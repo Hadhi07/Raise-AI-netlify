@@ -1,0 +1,4 @@
+node_modules/
+temp.jpg
+*.output
+.DS_Store

@@ -1,0 +1,16 @@
+{
+  "name": "raiseai-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site for raiseai.in. No runtime build; Tailwind CSS is pre-generated into assets/ and committed.",
+  "scripts": {
+    "build:css": "tailwindcss -c build/tw-funnel.config.js -i build/tw.in.css -o assets/tw-funnel.css --minify && tailwindcss -c build/tw-home.config.js -i build/tw.in.css -o assets/tw-home.css --minify",
+    "watch:css": "tailwindcss -c build/tw-funnel.config.js -i build/tw.in.css -o assets/tw-funnel.css --watch"
+  },
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.9",
+    "tailwindcss": "^3.4.14"
+  }
+}

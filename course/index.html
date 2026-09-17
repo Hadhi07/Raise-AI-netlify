@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>Raise AI | Course Dashboard</title>
+    <link rel="stylesheet" href="/assets/tw-funnel.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #000; color: #fff; }
+        .material-symbols-outlined { font-variation-settings: "FILL" 1; vertical-align: middle; }
+        .course-card { transition: all 0.2s ease; border: 1px solid #222; background: #080808; }
+        .course-card:hover { border-color: #a3fd00; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(163,253,0,0.1); }
+    </style>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "y7w4qe8w9w");
+    </script>
+</head>
+<body class="font-sans antialiased overflow-x-hidden min-h-screen flex flex-col" style="overflow-y: hidden;">
+
+    <!-- Access Overlay -->
+    <div id="access-overlay" class="fixed inset-0 z-50 bg-[#000000] flex flex-col items-center justify-center transition-opacity duration-300">
+        <div class="bg-[#111] border border-[#222] p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4 text-center">
+            <div class="mb-6">
+                <span class="material-symbols-outlined text-5xl text-neon mb-2">lock</span>
+                <h2 class="text-2xl font-headline font-bold text-white">Course Access</h2>
+                <p class="text-neutral-400 text-sm mt-2">Please enter the access code to view this course.</p>
+            </div>
+            <div id="access-form" class="flex flex-col gap-4">
+                <input type="text" id="course-access-code" autocomplete="off" placeholder="Enter access code..." class="bg-black border border-[#333] text-white rounded-lg px-4 py-3 focus:outline-none focus:border-neon focus:ring-1 focus:ring-neon transition w-full text-center" style="-webkit-text-security: disc; text-security: disc;">
+                <p id="access-error" class="text-urgency text-xs font-semibold hidden">Incorrect access code. Please try again.</p>
+                <button type="button" id="unlock-btn" class="bg-neon text-black font-bold py-3 px-4 rounded-lg hover:bg-[#b5ff1a] transition w-full">Unlock Course</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w-full z-40 bg-black/90 border-b border-[#1a1a1a] sticky top-0 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-2">
+                <img src="/webinar/logo.png" alt="Raise AI Logo" width="256" height="170" decoding="async" class="h-8 md:h-10 object-contain brightness-110" />
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="#" class="text-sm font-semibold text-neutral-400 hover:text-white transition">My Profile</a>
+                <div class="w-8 h-8 rounded-full bg-[#222] border border-[#333] flex items-center justify-center">
+                    <span class="material-symbols-outlined text-sm">person</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 max-w-6xl mx-auto w-full px-4 md:px-8 py-10">
+        
+        <!-- Welcome Section -->
+        <div class="mb-10">
+            <h1 class="text-3xl md:text-5xl font-headline font-black mb-3">Welcome to <span class="text-neon">Flow AI Mastery</span></h1>
+            <p class="text-neutral-400 text-base md:text-lg max-w-2xl">Complete all 7 days of the program to master AI video creation from scratch using 100% free tools.</p>
+            
+            <div class="mt-6 bg-[#111] border border-[#222] rounded-xl p-4 flex items-center justify-between gap-4">
+                <div class="flex-1">
+                    <div class="flex justify-between text-xs font-bold mb-2">
+                        <span class="text-white">Your Progress</span>
+                        <span class="text-neon">0% (0/7 Days)</span>
+                    </div>
+                    <div class="w-full bg-[#222] h-2 rounded-full overflow-hidden">
+                        <div class="bg-neon h-full rounded-full" style="width: 0%;"></div>
+                    </div>
+                </div>
+                <a href="/course/day-1.html" class="bg-neon text-black px-4 py-2 rounded-lg font-bold text-sm hover:bg-[#b5ff1a] transition shrink-0">Start Day 1</a>
+            </div>
+        </div>
+
+        <!-- Course Modules Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="modules-grid">
+            <a href="/course/day-1.html" class="course-card rounded-2xl overflow-hidden block group relative hover:border-neon transition">
+                <div class="aspect-video bg-[#1a1a1a] relative flex items-center justify-center border-b border-[#222]">
+                    <div class="bg-neon text-black px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest shadow-[0_0_20px_rgba(163,253,0,0.4)] flex items-center gap-1.5 transform group-hover:scale-105 transition"><span class="material-symbols-outlined text-sm">play_arrow</span> UPLOADED</div>
+                </div>
+                <div class="p-5">
+                    <div class="text-neon text-xs font-extrabold tracking-widest uppercase mb-1">Day 1</div>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-tight">Introduction to Editing in Flow</h3>
+                </div>
+            </a>
+            <a href="/course/day-2.html" class="course-card rounded-2xl overflow-hidden block group relative hover:border-neon transition">
+                <div class="aspect-video bg-[#1a1a1a] relative flex items-center justify-center border-b border-[#222]">
+                    <div class="bg-neon text-black px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest shadow-[0_0_20px_rgba(163,253,0,0.4)] flex items-center gap-1.5 transform group-hover:scale-105 transition"><span class="material-symbols-outlined text-sm">play_arrow</span> UPLOADED</div>
+                </div>
+                <div class="p-5">
+                    <div class="text-neon text-xs font-extrabold tracking-widest uppercase mb-1">Day 2</div>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-tight">Ideation - Visualisation and Scripting</h3>
+                </div>
+            </a>
+            <a href="/course/day-3.html" class="course-card rounded-2xl overflow-hidden block group relative hover:border-neon transition">
+                <div class="aspect-video bg-[#1a1a1a] relative flex items-center justify-center border-b border-[#222]">
+                    <div class="bg-neon text-black px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest shadow-[0_0_20px_rgba(163,253,0,0.4)] flex items-center gap-1.5 transform group-hover:scale-105 transition"><span class="material-symbols-outlined text-sm">play_arrow</span> UPLOADED</div>
+                </div>
+                <div class="p-5">
+                    <div class="text-neon text-xs font-extrabold tracking-widest uppercase mb-1">Day 3</div>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-tight">Video Generation Models in Flow</h3>
+                </div>
+            </a>
+            <a href="/course/day-4.html" class="course-card rounded-2xl overflow-hidden block group relative hover:border-neon transition">
+                <div class="aspect-video bg-[#1a1a1a] relative flex items-center justify-center border-b border-[#222]">
+                    <div class="bg-neon text-black px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest shadow-[0_0_20px_rgba(163,253,0,0.4)] flex items-center gap-1.5 transform group-hover:scale-105 transition"><span class="material-symbols-outlined text-sm">play_arrow</span> UPLOADED</div>
+                </div>
+                <div class="p-5">
+                    <div class="text-neon text-xs font-extrabold tracking-widest uppercase mb-1">Day 4</div>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-tight">Character &amp; Audio Consistency + Talking Head Ads</h3>
+                </div>
+            </a>
+            <a href="/course/day-5.html" class="course-card rounded-2xl overflow-hidden block group relative hover:border-neon transition">
+                <div class="aspect-video bg-[#1a1a1a] relative flex items-center justify-center border-b border-[#222]">
+                    <div class="bg-neon text-black px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest shadow-[0_0_20px_rgba(163,253,0,0.4)] flex items-center gap-1.5 transform group-hover:scale-105 transition"><span class="material-symbols-outlined text-sm">play_arrow</span> UPLOADED</div>
+                </div>
+                <div class="p-5">
+                    <div class="text-neon text-xs font-extrabold tracking-widest uppercase mb-1">Day 5</div>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-tight">Product Commercials &amp; Storyboarding</h3>
+                </div>
+            </a>
+            <a href="/course/day-6.html" class="course-card rounded-2xl overflow-hidden block group relative hover:border-neon transition">
+                <div class="aspect-video bg-[#1a1a1a] relative flex items-center justify-center border-b border-[#222]">
+                    <div class="bg-neon text-black px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest shadow-[0_0_20px_rgba(163,253,0,0.4)] flex items-center gap-1.5 transform group-hover:scale-105 transition"><span class="material-symbols-outlined text-sm">play_arrow</span> UPLOADED</div>
+                </div>
+                <div class="p-5">
+                    <div class="text-neon text-xs font-extrabold tracking-widest uppercase mb-1">Day 6</div>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-tight">UGC Ads, AI Influencers &amp; Engine Limits</h3>
+                </div>
+            </a>
+            <a href="/course/day-7.html" class="course-card rounded-2xl overflow-hidden block group relative hover:border-neon transition">
+                <div class="aspect-video bg-[#1a1a1a] relative flex items-center justify-center border-b border-[#222]">
+                    <div class="bg-neon text-black px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest shadow-[0_0_20px_rgba(163,253,0,0.4)] flex items-center gap-1.5 transform group-hover:scale-105 transition"><span class="material-symbols-outlined text-sm">play_arrow</span> UPLOADED</div>
+                </div>
+                <div class="p-5">
+                    <div class="text-neon text-xs font-extrabold tracking-widest uppercase mb-1">Day 7</div>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-tight">Different Styles &amp; Environmental Controls</h3>
+                </div>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#050505] border-t border-[#111] py-8 text-center mt-auto">
+        <p class="text-neutral-500 text-xs">&copy; 2026 Raise AI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Check if already authenticated this session
+        if (sessionStorage.getItem('course_authenticated') === 'true') {
+            const overlay = document.getElementById('access-overlay');
+            if (overlay) {
+                overlay.style.display = 'none';
+                document.body.style.overflowY = 'auto';
+            }
+        }
+
+        function attemptUnlock() {
+            const pass = document.getElementById('course-access-code').value;
+            if (pass === 'AIP001') {
+                sessionStorage.setItem('course_authenticated', 'true');
+                const overlay = document.getElementById('access-overlay');
+                overlay.style.opacity = '0';
+                document.body.style.overflowY = 'auto';
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 300);
+            } else {
+                document.getElementById('access-error').classList.remove('hidden');
+                document.getElementById('course-access-code').classList.add('border-urgency');
+                document.getElementById('course-access-code').value = '';
+            }
+        }
+
+        document.getElementById('unlock-btn').addEventListener('click', attemptUnlock);
+        document.getElementById('course-access-code').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                attemptUnlock();
+            }
+        });
+    </script>
+</body>
+</html>
