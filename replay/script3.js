@@ -1,5 +1,16 @@
 let player;
 
+// Dynamically load the API
+if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+} else {
+    // If it's already loaded
+    setTimeout(onYouTubeIframeAPIReady, 100);
+}
+
 // Wait for API to load
 function onYouTubeIframeAPIReady() {
     if (!document.getElementById('youtube-player')) return;
