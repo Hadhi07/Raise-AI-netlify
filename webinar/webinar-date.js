@@ -1,11 +1,11 @@
 (function() {
     function getNextWebinarDate() {
         const now = new Date();
-        const targetDate = new Date(2026, 8, 20, 20, 0, 0); // Sept 20, 2026 at 8:00 PM
+        const targetDate = new Date(2026, 9, 4, 20, 0, 0); // Oct 4, 2026 at 8:00 PM
         
-        // If we are before Sept 20th at 8:00 PM, always return Sept 20th
+        // If we are before Oct 4th at 8:00 PM, always return Oct 4th
         if (now < targetDate) {
-            return new Date(2026, 8, 20);
+            return new Date(2026, 9, 4);
         }
         
         // Otherwise, fallback to the automatic "next Sunday" logic
