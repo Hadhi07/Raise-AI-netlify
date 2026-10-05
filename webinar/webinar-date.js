@@ -43,18 +43,9 @@
     }
 
     function updateWebinarDates() {
-        const nextWebinarDate = getNextWebinarDate();
-        
-        // 1. Update elements with class 'dynamic-date'
-        const dynamicElements = document.querySelectorAll('.dynamic-date');
-        dynamicElements.forEach(el => {
-            const format = el.getAttribute('data-format') || 'long';
-            el.textContent = formatDate(nextWebinarDate, format);
-        });
-
-        // 2. Update the document title if it needs updating
+        // Webinars are temporarily closed. Do not run dynamic date logic.
         if (document.title.includes("Learn Flow AI Video Creation")) {
-            document.title = `Raise AI | Learn Flow AI Video Creation (${formatDate(nextWebinarDate, "short")}, 9:00 - 11:00 PM)`;
+            document.title = "Raise AI | Learn Flow AI Video Creation (Webinars Closed)";
         }
     }
 
