@@ -1,9 +1,9 @@
 (function() {
     function getNextWebinarDate() {
         const now = new Date();
-        const targetDate = new Date(2026, 9, 4, 20, 0, 0); // Oct 4, 2026 at 8:00 PM
+        const targetDate = new Date(2026, 9, 4, 21, 0, 0); // Oct 4, 2026 at 9:00 PM
         
-        // If we are before Oct 4th at 8:00 PM, always return Oct 4th
+        // If we are before Oct 4th at 9:00 PM, always return Oct 4th
         if (now < targetDate) {
             return new Date(2026, 9, 4);
         }
@@ -12,7 +12,7 @@
         let day = now.getDay();
         let daysUntilSunday = (7 - day) % 7;
         
-        if (day === 0 && now.getHours() >= 20) {
+        if (day === 0 && now.getHours() >= 21) {
             daysUntilSunday = 7;
         }
         
@@ -43,18 +43,9 @@
     }
 
     function updateWebinarDates() {
-        const nextWebinarDate = getNextWebinarDate();
-        
-        // 1. Update elements with class 'dynamic-date'
-        const dynamicElements = document.querySelectorAll('.dynamic-date');
-        dynamicElements.forEach(el => {
-            const format = el.getAttribute('data-format') || 'long';
-            el.textContent = formatDate(nextWebinarDate, format);
-        });
-
-        // 2. Update the document title if it needs updating
+        // Webinars are temporarily closed. Do not run dynamic date logic.
         if (document.title.includes("Learn Flow AI Video Creation")) {
-            document.title = `Raise AI | Learn Flow AI Video Creation (${formatDate(nextWebinarDate, "short")}, 8:30 - 10:30 PM)`;
+            document.title = "Raise AI | Learn Flow AI Video Creation (Webinars Closed)";
         }
     }
 
