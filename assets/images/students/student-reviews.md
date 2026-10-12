@@ -15,18 +15,18 @@ Permission given: yes / no
 ---
 
 Name: Hafeef
-Profession: Video Editor
+Profession: Content Creator
 Photo file: student-1.jpg / student-1.webp (black and white floral shirt)
-Review: "I learned how to make AI commercials from scratch. My editing speed tripled in the first two weeks."
+Review: "I learned how to make AI commercials from scratch. My creation speed tripled in the first two weeks."
 Video:
 Permission given: yes
 
 ---
 
 Name: Jasim Thangal
-Profession: Graphic Designer
+Profession: Video Editor
 Photo file: student-2.jpg / student-2.webp (black shirt)
-Review: "Creating AI visuals and character consistency changed how I pitch to brand clients."
+Review: "Creating AI visuals and character consistency changed how I edit and pitch to brand clients."
 Video:
 Permission given: yes
 
@@ -42,9 +42,9 @@ Permission given: yes
 ---
 
 Name: Ajmal Sunoon
-Profession: Digital Marketer
+Profession: Content Creator
 Photo file: student-4.jpg / student-4.webp (light blue shirt, watch)
-Review: "We produce UGC ads in-house now. The ROI from the AI workshop was immediate."
+Review: "We produce commercial AI video reels in-house now. The quality and reach grew right away."
 Video:
 Permission given: yes
 
