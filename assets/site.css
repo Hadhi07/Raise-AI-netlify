@@ -4,7 +4,7 @@
    Theme: Minimal, premium, high contrast, clean typography.
    ========================================================================== */
 
-@import "/assets/fonts/fonts.css";
+@import "/assets/fonts/fonts.css?v=3";
 
 :root {
   --raise-blue: #1554FF;
@@ -796,12 +796,14 @@ h3 {
   position: relative;
   overflow: hidden;
   background: #17191C;
+  cursor: pointer;
 }
 
 .frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .frame .play {
@@ -815,12 +817,29 @@ h3 {
   display: grid;
   place-items: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.2s ease;
+  z-index: 5;
+}
+
+.frame:hover .play {
+  transform: scale(1.1);
+  background: var(--volt-lime);
 }
 
 .frame .play svg {
   width: 14px;
   height: 14px;
   margin-left: 2px;
+}
+
+.frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: inherit;
+  z-index: 10;
 }
 
 /* Category Pills & Grid (Results / Reviews / Blog) */
@@ -880,12 +899,51 @@ h3 {
   border-radius: 14px;
   overflow: hidden;
   position: relative;
+  background: #000;
+  cursor: pointer;
 }
 
 .vid .frame-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.vid .frame-wrap .play {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background 0.2s ease;
+  z-index: 5;
+}
+
+.vid .frame-wrap:hover .play {
+  transform: scale(1.1);
+  background: var(--volt-lime);
+}
+
+.vid .frame-wrap .play svg {
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+}
+
+.vid .frame-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: inherit;
+  z-index: 10;
 }
 
 .vid h3 {
@@ -990,11 +1048,13 @@ h3 {
 .final2 .pic {
   position: relative;
   height: 330px;
+  overflow: hidden;
   margin: 0 calc(var(--pad) * -1);
 }
 
 .final2 .pic .circle {
   position: absolute;
+  z-index: 1;
   width: 420px;
   height: 420px;
   border-radius: 50%;
@@ -1005,12 +1065,14 @@ h3 {
 
 .final2 .pic .me {
   position: absolute;
+  z-index: 2;
   right: 14%;
   bottom: 0;
   width: 230px;
   height: 310px;
   object-fit: contain;
   object-position: bottom;
+  display: block;
 }
 
 /* Final CTA for Sub-pages */
@@ -1944,6 +2006,7 @@ dialog#note::backdrop {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .sheet .x {
@@ -1959,6 +2022,71 @@ dialog#note::backdrop {
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sheet .x:hover {
+  background: var(--soft-white);
+}
+
+.sheet .who {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-right: 48px;
+}
+
+.sheet .who .ph {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--soft-white);
+}
+
+.sheet .who .ph img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sheet h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.sheet .meta {
+  font: 600 12px/1 var(--body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.sheet blockquote {
+  font: 500 18px/1.5 var(--display);
+  letter-spacing: -0.01em;
+  color: var(--charcoal);
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sheet .bar {
+  display: block;
+  width: 48px;
+  height: 5px;
+  border-radius: 6px;
+  background: var(--volt-lime);
+}
+
+.sheet .acts {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
 }
 
 /* Media Queries */
@@ -2096,17 +2224,21 @@ dialog#note::backdrop {
   .final2 .pic {
     height: 470px;
     margin: 0;
+    overflow: visible;
   }
   .final2 .pic .circle {
+    z-index: 1;
     width: 600px;
     height: 600px;
     right: -180px;
     bottom: -230px;
   }
   .final2 .pic .me {
+    z-index: 2;
     width: 320px;
     height: 430px;
     right: 10%;
+    display: block;
   }
   
   /* Final */
