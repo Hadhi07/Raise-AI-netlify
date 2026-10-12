@@ -26,7 +26,7 @@
 <!-- Self-hosted Fonts Fallback & Site CSS -->
 <link rel="preload" href="/assets/fonts/manrope-800.woff2?v=3" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts/fonts.css?v=3">
-<link rel="stylesheet" href="/assets/site.css?v=3">
+<link rel="stylesheet" href="/assets/site.css?v=5">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18499038791"></script>
@@ -137,49 +137,248 @@
     <div class="tagrow"><span class="tag">Reviews</span></div>
     <h1>What people say about <span class="key">Raise AI.</span></h1>
     <span class="underline"></span>
-    <p class="lead">Their words, not ours. Real feedback from professionals, educators and attendees who learned with us.</p>
+    <p class="lead">Their words, not ours. Real unfiltered voice notes and feedback from live webinar attendees who learned Flow AI and prompt creation with us.</p>
   </div>
 </section>
 
 <section class="sec" style="padding-top:0">
   <div class="wrap">
-    <div class="pills">
-      <button data-f="all" aria-pressed="true">All</button>
-      <button data-f="teams" aria-pressed="false">Teams & Institutes</button>
-      <button data-f="webinar" aria-pressed="false">Webinar Attendees</button>
+    <div class="audio-reviews-header">
+      <span class="tag tag-lime">Webinar Voice Reviews</span>
+      <p style="font-size:15px;color:var(--ink-soft);margin-top:8px">Tap any voice note to hear authentic feedback directly from attendees who completed our live AI training.</p>
     </div>
 
-    <div class="masonry">
-      <div class="rv rv-feature" data-cat="teams">
-        <blockquote>"Today I use AI like voice-to-text in all of my work and it is saving me <mark>more than 2 hours a day.</mark>"</blockquote>
-        <p class="who"><b>Bushar TP</b>, Principal, Green Valley Public School</p>
-      </div>
-
-      <div class="rv rv-audio" data-cat="webinar">
-        <i><svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="#fff"/></svg></i>
-        <div>
-          <b>Hear from Jithin</b>
-          <span>Webinar attendee</span>
+    <div class="audio-reviews-grid">
+      <!-- 1. Jithin -->
+      <article class="rv-audio-card">
+        <div class="rv-audio-header">
+          <div class="rv-audio-user">
+            <div class="rv-audio-avatar">J</div>
+            <div class="rv-audio-meta">
+              <h3>Hear from Jithin</h3>
+              <span>Webinar attendee</span>
+            </div>
+          </div>
+          <span class="rv-audio-badge">
+            <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-6"/></svg>
+            Verified Voice Note
+          </span>
         </div>
-      </div>
-
-      <div class="rv" data-cat="teams">
-        <blockquote>"He made our students think about AI first before taking manual efforts, and introduced multiple AI tools that increased the profitability of our company."</blockquote>
-        <p class="who"><b>Junaid Ahammed KV</b>, Entrepreneur & Mentor, IIDT Escala</p>
-      </div>
-
-      <div class="rv rv-audio" data-cat="webinar">
-        <i><svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="#fff"/></svg></i>
-        <div>
-          <b>Hear from Vishnu</b>
-          <span>Webinar attendee</span>
+        <div class="rv-audio-player">
+          <button class="rv-audio-play-btn" aria-label="Play voice review from Jithin" type="button">
+            <svg class="icon-play" viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="rv-audio-track">
+            <div class="rv-progress-container">
+              <div class="rv-progress-bar"></div>
+            </div>
+            <div class="rv-audio-times">
+              <span class="current-time">0:00</span>
+              <span class="total-time">0:00</span>
+            </div>
+          </div>
+          <div class="yt-audio-player hidden" data-yt-id="0eLzQ5NvLmM"></div>
         </div>
-      </div>
+      </article>
 
-      <div class="rv" data-cat="teams">
-        <blockquote>"Practical business AI that drives profit. Reduced costs and saved significant time for the whole team."</blockquote>
-        <p class="who"><b>Sajeer Calicut</b>, Agency owner</p>
-      </div>
+      <!-- 2. Vishnu -->
+      <article class="rv-audio-card">
+        <div class="rv-audio-header">
+          <div class="rv-audio-user">
+            <div class="rv-audio-avatar">V</div>
+            <div class="rv-audio-meta">
+              <h3>Hear from Vishnu</h3>
+              <span>Webinar attendee</span>
+            </div>
+          </div>
+          <span class="rv-audio-badge">
+            <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-6"/></svg>
+            Verified Voice Note
+          </span>
+        </div>
+        <div class="rv-audio-player">
+          <button class="rv-audio-play-btn" aria-label="Play voice review from Vishnu" type="button">
+            <svg class="icon-play" viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="rv-audio-track">
+            <div class="rv-progress-container">
+              <div class="rv-progress-bar"></div>
+            </div>
+            <div class="rv-audio-times">
+              <span class="current-time">0:00</span>
+              <span class="total-time">0:00</span>
+            </div>
+          </div>
+          <div class="yt-audio-player hidden" data-yt-id="R0yXHD0MlvY"></div>
+        </div>
+      </article>
+
+      <!-- 3. Attendee 1 -->
+      <article class="rv-audio-card">
+        <div class="rv-audio-header">
+          <div class="rv-audio-user">
+            <div class="rv-audio-avatar">A</div>
+            <div class="rv-audio-meta">
+              <h3>Hear from an Attendee</h3>
+              <span>Webinar attendee</span>
+            </div>
+          </div>
+          <span class="rv-audio-badge">
+            <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-6"/></svg>
+            Verified Voice Note
+          </span>
+        </div>
+        <div class="rv-audio-player">
+          <button class="rv-audio-play-btn" aria-label="Play voice review from Attendee" type="button">
+            <svg class="icon-play" viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="rv-audio-track">
+            <div class="rv-progress-container">
+              <div class="rv-progress-bar"></div>
+            </div>
+            <div class="rv-audio-times">
+              <span class="current-time">0:00</span>
+              <span class="total-time">0:00</span>
+            </div>
+          </div>
+          <div class="yt-audio-player hidden" data-yt-id="DJ3II8alb3Y"></div>
+        </div>
+      </article>
+
+      <!-- 4. Attendee 2 -->
+      <article class="rv-audio-card">
+        <div class="rv-audio-header">
+          <div class="rv-audio-user">
+            <div class="rv-audio-avatar">A</div>
+            <div class="rv-audio-meta">
+              <h3>Hear from an Attendee</h3>
+              <span>Webinar attendee</span>
+            </div>
+          </div>
+          <span class="rv-audio-badge">
+            <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-6"/></svg>
+            Verified Voice Note
+          </span>
+        </div>
+        <div class="rv-audio-player">
+          <button class="rv-audio-play-btn" aria-label="Play voice review from Attendee" type="button">
+            <svg class="icon-play" viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="rv-audio-track">
+            <div class="rv-progress-container">
+              <div class="rv-progress-bar"></div>
+            </div>
+            <div class="rv-audio-times">
+              <span class="current-time">0:00</span>
+              <span class="total-time">0:00</span>
+            </div>
+          </div>
+          <div class="yt-audio-player hidden" data-yt-id="4vvu4X5iBtc"></div>
+        </div>
+      </article>
+
+      <!-- 5. Attendee 3 -->
+      <article class="rv-audio-card">
+        <div class="rv-audio-header">
+          <div class="rv-audio-user">
+            <div class="rv-audio-avatar">A</div>
+            <div class="rv-audio-meta">
+              <h3>Hear from an Attendee</h3>
+              <span>Webinar attendee</span>
+            </div>
+          </div>
+          <span class="rv-audio-badge">
+            <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-6"/></svg>
+            Verified Voice Note
+          </span>
+        </div>
+        <div class="rv-audio-player">
+          <button class="rv-audio-play-btn" aria-label="Play voice review from Attendee" type="button">
+            <svg class="icon-play" viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="rv-audio-track">
+            <div class="rv-progress-container">
+              <div class="rv-progress-bar"></div>
+            </div>
+            <div class="rv-audio-times">
+              <span class="current-time">0:00</span>
+              <span class="total-time">0:00</span>
+            </div>
+          </div>
+          <div class="yt-audio-player hidden" data-yt-id="fB2nyQogIH0"></div>
+        </div>
+      </article>
+
+      <!-- 6. Attendee 4 -->
+      <article class="rv-audio-card">
+        <div class="rv-audio-header">
+          <div class="rv-audio-user">
+            <div class="rv-audio-avatar">A</div>
+            <div class="rv-audio-meta">
+              <h3>Hear from an Attendee</h3>
+              <span>Webinar attendee</span>
+            </div>
+          </div>
+          <span class="rv-audio-badge">
+            <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-6"/></svg>
+            Verified Voice Note
+          </span>
+        </div>
+        <div class="rv-audio-player">
+          <button class="rv-audio-play-btn" aria-label="Play voice review from Attendee" type="button">
+            <svg class="icon-play" viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="rv-audio-track">
+            <div class="rv-progress-container">
+              <div class="rv-progress-bar"></div>
+            </div>
+            <div class="rv-audio-times">
+              <span class="current-time">0:00</span>
+              <span class="total-time">0:00</span>
+            </div>
+          </div>
+          <div class="yt-audio-player hidden" data-yt-id="ziffPKbcvvQ"></div>
+        </div>
+      </article>
+
+      <!-- 7. Attendee 5 -->
+      <article class="rv-audio-card">
+        <div class="rv-audio-header">
+          <div class="rv-audio-user">
+            <div class="rv-audio-avatar">A</div>
+            <div class="rv-audio-meta">
+              <h3>Hear from an Attendee</h3>
+              <span>Webinar attendee</span>
+            </div>
+          </div>
+          <span class="rv-audio-badge">
+            <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6l3 3 5-6"/></svg>
+            Verified Voice Note
+          </span>
+        </div>
+        <div class="rv-audio-player">
+          <button class="rv-audio-play-btn" aria-label="Play voice review from Attendee" type="button">
+            <svg class="icon-play" viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <div class="rv-audio-track">
+            <div class="rv-progress-container">
+              <div class="rv-progress-bar"></div>
+            </div>
+            <div class="rv-audio-times">
+              <span class="current-time">0:00</span>
+              <span class="total-time">0:00</span>
+            </div>
+          </div>
+          <div class="yt-audio-player hidden" data-yt-id="hRzu9zsLCbw"></div>
+        </div>
+      </article>
     </div>
 
     <div class="band">
@@ -277,18 +476,142 @@
   </a>
 </div>
 
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
-document.querySelectorAll('.pills').forEach(function(g) {
-  g.addEventListener('click', function(e) {
-    var b = e.target.closest('button');
-    if (!b) return;
-    g.querySelectorAll('button').forEach(function(x) { x.setAttribute('aria-pressed', x === b); });
-    var f = b.dataset.f;
-    document.querySelectorAll('.rv').forEach(function(c) {
-      c.style.display = (f === 'all' || c.dataset.cat === f) ? '' : 'none';
+let ytPlayers = [];
+let ytInterval;
+
+function formatTimeStr(time) {
+  if (isNaN(time) || !isFinite(time)) return "0:00";
+  const min = Math.floor(time / 60);
+  const sec = Math.floor(time % 60);
+  return min + ":" + (sec < 10 ? "0" : "") + sec;
+}
+
+function onYouTubeIframeAPIReady() {
+  const players = document.querySelectorAll(".rv-audio-player");
+  players.forEach((player, index) => {
+    const audioDiv = player.querySelector(".yt-audio-player");
+    if (!audioDiv) return;
+    const ytId = audioDiv.getAttribute("data-yt-id");
+    
+    const playerId = "rv-yt-audio-" + index;
+    audioDiv.id = playerId;
+    
+    const playBtn = player.querySelector(".rv-audio-play-btn");
+    const iconPlay = playBtn.querySelector(".icon-play");
+    const iconPause = playBtn.querySelector(".icon-pause");
+    const progressBar = player.querySelector(".rv-progress-bar");
+    const progressContainer = player.querySelector(".rv-progress-container");
+    const currentTimeEl = player.querySelector(".current-time");
+    const totalTimeEl = player.querySelector(".total-time");
+
+    let ytInstance;
+    try {
+      ytInstance = new YT.Player(playerId, {
+        height: '0',
+        width: '0',
+        videoId: ytId,
+        playerVars: {
+          'playsinline': 1,
+          'controls': 0,
+          'disablekb': 1,
+          'rel': 0,
+          'modestbranding': 1
+        },
+        events: {
+          'onReady': function(event) {
+            const duration = event.target.getDuration();
+            if (duration && duration > 0) {
+              totalTimeEl.textContent = formatTimeStr(duration);
+            }
+            ytPlayers.push({
+              api: event.target,
+              playerEl: player,
+              iconPlay: iconPlay,
+              iconPause: iconPause,
+              progressBar: progressBar,
+              currentTimeEl: currentTimeEl,
+              totalTimeEl: totalTimeEl
+            });
+          },
+          'onStateChange': function(event) {
+            if (event.data === YT.PlayerState.PLAYING) {
+              iconPlay.style.display = 'none';
+              iconPause.style.display = 'block';
+              if (!ytInterval) {
+                ytInterval = setInterval(updateAllProgress, 400);
+              }
+            } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+              iconPlay.style.display = 'block';
+              iconPause.style.display = 'none';
+              if (event.data === YT.PlayerState.ENDED) {
+                progressBar.style.width = "0%";
+                currentTimeEl.textContent = "0:00";
+              }
+            }
+          }
+        }
+      });
+    } catch(err) {
+      console.warn("YouTube player setup warning:", err);
+    }
+
+    playBtn.addEventListener("click", function(e) {
+      if (e) e.stopPropagation();
+      if (!ytInstance || typeof ytInstance.getPlayerState !== "function") return;
+      const state = ytInstance.getPlayerState();
+      
+      if (state === YT.PlayerState.PLAYING) {
+        ytInstance.pauseVideo();
+      } else {
+        // Pause other active players
+        ytPlayers.forEach(function(p) {
+          if (p.api !== ytInstance && p.api.getPlayerState && p.api.getPlayerState() === YT.PlayerState.PLAYING) {
+            p.api.pauseVideo();
+            p.iconPlay.style.display = 'block';
+            p.iconPause.style.display = 'none';
+          }
+        });
+        ytInstance.playVideo();
+      }
+    });
+
+    progressContainer.addEventListener("click", function(e) {
+      if (!ytInstance || typeof ytInstance.getDuration !== "function") return;
+      const rect = progressContainer.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const percent = clickX / rect.width;
+      const duration = ytInstance.getDuration();
+      if (duration) {
+        ytInstance.seekTo(percent * duration, true);
+      }
     });
   });
-});
+}
+
+function updateAllProgress() {
+  let anyPlaying = false;
+  ytPlayers.forEach(function(p) {
+    if (p.api && p.api.getPlayerState && p.api.getPlayerState() === YT.PlayerState.PLAYING) {
+      anyPlaying = true;
+      const current = p.api.getCurrentTime();
+      const duration = p.api.getDuration();
+      if (duration > 0) {
+        const percent = (current / duration) * 100;
+        p.progressBar.style.width = percent + "%";
+        p.currentTimeEl.textContent = formatTimeStr(current);
+        if (p.totalTimeEl.textContent === "0:00") {
+          p.totalTimeEl.textContent = formatTimeStr(duration);
+        }
+      }
+    }
+  });
+  if (!anyPlaying && ytInterval) {
+    clearInterval(ytInterval);
+    ytInterval = null;
+  }
+}
 </script>
 
 </body>
