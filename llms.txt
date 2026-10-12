@@ -2,6 +2,15 @@
 
 Raise AI is an AI upskilling company in Kerala, India. We teach working professionals how to use AI in their own job, through online AI courses, AI classes, workshops and training.
 
+## Pages
+
+- Homepage: Overview of Raise AI, live workshops, masterclass courses, student results, and founder story. URL: https://raiseai.in/
+- About Us: Meet the founder Hadhi Muhammed P., read the story behind Raise AI, our core beliefs, and how we teach. URL: https://raiseai.in/about/
+- Student Results: Watch AI commercial ads, product videos, and UGC reels made by students without a camera, studio, or shoot. URL: https://raiseai.in/results/
+- Reviews: Real reviews and audio testimonials from students, teachers, businesses, and institutes. URL: https://raiseai.in/reviews/
+- Blog: Simple, practical guides on AI video, AI tools, and using AI at work. URL: https://raiseai.in/blog/
+- Guide: How to make an AI video ad for free (step by step) using ChatGPT, Google Flow, Luma Dream Machine, ElevenLabs, and CapCut. URL: https://raiseai.in/blog/how-to-make-an-ai-video-ad-for-free/
+
 ## Courses
 
 - Live AI workshop: Flow AI Fundamentals: A 2-hour online live class for beginners teaching how to make AI videos with free browser tools on Google Meet. URL: https://raiseai.in/webinar/
@@ -9,10 +18,11 @@ Raise AI is an AI upskilling company in Kerala, India. We teach working professi
 
 ## Founder
 
-Hadhi Muhammed P. is an AI entrepreneur and mentor based in Kozhikode, Kerala, India.
+Hadhi Muhammed P. is an AI entrepreneur, content creator, and mentor based in Kozhikode, Kerala, India.
 
 ## Contact
 
+- Office: KINFRA Advanced Technology Park, Ramanattukara, Kozhikode, Kerala
 - WhatsApp: +91 73560 03301 (Every day, 9 AM to 10 PM IST)
 - Email: support@raiseai.in
 - Website: https://raiseai.in/

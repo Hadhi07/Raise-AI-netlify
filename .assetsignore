@@ -1,8 +1,14 @@
 node_modules
+node_modules/*
+node_modules/**
 package.json
 package-lock.json
 wrangler.jsonc
 .git
 .gitignore
 *.md
+**/*.md
 handoff
+handoff/*
+handoff/**
+README.md
