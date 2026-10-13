@@ -25,7 +25,7 @@
 <!-- Self-hosted Fonts Fallback & Site CSS -->
 <link rel="preload" href="/assets/fonts/manrope-800.woff2?v=3" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts/fonts.css?v=3">
-<link rel="stylesheet" href="/assets/site.css?v=5">
+<link rel="stylesheet" href="/assets/site.css?v=6">
 <style>
 /* Homepage-only fixes (scoped; site.css is shared) */
 /* Hero uses .hero2 styles; the 7-word pill needs a 14s loop (site.css timings are for 6 words) */
@@ -38,10 +38,59 @@
 @keyframes swap7{0%{opacity:0;transform:translateY(40%) scale(.92)}3%,12.8%{opacity:1;transform:none}15.4%,100%{opacity:0;transform:translateY(-40%) scale(.96)}}
 @keyframes shine7{0%,4.3%{transform:translateX(-150%) skewX(-18deg)}11.1%,100%{transform:translateX(320%) skewX(-18deg)}}
 /* Hero key message: lime highlighter sweeps in behind "your job." */
-.hero2 .job{position:relative;display:inline-block;white-space:nowrap;isolation:isolate}
-.hero2 .job::before{content:"";position:absolute;left:-.08em;right:-.08em;bottom:.08em;height:.38em;background:var(--volt-lime);border-radius:.1em;z-index:-1;transform-origin:left center}
-@media (prefers-reduced-motion:no-preference){.hero2 .job::before{animation:jobmark .8s cubic-bezier(.2,.8,.2,1) .4s both}}
+.hero2 .job{position:relative;display:inline-block;white-space:nowrap;isolation:isolate;color:var(--charcoal);font-weight:800}
+.hero2 .job::before{content:"";position:absolute;left:-.06em;right:-.06em;bottom:.06em;height:.46em;background:var(--volt-lime);border-radius:.14em;z-index:-1;transform-origin:left center}
+@media (prefers-reduced-motion:no-preference){.hero2 .job::before{animation:jobmark .8s cubic-bezier(.2,.8,.2,1) .35s both}}
 @keyframes jobmark{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+/* Hero rotating pill & layout */
+.hero2 .swap{display:grid;margin:12px 0 8px;font-family:var(--pill);line-height:1.15}
+.hero2 .swap > span{white-space:nowrap}
+/* Mobile hero & section optimizations */
+@media (max-width: 480px){
+  .hero2{padding:28px 0 40px}
+  .hero2 h1{font-size:clamp(28px, 8.2vw, 36px);line-height:1.15;margin-top:16px;max-width:100%}
+  .hero2 .swap{font-size:clamp(19px, 5.4vw, 24px);margin:12px 0 6px}
+  .hero2 .swap > span{padding:0.18em 0.4em 0.2em;border-radius:0.38em;gap:0.24em}
+  .hero2 .lead{font-size:16.5px;line-height:1.52;margin-top:18px}
+  .hero-cta{margin-top:22px;gap:12px}
+  .hero-cta .btn{width:100%;justify-content:space-between}
+  .marq{margin-top:28px;gap:8px}
+  .marq .chip{font-size:13px;padding:8px 14px}
+  .growth{padding:48px 0}
+  .gg{gap:10px;margin-top:24px}
+  .gg > div{padding:18px 16px;border-radius:20px;gap:14px}
+  .ring{width:56px;height:56px}
+  .ring svg{width:56px;height:56px}
+  .gnum{font-size:30px}
+  .glb{font-size:14px;margin-top:4px}
+  .grid{gap:8px;margin-top:18px}
+  .stu{border-radius:18px;padding:6px 6px 12px;gap:6px}
+  .stu .photo{border-radius:12px}
+  .stu h3{font-size:15px;margin:2px 2px 0}
+  .role{font-size:10.5px;padding:5px 8px;border-radius:10px}
+  .bubble{padding:6px 8px;border-radius:4px 10px 10px 10px}
+  .bubble p{font-size:12px;line-height:1.35}
+  .read{font-size:12px;margin-left:2px}
+  .card{padding:22px 18px;border-radius:20px;gap:12px}
+  .card h3{font-size:20px}
+  .card p{font-size:14.5px}
+  .card ul{font-size:14px;gap:8px}
+  .chips{gap:6px}
+  .chips span{font-size:12px;padding:5px 10px}
+  .card .foot{flex-direction:column;align-items:stretch;gap:10px}
+  .card .foot .price{margin-bottom:2px}
+  .card .foot .btn{width:100%;justify-content:space-between}
+  .work{padding:56px 0}
+  .frames{margin:28px calc(var(--pad) * -1) 0;padding-left:var(--pad);padding-right:var(--pad)}
+  .frame{width:68%;max-width:240px}
+  .final2{padding-top:56px}
+  .final2 h2{font-size:clamp(28px, 8vw, 34px);line-height:1.15}
+  .final2 .txt{padding-bottom:0}
+  .final2 .btn{width:100%;justify-content:space-between}
+  .final2 .pic{height:300px;margin-top:14px}
+  .final2 .pic .circle{width:340px;height:340px;right:-70px;bottom:-120px}
+  .final2 .pic .me{width:210px;right:12%}
+}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 /* Logo files have wide built-in padding: crop to the mark so it is legible at 28px */
 .hdr .logo,.ftr .logo{height:28px;width:111px;overflow:hidden;display:block}
@@ -303,7 +352,7 @@
       <span class="tag">AI upskilling institute</span>
     </div>
     <h1>
-      AI won't take <span class="job"><span class="key">your job.</span></span><br>
+      AI won't take <span class="job">your job.</span><br>
       <span class="sr-only">A doctor, architect, lawyer, teacher, graphic designer, interior designer or video editor who uses AI will.</span>
       <span class="swap" id="heroSwap" aria-hidden="true">
         <span><span class="ai">AI + </span>Doctor</span>
@@ -314,9 +363,8 @@
         <span><span class="ai">AI + </span>Interior Designer</span>
         <span><span class="ai">AI + </span>Video Editor</span>
       </span>
-      will.
+      <span class="key">will.</span>
     </h1>
-    <span class="underline" aria-hidden="true"></span>
     <p class="lead">
       We teach working professionals how to use AI in their own job. Live online classes, real work, no theory.
     </p>
