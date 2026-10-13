@@ -37,6 +37,11 @@
 .hero2 .swap .ai{color:var(--charcoal);opacity:.55}
 @keyframes swap7{0%{opacity:0;transform:translateY(40%) scale(.92)}3%,12.8%{opacity:1;transform:none}15.4%,100%{opacity:0;transform:translateY(-40%) scale(.96)}}
 @keyframes shine7{0%,4.3%{transform:translateX(-150%) skewX(-18deg)}11.1%,100%{transform:translateX(320%) skewX(-18deg)}}
+/* Hero key message: lime highlighter sweeps in behind "your job." */
+.hero2 .job{position:relative;display:inline-block;white-space:nowrap;isolation:isolate}
+.hero2 .job::before{content:"";position:absolute;left:-.08em;right:-.08em;bottom:.08em;height:.38em;background:var(--volt-lime);border-radius:.1em;z-index:-1;transform-origin:left center}
+@media (prefers-reduced-motion:no-preference){.hero2 .job::before{animation:jobmark .8s cubic-bezier(.2,.8,.2,1) .4s both}}
+@keyframes jobmark{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 /* Logo files have wide built-in padding: crop to the mark so it is legible at 28px */
 .hdr .logo,.ftr .logo{height:28px;width:111px;overflow:hidden;display:block}
@@ -298,7 +303,7 @@
       <span class="tag">AI upskilling institute</span>
     </div>
     <h1>
-      AI won't take <span style="white-space:nowrap">your job.</span><br>
+      AI won't take <span class="job"><span class="key">your job.</span></span><br>
       <span class="sr-only">A doctor, architect, lawyer, teacher, graphic designer, interior designer or video editor who uses AI will.</span>
       <span class="swap" id="heroSwap" aria-hidden="true">
         <span><span class="ai">AI + </span>Doctor</span>
@@ -309,7 +314,7 @@
         <span><span class="ai">AI + </span>Interior Designer</span>
         <span><span class="ai">AI + </span>Video Editor</span>
       </span>
-      <span class="key">will.</span>
+      will.
     </h1>
     <span class="underline" aria-hidden="true"></span>
     <p class="lead">
