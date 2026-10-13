@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raise AI Blog</title>
+    <link>https://raiseai.in/blog/</link>
+    <atom:link href="https://raiseai.in/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <description>Simple, practical guides on AI video, AI tools and using AI at work, from the Raise AI team in Kerala.</description>
+    <language>en-IN</language>
+    <lastBuildDate>Tue, 13 Oct 2026 00:00:00 +0530</lastBuildDate>
+    <item>
+      <title>How to make an AI video ad for free (step by step)</title>
+      <link>https://raiseai.in/blog/how-to-make-an-ai-video-ad-for-free/</link>
+      <guid isPermaLink="true">https://raiseai.in/blog/how-to-make-an-ai-video-ad-for-free/</guid>
+      <description>A step-by-step guide to making your first AI video ad using only free tools, from idea to finished video.</description>
+      <author>support@raiseai.in (Hadhi Muhammed P.)</author>
+      <category>AI video</category>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0530</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Meet Our Students | Raise AI Alumni & Creators</title>
-<meta name="description" content="Discover professionals who upskilled with Raise AI across video editing, design, marketing and more. Read their reviews and see their work.">
+<title>Raise AI Students | People Who Upskilled With AI</title>
+<meta name="description" content="Meet the people who finished a Raise AI course: who they are, what they do, and what they said after learning AI for their own work.">
 <link rel="canonical" href="https://raiseai.in/students/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://raiseai.in/students/">
-<meta property="og:title" content="Meet Our Students | Raise AI Alumni & Creators">
-<meta property="og:description" content="Discover professionals who upskilled with Raise AI across video editing, design, marketing and more. Read their reviews and see their work.">
-<meta property="og:image" content="https://raiseai.in/assets/images/students/student-1.webp?v=3">
+<meta property="og:title" content="Raise AI Students | People Who Upskilled With AI">
+<meta property="og:description" content="Meet the people who finished a Raise AI course: who they are, what they do, and what they said after learning AI for their own work.">
+<meta property="og:image" content="https://raiseai.in/assets/images/students/student-1.webp?v=4">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Meet Our Students | Raise AI Alumni & Creators">
-<meta name="twitter:description" content="Discover professionals who upskilled with Raise AI across video editing, design, marketing and more. Read their reviews and see their work.">
-<meta name="twitter:image" content="https://raiseai.in/assets/images/students/student-1.webp?v=3">
+<meta name="twitter:title" content="Raise AI Students | People Who Upskilled With AI">
+<meta name="twitter:description" content="Meet the people who finished a Raise AI course: who they are, what they do, and what they said after learning AI for their own work.">
+<meta name="twitter:image" content="https://raiseai.in/assets/images/students/student-1.webp?v=4">
 <link rel="icon" type="image/png" href="/assets/images/logo/logo-dark.webp?v=3">
 
 <!-- Google Fonts CDN (Inter, Manrope, Unbounded) -->
@@ -25,7 +25,7 @@
 <!-- Self-hosted Fonts Fallback & Site CSS -->
 <link rel="preload" href="/assets/fonts/manrope-800.woff2?v=3" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts/fonts.css?v=3">
-<link rel="stylesheet" href="/assets/site.css?v=3">
+<link rel="stylesheet" href="/assets/site.css?v=5">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18499038791"></script>
@@ -71,10 +71,24 @@
       "name": "Raise AI",
       "legalName": "Raise AI LLP",
       "url": "https://raiseai.in/",
-      "logo": "https://raiseai.in/assets/images/logo/logo-light.webp"
+      "logo": "https://raiseai.in/assets/images/logo/logo-light.webp?v=3",
+      "description": "Raise AI is an AI upskilling institute in Kerala, India. We teach working professionals how to use AI in their own job.",
+      "founder": { "@id": "https://raiseai.in/#hadhi" }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://raiseai.in/students/#webpage",
+      "url": "https://raiseai.in/students/",
+      "name": "Raise AI Students | People Who Upskilled With AI",
+      "description": "Meet the people who finished a Raise AI course: who they are, what they do, and what they said after learning AI for their own work.",
+      "inLanguage": "en-IN",
+      "isPartOf": { "@type": "WebSite", "url": "https://raiseai.in/" },
+      "publisher": { "@id": "https://raiseai.in/#org" },
+      "breadcrumb": { "@id": "https://raiseai.in/students/#breadcrumb" }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://raiseai.in/students/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -93,6 +107,44 @@
   ]
 }
 </script>
+
+<!-- Students page only: batch heading, card animation (section 6.3) and note sheet (6.4). Scoped; site.css is shared. -->
+<style>
+.batch-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;border-bottom:2px solid var(--charcoal);padding-bottom:16px;margin-bottom:28px}
+.batch-head h2{font-size:26px}
+.batch-head > span{font-size:14px;color:var(--ink-muted);font-weight:600}
+
+/* Start state applies only after JS adds .anim to <html>; without JS every pill is final. */
+@keyframes stushine{0%{transform:translateX(-140%) skewX(-18deg)}22%,100%{transform:translateX(340%) skewX(-18deg)}}
+.anim .stu .role{background:var(--soft-white);color:var(--ink-soft);transition:background-color .35s ease .25s,color .35s ease .25s}
+.anim .stu .role .ai{max-width:0;opacity:0;transition:max-width .4s cubic-bezier(.2,1.3,.4,1) .2s,opacity .25s ease .3s}
+.anim .stu.in .role{background:var(--volt-lime);color:var(--deep-blue)}
+.anim .stu.in .role .ai{max-width:3.2em;opacity:1}
+.stu.in .role::after{animation:stushine 5s ease-in-out .7s infinite}
+.stu.in:hover .role::after{animation:stushine 1.1s ease-in-out}
+
+/* The note: bottom sheet on phones and tablets, centred card on desktop */
+dialog#note{max-height:88vh;overflow:visible}
+dialog#note .sheet{max-height:88vh;overflow:auto;gap:0}
+dialog#note .sheet .x{width:44px;height:44px;right:14px;top:14px;color:var(--charcoal)}
+dialog#note .note-role{font-size:12px;padding:7px 12px;border-radius:99px;margin-top:8px}
+dialog#note .meta{margin-top:18px}
+dialog#note blockquote{margin-top:14px;font-size:20px;line-height:1.45}
+dialog#note .note-line{display:block;width:48px;height:6px;border-radius:6px;background:var(--volt-lime);margin-top:20px}
+@media (max-width:859px){
+  dialog#note{width:100%;max-width:100%;margin:auto 0 0;border-radius:28px 28px 0 0}
+  dialog#note .sheet{border-radius:28px 28px 0 0;padding:26px 22px calc(28px + env(safe-area-inset-bottom,0px))}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .anim .stu .role{background:var(--volt-lime);color:var(--deep-blue);transition:none}
+  .anim .stu .role .ai{max-width:3.2em;opacity:1;transition:none}
+  .stu .role::after{animation:none!important}
+  .stu,.stu .read svg{transition:none}
+  .stu:hover,.stu:focus-visible{transform:none}
+  .stu:hover .read svg{transform:none}
+}
+</style>
 </head>
 <body id="top">
 
@@ -132,78 +184,77 @@
 
 <section class="phero">
   <div class="wrap">
-    <p class="crumb"><a href="/">Home</a> / Students</p>
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Students</span></nav>
     <div class="tagrow"><span class="tag">Our students</span></div>
     <h1>Say hello to <span class="key">our students.</span></h1>
     <span class="underline"></span>
-    <p class="lead">They came with a skill. They left with AI on their side. Tap any card below to read their review and experience.</p>
+    <p class="lead">They came with a skill. They left with AI on their side. Tap a card to read their review.</p>
   </div>
 </section>
 
 <section class="sec" style="padding-top:0">
   <div class="wrap">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;border-bottom:1px solid var(--divider);padding-bottom:16px;margin-bottom:28px">
-      <h2 style="font-size:26px">AI Ad Video Production, <span class="key">Batch 1</span></h2>
-      <span style="font-size:14px;color:var(--ink-muted);font-weight:600">September 2026</span>
+    <div class="batch-head">
+      <h2>AI Ad Video Production, <span class="key">Batch 1</span></h2>
     </div>
 
     <div class="grid">
       <!-- Student 1 -->
-      <button class="stu" type="button" id="student-1" data-name="Hafeef" data-role="AI + Content Creator" data-img="/assets/images/students/student-1.webp?v=4" data-quote="Before joining Raise AI, I spent days rendering 3D scenes and sourcing stock clips. Learning Google Flow and the commercial pipeline changed everything. My creation speed tripled in the first two weeks, and I delivered my first AI-generated brand commercial for a client right after graduating.">
+      <button class="stu" type="button" id="student-1" aria-haspopup="dialog">
         <div class="photo">
-          <img src="/assets/images/students/student-1.webp?v=4" alt="Hafeef" width="300" height="300" loading="lazy">
+          <img src="/assets/images/students/student-1.webp?v=4" alt="Hafeef" width="300" height="300" loading="lazy" decoding="async">
         </div>
         <h3>Hafeef</h3>
         <span class="role"><span class="ai">AI + </span>Content Creator</span>
         <div class="bubble">
           <p>"I learned how to make AI commercials from scratch. My creation speed tripled in the first two weeks."</p>
         </div>
-        <span class="read">Read full review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="read">Read review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
 
       <!-- Student 2 -->
-      <button class="stu" type="button" id="student-2" data-name="Jasim Thangal" data-role="AI + Video Editor" data-img="/assets/images/students/student-2.webp?v=4" data-quote="The biggest hurdle with generative AI was character consistency across multiple scenes. In this masterclass, Hadhi showed us the exact workflow to lock face, attire, and lighting without drift. It completely changed how I edit and pitch campaigns to brand clients.">
+      <button class="stu" type="button" id="student-2" aria-haspopup="dialog">
         <div class="photo">
-          <img src="/assets/images/students/student-2.webp?v=4" alt="Jasim Thangal" width="300" height="300" loading="lazy">
+          <img src="/assets/images/students/student-2.webp?v=4" alt="Jasim Thangal" width="300" height="300" loading="lazy" decoding="async">
         </div>
         <h3>Jasim Thangal</h3>
         <span class="role"><span class="ai">AI + </span>Video Editor</span>
         <div class="bubble">
           <p>"Creating AI visuals and character consistency changed how I edit and pitch to brand clients."</p>
         </div>
-        <span class="read">Read full review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="read">Read review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
 
       <!-- Student 3 -->
-      <button class="stu" type="button" id="student-3" data-name="Niyas" data-role="AI + Content Creator" data-img="/assets/images/students/student-3.webp?v=4" data-quote="I used to rent cameras, set up lighting, and waste hours reshooting scenes. Now I build photorealistic cinematic sequences from my laptop. The workflow saves me at least 15 hours on every video campaign, and the quality is indistinguishable from live production.">
+      <button class="stu" type="button" id="student-3" aria-haspopup="dialog">
         <div class="photo">
-          <img src="/assets/images/students/student-3.webp?v=4" alt="Niyas" width="300" height="300" loading="lazy">
+          <img src="/assets/images/students/student-3.webp?v=4" alt="Niyas" width="300" height="300" loading="lazy" decoding="async">
         </div>
         <h3>Niyas</h3>
         <span class="role"><span class="ai">AI + </span>Content Creator</span>
         <div class="bubble">
           <p>"No studio or camera needed. The workflow saves me 15 hours on every video campaign."</p>
         </div>
-        <span class="read">Read full review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="read">Read review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
 
       <!-- Student 4 -->
-      <button class="stu stu-4" type="button" id="student-4" data-name="Ajmal Sunoon" data-role="AI + Content Creator" data-img="/assets/images/students/student-4.webp?v=4" data-quote="As a creator, creative fatigue and production costs were constant bottlenecks. Being able to generate localized commercial b-roll and cinematic reels on demand has transformed our channel output. The ROI from the AI training was immediate.">
+      <button class="stu" type="button" id="student-4" aria-haspopup="dialog">
         <div class="photo">
-          <img src="/assets/images/students/student-4.webp?v=4" alt="Ajmal Sunoon" width="300" height="300" loading="lazy">
+          <img src="/assets/images/students/student-4.webp?v=4" alt="Ajmal Sunoon" width="300" height="300" loading="lazy" decoding="async">
         </div>
         <h3>Ajmal Sunoon</h3>
         <span class="role"><span class="ai">AI + </span>Content Creator</span>
         <div class="bubble">
           <p>"We produce commercial AI video reels in-house now. The quality and reach grew right away."</p>
         </div>
-        <span class="read">Read full review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="read">Read review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
     </div>
 
     <div style="text-align:center;margin-top:40px">
       <a class="btn" href="/results/">
-        See what our students made 
+        See Student Results
         <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
       </a>
     </div>
@@ -215,7 +266,7 @@
   <div class="wrap">
     <h2>Your card can be <span class="key">here next.</span></h2>
     <a class="btn" href="/webinar/">
-      Start with the live webinar 
+      Start with the live webinar
       <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
     </a>
   </div>
@@ -224,32 +275,22 @@
 
 </main>
 
-<!-- Modal Dialog Sheet for Full Student Review -->
-<dialog id="note" aria-labelledby="note-name">
+<!-- Student note. Filled from the card that was tapped; the full note text of every student is in the card markup above. -->
+<dialog id="note" aria-labelledby="note-name" aria-describedby="note-quote">
   <div class="sheet">
-    <button class="x" aria-label="Close dialog">&times;</button>
+    <button class="x" type="button" aria-label="Close review">&times;</button>
     <div class="who">
       <div class="ph">
-        <img id="note-img" src="/assets/images/students/student-1.webp?v=3" alt="Student photo" width="64" height="64">
+        <img id="note-img" src="/assets/images/students/student-1.webp?v=4" alt="" width="64" height="64" loading="lazy" decoding="async">
       </div>
       <div>
-        <h2 id="note-name">Student Name</h2>
-        <span class="role" id="note-role" style="font-size:12px;padding:6px 12px;border-radius:99px;margin-top:6px">AI + Role</span>
+        <h2 id="note-name"></h2>
+        <span class="role note-role" id="note-role"></span>
       </div>
     </div>
-    <p class="meta">AI Ad Video Production &bull; Batch 1</p>
-    <blockquote id="note-quote">"Full review goes here."</blockquote>
-    <span class="bar"></span>
-    <div class="acts">
-      <a class="btn btn-sm" href="/results/">
-        Watch their work 
-        <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
-      </a>
-      <a class="btn btn-sm" href="/webinar/" style="background:var(--volt-lime);color:#000">
-        Join live webinar 
-        <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
-      </a>
-    </div>
+    <p class="meta">AI Ad Video Production, Batch 1</p>
+    <blockquote id="note-quote"></blockquote>
+    <span class="note-line" aria-hidden="true"></span>
   </div>
 </dialog>
 
@@ -322,45 +363,80 @@
 </div>
 
 <script>
-// Student Dialog Sheet logic
-var note = document.getElementById('note');
-var noteImg = document.getElementById('note-img');
-var noteName = document.getElementById('note-name');
-var noteRole = document.getElementById('note-role');
-var noteQuote = document.getElementById('note-quote');
+(function () {
+  var note = document.getElementById('note');
+  var cards = [].slice.call(document.querySelectorAll('.stu'));
+  if (!note || !cards.length) return;
+  var noteImg = document.getElementById('note-img');
+  var noteName = document.getElementById('note-name');
+  var noteRole = document.getElementById('note-role');
+  var noteQuote = document.getElementById('note-quote');
+  var opener = null;
 
-function openStudentModal(btn) {
-  if (!btn || !note) return;
-  noteImg.src = btn.getAttribute('data-img');
-  noteImg.alt = btn.getAttribute('data-name');
-  noteName.textContent = btn.getAttribute('data-name');
-  noteRole.textContent = btn.getAttribute('data-role');
-  noteQuote.textContent = '"' + btn.getAttribute('data-quote') + '"';
-  note.showModal();
-}
-
-document.querySelectorAll('.stu').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    openStudentModal(btn);
-  });
-});
-
-if (note) {
-  note.querySelector('.x').addEventListener('click', function() { note.close(); });
-  note.addEventListener('click', function(e) {
-    if (e.target === note) note.close();
-  });
-}
-
-// Auto open from URL hash (e.g. #student-1)
-window.addEventListener('DOMContentLoaded', function() {
-  if (window.location.hash) {
-    var target = document.querySelector(window.location.hash);
-    if (target && target.classList.contains('stu')) {
-      openStudentModal(target);
-    }
+  function setHash(id) {
+    try {
+      history.replaceState(null, '', id ? '#' + id : location.pathname + location.search);
+    } catch (e) {}
   }
-});
+
+  // Everything shown in the note is read from the card itself, so card and note never disagree.
+  function openNote(card, fromHash) {
+    if (typeof note.showModal !== 'function') return; // very old browsers: the card already shows the full review
+    var img = card.querySelector('.photo img');
+    var name = card.querySelector('h3');
+    var role = card.querySelector('.role');
+    var quote = card.querySelector('.bubble p');
+    noteImg.src = img ? img.getAttribute('src') : '';
+    noteImg.alt = img ? img.alt : '';
+    noteName.textContent = name ? name.textContent : '';
+    noteRole.textContent = role ? role.textContent : '';
+    noteQuote.textContent = quote ? quote.textContent : '';
+    opener = card;
+    if (!note.open) note.showModal();
+    if (!fromHash) setHash(card.id);
+    if (window.clarity) { try { window.clarity('event', 'student_note_open'); } catch (e) {} }
+  }
+
+  cards.forEach(function (card) {
+    card.addEventListener('click', function () { openNote(card, false); });
+  });
+
+  note.querySelector('.x').addEventListener('click', function () { note.close(); });
+  // A tap on the dark backdrop lands on the <dialog> itself, not on the sheet.
+  note.addEventListener('click', function (e) { if (e.target === note) note.close(); });
+  // Escape fires 'cancel' then 'close' natively; every way of closing ends here.
+  note.addEventListener('close', function () {
+    setHash('');
+    if (opener) { try { opener.focus({ preventScroll: true }); } catch (e) { opener.focus(); } }
+  });
+
+  // /students/#student-1 opens that student's note.
+  function fromHash() {
+    var id = decodeURIComponent((location.hash || '').slice(1));
+    var card = id ? document.getElementById(id) : null;
+    if (card && card.classList.contains('stu')) openNote(card, true);
+  }
+  fromHash();
+  window.addEventListener('hashchange', fromHash);
+
+  // Upskilled animation (section 6.3). Only runs with JS on and motion allowed;
+  // otherwise the pills stay in their final lime state.
+  if (!('IntersectionObserver' in window)) return;
+  try {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  } catch (e) {}
+  document.documentElement.classList.add('anim');
+  var io = new IntersectionObserver(function (es) {
+    var n = 0;
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      setTimeout(function () { el.classList.add('in'); }, n++ * 140);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.35 });
+  cards.forEach(function (c) { io.observe(c); });
+})();
 </script>
 
 </body>

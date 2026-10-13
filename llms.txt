@@ -7,18 +7,20 @@ Raise AI is an AI upskilling company in Kerala, India. We teach working professi
 - Homepage: Overview of Raise AI, live workshops, masterclass courses, student results, and founder story. URL: https://raiseai.in/
 - About Us: Meet the founder Hadhi Muhammed P., read the story behind Raise AI, our core beliefs, and how we teach. URL: https://raiseai.in/about/
 - Student Results: Watch AI commercial ads, product videos, and UGC reels made by students without a camera, studio, or shoot. URL: https://raiseai.in/results/
-- Reviews: Real reviews and audio testimonials from students, teachers, businesses, and institutes. URL: https://raiseai.in/reviews/
+- Students: Meet the people who finished a Raise AI course, what they do, and what they said after learning AI for their own work. URL: https://raiseai.in/students/
+- Reviews: Real voice-note reviews from people who joined the live AI webinar. URL: https://raiseai.in/reviews/
 - Blog: Simple, practical guides on AI video, AI tools, and using AI at work. URL: https://raiseai.in/blog/
 - Guide: How to make an AI video ad for free (step by step) using ChatGPT, Google Flow, Luma Dream Machine, ElevenLabs, and CapCut. URL: https://raiseai.in/blog/how-to-make-an-ai-video-ad-for-free/
+- Blog RSS feed: https://raiseai.in/blog/rss.xml
 
 ## Courses
 
 - Live AI workshop: Flow AI Fundamentals: A 2-hour online live class for beginners teaching how to make AI videos with free browser tools on Google Meet. URL: https://raiseai.in/webinar/
-- AI Ad Video Production Masterclass: A 14-day live AI bootcamp in 7 modules covering precision editing, scripting, character consistency, AI influencers, product B-roll, UGC ads, and 3D cinematic workflows. URL: https://raiseai.in/course/
+- AI Ad Video Production Masterclass: A 14-day live AI bootcamp in 7 modules covering precision editing, scripting, character consistency, AI influencers, product B-roll, UGC ads, and 3D, cartoon and cinematic styles. URL: https://raiseai.in/#courses
 
 ## Founder
 
-Hadhi Muhammed P. is an AI entrepreneur, content creator, and mentor based in Kozhikode, Kerala, India.
+Hadhi Muhammed P. is the founder of Raise AI. He is an AI entrepreneur and mentor who teaches in simple words, with real work on screen.
 
 ## Contact
 

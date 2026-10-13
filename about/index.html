@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Raise AI | Kerala's AI Upskilling Institute</title>
-<meta name="description" content="Raise AI teaches working professionals in Kerala how to use AI tools in their own job. Live online classes, real work, no theory.">
+<title>About Raise AI | AI Upskilling Institute in Kerala, India</title>
+<meta name="description" content="Raise AI started in Kerala with one idea: AI is just a tool for you. Meet the founder, read the story and see how we teach.">
 <link rel="canonical" href="https://raiseai.in/about/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://raiseai.in/about/">
-<meta property="og:title" content="About Raise AI | Kerala's AI Upskilling Institute">
-<meta property="og:description" content="Raise AI teaches working professionals in Kerala how to use AI tools in their own job. Live online classes, real work, no theory.">
+<meta property="og:title" content="About Raise AI | AI Upskilling Institute in Kerala, India">
+<meta property="og:description" content="Raise AI started in Kerala with one idea: AI is just a tool for you. Meet the founder, read the story and see how we teach.">
 <meta property="og:image" content="https://raiseai.in/assets/images/founder/hadhi-cutout-2.webp">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About Raise AI | Kerala's AI Upskilling Institute">
-<meta name="twitter:description" content="Raise AI teaches working professionals in Kerala how to use AI tools in their own job. Live online classes, real work, no theory.">
+<meta name="twitter:title" content="About Raise AI | AI Upskilling Institute in Kerala, India">
+<meta name="twitter:description" content="Raise AI started in Kerala with one idea: AI is just a tool for you. Meet the founder, read the story and see how we teach.">
 <meta name="twitter:image" content="https://raiseai.in/assets/images/founder/hadhi-cutout-2.webp">
 
 <link rel="icon" type="image/png" href="/assets/images/logo/logo-dark.webp?v=3">
@@ -72,7 +72,7 @@
       "name": "Raise AI",
       "legalName": "Raise AI LLP",
       "url": "https://raiseai.in/",
-      "logo": "https://raiseai.in/assets/images/logo/logo-light.webp",
+      "logo": "https://raiseai.in/assets/images/logo/logo-light.webp?v=3",
       "description": "Raise AI is an AI upskilling institute in Kerala, India. We teach working professionals how to use AI in their own job.",
       "foundingDate": "2026-08",
       "founder": { "@id": "https://raiseai.in/#hadhi" },
@@ -82,14 +82,25 @@
         "addressLocality": "Kozhikode",
         "addressRegion": "Kerala",
         "addressCountry": "IN"
-      }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-73560-03301",
+        "contactType": "customer support",
+        "availableLanguage": ["en", "ml"]
+      },
+      "sameAs": [
+        "https://www.instagram.com/raise_ai",
+        "https://www.youtube.com/@Raise_withAI"
+      ]
     },
     {
       "@type": "Person",
       "@id": "https://raiseai.in/#hadhi",
       "name": "Hadhi Muhammed P.",
-      "jobTitle": "Founder, Raise AI",
+      "jobTitle": "Founder & AI Mentor",
       "worksFor": { "@id": "https://raiseai.in/#org" },
+      "image": "https://raiseai.in/assets/images/founder/hadhi-cutout.webp?v=3",
       "sameAs": [
         "https://www.instagram.com/hadhi_creates_",
         "https://www.linkedin.com/in/hadhi-muhammed-p-71667b378/",
@@ -97,7 +108,19 @@
       ]
     },
     {
+      "@type": "AboutPage",
+      "@id": "https://raiseai.in/about/#webpage",
+      "url": "https://raiseai.in/about/",
+      "name": "About Raise AI | AI Upskilling Institute in Kerala, India",
+      "description": "Raise AI started in Kerala with one idea: AI is just a tool for you. Meet the founder, read the story and see how we teach.",
+      "inLanguage": "en-IN",
+      "about": { "@id": "https://raiseai.in/#org" },
+      "mainEntity": { "@id": "https://raiseai.in/#org" },
+      "breadcrumb": { "@id": "https://raiseai.in/about/#breadcrumb" }
+    },
+    {
       "@type": "BreadcrumbList",
+      "@id": "https://raiseai.in/about/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -116,6 +139,29 @@
   ]
 }
 </script>
+
+<!-- About page only: layout and race animation (scoped; site.css is shared) -->
+<style>
+.idea .bench .l1 .fill{width:12%}
+.idea .bench .l2 .fill{width:100%}
+.anim .idea .bench:not(.in) .fill{width:0}
+.anim .idea .bench:not(.in) .fast{opacity:0;transform:translateY(8px) scale(.7)}
+.anim .idea .bench.in .l1 .fill{transition:width 2.4s cubic-bezier(.25,.6,.4,1) .2s}
+.anim .idea .bench.in .l2 .fill{transition:width 1.15s cubic-bezier(.75,0,.15,1) .2s}
+.anim .idea .bench.in .fast{transition:opacity .2s ease 1.3s,transform .45s cubic-bezier(.2,1.6,.4,1) 1.3s}
+@media (prefers-reduced-motion:reduce){
+  .anim .idea .bench .fill,.anim .idea .bench .fast{transition:none!important}
+  .anim .idea .bench:not(.in) .l1 .fill{width:12%}
+  .anim .idea .bench:not(.in) .l2 .fill{width:100%}
+  .anim .idea .bench:not(.in) .fast{opacity:1;transform:none}
+}
+.story .txt{max-width:680px}
+.visit a{color:var(--raise-blue);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.visit .more{margin-top:4px}
+@media (min-width:860px){
+  .idea .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:72px;align-items:center}
+}
+</style>
 </head>
 <body id="top">
 
@@ -155,7 +201,7 @@
 
 <section class="phero">
   <div class="wrap">
-    <p class="crumb"><a href="/">Home</a> / About</p>
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">About</span></nav>
     <div class="tagrow"><span class="tag">About us</span></div>
     <h1>Everyone was worrying. So we started <span class="key">Raise AI.</span></h1>
     <span class="underline"></span>
@@ -185,15 +231,15 @@
       <h2 style="margin-top:22px">A runner is fast. A runner with an engine has an <span class="key">unfair advantage.</span></h2>
       <p class="lead">AI is the unfair multiplier. If you have real skill and creative craft, AI cuts what took 2 hours down to 6 minutes. You ship finished work, test more angles, and deliver while others are still opening software. That is the unfair advantage we teach.</p>
     </div>
-    <div class="bench in" role="img" aria-label="Two speed tracks demonstrating the unfair advantage. Your skill alone takes 2 hours. Your skill with AI finishes in 6 minutes — a massive 20x unfair advantage.">
+    <div class="bench" role="img" aria-label="Two speed tracks demonstrating the unfair advantage. Your skill alone takes 2 hours. Your skill with AI finishes in 6 minutes — a massive 20x unfair advantage.">
       <p class="bench-top">Same high quality. Massive unfair advantage.</p>
       <div class="lane l1">
         <div class="lane-h"><small>Your skill alone</small><span class="time"><b>2</b> hrs</span></div>
-        <div class="rail"><div class="fill" style="width:12%"></div></div>
+        <div class="rail"><div class="fill"></div></div>
       </div>
       <div class="lane l2">
         <div class="lane-h"><small>Your skill + AI</small><span class="time"><b>6</b> mins</span><span class="fast">20× Unfair Advantage</span></div>
-        <div class="rail"><div class="fill" style="width:100%"></div></div>
+        <div class="rail"><div class="fill"></div></div>
       </div>
     </div>
   </div>
@@ -261,7 +307,7 @@
   <div class="wrap founder">
     <div class="founder-vis">
       <div class="circle"></div>
-      <img src="/assets/images/founder/hadhi-cutout-2.webp?v=3" alt="Hadhi Muhammed P., Founder of Raise AI" width="400" height="400" loading="eager">
+      <img src="/assets/images/founder/hadhi-cutout-2.webp?v=3" alt="Hadhi Muhammed P., Founder of Raise AI" width="400" height="400" loading="lazy" decoding="async">
     </div>
     <div>
       <span class="tag">Founder</span>
@@ -311,6 +357,13 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>
         <a href="mailto:support@raiseai.in">support@raiseai.in</a>
       </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>
+        <span>Every day, 9 AM to 10 PM</span>
+      </li>
+      <li>
+        <a class="more" href="https://www.google.com/maps/search/?api=1&amp;query=KINFRA%20Advanced%20Technology%20Park%2C%20Ramanattukara%2C%20Kozhikode%2C%20Kerala" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+      </li>
     </ul>
   </div>
 </section>
@@ -320,7 +373,7 @@
   <div class="wrap">
     <h2>If you want to upskill, <span class="key">now you have Raise AI.</span></h2>
     <a class="btn" href="/webinar/">
-      Start with the live webinar 
+      Start with the live webinar
       <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
     </a>
   </div>
@@ -396,6 +449,25 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 19L4 20z"/></svg>
   </a>
 </div>
+
+<script>
+// Race graphic: runs once, the first time the card is 35% visible.
+// Without JS, or with reduced motion, the final state shows (no .anim class).
+(function () {
+  var bench = document.querySelector('.idea .bench');
+  if (!bench || !('IntersectionObserver' in window)) return;
+  try {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  } catch (e) {}
+  document.documentElement.classList.add('anim');
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) { bench.classList.add('in'); io.disconnect(); }
+    });
+  }, { threshold: 0.35 });
+  io.observe(bench);
+})();
+</script>
 
 </body>
 </html>

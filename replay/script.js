@@ -1,9 +1,12 @@
 let player;
+let playerInitialised = false;
 
-// Wait for API to load
+// Called by the YouTube IFrame API once it has loaded (must be a global function).
 function onYouTubeIframeAPIReady() {
-    if (!document.getElementById('youtube-player')) return;
-    
+    if (playerInitialised || !document.getElementById('youtube-player')) return;
+    if (!window.YT || typeof YT.Player !== 'function') return;
+    playerInitialised = true;
+
     player = new YT.Player('youtube-player', {
         height: '100%',
         width: '100%',
@@ -25,58 +28,20 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-    console.log("Player ready");
     event.target.playVideo();
 }
 
-// Full Screen Logic
-document.addEventListener('DOMContentLoaded', () => {
-    const fsBtn = document.getElementById('custom-fullscreen-btn');
-    if (fsBtn) {
-        fsBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const videoWrapper = document.getElementById('main-video-wrapper');
-            
-            if (!document.fullscreenElement) {
-                if (videoWrapper.requestFullscreen) {
-                    videoWrapper.requestFullscreen();
-                } else if (videoWrapper.webkitRequestFullscreen) { /* Safari */
-                    videoWrapper.webkitRequestFullscreen();
-                } else if (videoWrapper.msRequestFullscreen) { /* IE11 */
-                    videoWrapper.msRequestFullscreen();
-                }
-            } else {
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) { /* Safari */
-                    document.webkitExitFullscreen();
-                } else if (document.msExitFullscreen) { /* IE11 */
-                    document.msExitFullscreen();
-                }
-            }
-        });
+// Load the IFrame API only on pages that have a player, after the callback above
+// is defined (avoids the race where the API fires before the callback exists).
+if (document.getElementById('youtube-player')) {
+    if (window.YT && typeof YT.Player === 'function') {
+        onYouTubeIframeAPIReady();
+    } else {
+        var ytTag = document.createElement('script');
+        ytTag.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(ytTag);
     }
-});
-
-// SPA navigation removed as we now use standard physical links.
-// --- Mockup Video Player Logic ---
-document.addEventListener('DOMContentLoaded', () => {
-    const resultsVideo = document.getElementById('results-video');
-    const resultsPlayBtn = document.getElementById('results-play-btn');
-    const resultsCaption = document.getElementById('results-text-caption');
-
-    if (resultsVideo && resultsPlayBtn) {
-        resultsPlayBtn.addEventListener('click', () => {
-            resultsVideo.play().then(() => {
-                resultsPlayBtn.style.display = 'none';
-                if(resultsCaption) resultsCaption.style.display = 'none';
-                resultsVideo.setAttribute('controls', 'true');
-            }).catch(e => {
-                console.error("Video play failed:", e);
-            });
-        });
-    }
-});
+}
 
 // --- Countdown Timer & Reveal Logic ---
 let countdownInterval;

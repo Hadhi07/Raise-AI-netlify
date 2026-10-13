@@ -15,7 +15,7 @@
 <meta name="twitter:title" content="Raise AI | Online AI Courses, Classes and Training in Kerala">
 <meta name="twitter:description" content="Learn AI with live online AI courses from Raise AI, Kerala. AI classes, workshops and training that teach the latest AI tools for your own job.">
 <meta name="twitter:image" content="https://raiseai.in/assets/images/results/AI_advertisement_jpg.webp?v=3">
-<link rel="icon" type="image/png" href="/assets/images/logo/logo-dark.webp?v=3">
+<link rel="icon" type="image/webp" href="/assets/images/logo/logo-dark.webp?v=3">
 
 <!-- Google Fonts CDN (Inter, Manrope, Unbounded) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +26,31 @@
 <link rel="preload" href="/assets/fonts/manrope-800.woff2?v=3" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts/fonts.css?v=3">
 <link rel="stylesheet" href="/assets/site.css?v=5">
+<style>
+/* Homepage-only fixes (scoped; site.css is shared) */
+/* Hero uses .hero2 styles; the 7-word pill needs a 14s loop (site.css timings are for 6 words) */
+@media (prefers-reduced-motion:no-preference){
+.hero2 .swap > span{animation-name:swap7;animation-duration:14s}
+.hero2 .swap > span::after{animation-name:shine7;animation-duration:14s}
+.hero2 .swap > span:nth-child(7){animation-delay:12s}
+}
+.hero2 .swap .ai{color:var(--charcoal);opacity:.55}
+@keyframes swap7{0%{opacity:0;transform:translateY(40%) scale(.92)}3%,12.8%{opacity:1;transform:none}15.4%,100%{opacity:0;transform:translateY(-40%) scale(.96)}}
+@keyframes shine7{0%,4.3%{transform:translateX(-150%) skewX(-18deg)}11.1%,100%{transform:translateX(320%) skewX(-18deg)}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* Logo files have wide built-in padding: crop to the mark so it is legible at 28px */
+.hdr .logo,.ftr .logo{height:28px;width:111px;overflow:hidden;display:block}
+.hdr .logo img,.ftr .logo img{height:88px!important;width:auto!important;max-width:none;margin:-30px 0 0 -11px}
+/* Desktop shows three student cards */
+@media (min-width:860px){.grid .stu-4{display:none}}
+/* Room for the focus ring inside the scrolling video strip */
+.frames{padding-top:6px;padding-bottom:6px}
+/* Final section is black: key phrase takes the volt gradient (blue on black was low contrast) */
+.final2 .key{background-image:var(--volt-gradient)}
+.faq p a{color:var(--raise-blue);text-decoration:underline;text-underline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.stu,.stu:hover{transition:none;transform:none}}
+</style>
+<noscript><style>.gg>div,.growth .ring i{opacity:1;transform:none}.growth .ring .fg{stroke-dashoffset:0}</style></noscript>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18499038791"></script>
@@ -106,39 +131,90 @@
       ]
     },
     {
+      "@type": "WebSite",
+      "@id": "https://raiseai.in/#site",
+      "url": "https://raiseai.in/",
+      "name": "Raise AI",
+      "publisher": {
+        "@id": "https://raiseai.in/#org"
+      }
+    },
+    {
+      "@type": "Course",
+      "name": "AI Ad Video Production Masterclass",
+      "description": "A 14-day live course in 7 modules. Students learn to make AI video ads and finish one piece of work per module.",
+      "provider": {
+        "@id": "https://raiseai.in/#org"
+      },
+      "url": "https://raiseai.in/course/"
+    },
+    {
+      "@type": "Course",
+      "name": "Flow AI Fundamentals (live webinar)",
+      "description": "A 2-hour live beginner class on making AI videos with free tools.",
+      "provider": {
+        "@id": "https://raiseai.in/#org"
+      },
+      "url": "https://raiseai.in/webinar/"
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://raiseai.in/#faq",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How can working professionals in Kerala learn and use AI in their careers?",
+          "name": "What is Raise AI?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Working professionals across all industries—including doctors, lawyers, architects, designers, editors, and teachers—can learn practical AI tools through live online interactive classes. You learn how to apply generative AI, scriptwriting GPTs, and automated workflows directly to your everyday tasks without requiring coding knowledge."
+            "text": "Raise AI is an AI upskilling institute in Kerala, India. We teach working professionals in every field, from doctors and lawyers to architects and editors, how to use AI tools in their own job, in live online classes."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I create professional AI video ads without filming equipment or editing experience?",
+          "name": "Is this an online AI course?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. With modern generative tools like Google Flow, Luma Dream Machine, ElevenLabs, and CapCut, you can produce complete 30-second commercial advertisements entirely on your laptop. No camera, studio, lighting equipment, or actors are required."
+            "text": "Yes. Every AI class is online and live on Google Meet, so you can join from anywhere. You also get the recording after each class."
           }
         },
         {
           "@type": "Question",
-          "name": "What are the best free AI video generators for commercial ads in 2026?",
+          "name": "What is the best AI course for a beginner?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The leading free-tier AI video tools include Google Flow, Luma Dream Machine, Kling AI, and Hailuo. These platforms allow creators to generate photorealistic b-roll, commercial product visuals, and character animations directly in standard web browsers."
+            "text": "The best AI course is one where you build real work for your own job, not one where you only watch. If you are new, start with our 2-hour live AI workshop. It uses free tools and needs no experience."
           }
         },
         {
           "@type": "Question",
-          "name": "Will AI tools replace video editors and graphic designers in Kerala?",
+          "name": "Who are these AI classes for?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "AI will not replace skilled creators; creators who leverage AI will replace those who do not. AI handles tedious repetitive rendering, masking, and b-roll sourcing, enabling editors and designers to finish client deliverables 5x faster and charge premium rates."
+            "text": "Working professionals who already have a skill and want to learn about AI to do it faster: doctors, lawyers, architects, teachers, designers, video editors and creators. You do not need any coding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which AI tools will I learn?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We teach the latest AI tools that are useful for real work, such as Google Flow, Veo, Gemini, ChatGPT, ElevenLabs and Meta AI. We update the classes when better tools come out."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need paid tools or a powerful computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The live AI workshop uses only free tools that run in your browser. In the main course we set up the tools together with you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I run a business. Is there a course for me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every business needs AI in a different way, so we do not run a fixed course for business owners. Book a 1-to-1 session with Hadhi on WhatsApp and we plan it around your business."
           }
         },
         {
@@ -151,42 +227,26 @@
         },
         {
           "@type": "Question",
-          "name": "How can business owners in Kerala use AI to automate operations and cut costs?",
+          "name": "Do I get a certificate after the AI course?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Business owners use AI to automate customer support on WhatsApp, generate localized video commercials in minutes, and streamline internal reporting. We offer tailored 1-to-1 private strategy sessions with founder Hadhi Muhammed P. to audit your business and design custom AI workflows."
+            "text": "Yes. Students who finish the AI Ad Video Production Masterclass get a Certificate of Completion."
           }
         },
         {
           "@type": "Question",
-          "name": "What is Google Flow and how does generative AI video work?",
+          "name": "What is the refund policy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Google Flow is an advanced generative video creation workflow that transforms descriptive text prompts and reference images into fluid cinematic video scenes. It empowers creators to simulate camera movement, lighting, and product physics effortlessly."
+            "text": "If the class does not match what we described, you can ask for a refund within 3 days of paying. Approved refunds reach you in 5 to 7 working days. Read the full refund policy."
           }
         },
         {
           "@type": "Question",
-          "name": "What certificate and portfolio do students finish with?",
+          "name": "How do I contact Raise AI?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Students who complete the AI Ad Video Production Masterclass finish with 7 production-grade commercial portfolio pieces—including swapped hero assets, UGC ads, and character consistency reels—along with a verified Certificate of Completion."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need a high-end computer or paid software to start learning?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. The live beginner workshop and courses operate entirely on cloud-based browser tools. A standard laptop with a stable internet connection is all you need."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I choose between the 2-hour AI workshop and the 14-day masterclass?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If you are new to AI video tools, begin with the 2-hour Live AI Workshop to create your first completed video using free tools. If you are an active creator or editor seeking client-grade commercial production skills, join the 14-day masterclass."
+            "text": "WhatsApp is fastest: +91 73560 03301, every day from 9 AM to 10 PM. You can also email support@raiseai.in."
           }
         }
       ]
@@ -199,8 +259,8 @@
 
 <header class="hdr">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Raise AI Homepage">
-      <img src="/assets/images/logo/logo-light.webp?v=3" alt="Raise AI" width="112" height="28" style="height:28px;width:auto">
+    <a class="logo" href="#top" aria-label="Raise AI home">
+      <img src="/assets/images/logo/logo-light.webp?v=3" alt="Raise AI" width="132" height="88">
     </a>
     <nav class="nav" aria-label="Main navigation">
       <a href="#courses">Courses</a>
@@ -211,10 +271,10 @@
       <a href="/about/">About</a>
     </nav>
     <div class="hdr-r">
-      <a class="hdr-cta" href="https://wa.me/917356003301?text=Hi%2C%20I%20have%20a%20question%20about%20Raise%20AI.">Chat with us</a>
+      <a class="hdr-cta" href="https://wa.me/917356003301?text=Hi%2C%20I%20am%20on%20the%20Raise%20AI%20website%20and%20I%20have%20a%20question." data-cta="wa_header">Chat with us</a>
       <details class="menu">
-        <summary aria-label="Open menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <summary aria-label="Menu">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </summary>
         <nav aria-label="Mobile navigation">
           <a href="#courses">Courses</a>
@@ -232,14 +292,15 @@
 <main>
 
 <!-- 1. HERO -->
-<section class="hero">
+<section class="hero hero2">
   <div class="wrap">
     <div class="tagrow">
       <span class="tag">AI upskilling institute</span>
     </div>
     <h1>
-      Every profession becomes
-      <span class="swap" id="heroSwap" aria-label="changing role">
+      AI won't take <span style="white-space:nowrap">your job.</span><br>
+      <span class="sr-only">A doctor, architect, lawyer, teacher, graphic designer, interior designer or video editor who uses AI will.</span>
+      <span class="swap" id="heroSwap" aria-hidden="true">
         <span><span class="ai">AI + </span>Doctor</span>
         <span><span class="ai">AI + </span>Architect</span>
         <span><span class="ai">AI + </span>Lawyer</span>
@@ -248,9 +309,9 @@
         <span><span class="ai">AI + </span>Interior Designer</span>
         <span><span class="ai">AI + </span>Video Editor</span>
       </span>
-      with <span class="key">Raise AI.</span>
+      <span class="key">will.</span>
     </h1>
-    <span class="underline"></span>
+    <span class="underline" aria-hidden="true"></span>
     <p class="lead">
       We teach working professionals how to use AI in their own job. Live online classes, real work, no theory.
     </p>
@@ -316,8 +377,8 @@
           <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></i>
         </div>
         <div>
-          <p class="gnum"><span class="n" data-to="2500" data-pre="" data-suf="+">2,500+</span></p>
-          <p class="glb">hours saved by professionals <b>using AI in daily work</b></p>
+          <p class="gnum"><span class="n" data-to="500" data-pre="" data-suf="+">500+</span></p>
+          <p class="glb">attendees <b>joined our live webinar classes</b></p>
         </div>
       </div>
       <div class="gt hl">
@@ -354,7 +415,7 @@
     <div class="grid">
       <a class="stu" href="/students/#student-1">
         <div class="photo">
-          <img src="/assets/images/students/student-1.webp?v=4" alt="Hafeef" width="300" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+          <img src="/assets/images/students/student-1.webp?v=4" alt="Hafeef" width="300" height="300" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
         </div>
         <h3>Hafeef</h3>
         <span class="role"><span class="ai">AI + </span>Content Creator</span>
@@ -366,7 +427,7 @@
 
       <a class="stu" href="/students/#student-2">
         <div class="photo">
-          <img src="/assets/images/students/student-2.webp?v=4" alt="Jasim Thangal" width="300" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+          <img src="/assets/images/students/student-2.webp?v=4" alt="Jasim Thangal" width="300" height="300" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
         </div>
         <h3>Jasim Thangal</h3>
         <span class="role"><span class="ai">AI + </span>Video Editor</span>
@@ -378,7 +439,7 @@
 
       <a class="stu" href="/students/#student-3">
         <div class="photo">
-          <img src="/assets/images/students/student-3.webp?v=4" alt="Niyas" width="300" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+          <img src="/assets/images/students/student-3.webp?v=4" alt="Niyas" width="300" height="300" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
         </div>
         <h3>Niyas</h3>
         <span class="role"><span class="ai">AI + </span>Content Creator</span>
@@ -390,7 +451,7 @@
 
       <a class="stu stu-4" href="/students/#student-4">
         <div class="photo">
-          <img src="/assets/images/students/student-4.webp?v=4" alt="Ajmal Sunoon" width="300" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+          <img src="/assets/images/students/student-4.webp?v=4" alt="Ajmal Sunoon" width="300" height="300" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">
         </div>
         <h3>Ajmal Sunoon</h3>
         <span class="role"><span class="ai">AI + </span>Content Creator</span>
@@ -421,7 +482,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Book your time on WhatsApp</li>
         </ul>
         <div class="foot">
-          <a class="btn btn-sm" href="https://wa.me/917356003301?text=Hi%20Hadhi%2C%20I%20run%20a%20business%20and%20want%20to%20book%20a%201-to-1%20AI%20session.">
+          <a class="btn btn-sm" href="https://wa.me/917356003301?text=Hi%2C%20I%20want%20to%20book%20a%201-to-1%20AI%20session%20for%20my%20business." data-cta="wa_business">
             Book a 1-to-1 session <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
           </a>
         </div>
@@ -437,7 +498,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Full recording sent to you</li>
         </ul>
         <div class="foot">
-          <a class="btn btn-sm" href="/webinar/">
+          <a class="btn btn-sm" href="/webinar/" data-cta="webinar_card">
             Register for live workshop <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
           </a>
         </div>
@@ -461,7 +522,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Lifetime access to recordings</li>
         </ul>
         <div class="foot">
-          <a class="btn btn-sm" href="/webinar/">
+          <a class="btn btn-sm" href="/webinar/" data-cta="webinar_card_masterclass">
             Start with the live webinar <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
           </a>
         </div>
@@ -477,34 +538,32 @@
     <h2 style="margin-top:22px">Made with the tools <span class="key">we teach.</span></h2>
     <p class="lead">No camera, no studio, no shoot. Tap any video to play it directly.</p>
     <div class="frames">
-      <div class="frame" data-yt-id="Mf1ytBNRGd0" title="Play AI product advertisement">
-        <img src="/assets/images/results/AI_advertisement_jpg.webp?v=3" alt="AI product advertisement" width="250" height="444" loading="lazy">
+      <div class="frame" data-yt-id="Mf1ytBNRGd0" data-cta="video_play" role="button" tabindex="0" aria-label="Play video: AI product advertisement">
+        <img src="/assets/images/results/AI_advertisement_jpg.webp?v=3" alt="AI product advertisement" width="250" height="444" loading="lazy" decoding="async">
         <span class="play" aria-hidden="true"><svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="#000"/></svg></span>
       </div>
-      <div class="frame" data-yt-id="8HlXIa_cCeE" title="Play Sunscreen commercial B-roll">
-        <img src="/assets/images/results/Create_sunscreen_commercial_B-roll_1080p_202609021711_erasio_jpg.webp?v=3" alt="Sunscreen commercial" width="250" height="444" loading="lazy">
+      <div class="frame" data-yt-id="8HlXIa_cCeE" data-cta="video_play" role="button" tabindex="0" aria-label="Play video: Sunscreen commercial B-roll">
+        <img src="/assets/images/results/Create_sunscreen_commercial_B-roll_1080p_202609021711_erasio_jpg.webp?v=3" alt="Sunscreen commercial" width="250" height="444" loading="lazy" decoding="async">
         <span class="play" aria-hidden="true"><svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="#000"/></svg></span>
       </div>
-      <div class="frame" data-yt-id="5cDdefr_0M0" title="Play Character wearing clothes">
-        <img src="/assets/images/results/Character_wearing_clothes_discus_202608302136_jpg.webp?v=3" alt="Character consistency" width="250" height="444" loading="lazy">
+      <div class="frame" data-yt-id="5cDdefr_0M0" data-cta="video_play" role="button" tabindex="0" aria-label="Play video: Character wearing clothes">
+        <img src="/assets/images/results/Character_wearing_clothes_discus_202608302136_jpg.webp?v=3" alt="Character consistency" width="250" height="444" loading="lazy" decoding="async">
         <span class="play" aria-hidden="true"><svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="#000"/></svg></span>
       </div>
-      <div class="frame" data-yt-id="s-s2sYs8GnY" title="Play Asset swap on real footage">
-        <img src="/assets/images/results/Video_Project_editing_in_real_jpg.webp?v=3" alt="Edit on real footage" width="250" height="444" loading="lazy">
+      <div class="frame" data-yt-id="s-s2sYs8GnY" data-cta="video_play" role="button" tabindex="0" aria-label="Play video: Asset swap on real footage">
+        <img src="/assets/images/results/Video_Project_editing_in_real_jpg.webp?v=3" alt="Edit on real footage" width="250" height="444" loading="lazy" decoding="async">
         <span class="play" aria-hidden="true"><svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="#000"/></svg></span>
       </div>
-      <div class="frame" data-yt-id="uSGf2PIoPF0" title="Play AI influencer talking-head ad">
-        <img src="/assets/images/results/Video_Project_5_jpg.webp?v=3" alt="AI influencer ad" width="250" height="444" loading="lazy">
+      <div class="frame" data-yt-id="uSGf2PIoPF0" data-cta="video_play" role="button" tabindex="0" aria-label="Play video: AI influencer talking-head ad">
+        <img src="/assets/images/results/Video_Project_5_jpg.webp?v=3" alt="AI influencer ad" width="250" height="444" loading="lazy" decoding="async">
         <span class="play" aria-hidden="true"><svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="#000"/></svg></span>
       </div>
-      <div class="frame" data-yt-id="l48YJvzv4jA" title="Play 30-second product film">
-        <img src="/assets/images/results/Creating_sunscreen_product_comme_202609020459_jpg.webp?v=3" alt="Product film" width="250" height="444" loading="lazy">
+      <div class="frame" data-yt-id="l48YJvzv4jA" data-cta="video_play" role="button" tabindex="0" aria-label="Play video: Sunscreen product commercial">
+        <img src="/assets/images/results/Creating_sunscreen_product_comme_202609020459_jpg.webp?v=3" alt="Sunscreen product commercial" width="250" height="444" loading="lazy" decoding="async">
         <span class="play" aria-hidden="true"><svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="#000"/></svg></span>
       </div>
     </div>
-    <p style="margin-top:28px">
-      <a class="more" href="/results/">See all student results &rarr;</a>
-    </p>
+    <a class="more" href="/results/">See all student results &rarr;</a>
   </div>
 </section>
 
@@ -515,44 +574,48 @@
     <h2 style="margin-top:22px">Everything you need to know about <span class="key">learning AI.</span></h2>
     <div class="faq">
       <details open>
-        <summary>How can working professionals in Kerala learn and use AI in their careers?</summary>
-        <p>Working professionals across diverse fields—including doctors, lawyers, architects, designers, editors, and educators—can learn practical AI applications through live online interactive classes. You learn how to use generative AI, custom scriptwriting GPTs, and automated workflows directly in your everyday tasks without requiring coding knowledge or prior technical backgrounds.</p>
+        <summary>What is Raise AI?</summary>
+        <p>Raise AI is an AI upskilling institute in Kerala, India. We teach working professionals in every field, from doctors and lawyers to architects and editors, how to use AI tools in their own job, in live online classes.</p>
       </details>
       <details>
-        <summary>Can I create professional AI video ads without filming equipment or editing experience?</summary>
-        <p>Yes. With modern generative tools like Google Flow, Luma Dream Machine, ElevenLabs, and CapCut, you can produce complete 30-second commercial advertisements entirely on your laptop. No camera, studio, lighting equipment, or actors are required to get started.</p>
+        <summary>Is this an online AI course?</summary>
+        <p>Yes. Every AI class is online and live on Google Meet, so you can join from anywhere. You also get the recording after each class.</p>
       </details>
       <details>
-        <summary>What are the best free AI video generators for commercial ads in 2026?</summary>
-        <p>The leading free-tier AI video tools include Google Flow, Luma Dream Machine, Kling AI, and Hailuo. These platforms allow creators to generate photorealistic b-roll, commercial product visuals, and character animations directly in standard web browsers.</p>
+        <summary>What is the best AI course for a beginner?</summary>
+        <p>The best AI course is one where you build real work for your own job, not one where you only watch. If you are new, start with our 2-hour live AI workshop. It uses free tools and needs no experience.</p>
       </details>
       <details>
-        <summary>Will AI tools replace video editors and graphic designers in Kerala?</summary>
-        <p>AI will not replace skilled creators; creators who leverage AI will replace those who do not. AI handles tedious repetitive rendering, masking, and b-roll sourcing, enabling editors and designers to finish client deliverables 5x faster and charge premium rates.</p>
+        <summary>Who are these AI classes for?</summary>
+        <p>Working professionals who already have a skill and want to learn about AI to do it faster: doctors, lawyers, architects, teachers, designers, video editors and creators. You do not need any coding.</p>
+      </details>
+      <details>
+        <summary>Which AI tools will I learn?</summary>
+        <p>We teach the latest AI tools that are useful for real work, such as Google Flow, Veo, Gemini, ChatGPT, ElevenLabs and Meta AI. We update the classes when better tools come out.</p>
+      </details>
+      <details>
+        <summary>Do I need paid tools or a powerful computer?</summary>
+        <p>No. The live AI workshop uses only free tools that run in your browser. In the main course we set up the tools together with you.</p>
+      </details>
+      <details>
+        <summary>I run a business. Is there a course for me?</summary>
+        <p>Every business needs AI in a different way, so we do not run a fixed course for business owners. Book a 1-to-1 session with Hadhi on WhatsApp and we plan it around your business.</p>
       </details>
       <details>
         <summary>Are the live AI classes conducted in Malayalam or English?</summary>
         <p>Classes are conducted live in simple Malayalam with standard industry English technical terms. This ensures that every concept is completely clear and comfortable for learners across Kerala.</p>
       </details>
       <details>
-        <summary>How can business owners in Kerala use AI to automate operations and cut costs?</summary>
-        <p>Business owners use AI to automate customer support on WhatsApp, generate localized video commercials in minutes, and streamline internal reporting. We offer tailored 1-to-1 private strategy sessions with founder Hadhi Muhammed P. to audit your business and design custom AI workflows.</p>
+        <summary>Do I get a certificate after the AI course?</summary>
+        <p>Yes. Students who finish the AI Ad Video Production Masterclass get a Certificate of Completion.</p>
       </details>
       <details>
-        <summary>What is Google Flow and how does generative AI video work?</summary>
-        <p>Google Flow is an advanced generative video creation workflow that transforms descriptive text prompts and reference images into fluid cinematic video scenes. It empowers creators to simulate camera movement, lighting, and product physics effortlessly.</p>
+        <summary>What is the refund policy?</summary>
+        <p>If the class does not match what we described, you can ask for a refund within 3 days of paying. Approved refunds reach you in 5 to 7 working days. Read the full <a href="/refund/">refund policy</a>.</p>
       </details>
       <details>
-        <summary>What certificate and portfolio do students finish with?</summary>
-        <p>Students who complete the AI Ad Video Production Masterclass finish with 7 production-grade commercial portfolio pieces—including swapped hero assets, UGC ads, and character consistency reels—along with a verified Certificate of Completion.</p>
-      </details>
-      <details>
-        <summary>Do I need a high-end computer or paid software to start learning?</summary>
-        <p>No. The live beginner workshop and courses operate entirely on cloud-based browser tools. A standard laptop with a stable internet connection is all you need.</p>
-      </details>
-      <details>
-        <summary>How do I choose between the 2-hour AI workshop and the 14-day masterclass?</summary>
-        <p>If you are new to AI video tools, begin with the 2-hour Live AI Workshop to create your first completed video using free tools. If you are an active creator or editor seeking client-grade commercial production skills, join the 14-day masterclass.</p>
+        <summary>How do I contact Raise AI?</summary>
+        <p>WhatsApp is fastest: <a href="https://wa.me/917356003301?text=Hi%2C%20I%20am%20on%20the%20Raise%20AI%20website%20and%20I%20have%20a%20question." data-cta="wa_faq">+91 73560 03301</a>, every day from 9 AM to 10 PM. You can also email <a href="mailto:support@raiseai.in">support@raiseai.in</a>.</p>
       </details>
     </div>
   </div>
@@ -572,7 +635,7 @@
     </div>
     <div class="pic">
       <div class="circle"></div>
-      <img class="me" src="/assets/images/founder/hadhi-cutout.webp?v=3" alt="Hadhi Muhammed P., Founder of Raise AI" width="320" height="430" loading="eager">
+      <img class="me" src="/assets/images/founder/hadhi-cutout.webp?v=3" alt="Hadhi Muhammed P., Founder of Raise AI" width="320" height="430" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -581,8 +644,8 @@
 
 <footer class="ftr">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Raise AI Homepage">
-      <img src="/assets/images/logo/logo-dark.webp?v=3" alt="Raise AI" width="112" height="28" style="height:28px;width:auto">
+    <a class="logo" href="#top" aria-label="Raise AI home">
+      <img src="/assets/images/logo/logo-dark.webp?v=3" alt="Raise AI" width="132" height="88" loading="lazy" decoding="async">
     </a>
     <div class="ftr-grid">
       <div>
@@ -592,7 +655,7 @@
       <div>
         <h4>Learn</h4>
         <ul>
-          <li><a href="/webinar/">Live AI workshop</a></li>
+          <li><a href="/webinar/" data-cta="webinar_footer">Live AI workshop</a></li>
           <li><a href="#courses">AI Ad Video Production course</a></li>
           <li><a href="/results/">Student Results</a></li>
           <li><a href="/blog/">Blog</a></li>
@@ -610,7 +673,7 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="https://wa.me/917356003301?text=Hi%2C%20I%20want%20to%20connect%20with%20Raise%20AI.">WhatsApp +91 73560 03301</a></li>
+          <li><a href="https://wa.me/917356003301?text=Hi%2C%20I%20am%20on%20the%20Raise%20AI%20website%20and%20I%20have%20a%20question." data-cta="wa_footer">WhatsApp +91 73560 03301</a></li>
           <li><a href="mailto:support@raiseai.in">support@raiseai.in</a></li>
           <li>Every day, 9 AM to 10 PM</li>
         </ul>
@@ -638,12 +701,12 @@
 
 <!-- Sticky mobile bar -->
 <div class="bar" id="mobileBar">
-  <a class="btn" href="/webinar/">
+  <a class="btn" href="/webinar/" data-cta="webinar_sticky">
     Register for live workshop
     <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
   </a>
-  <a class="wa" href="https://wa.me/917356003301?text=Hi%2C%20I%20have%20a%20question%20about%20Raise%20AI." aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 19L4 20z"/></svg>
+  <a class="wa" href="https://wa.me/917356003301?text=Hi%2C%20I%20am%20on%20the%20Raise%20AI%20website%20and%20I%20have%20a%20question." data-cta="wa_sticky" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 19L4 20z"/></svg>
   </a>
 </div>
 
@@ -663,9 +726,12 @@
 (function() {
   var s = document.querySelector('.growth');
   if (!s) return;
+  var reduce = false;
+  try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
   function fmt(n) { return n.toLocaleString('en-IN'); }
   function go() {
     s.querySelectorAll('.gt').forEach(function(card, idx) {
+      if (reduce) { card.style.opacity = '1'; card.style.transform = 'none'; return; }
       setTimeout(function() {
         card.style.opacity = '1';
         card.style.transform = 'none';
@@ -701,35 +767,91 @@
       }, idx * 160);
     });
   }
-  if (!('IntersectionObserver' in window)) { go(); return; }
+  if (reduce || !('IntersectionObserver' in window)) { go(); return; }
   var io = new IntersectionObserver(function(es) {
     if (es[0].isIntersecting) { go(); io.disconnect(); }
   }, { threshold: 0.25 });
   io.observe(s);
 })();
 
-// Interactive Video Tap-to-Play
-document.querySelectorAll('.frame[data-yt-id]').forEach(function(frame) {
-  frame.addEventListener('click', function() {
-    var ytId = frame.getAttribute('data-yt-id');
-    if (!ytId) return;
-    
-    // Stop other videos
-    document.querySelectorAll('.frame iframe').forEach(function(iframe) {
-      iframe.remove();
+// Tap-to-play YouTube (iframe only inserted after a tap or Enter/Space)
+(function() {
+  var frames = document.querySelectorAll('.frame[data-yt-id]');
+  function stopAll() {
+    frames.forEach(function(f) {
+      var old = f.querySelector('iframe');
+      if (old) {
+        old.remove();
+        f.setAttribute('role', 'button');
+        f.setAttribute('tabindex', '0');
+        if (f.dataset.label) f.setAttribute('aria-label', f.dataset.label);
+      }
     });
-    
+  }
+  function play(frame) {
+    var ytId = frame.getAttribute('data-yt-id');
+    if (!ytId || frame.querySelector('iframe')) return;
+    stopAll();
+    var label = frame.getAttribute('aria-label') || 'Student video';
+    frame.dataset.label = label;
     var iframe = document.createElement('iframe');
-    iframe.src = 'https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1&modestbranding=1&rel=0';
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(ytId) + '?autoplay=1&playsinline=1&rel=0';
+    iframe.title = label.replace(/^Play video:\s*/, '');
     iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
     iframe.setAttribute('allowfullscreen', '');
+    frame.removeAttribute('role');
+    frame.removeAttribute('tabindex');
+    frame.removeAttribute('aria-label');
     frame.appendChild(iframe);
-    
-    if (window.clarity) {
-      window.clarity('event', 'video_play', { ytId: ytId });
-    }
+    try { iframe.focus(); } catch (e) {}
+    try { if (window.clarity) window.clarity('event', 'video_play'); } catch (e) {}
+  }
+  frames.forEach(function(frame) {
+    frame.addEventListener('click', function() { play(frame); });
+    frame.addEventListener('keydown', function(e) {
+      if (e.target !== frame) return;
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); play(frame); }
+    });
   });
-});
+})();
+
+// Pass utm_* / fbclid on to /webinar/ and /course/ links, and track data-cta clicks
+(function() {
+  try {
+    var src = new URLSearchParams(window.location.search);
+    var keep = [];
+    src.forEach(function(v, k) {
+      if (/^utm_/i.test(k) || k === 'fbclid') keep.push(encodeURIComponent(k) + '=' + encodeURIComponent(v));
+    });
+    if (keep.length) {
+      var qs = keep.join('&');
+      document.querySelectorAll('a[href^="/webinar/"], a[href^="/course/"]').forEach(function(a) {
+        var h = a.getAttribute('href'), hash = '', i = h.indexOf('#');
+        if (i > -1) { hash = h.slice(i); h = h.slice(0, i); }
+        a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + qs + hash);
+      });
+    }
+  } catch (e) {}
+
+  document.addEventListener('click', function(e) {
+    var el = e.target && e.target.closest ? e.target.closest('a[data-cta]') : null;
+    if (!el) return;
+    var cta = el.getAttribute('data-cta') || '';
+    var placement = cta.replace(/^[a-z]+_/, '');
+    try {
+      if (cta.indexOf('webinar_') === 0) {
+        if (window.fbq) window.fbq('trackCustom', 'HomeToWebinar', { placement: placement });
+        if (window.clarity) window.clarity('event', 'home_to_webinar');
+      } else if (cta.indexOf('course_') === 0) {
+        if (window.fbq) window.fbq('trackCustom', 'HomeToCourse', { placement: placement });
+        if (window.clarity) window.clarity('event', 'home_to_course');
+      } else if (cta.indexOf('wa_') === 0) {
+        if (window.fbq) window.fbq('track', 'Contact', { placement: placement });
+        if (window.clarity) window.clarity('event', 'whatsapp_click');
+      }
+    } catch (err) {}
+  });
+})();
 </script>
 
 </body>

@@ -6,9 +6,15 @@ package-lock.json
 wrangler.jsonc
 .git
 .gitignore
+.gitattributes
 *.md
 **/*.md
 handoff
 handoff/*
 handoff/**
 README.md
+build
+build/*
+build/**
+generate-courses.js
+light-theme.js

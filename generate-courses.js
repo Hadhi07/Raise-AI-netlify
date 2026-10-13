@@ -1,3 +1,12 @@
+// OBSOLETE one-off scaffold. course/day-2.html … day-7.html were hand-edited after it ran
+// (real lesson titles, video IDs, descriptions, resource links, noindex, logo, footer).
+// Re-running it would overwrite those pages with stale placeholder content (and create
+// day-8 … day-10). It refuses to run unless --force is passed.
+if (!process.argv.includes('--force')) {
+    console.error('generate-courses.js is obsolete and would overwrite hand-edited course pages. Pass --force to run anyway.');
+    process.exit(1);
+}
+
 ﻿
 const fs = require("fs");
 const template = fs.readFileSync("course/day-1.html", "utf8");
