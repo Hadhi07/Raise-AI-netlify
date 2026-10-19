@@ -10,7 +10,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('youtube-player', {
         height: '100%',
         width: '100%',
-        videoId: 'bbmL2iUrl5o', // Actual Video ID
+        videoId: 'fB05c5ygbFM', // Actual Video ID
         playerVars: {
             'autoplay': 1,
             'controls': 1, // Enable controls for zooming
