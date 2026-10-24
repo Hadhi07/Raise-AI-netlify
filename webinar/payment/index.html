@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html class="dark" lang="en">
+<!doctype html>
+<html lang="en-IN">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18499038791"></script>
@@ -7,136 +7,87 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-18499038791');
 </script>
 <meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Complete Registration | Raise AI Masterclass</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="icon" type="image/webp" href="/assets/images/logo/logo-dark.webp?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/fonts/fonts.css?v=3">
+<link rel="stylesheet" href="/assets/site.css?v=7">
 <style>
-* {
-    box-sizing: border-box;
-}
-body {
-    overflow-x: hidden;
-    width: 100%;
-}
-.material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    display: inline-block;
-    vertical-align: middle;
-}
-.neon-text {
-    color: #a3fd00;
-}
-.timer-red {
-    color: #ff2a40;
-    text-shadow: 0 0 10px rgba(255, 42, 64, 0.5);
-}
-.timer-red-bg {
-    background-color: #1a0507;
-    border-color: rgba(255, 42, 64, 0.4);
-    color: #ff2a40;
-}
-/* Sparky shimmer effect on CTA buttons every 2 seconds */
-@keyframes sparkShimmer {
-    0% {
-        transform: translateX(-150%) skewX(-20deg);
-        opacity: 0;
-    }
-    15% {
-        opacity: 0.8;
-    }
-    30% {
-        transform: translateX(250%) skewX(-20deg);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(250%) skewX(-20deg);
-        opacity: 0;
-    }
-}
-@keyframes pulseButton {
-    0%, 100% {
-        box-shadow: 0 0 20px rgba(163, 253, 0, 0.4);
-        transform: scale(1);
-    }
-    50% {
-        box-shadow: 0 0 35px rgba(163, 253, 0, 0.8);
-        transform: scale(1.02);
-    }
-}
-.shimmer-badge {
-    position: relative;
-    overflow: hidden;
-}
-.shimmer-badge::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.9), transparent);
-    transform: skewX(-20deg);
-    animation: badgeSweep 1s infinite;
-}
-@keyframes badgeSweep {
-    0% { left: -100%; }
-    50%, 100% { left: 200%; }
-}
+/* Payment page only (scoped; site.css is shared) */
+body{background:var(--soft-white);padding-bottom:0}
+.p-wrap{max-width:560px;margin:0 auto;padding:0 16px 40px}
+.hdr .wrap{max-width:560px;padding:0 16px}
+.hdr .logo{height:28px;width:111px;overflow:hidden;display:block}
+.hdr .logo img{height:88px!important;width:auto!important;max-width:none;margin:-30px 0 0 -11px}
+.p-back{width:40px;height:40px;border-radius:50%;border:1px solid var(--divider);display:grid;place-items:center;background:#fff;margin-right:10px}
+.p-back svg{width:18px;height:18px}
+.p-l{display:flex;align-items:center}
+.p-sec{font:600 12px/1 var(--body);color:var(--ink-soft);display:inline-flex;gap:6px;align-items:center;background:var(--soft-white);border:1px solid var(--divider);border-radius:99px;padding:8px 12px}
+.p-sec svg{width:14px;height:14px}
 
-.neon-btn {
-    position: relative;
-    background-color: #a3fd00;
-    color: #000000;
-    font-weight: 800;
-    overflow: hidden;
-    animation: pulseButton 2s infinite ease-in-out;
-    transition: all 0.2s ease;
-}
-.neon-btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.7) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    animation: sparkShimmer 2s infinite linear;
-    pointer-events: none;
-}
-.neon-btn:hover {
-    background-color: #b5ff1a;
-    box-shadow: 0 0 35px rgba(163, 253, 0, 0.8);
-    transform: translateY(-2px);
-}
-.scan-line {
-    animation: scan 2.8s ease-in-out infinite;
-}
-@keyframes scan {
-    0%, 100% { top: 0%; opacity: 0; }
-    15% { opacity: 1; }
-    85% { opacity: 1; }
-    100% { top: 100%; opacity: 0; }
-}
+/* Order card (white) */
+.p-card{background:#fff;border:1px solid var(--divider);border-radius:24px;padding:20px;margin-top:20px}
+.p-kick{font:600 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--raise-blue)}
+.p-card h1{font-size:23px;line-height:1.2;margin-top:8px}
+.p-meta{list-style:none;padding:0;display:grid;gap:8px;margin-top:14px;font-size:14px;color:var(--ink-soft)}
+.p-meta li{display:flex;gap:10px;align-items:center}
+.p-meta li b{color:var(--charcoal)}
+.p-meta svg{width:17px;height:17px;flex:none}
+.p-price{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:16px;padding-top:16px;border-top:1px dashed var(--divider)}
+.p-price small{display:block;font:600 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--raise-blue);margin-bottom:8px}
+.p-amt{font:800 40px/1 var(--display);letter-spacing:-.03em}
+.p-amt s{font-size:18px;font-weight:600;color:var(--ink-muted);margin-right:6px;text-decoration-thickness:2px}
+.p-timer{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--body);background:#000;color:#fff;border-radius:99px;padding:8px 8px 8px 13px}
+.p-timer b{font:500 13px/1 var(--pill);color:#000;background:var(--volt-lime);border-radius:99px;padding:6px 9px;font-variant-numeric:tabular-nums}
+
+/* Pay card (volt lime, like the /webinar/ hero ticket) */
+.p-pay{background:var(--volt-lime);color:#000;border-radius:28px;padding:20px;margin-top:12px;box-shadow:0 30px 70px -32px rgba(130,170,0,.9)}
+.p-pay-hd{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.p-pay h2{font-size:21px;display:flex;align-items:center;gap:10px}
+.p-pay h2 svg{width:20px;height:20px}
+.p-due{font:800 22px/1 var(--display);letter-spacing:-.02em;background:#000;color:var(--volt-lime);border-radius:99px;padding:9px 15px}
+/* Razorpay panel (Razorpay draws the button itself) with the sliding shine */
+.p-rzp{position:relative;overflow:hidden;margin-top:14px;background:#fff;border-radius:18px;padding:16px;display:flex;justify-content:center;min-height:80px;align-items:center;box-shadow:0 14px 30px -14px rgba(21,84,255,.6)}
+.p-rzp::after{content:"";position:absolute;top:-10%;bottom:-10%;left:0;width:55%;background:linear-gradient(100deg,transparent 0%,rgba(21,84,255,.08) 35%,rgba(209,254,23,.55) 50%,rgba(21,84,255,.08) 65%,transparent 100%);transform:translateX(-160%) skewX(-18deg);pointer-events:none;z-index:2}
+@media (prefers-reduced-motion:no-preference){.p-rzp::after{animation:boxshine 3.6s ease-in-out 1.2s infinite}}
+@keyframes boxshine{0%{transform:translateX(-160%) skewX(-18deg)}40%,100%{transform:translateX(260%) skewX(-18deg)}}
+/* Accepted methods: plain text, must not look tappable */
+.p-ways{display:flex;flex-wrap:wrap;align-items:center;gap:4px 0;margin-top:14px;font:500 13px/1.4 var(--body);color:#17191C}
+.p-ways small{font:600 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:rgba(0,0,0,.55);margin-right:8px}
+.p-ways span{display:inline-flex;align-items:center}
+.p-ways span:not(:last-child)::after{content:"·";margin:0 7px;color:rgba(0,0,0,.4)}
+.p-safe{background:#000;color:#fff;border-radius:18px;padding:14px 16px;margin-top:14px;display:grid;gap:10px}
+.p-safe > span{display:flex;gap:10px;align-items:center;font-size:13.5px;line-height:1.35;color:var(--d-ink-soft)}
+.p-safe b{color:#fff;font-weight:600}
+.p-safe svg{width:18px;height:18px;flex:none}
+.p-safe a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+/* After you pay: 3 short steps (no button; the WhatsApp button is on /thankyou/) */
+.p-after{margin-top:12px}
+.p-after h2{font-size:19px}
+.p-after ol{list-style:none;padding:0;display:grid;gap:12px;margin-top:14px;counter-reset:a}
+.p-after li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink-soft)}
+.p-after li::before{counter-increment:a;content:counter(a);flex:none;width:26px;height:26px;border-radius:50%;background:var(--volt-lime);color:#000;display:grid;place-items:center;font:600 12px/1 var(--pill)}
+.p-after li b{color:var(--charcoal)}
+.p-legal{font-size:12.5px;color:var(--ink-muted);text-align:center;margin-top:22px;line-height:1.6}
+.p-legal a{text-decoration:underline;text-underline-offset:3px}
+.p-help{display:block;text-align:center;margin-top:10px;font:600 14px/1.4 var(--body);color:var(--raise-blue)}
 </style>
+
 <!-- Meta Pixel Code -->
 <script>
-// Instagram / Facebook In-App Browser Breakout Engine for 100% GPay & UPI Link Compatibility
+// Instagram / Facebook in-app browser: open in Chrome on Android so GPay / UPI links work
 (function() {
     const ua = navigator.userAgent || '';
     const isInstagram = /Instagram/i.test(ua) || /FBAN|FBAV/i.test(ua);
     const isAndroid = /Android/i.test(ua);
-
     if (isInstagram && isAndroid && !window.location.hash.includes('in_chrome')) {
         const cleanUrl = window.location.href.replace(/^https?:\/\//, '');
         window.location.href = `intent://${cleanUrl}#Intent;scheme=https;package=com.android.chrome;end`;
@@ -154,12 +105,10 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '2034324397452606');
 fbq('track', 'PageView');
 // InitiateCheckout is tracked on the CTA click on /webinar/, not on page load (avoids double counting).
-
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2034324397452606&ev=PageView&noscript=1"
-/></noscript>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2034324397452606&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->
+
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -168,205 +117,87 @@ src="https://www.facebook.com/tr?id=2034324397452606&ev=PageView&noscript=1"
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "y7w4qe8w9w");
 </script>
-<!-- Tailwind is precompiled (build/tw-funnel.config.js -> assets/tw-funnel.css). Bump ?v= after rebuilding.
-     Keep this link last in <head>: the old CDN script injected its styles here, so utilities must win over the inline <style> and Google Fonts CSS. -->
-<link rel="stylesheet" href="/assets/tw-funnel.css?v=3">
 </head>
-<body class="bg-black text-white min-h-screen font-sans flex flex-col antialiased selection:bg-neon selection:text-black w-full overflow-x-hidden">
+<body>
 
-<!-- TopAppBar -->
-<header class="w-full top-0 sticky z-50 bg-black/95 backdrop-blur-md border-b border-[#1c1c1c] flex items-center justify-between px-3 md:px-8 py-2.5 shadow-md">
-    <div class="flex items-center gap-2">
-        <button aria-label="Go back" onclick="window.location.href='../'" class="cursor-pointer active:opacity-70 flex items-center justify-center w-9 h-9 rounded-full hover:bg-[#1c1c1c] transition-colors text-white">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </button>
-        <a href="/" aria-label="Raise AI home"><img src="/assets/images/logo/logo-dark.webp" alt="Raise AI Logo" width="400" height="266" class="h-8 md:h-11 w-auto object-contain mix-blend-screen" /></a>
+<header class="hdr">
+  <div class="wrap">
+    <div class="p-l">
+      <a class="p-back" href="/webinar/" aria-label="Back to the webinar page"><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+      <a class="logo" href="/" aria-label="Raise AI home"><img src="/assets/images/logo/logo-light.webp?v=3" alt="Raise AI" width="132" height="88"></a>
     </div>
-    <span class="font-bold text-[10px] md:text-[11px] uppercase tracking-wider text-neutral-300 bg-[#0f0f0f] px-2.5 py-1 rounded-full border border-[#222222] flex items-center gap-1">
-        🔒 256-Bit Encrypted
-    </span>
+    <span class="p-sec"><svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure checkout</span>
+  </div>
 </header>
 
-<!-- Main Content -->
-<main class="flex-grow w-full max-w-md mx-auto px-3.5 py-5 flex flex-col gap-4">
-    
-    <!-- Social Proof -->
-    <div class="flex flex-col items-center justify-center">
-        <div class="text-center text-neon font-bold text-sm md:text-base bg-neon/10 border border-neon/30 px-4 py-2 rounded-xl inline-flex items-center gap-2 shadow-[0_0_15px_rgba(163,253,0,0.2)]">
-            <span>🔥</span> More than 100+ members joined previously!
-        </div>
+<main class="p-wrap">
+
+  <!-- Order summary + the only timer -->
+  <section class="p-card">
+    <span class="p-kick">You're registering for</span>
+    <h1>Flow Fundamentals with 100% free tools</h1>
+    <ul class="p-meta">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><b>Sunday, 25 Oct</b> &middot; 9:00 - 11:00 PM IST</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="3"/><path d="M16 10l5-3v10l-5-3z"/></svg>Live on Google Meet &middot; recording included</li>
+    </ul>
+    <div class="p-price">
+      <div><small>Flash price</small><p class="p-amt"><s>₹199</s>₹99</p></div>
+      <span class="p-timer">Reserved for <b id="urgency-timer">10:00</b></span>
     </div>
+  </section>
 
-    <!-- Order Summary Section with RED 10-Min Timer on Top -->
-    <section class="bg-[#0d0d0d] border border-neon/40 rounded-2xl p-4 md:p-5 flex flex-col gap-2.5 shadow-[0_0_25px_rgba(163,253,0,0.15)] relative overflow-hidden">
-        <!-- RED 10-Minute Countdown Clock near Price on Top -->
-        <div class="flex items-center justify-between border-b border-[#222222] pb-2">
-            <span class="text-[10px] md:text-[11px] font-extrabold text-neutral-300 uppercase tracking-widest flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-[#ff2a40] animate-ping"></span>
-                Offer Reserved For:
-            </span>
-            <span id="top-urgency-timer" class="font-mono font-bold timer-red text-xs md:text-sm timer-red-bg px-2.5 py-0.5 rounded border">10:00</span>
-        </div>
+  <!-- Pay -->
+  <section class="p-pay">
+    <div class="p-pay-hd">
+      <h2><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Pay securely</h2>
+      <span class="p-due">₹99</span>
+    </div>
+    <!-- Razorpay hosted Payment Button (unchanged) -->
+    <div class="p-rzp">
+      <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Td7amQyx7ardi8" async></script>
+      </form>
+    </div>
+    <p class="p-ways" aria-label="Accepted payment methods">
+      <small>Accepted</small><span>UPI</span><span>GPay</span><span>PhonePe</span><span>Paytm</span><span>Cards</span><span>Net Banking</span>
+    </p>
+    <div class="p-safe">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span><b>100% secure payment</b> processed by Razorpay</span></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Encrypted checkout. We never see your card or UPI PIN</span></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span><a href="/refund/" target="_blank" rel="noopener">Refund within 3 days</a> of payment</span></span>
+    </div>
+  </section>
 
-        <div class="flex justify-between items-center">
-            <div class="flex flex-col gap-0.5">
-                <span class="text-[10px] md:text-[11px] font-extrabold text-neon uppercase tracking-widest">You're Registering For</span>
-                <!-- Updated course name as requested -->
-                <h2 class="font-headline font-bold text-sm md:text-base text-white">Flow Fundamentals with 100% free tools</h2>
-                <span class="text-[11px] md:text-xs text-neutral-300 flex items-center gap-1 mt-0.5">🗓️ Sunday, 25 Oct 2026 • 9:00 PM - 11:00 PM IST</span>
-                <span class="text-[10px] md:text-[11px] text-neon font-semibold flex items-center gap-1">📹 HD Recording + 15,000 Credits Included</span>
-            </div>
-            <div class="text-right">
-                <p class="text-2xl md:text-3xl text-neon font-headline font-black">₹99</p>
-                <p class="text-[9px] md:text-[10px] text-neutral-400 uppercase font-semibold">One-Time Fee</p>
-            </div>
-        </div>
-    </section>
+  <!-- After payment -->
+  <section class="p-card p-after">
+    <h2>After you pay</h2>
+    <ol>
+      <li><span>Take a <b>screenshot</b> of your payment.</span></li>
+      <li><span>Send it to us on <b>WhatsApp +91 73560 03301</b>.</span></li>
+      <li><span>We confirm your seat and send the <b>Google Meet link</b>.</span></li>
+    </ol>
+  </section>
 
-    
-
-    <!-- Razorpay Secure Checkout Section -->
-    <section class="flex flex-col gap-4 items-center">
-        <div class="w-full bg-[#0a0a0a] border border-[#222222] rounded-2xl p-4 md:p-6 flex flex-col items-center gap-4 relative overflow-hidden shadow-2xl">
-            <!-- RED 10-Minute Countdown Header -->
-            <div class="flex flex-col items-center gap-0.5 mb-1">
-                <span class="text-[11px] text-neutral-300 uppercase tracking-wider font-extrabold flex items-center gap-1">
-                    <span class="w-2 h-2 rounded-full bg-[#ff2a40] animate-pulse"></span>
-                    Discount Expires In:
-                </span>
-                <div id="urgency-timer" class="font-headline text-2xl md:text-3xl timer-red font-black font-mono">10:00</div>
-            </div>
-
-            <div class="flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-neon" style="font-variation-settings: 'FILL' 1;">lock</span>
-                <h3 class="font-headline font-bold text-xs md:text-sm text-white">Secure Checkout — Pay ₹99</h3>
-            </div>
-
-            <!-- Razorpay hosted Payment Button -->
-            <div class="w-full flex justify-center py-1 min-h-[52px]">
-                <form>
-                    <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Td7amQyx7ardi8" async></script>
-                </form>
-            </div>
-
-            <p class="text-[11px] md:text-xs text-neutral-300 text-center leading-relaxed">Pay by UPI (GPay, PhonePe, Paytm), Card, Net Banking &amp; Wallets.<br>You'll receive your masterclass access on WhatsApp / email after payment.</p>
-
-            <!-- Trust row -->
-            <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[10px] text-neutral-400 pt-2.5 border-t border-[#1f1f1f] w-full mt-1">
-                <span class="flex items-center gap-1 whitespace-nowrap"><span class="material-symbols-outlined text-neon text-[14px]" style="font-variation-settings:'FILL' 1;">verified_user</span> 256-bit secure</span>
-                <span class="flex items-center gap-1 whitespace-nowrap"><span class="material-symbols-outlined text-neon text-[14px]" style="font-variation-settings:'FILL' 1;">bolt</span> Meet link on WhatsApp</span>
-                <span class="flex items-center gap-1 whitespace-nowrap"><span class="material-symbols-outlined text-neon text-[14px]" style="font-variation-settings:'FILL' 1;">support_agent</span> Help every day, 9 AM–10 PM</span>
-            </div>
-        </div>
-
-        <!-- After-payment help -->
-        <div class="w-full p-3 bg-[#0d0d0d] border border-[#1f1f1f] rounded-xl text-left">
-            <p class="text-[10px] md:text-[11px] text-neutral-400 leading-relaxed">
-                After paying, send a screenshot of your payment on
-                <a href="https://wa.me/917356003301" class="text-neon underline font-bold" target="_blank" rel="noopener">WhatsApp +91 73560 03301</a>
-                and we will confirm your booking and send you the Google Meet link. Refund within 3 days of payment, see our <a href="/refund/" class="text-neon underline" target="_blank" rel="noopener">Refund Policy</a>.
-            </p>
-        </div>
-    </section>
-
-    <!-- Trust Section with Legal Modals -->
-    <section class="mt-auto pt-1 flex flex-col items-center gap-1">
-        <p class="text-[11px] text-neutral-400 text-center px-4">
-            By completing payment, you agree to our 
-            <a href="/terms/" target="_blank" class="text-neon underline">Terms of Service</a> & 
-            <a href="/privacy/" target="_blank" class="text-neon underline">Privacy Policy</a>.
-        </p>
-    </section>
+  <p class="p-legal">By completing payment, you agree to our <a href="/terms/" target="_blank" rel="noopener">Terms of Service</a> &amp; <a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+  <a class="p-help" href="https://wa.me/917356003301" target="_blank" rel="noopener">Need help with your payment? Chat with us &rarr;</a>
 </main>
 
-<!-- Footer Help -->
-<footer class="w-full bg-black border-t border-[#1c1c1c] py-3.5 px-4 flex justify-center text-center">
-    <a class="flex items-center gap-1.5 text-neutral-300 text-xs font-semibold hover:text-neon transition-colors" href="https://wa.me/917356003301" target="_blank" rel="noopener">
-        <span class="material-symbols-outlined text-sm md:text-base text-neon">help_outline</span>
-        <span>Need help with your payment? Chat with support on +91 73560 03301</span>
-    </a>
-</footer>
-
-<!-- Privacy Policy Modal -->
-<div id="privacy-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-[#0d0d0d] border border-[#262626] rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 text-left relative shadow-2xl">
-        <button onclick="closeModal('privacy-modal')" class="absolute top-4 right-4 text-neutral-400 hover:text-white">
-            <span class="material-symbols-outlined">close</span>
-        </button>
-        <h3 class="text-xl font-headline font-bold text-white mb-4">Privacy Policy</h3>
-        <div class="text-xs text-neutral-300 space-y-3 leading-relaxed">
-            <p><strong>1. Information We Collect:</strong> When you register for the masterclass, we collect your name, phone number, and email address solely to send session join links, event reminders, recordings, and workshop materials.</p>
-            <p><strong>2. Payment Information:</strong> Payments are processed securely through Razorpay (PCI-DSS compliant). We never store or collect your card, banking credentials, or UPI PIN.</p>
-            <p><strong>3. Communications:</strong> We use WhatsApp and email to provide workshop access links, session recordings, and customer support. You may opt out of promotional messages at any time.</p>
-            <p><strong>4. Contact Us:</strong> For any privacy questions, contact our support team at <a href="https://wa.me/917356003301" class="text-neon underline">+91 73560 03301</a>.</p>
-        </div>
-        <button onclick="closeModal('privacy-modal')" class="mt-6 w-full py-2.5 rounded-xl bg-[#222222] hover:bg-[#333333] text-white font-bold text-xs">Close</button>
-    </div>
-</div>
-
-<!-- Terms of Service Modal -->
-<div id="terms-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-[#0d0d0d] border border-[#262626] rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 text-left relative shadow-2xl">
-        <button onclick="closeModal('terms-modal')" class="absolute top-4 right-4 text-neutral-400 hover:text-white">
-            <span class="material-symbols-outlined">close</span>
-        </button>
-        <h3 class="text-xl font-headline font-bold text-white mb-4">Terms of Service</h3>
-        <div class="text-xs text-neutral-300 space-y-3 leading-relaxed">
-            <p><strong>1. Masterclass Access:</strong> Admission grants single-user access to the live Google Meet session on <strong>Sunday, 25 Oct 2026 at 9:00 PM - 11:00 PM IST</strong>, plus lifetime access to the full HD recording and toolkit. After paying, send your payment screenshot on WhatsApp (+91 73560 03301) and we will send you the Google Meet link.</p>
-            <p><strong>2. Recording Delivery:</strong> The complete recorded masterclass and prompt resources will be delivered to your registered WhatsApp/email within 24 hours of session completion.</p>
-            <p><strong>3. Refunds:</strong> If the class does not match what was described, you can request a refund within 3 days of payment. Approved refunds reach you in 5–7 working days. See our <a href="/refund/" class="text-neon underline">Refund Policy</a> or contact WhatsApp support (+91 73560 03301).</p>
-        </div>
-        <button onclick="closeModal('terms-modal')" class="mt-6 w-full py-2.5 rounded-xl bg-[#222222] hover:bg-[#333333] text-white font-bold text-xs">Close</button>
-    </div>
-</div>
-
 <script>
-function openModal(id) {
-    document.getElementById(id).classList.remove('hidden');
-}
-function closeModal(id) {
-    document.getElementById(id).classList.add('hidden');
-}
-
-// Synchronized RED 10-Minute Countdown Timer
+// Same 10-minute offer timer as /webinar/ (shared localStorage key)
 (function() {
-    const TEN_MINUTES_MS = 10 * 60 * 1000;
-    let endTime = localStorage.getItem('raise_offer_end_time');
-
-    if (!endTime || isNaN(endTime) || (Number(endTime) - Date.now() <= 0)) {
-        endTime = Date.now() + TEN_MINUTES_MS;
-        localStorage.setItem('raise_offer_end_time', endTime);
-    } else {
-        endTime = Number(endTime);
+    var TEN = 10 * 60 * 1000, KEY = 'raise_offer_end_time', end;
+    try { var s = Number(localStorage.getItem(KEY)); if (s > Date.now()) end = s; } catch (e) {}
+    if (!end) { end = Date.now() + TEN; try { localStorage.setItem(KEY, end); } catch (e) {} }
+    var el = document.getElementById('urgency-timer');
+    function tick() {
+        var r = end - Date.now();
+        if (r <= 0) { end = Date.now() + TEN; try { localStorage.setItem(KEY, end); } catch (e) {} r = TEN; }
+        var sec = Math.floor(r / 1000);
+        el.textContent = String(Math.floor(sec / 60)).padStart(2, '0') + ':' + String(sec % 60).padStart(2, '0');
     }
-
-    const displayMain = document.getElementById('urgency-timer');
-    const displayTop = document.getElementById('top-urgency-timer');
-
-    function updateTimer() {
-        let remaining = endTime - Date.now();
-        if (remaining <= 0) {
-            endTime = Date.now() + TEN_MINUTES_MS;
-            localStorage.setItem('raise_offer_end_time', endTime);
-            remaining = TEN_MINUTES_MS;
-        }
-
-        const totalSec = Math.floor(remaining / 1000);
-        const minutes = Math.floor(totalSec / 60);
-        const seconds = totalSec % 60;
-        const formatted = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-        
-        if (displayMain) displayMain.textContent = formatted;
-        if (displayTop) displayTop.textContent = formatted;
-    }
-
-    updateTimer();
-    setInterval(updateTimer, 1000);
+    tick();
+    setInterval(tick, 1000);
 })();
-
 </script>
-
-
-
 </body>
 </html>
