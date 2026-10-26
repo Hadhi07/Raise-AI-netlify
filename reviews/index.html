@@ -558,12 +558,16 @@
 
   function pauseOthers(cur) {
     cards.forEach(function (c) {
-      if (c !== cur && c.yt && c.playing) {
-        try { c.yt.pauseVideo(); } catch (e) {}
+      if (c !== cur && c.playing) {
+        if (c.audio) { try { c.audio.pause(); } catch (e) {} }
+        if (c.yt) { try { c.yt.pauseVideo(); } catch (e) {} }
         setPlaying(c, false);
       }
     });
-    document.querySelectorAll('video, audio').forEach(function (m) { try { m.pause(); } catch (e) {} });
+    document.querySelectorAll('video, audio').forEach(function (m) {
+      if (cur && cur.audio && m === cur.audio) return;
+      try { m.pause(); } catch (e) {}
+    });
   }
 
   function tick() {
@@ -584,9 +588,12 @@
   document.querySelectorAll('.rv-audio-card').forEach(function (card, i) {
     var holder = card.querySelector('.yt-audio-player');
     var btn = card.querySelector('.rv-audio-play-btn');
-    if (!holder || !btn) return;
+    if (!btn) return;
+    var audioSrc = card.getAttribute('data-audio-src') || (holder && holder.getAttribute('data-audio-src'));
     var c = {
-      id: holder.getAttribute('data-yt-id'), holder: holder, btn: btn,
+      audioSrc: audioSrc, audio: null,
+      id: holder ? holder.getAttribute('data-yt-id') : null,
+      holder: holder, btn: btn,
       label: btn.getAttribute('data-label'),
       iconPlay: btn.querySelector('.icon-play'), iconPause: btn.querySelector('.icon-pause'),
       bar: card.querySelector('.rv-progress-bar'), progress: card.querySelector('.rv-progress-container'),
@@ -595,7 +602,49 @@
     };
     cards.push(c);
 
+    // If native audio file is provided: instant 0ms playback with native audio API
+    if (c.audioSrc) {
+      var a = new Audio(c.audioSrc);
+      a.preload = 'metadata';
+      c.audio = a;
+      a.addEventListener('loadedmetadata', function () {
+        if (a.duration && isFinite(a.duration)) {
+          c.tot.textContent = fmt(a.duration);
+        }
+      });
+      a.addEventListener('timeupdate', function () {
+        if (a.duration) {
+          c.bar.style.width = Math.min(100, (a.currentTime / a.duration) * 100) + '%';
+          c.cur.textContent = fmt(a.currentTime);
+          c.tot.textContent = fmt(a.duration);
+        }
+      });
+      a.addEventListener('ended', function () {
+        setPlaying(c, false);
+        c.bar.style.width = '0%';
+        c.cur.textContent = '0:00';
+      });
+      a.addEventListener('pause', function () {
+        if (!a.ended) setPlaying(c, false);
+      });
+    }
+
     btn.addEventListener('click', function () {
+      if (c.audio) {
+        if (c.playing) {
+          try { c.audio.pause(); } catch (e) {}
+          setPlaying(c, false);
+          return;
+        }
+        pauseOthers(c);
+        track('review_play');
+        c.audio.play().then(function () {
+          setPlaying(c, true);
+        }).catch(function (err) {
+          console.error(err);
+        });
+        return;
+      }
       if (c.yt) {
         if (c.playing) { try { c.yt.pauseVideo(); } catch (e) {} setPlaying(c, false); return; }
         pauseOthers(c);
@@ -603,7 +652,7 @@
         try { c.yt.playVideo(); } catch (e) {}
         return;
       }
-      if (c.loading) return;
+      if (c.loading || !holder) return;
       c.loading = true;
       btn.setAttribute('aria-busy', 'true');
       pauseOthers(c);
@@ -640,9 +689,17 @@
     });
 
     c.progress.addEventListener('click', function (e) {
-      if (!c.yt || !c.yt.getDuration) return;
-      var r = c.progress.getBoundingClientRect(), d = c.yt.getDuration();
-      if (d && r.width) c.yt.seekTo(Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)) * d, true);
+      var r = c.progress.getBoundingClientRect();
+      if (!r.width) return;
+      var pct = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width));
+      if (c.audio && c.audio.duration) {
+        c.audio.currentTime = pct * c.audio.duration;
+        return;
+      }
+      if (c.yt && c.yt.getDuration) {
+        var d = c.yt.getDuration();
+        if (d) c.yt.seekTo(pct * d, true);
+      }
     });
   });
 })();

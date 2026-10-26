@@ -832,7 +832,8 @@ h3 {
   margin-left: 2px;
 }
 
-.frame iframe {
+.frame iframe,
+.frame video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -840,6 +841,8 @@ h3 {
   border: 0;
   border-radius: inherit;
   z-index: 10;
+  object-fit: cover;
+  background: #000;
 }
 
 /* Category Pills & Grid (Results / Reviews / Blog) */
@@ -936,7 +939,8 @@ h3 {
   margin-left: 2px;
 }
 
-.vid .frame-wrap iframe {
+.vid .frame-wrap iframe,
+.vid .frame-wrap video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -944,6 +948,8 @@ h3 {
   border: 0;
   border-radius: inherit;
   z-index: 10;
+  object-fit: cover;
+  background: #000;
 }
 
 .vid h3 {
