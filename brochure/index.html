@@ -75,11 +75,14 @@ a{color:inherit}
 .lead{font-size:16px;line-height:1.6;color:var(--ink-soft);max-width:62ch}
 .dark .lead{color:var(--on-dark)}
 
-/* Carousels: endless loop, auto-slide + swipe either way */
-.viewport{overflow:hidden;width:100%;touch-action:pan-y}
-.track{display:flex;gap:14px;transition:transform 700ms cubic-bezier(.2,.7,.2,1);will-change:transform;user-select:none;-webkit-user-select:none}
-.viewport{cursor:grab}
-.viewport.drag{cursor:grabbing}
+/* Carousels: native swipe (snap) + endless loop + auto-slide */
+.viewport{position:relative;width:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;cursor:grab}
+.viewport::-webkit-scrollbar{display:none}
+.viewport.drag{cursor:grabbing;scroll-snap-type:none}
+.track{display:flex;gap:14px;width:max-content;user-select:none;-webkit-user-select:none}
+.track > *{scroll-snap-align:center;scroll-snap-stop:normal}
+.vids .track > *{scroll-snap-align:start}
+.vids{scroll-padding-inline-start:max(20px,env(safe-area-inset-left,0px))}
 .track img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
 
 /* Buttons */
@@ -101,8 +104,8 @@ a{color:inherit}
 .pill-role b{color:var(--lime);font-weight:700}
 .hero .sub{font-size:16px;color:var(--white)}
 .hero .viewport{margin-top:36px}
-.hero .track{padding-left:calc(50% - 115px)}
-.card-s{width:230px;flex-shrink:0;background:var(--white);color:var(--ink);border-radius:28px;padding:10px;display:flex;flex-direction:column;gap:10px;transform:scale(.88);opacity:.55;transition:transform 700ms,opacity 700ms;text-align:left}
+.hero .track{padding-inline:calc(50% - 115px)}
+.card-s{width:230px;flex-shrink:0;background:var(--white);color:var(--ink);border-radius:28px;padding:10px;display:flex;flex-direction:column;gap:10px;transform:scale(.88);opacity:.55;transition:transform 350ms,opacity 350ms;text-align:left}
 .card-s.on{transform:scale(1);opacity:1}
 .ph{background:var(--line);border-radius:20px;color:var(--ink-muted);font-size:12px;display:flex;align-items:flex-end;padding:12px;aspect-ratio:3/4;max-width:100%}
 .card-s .role{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.2;padding:0 8px}
@@ -117,7 +120,7 @@ a{color:inherit}
 .stat .t{font-size:14px;line-height:1.4}
 .stat.k{background:var(--black);color:var(--white)} .stat.k .n{color:var(--lime)} .stat.k .t{color:var(--on-dark)}
 .stat.b{background:var(--blue);color:var(--white)}
-.vids .track{padding-left:max(20px,env(safe-area-inset-left,0px))}
+.vids .track{padding-inline:max(20px,env(safe-area-inset-left,0px))}
 .vid{width:200px;flex-shrink:0;display:flex;flex-direction:column;gap:10px;margin:0}
 .vid .frame{aspect-ratio:9/16;max-width:100%;border-radius:24px;background:var(--char);color:var(--on-dark-muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;font-size:12px;text-align:center;padding:12px;overflow:hidden}
 .vid .frame video{width:100%;height:100%;object-fit:cover;border-radius:24px}
@@ -474,8 +477,9 @@ a{color:inherit}
     return '<article class="tier '+t.cls+'"><p class="tag">'+t.tag+'</p><h3>'+t.name+'</h3><p class="price">'+t.price+'</p><p class="blurb">'+t.blurb+'</p><ul>'+rows+'</ul><a class="btn" href="#pay">Enroll now<span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></article>';
   }).join('');
 
-  // Endless carousel: three copies of the items, we always show the middle copy and quietly jump back
-  // after each move, so it loops forever. Auto-slides; swipe or drag either way to take control.
+  // Endless carousel on native scrolling (smooth phone swipes with momentum + snap).
+  // Three copies of the items; after any scroll stops in the first or last copy we jump by one copy-width,
+  // which looks identical, so it loops forever both ways. Auto-slides, pauses while touched, resumes after.
   function loop(track, every, onChange){
     var vp=track.parentNode, items=[].slice.call(track.children), n=items.length;
     if(n<2) return null;
@@ -483,36 +487,39 @@ a{color:inherit}
       var c=el.cloneNode(true); c.setAttribute('aria-hidden','true');
       [].forEach.call(c.querySelectorAll('[tabindex]'),function(x){x.setAttribute('tabindex','-1');}); f.appendChild(c); }); return f; }
     track.insertBefore(copy(), track.firstChild); track.appendChild(copy());
-    var all=track.children, idx=n, stepW=0, timer=null, drag=null, moved=false;
-    function measure(){ stepW=all[1].offsetLeft-all[0].offsetLeft; }
-    function put(x, smooth){ track.style.transition=smooth?'':'none'; track.style.transform='translateX('+x+'px)'; }
-    function mark(){ var r=((idx%n)+n)%n; for(var k=0;k<all.length;k++) all[k].classList.toggle('on',k%n===r); if(onChange) onChange(r); }
-    function go(i){ idx=i; put(-idx*stepW,true); mark(); }
-    function settle(){ if(idx<n||idx>=2*n){ idx=((idx%n)+n)%n+n; put(-idx*stepW,false); track.offsetWidth; } }
-    track.addEventListener('transitionend',function(e){ if(e.target===track&&e.propertyName==='transform') settle(); });
-    function auto(){ clearInterval(timer); timer=setInterval(function(){ if(document.hidden||drag||track.paused) return; settle(); go(idx+1); },every); }
-    // swipe / drag (touch-action:pan-y keeps vertical page scroll working)
-    vp.addEventListener('pointerdown',function(e){ if(e.button>0) return; settle(); drag={x:e.clientX,y:e.clientY,base:-idx*stepW,dx:0,on:false}; moved=false; });
-    vp.addEventListener('pointermove',function(e){
-      if(!drag) return; var dx=e.clientX-drag.x, dy=e.clientY-drag.y;
-      if(!drag.on){ if(Math.abs(dx)<6) return; if(Math.abs(dy)>Math.abs(dx)){ drag=null; return; } drag.on=true; moved=true; vp.classList.add('drag'); try{vp.setPointerCapture(e.pointerId);}catch(err){} }
-      drag.dx=dx; put(drag.base+dx,false);
-    });
-    function end(){
-      if(!drag) return; var d=drag; drag=null; vp.classList.remove('drag');
-      if(!d.on) return;
-      var shift=Math.round(-d.dx/stepW); if(shift===0&&Math.abs(d.dx)>stepW*0.18) shift=d.dx<0?1:-1;
-      go(idx+shift); auto();
-    }
-    vp.addEventListener('pointerup',end); vp.addEventListener('pointercancel',end); vp.addEventListener('lostpointercapture',end);
-    // a swipe should not also count as a tap on a video
+    var all=track.children, center=getComputedStyle(all[0]).scrollSnapAlign.indexOf('center')>-1;
+    var cur=n, lastTouch=0, touching=false, endT=null;
+    function pad(){ return parseFloat(getComputedStyle(vp).scrollPaddingInlineStart)||0; }
+    function pos(i){ var el=all[i]; return center? el.offsetLeft+el.offsetWidth/2-vp.clientWidth/2 : el.offsetLeft-pad(); }
+    function step(){ return all[1].offsetLeft-all[0].offsetLeft; }
+    function nearest(){ var st=step(); return Math.round((vp.scrollLeft-pos(0))/st); }
+    function mark(i){ var r=((i%n)+n)%n; for(var k=0;k<all.length;k++) all[k].classList.toggle('on',k%n===r);
+      if(r!==mark.last){ mark.last=r; if(onChange) onChange(r); } }
+    function jumpTo(i){ vp.style.scrollSnapType='none'; vp.scrollLeft=pos(i); vp.offsetWidth; vp.style.scrollSnapType=''; }
+    function settle(){ cur=nearest(); if(cur<n||cur>=2*n){ cur=((cur%n)+n)%n+n; jumpTo(cur); } mark(cur); }
+    vp.addEventListener('scroll',function(){ mark(nearest()); clearTimeout(endT); endT=setTimeout(settle,140); },{passive:true});
+    // pause while the visitor is touching or dragging
+    function hold(){ touching=true; lastTouch=Date.now(); }
+    function free(){ touching=false; lastTouch=Date.now(); }
+    vp.addEventListener('touchstart',hold,{passive:true}); vp.addEventListener('touchend',free,{passive:true}); vp.addEventListener('touchcancel',free,{passive:true});
+    vp.addEventListener('wheel',function(){ lastTouch=Date.now(); },{passive:true});
+    // mouse drag for laptops (phones use the native swipe)
+    var md=null, moved=false;
+    vp.addEventListener('pointerdown',function(e){ if(e.pointerType!=='mouse'||e.button>0) return; md={x:e.clientX,sl:vp.scrollLeft}; moved=false; hold(); });
+    window.addEventListener('pointermove',function(e){ if(!md) return; var dx=e.clientX-md.x; if(Math.abs(dx)>5){ moved=true; vp.classList.add('drag'); } if(moved) vp.scrollLeft=md.sl-dx; });
+    window.addEventListener('pointerup',function(){ if(!md) return; md=null; free(); if(vp.classList.contains('drag')){ vp.classList.remove('drag'); vp.scrollTo({left:pos(nearest()),behavior:'smooth'}); } });
     vp.addEventListener('click',function(e){ if(moved){ e.preventDefault(); e.stopPropagation(); moved=false; } },true);
-    window.addEventListener('resize',function(){ measure(); put(-idx*stepW,false); });
-    measure(); put(-idx*stepW,false); mark(); auto();
+    // auto-slide
+    setInterval(function(){
+      if(document.hidden||touching||track.paused||Date.now()-lastTouch<4500) return;
+      settle(); vp.scrollTo({left:pos(cur+1),behavior:'smooth'});
+    },every);
+    window.addEventListener('resize',function(){ jumpTo(cur); });
+    jumpTo(cur); mark(cur);
     return track;
   }
-  loop(ht, 2600, heroPill);
-  loop(vt, 2400);
+  loop(ht, 3000, heroPill);
+  loop(vt, 2800);
 
   // Copy UPI
   document.getElementById('copyBtn').addEventListener('click',function(){
