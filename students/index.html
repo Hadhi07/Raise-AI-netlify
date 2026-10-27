@@ -123,6 +123,12 @@
 .stu.in .role::after{animation:stushine 5s ease-in-out .7s infinite}
 .stu.in:hover .role::after{animation:stushine 1.1s ease-in-out}
 
+/* Photo-only student cards: same look, not tappable */
+.stu-ph{cursor:default}
+.stu-ph:hover,.stu-ph:focus-visible{transform:none;border-color:var(--divider)}
+.stu-ph .photo img{object-position:center 30%}
+.stu-ph .ph-note{font-size:13px;color:var(--ink-muted);margin:0 3px}
+
 /* The note: bottom sheet on phones and tablets, centred card on desktop */
 dialog#note{max-height:88vh;overflow:visible}
 dialog#note .sheet{max-height:88vh;overflow:auto;gap:0}
@@ -250,6 +256,79 @@ dialog#note .note-line{display:block;width:48px;height:6px;border-radius:6px;bac
         </div>
         <span class="read">Read review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
+    </div>
+
+    <!-- More students: photo cards (no review yet, so not tappable) -->
+    <div class="batch-head" style="margin-top:56px">
+      <h2>More of <span class="key">our students</span></h2>
+      <span>From our batches and webinars</span>
+    </div>
+    <div class="grid">
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-5.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-9.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-6.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-10.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-7.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-11.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-8.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-12.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-13.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-14.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-15.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-16.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-17.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+        <p class="ph-note">Raise AI student</p>
+      </div>
     </div>
 
     <div style="text-align:center;margin-top:40px">
@@ -398,6 +477,7 @@ dialog#note .note-line{display:block;width:48px;height:6px;border-radius:6px;bac
   }
 
   cards.forEach(function (card) {
+    if (card.tagName !== 'BUTTON') return; // photo-only cards have no review to open
     card.addEventListener('click', function () { openNote(card, false); });
   });
 
