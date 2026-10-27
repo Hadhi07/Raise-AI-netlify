@@ -127,6 +127,10 @@
 .stu-ph{cursor:default}
 .stu-ph:hover,.stu-ph:focus-visible{transform:none;border-color:var(--divider)}
 .stu-ph .photo img{object-position:center 30%}
+.stu-more{background:var(--raise-blue);border-color:var(--raise-blue);color:#fff;cursor:default;justify-content:center;align-items:center;text-align:center;gap:6px;min-height:100%}
+.stu-more:hover,.stu-more:focus-visible{transform:none;border-color:var(--raise-blue)}
+.stu-more b{font:800 clamp(44px,12vw,72px)/1 var(--display);color:var(--volt-lime);letter-spacing:-.03em}
+.stu-more span{font:600 14px/1.35 var(--body);color:rgba(255,255,255,.9)}
 .stu-ph .ph-note{font-size:13px;color:var(--ink-muted);margin:0 3px}
 
 /* The note: bottom sheet on phones and tablets, centred card on desktop */
@@ -224,7 +228,7 @@ dialog#note .note-line{display:block;width:48px;height:6px;border-radius:6px;bac
           <img src="/assets/images/students/student-2.webp?v=4" alt="Jasim Thangal" width="300" height="300" loading="lazy" decoding="async">
         </div>
         <h3>Jasim Thangal</h3>
-        <span class="role"><span class="ai">AI + </span>Video Editor</span>
+        <span class="role"><span class="ai">AI + </span>Sales Executive</span>
         <div class="bubble">
           <p>"Creating AI visuals and character consistency changed how I edit and pitch to brand clients."</p>
         </div>
@@ -256,41 +260,76 @@ dialog#note .note-line{display:block;width:48px;height:6px;border-radius:6px;bac
         </div>
         <span class="read">Read review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
+
+      <!-- Batch 1: photo cards (no review yet) -->
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-12.webp?v=1" alt="Althaf" width="300" height="400" loading="lazy" decoding="async"></div>
+        <h3>Althaf</h3>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-13.webp?v=1" alt="Munawar" width="300" height="400" loading="lazy" decoding="async"></div>
+        <h3>Munawar</h3>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-14.webp?v=1" alt="Rafi" width="300" height="400" loading="lazy" decoding="async"></div>
+        <h3>Rafi</h3>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+      </div>
+      <div class="stu stu-more" aria-label="2 more students in Batch 1">
+        <b>+2</b>
+        <span>more students<br>in Batch 1</span>
+      </div>
     </div>
 
-    <!-- More students: photo cards (no review yet, so not tappable) -->
+    <!-- Batch 2 -->
     <div class="batch-head" style="margin-top:56px">
-      <h2>More of <span class="key">our students</span></h2>
-      <span>From our batches and webinars</span>
+      <h2>AI Ad Video Production, <span class="key">Batch 2</span></h2>
     </div>
     <div class="grid">
       <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-9.webp?v=1" alt="Shumail" width="300" height="400" loading="lazy" decoding="async"></div>
+        <h3>Shumail</h3>
+        <span class="role"><span class="ai">AI + </span>Editor</span>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-17.webp?v=1" alt="Shan" width="300" height="400" loading="lazy" decoding="async"></div>
+        <h3>Shan</h3>
+        <span class="role"><span class="ai">AI + </span>Editor</span>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-10.webp?v=1" alt="Sinan" width="300" height="400" loading="lazy" decoding="async"></div>
+        <h3>Sinan</h3>
+        <span class="role"><span class="ai">AI + </span>Editor</span>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-6.webp?v=1" alt="Amjath" width="300" height="400" loading="lazy" decoding="async"></div>
+        <h3>Amjath</h3>
+        <span class="role"><span class="ai">AI + </span>Designer</span>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-7.webp?v=1" alt="Shafeeq" width="300" height="400" loading="lazy" decoding="async"></div>
+        <h3>Shafeeq</h3>
+        <span class="role"><span class="ai">AI + </span>Interior Designer</span>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-11.webp?v=1" alt="Anas" width="300" height="400" loading="lazy" decoding="async"></div>
+        <h3>Anas</h3>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-15.webp?v=1" alt="Rajeesh" width="300" height="400" loading="lazy" decoding="async"></div>
+        <h3>Rajeesh</h3>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+      </div>
+      <div class="stu stu-ph">
+        <div class="photo"><img src="/assets/images/students/student-16.webp?v=1" alt="Sandeep" width="300" height="400" loading="lazy" decoding="async"></div>
+        <h3>Sandeep</h3>
+        <span class="role"><span class="ai">AI + </span>Creator</span>
+      </div>
+      <div class="stu stu-ph">
         <div class="photo"><img src="/assets/images/students/student-5.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
-        <span class="role"><span class="ai">AI + </span>Creator</span>
-        <p class="ph-note">Raise AI student</p>
-      </div>
-      <div class="stu stu-ph">
-        <div class="photo"><img src="/assets/images/students/student-9.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
-        <span class="role"><span class="ai">AI + </span>Creator</span>
-        <p class="ph-note">Raise AI student</p>
-      </div>
-      <div class="stu stu-ph">
-        <div class="photo"><img src="/assets/images/students/student-6.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
-        <span class="role"><span class="ai">AI + </span>Creator</span>
-        <p class="ph-note">Raise AI student</p>
-      </div>
-      <div class="stu stu-ph">
-        <div class="photo"><img src="/assets/images/students/student-10.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
-        <span class="role"><span class="ai">AI + </span>Creator</span>
-        <p class="ph-note">Raise AI student</p>
-      </div>
-      <div class="stu stu-ph">
-        <div class="photo"><img src="/assets/images/students/student-7.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
-        <span class="role"><span class="ai">AI + </span>Creator</span>
-        <p class="ph-note">Raise AI student</p>
-      </div>
-      <div class="stu stu-ph">
-        <div class="photo"><img src="/assets/images/students/student-11.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
         <span class="role"><span class="ai">AI + </span>Creator</span>
         <p class="ph-note">Raise AI student</p>
       </div>
@@ -299,36 +338,7 @@ dialog#note .note-line{display:block;width:48px;height:6px;border-radius:6px;bac
         <span class="role"><span class="ai">AI + </span>Creator</span>
         <p class="ph-note">Raise AI student</p>
       </div>
-      <div class="stu stu-ph">
-        <div class="photo"><img src="/assets/images/students/student-12.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
-        <span class="role"><span class="ai">AI + </span>Creator</span>
-        <p class="ph-note">Raise AI student</p>
-      </div>
-      <div class="stu stu-ph">
-        <div class="photo"><img src="/assets/images/students/student-13.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
-        <span class="role"><span class="ai">AI + </span>Creator</span>
-        <p class="ph-note">Raise AI student</p>
-      </div>
-      <div class="stu stu-ph">
-        <div class="photo"><img src="/assets/images/students/student-14.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
-        <span class="role"><span class="ai">AI + </span>Creator</span>
-        <p class="ph-note">Raise AI student</p>
-      </div>
-      <div class="stu stu-ph">
-        <div class="photo"><img src="/assets/images/students/student-15.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
-        <span class="role"><span class="ai">AI + </span>Creator</span>
-        <p class="ph-note">Raise AI student</p>
-      </div>
-      <div class="stu stu-ph">
-        <div class="photo"><img src="/assets/images/students/student-16.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
-        <span class="role"><span class="ai">AI + </span>Creator</span>
-        <p class="ph-note">Raise AI student</p>
-      </div>
-      <div class="stu stu-ph">
-        <div class="photo"><img src="/assets/images/students/student-17.webp?v=1" alt="Raise AI student" width="300" height="400" loading="lazy" decoding="async"></div>
-        <span class="role"><span class="ai">AI + </span>Creator</span>
-        <p class="ph-note">Raise AI student</p>
-      </div>
+      <!-- Batch 2 "+N more" card goes here once the batch size is confirmed -->
     </div>
 
     <div style="text-align:center;margin-top:40px">
