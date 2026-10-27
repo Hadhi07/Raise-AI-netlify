@@ -376,10 +376,20 @@ a{color:inherit}
     {role:'Video Editor', name:'Jasim Thangal', win:'Pitches AI visuals to brand clients', photo:'/assets/images/students/student-2.webp?v=4'},
     {role:'Content Creator', name:'Niyas', win:'Saves 15 hours on every campaign', photo:'/assets/images/students/student-3.webp?v=4'},
     {role:'Content Creator', name:'Ajmal Sunoon', win:'Makes commercial AI reels in-house', photo:'/assets/images/students/student-4.webp?v=4'},
-    {role:'[Role]', name:'[Student name]', win:'[What they achieved]', photo:'/assets/images/students/student-5.webp?v=1'},
-    {role:'[Role]', name:'[Student name]', win:'[What they achieved]', photo:'/assets/images/students/student-6.webp?v=1'},
-    {role:'[Role]', name:'[Student name]', win:'[What they achieved]', photo:'/assets/images/students/student-7.webp?v=1'},
-    {role:'[Role]', name:'[Student name]', win:'[What they achieved]', photo:'/assets/images/students/student-8.webp?v=1'}
+    /* Photo-only cards: add name + win (and a role) when you have them */
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-5.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-9.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-6.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-10.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-7.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-11.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-8.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-12.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-13.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-14.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-15.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-16.webp?v=1'},
+    {role:'Creator', name:'', win:'', photo:'/assets/images/students/student-17.webp?v=1'}
   ];
   /* Student videos: same list and order as the /webinar/ showcase (YouTube ID + poster image) */
   var VIDEOS = [
@@ -414,8 +424,8 @@ a{color:inherit}
     {cls:'top', tag:'Everything', name:'Ultimate Course', price:'₹27,999', blurb:'Live and recorded, plus Claude AI editing, Higgsfield, every AI tool and pro editing.', access:'Lifetime recording access', f:[1,1,1,1,1,1,1,1,1,1,1,1]}
   ];
   /* ================================== */
-  // Hide student cards that are not filled in yet (name still in [brackets])
-  STUDENTS=STUDENTS.filter(function(st){ return st.name && st.name.charAt(0)!=='['; });
+  // Hide cards whose text is still a [placeholder]; photo-only cards (no name) are fine
+  STUDENTS=STUDENTS.filter(function(st){ return st.photo && (st.name||'').charAt(0)!=='['; });
 
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   var play='<svg width="44" height="44" viewBox="0 0 56 56" fill="none" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="#fff"/><path d="M23 19l15 9-15 9V19z" fill="#1554FF"/></svg>';
@@ -426,8 +436,9 @@ a{color:inherit}
   // Hero cards
   var ht=document.getElementById('heroTrack');
   ht.innerHTML=STUDENTS.map(function(s){
-    var ph=s.photo?'<img src="'+esc(s.photo)+'" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px">':'<div class="ph">[Student photo]</div>';
-    return '<article class="card-s">'+ph+'<p class="role"><b>AI +</b> '+esc(s.role)+'</p><p class="who">'+esc(s.name)+' · '+esc(s.win)+'</p></article>';
+    var ph=s.photo?'<img src="'+esc(s.photo)+'" alt="" loading="lazy" decoding="async" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px">':'<div class="ph">[Student photo]</div>';
+    var who=s.name?'<p class="who">'+esc(s.name)+(s.win?' · '+esc(s.win):'')+'</p>':'<p class="who">Raise AI student</p>';
+    return '<article class="card-s">'+ph+'<p class="role"><b>AI +</b> '+esc(s.role)+'</p>'+who+'</article>';
   }).join('');
   var pillText=document.getElementById('pillText'), pillRole=document.getElementById('pillRole');
   function heroPill(i){
