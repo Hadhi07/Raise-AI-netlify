@@ -304,8 +304,8 @@ a{color:inherit}
     <div class="mods" id="mods"></div>
     <div class="bonus">
       <p class="tag">Ultimate plan bonus</p>
-      <h3>Claude AI editing, Higgsfield and pro editing</h3>
-      <p>Do editing tasks in Claude and control its style, plus an introduction to Higgsfield, all the AI tools we use, and pro editing.</p>
+      <h3>Claude AI editing and Higgsfield</h3>
+      <p>Do editing tasks in Claude and control its style, plus an introduction to Higgsfield and all the major AI integration tools.</p>
     </div>
   </div>
 </section>
@@ -418,11 +418,12 @@ a{color:inherit}
     {t:'AI UGC Ad Creation', p:['Frame vs. ingredient method','ChatGPT + video engines + ElevenLabs','Hook, product, call to action'], s:'A ready-to-publish UGC reel.', yt:'Gv114R0ZA_o', poster:'/assets/images/results/yt_david_toothpaste.webp'},
     {t:'Different Styles of AI Ads', p:['3D with real lighting','Cartoon, anime and flat styles','Cinematic, studio-shot look'], s:'One concept in three styles.', yt:'p5UjELUGTFU', poster:'/assets/images/results/yt_home_visual.webp'}
   ];
-  var FEATS = ['All 7 modules, recorded','Recording access','Custom Ad-Prompt GPT access','Doubt clearing on WhatsApp for 14 days','Live sessions, 9–10 PM','Live Q&A and debugging','Automation pipelines','Certificate of completion','Claude AI editing','Higgsfield introduction','Introduction to all AI tools','Pro editing'];
+  // Rows 1 (recording access) and 3 (doubt clearing) take their text from each tier's access / doubt
+  var FEATS = ['All 7 modules, recorded','Recording access','Custom Ad-Prompt GPT access','Doubt clearing','Live sessions, 9–10 PM','Live Q&A and debugging','Certificate of completion','Claude AI editing','Higgsfield introduction','Introduction to all the major AI integration tools'];
   var TIERS = [
-    {cls:'', tag:'Self-paced', name:'Pre-Recorded Classes', price:'₹8,449', blurb:'Learn on your own time, with our prompt GPT and 14 days of WhatsApp doubt support.', access:'Recording access for 3 months', f:[1,1,1,1,0,0,0,1,0,0,0,0]},
-    {cls:'mid', tag:'Live + recorded', name:'14-Day Live + Recordings', price:'₹16,400', blurb:'The full course with live doubt-clearing every other day.', access:'Lifetime recording access', f:[1,1,1,1,1,1,1,1,0,0,0,0]},
-    {cls:'top', tag:'Everything', name:'Ultimate Course', price:'₹27,999', blurb:'Live and recorded, plus Claude AI editing, Higgsfield, every AI tool and pro editing.', access:'Lifetime recording access', f:[1,1,1,1,1,1,1,1,1,1,1,1]}
+    {cls:'', tag:'Self-paced', name:'Pre-Recorded Classes', price:'₹8,449', blurb:'Learn on your own time, with our prompt GPT and 14 days of WhatsApp doubt support.', access:'Lifetime recording access', doubt:'Doubt clearing on WhatsApp for 14 days', f:[1,1,1,1,0,0,1,0,0,0]},
+    {cls:'mid', tag:'Live + recorded', name:'14-Day Live + Recordings', price:'₹16,400', blurb:'The full course with live doubt-clearing every other day.', access:'Lifetime recording access', doubt:'Doubt clearing on WhatsApp and Google Meet for 14 days', f:[1,1,1,1,1,1,1,0,0,0]},
+    {cls:'top', tag:'Everything', name:'Ultimate Course', price:'₹27,999', blurb:'Live and recorded, plus Claude AI editing, Higgsfield and all the major AI integration tools.', access:'Lifetime recording access', doubt:'Doubt clearing on WhatsApp and Google Meet for 30 days', f:[1,1,1,1,1,1,1,1,1,1]}
   ];
   /* ================================== */
   // Hide cards whose text is still a [placeholder]; photo-only cards (no name) are fine
@@ -485,7 +486,7 @@ a{color:inherit}
   // Plans
   document.getElementById('tiers').innerHTML=TIERS.map(function(t){
     var top=t.cls==='top', on=top?'#D1FE17':'#1554FF', off=top?'#9AA0AA':'#6B7079';
-    var rows=FEATS.map(function(f,k){var y=t.f[k], txt=k===1?t.access:f;return '<li class="'+(y?'':'no')+'">'+(y?tick(on):dash(off))+'<span>'+esc(txt)+'</span><span class="sr" style="position:absolute;left:-9999px">'+(y?'Included':'Not included')+'</span></li>';}).join('');
+    var rows=FEATS.map(function(f,k){var y=t.f[k], txt=k===1?t.access:k===3?t.doubt:f;return '<li class="'+(y?'':'no')+'">'+(y?tick(on):dash(off))+'<span>'+esc(txt)+'</span><span class="sr" style="position:absolute;left:-9999px">'+(y?'Included':'Not included')+'</span></li>';}).join('');
     return '<article class="tier '+t.cls+'"><p class="tag">'+t.tag+'</p><h3>'+t.name+'</h3><p class="price">'+t.price+'</p><p class="blurb">'+t.blurb+'</p><ul>'+rows+'</ul><a class="btn" href="#pay">Enroll now<span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></article>';
   }).join('');
 

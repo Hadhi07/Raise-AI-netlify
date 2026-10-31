@@ -84,6 +84,39 @@
 .w-a.lt .fill{background:var(--raise-blue)}
 .w-a.lt .tm{color:var(--ink-muted)}
 .w-a.lt.on{border-color:var(--raise-blue)}
+/* Hero voice notes: a stack of cards. The front card flies off, the next one jumps forward with a shine.
+   Kept on even with reduced motion: the movement is what tells people there are more notes. Stops once someone presses play. */
+.w-hv{margin-top:22px;animation:hvpop .7s cubic-bezier(.2,.8,.2,1) .5s both}
+.hv-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.hv-live{display:inline-flex;align-items:center;gap:7px;font:700 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--raise-blue);white-space:nowrap;margin-right:auto}
+.hv-n{font:600 12px/1 var(--pill);color:var(--ink-muted);font-variant-numeric:tabular-nums}
+.hv-n b{display:inline-block;color:var(--charcoal);font-weight:600}
+.hv-n b.tick{animation:hvtick .45s cubic-bezier(.2,1.4,.4,1)}
+.hv-next{width:34px;height:34px;border-radius:50%;border:1px solid var(--divider);background:#fff;display:grid;place-items:center;cursor:pointer;transition:background .2s ease,border-color .2s ease}
+.hv-next:hover{background:var(--volt-lime);border-color:var(--volt-lime)}
+.hv-next svg{width:15px;height:15px}
+.hv-track{display:grid;padding-bottom:26px}
+.hv-card{grid-area:1/1;margin-top:0!important;position:relative;overflow:hidden;opacity:0;visibility:hidden;pointer-events:none;z-index:0;transform:translateY(26px) scale(.86);transform-origin:50% 100%;box-shadow:0 22px 44px -30px rgba(21,84,255,.7);transition:transform .7s cubic-bezier(.22,1.25,.36,1),opacity .5s ease,background-color .4s ease,visibility 0s linear .7s}
+.hv-card > *{transition:opacity .35s ease}
+.hv-card.is-on,.hv-card.p1,.hv-card.p2{visibility:visible;transition:transform .7s cubic-bezier(.22,1.25,.36,1),opacity .5s ease,background-color .4s ease,visibility 0s}
+.hv-card.is-on{opacity:1;z-index:3;transform:none;pointer-events:auto;border-color:rgba(21,84,255,.35)}
+.hv-card.p1{opacity:1;z-index:2;transform:translateY(13px) scale(.94);background:#DCE6FF;border-color:#C3D3FF}
+.hv-card.p2{opacity:1;z-index:1;transform:translateY(26px) scale(.88);background:#BCCFFF;border-color:#A8C0FF}
+.hv-card.p1 > *,.hv-card.p2 > *{opacity:0}
+.hv-card.is-out{visibility:visible;opacity:0;z-index:4;transform:translateX(-115%) rotate(-9deg);transition:transform .6s cubic-bezier(.55,0,.8,.4),opacity .6s ease-in,visibility 0s}
+.hv-card::after{content:"";position:absolute;top:0;bottom:0;left:0;width:45%;background:linear-gradient(100deg,transparent,rgba(209,254,23,.75),transparent);transform:translateX(-130%) skewX(-18deg);pointer-events:none}
+.hv-card.flash::after{animation:hvshine .9s ease-out .3s}
+.hv-card.flash .av{animation:hvpopav .6s cubic-bezier(.2,1.5,.4,1) .2s}
+.hv-card .pb{position:relative}
+.hv-card.is-on:not(.on):not(.flash) .pb{animation:hvring 1.8s ease-out infinite}
+.hv-bar{height:3px;border-radius:3px;background:var(--divider);overflow:hidden;margin:0 14px}
+.hv-bar i{display:block;height:100%;width:0;background:var(--raise-blue);border-radius:3px}
+.w-hv.played .hv-bar{visibility:hidden}
+@keyframes hvring{0%{box-shadow:0 0 0 0 rgba(21,84,255,.55)}70%,100%{box-shadow:0 0 0 14px rgba(21,84,255,0)}}
+@keyframes hvshine{to{transform:translateX(330%) skewX(-18deg)}}
+@keyframes hvpopav{0%{transform:scale(.6)}100%{transform:none}}
+@keyframes hvtick{0%{transform:translateY(-8px);opacity:0}100%{transform:none;opacity:1}}
+@keyframes hvpop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
 .w-when{display:flex;flex-direction:column;gap:4px;background:var(--soft-white);border-radius:16px;padding:12px 14px}
 .w-when b{font:800 17px/1.2 var(--display);letter-spacing:-.01em}
 .w-when span{font-size:13.5px;color:var(--ink-soft)}
@@ -199,6 +232,13 @@
 .w-a.go .gt{font:600 14px/1.35 var(--body)}
 .w-a.go .gl{font:700 15px/1 var(--display);display:inline-flex;gap:8px;align-items:center;margin-top:4px}
 .w-a.go .gl svg{width:16px;height:16px}
+.w-aud .w-x{display:none}
+.w-aud.all .w-x{display:flex}
+.w-aud .go{order:1}
+.w-more{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:920px;margin-top:16px;padding:16px 20px;border-radius:999px;border:1px solid var(--d-divider);background:transparent;color:#fff;font:700 15px/1 var(--display);cursor:pointer;transition:border-color .2s ease}
+.w-more:hover{border-color:var(--volt-lime)}
+.w-more svg{width:16px;height:16px;transition:transform .2s ease}
+.w-more[aria-expanded="true"] svg{transform:rotate(180deg)}
 
 /* Final */
 .final2 .w-amt{color:#fff;font-size:40px;margin-top:18px}
@@ -272,6 +312,18 @@
 .ws-3 .thumb s{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-24deg);font:700 10px/1 var(--body);letter-spacing:.1em;color:rgba(255,255,255,.85);text-decoration-color:#FF2A40;text-decoration-thickness:2px;white-space:nowrap}
 .ws-3 .chip{background:var(--volt-lime);color:#000}
 .ws-3 p{color:var(--d-ink-soft)}
+/* Step 4: Claude editing, in Claude's warm cream + terracotta colours (a mini chat) */
+.ws-4{background:#F0EEE6;border:1px solid #E3DFD3;color:#141413}
+.ws-4 .art{background:#FAF9F5;border:1px solid #E8E4D9;justify-items:stretch;max-width:100%}
+.ws-4 .n{background:#D97757;color:#fff}
+.ws-4 h3{color:#141413}
+.ws-4 .cl-q{justify-self:end;max-width:220px;background:#E8E4D9;color:#141413;font:600 13px/1.3 var(--body);padding:9px 12px;border-radius:14px 14px 4px 14px}
+.ws-4 .cl-a{justify-self:start;display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #E8E4D9;color:#3D3D3A;font:600 13px/1.3 var(--body);padding:9px 12px;border-radius:14px 14px 14px 4px}
+.ws-4 .cl-a b{color:#C15F3C}
+.ws-4 .cl-dot{width:8px;height:8px;border-radius:50%;background:#D97757;flex:none}
+@media (prefers-reduced-motion:no-preference){.ws-4 .cl-dot{animation:wpulse 1.2s infinite}}
+.ws-4 .chip{justify-self:center;background:#D97757;color:#fff;transform:rotate(2deg)}
+.ws-4 p{color:#5E5D59}
 /* Tool marks in brand colours */
 .w-tools li{grid-template-columns:52px 1fr auto;align-items:center}
 .w-tools li .lg{grid-column:1;grid-row:1/span 2;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;transform:rotate(-4deg);box-shadow:0 10px 22px -10px rgba(21,84,255,.55);transition:transform .2s ease}
@@ -322,8 +374,8 @@
 @media (min-width:860px){
   .w-hero{padding:72px 0 104px}
   .w-hero .wrap{grid-template-columns:1.12fr .88fr;align-items:center;gap:56px}
-  .w-peek,.w-a.lt{max-width:460px}
-  .w-steps{grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+  .w-peek,.w-a.lt,.w-hv{max-width:460px}
+  .w-steps{grid-template-columns:repeat(2,1fr);gap:20px;margin-top:56px}
   .ws .art{height:170px}
   .w-hero h1 .swap{font-size:44px;margin-top:18px}
   .w-who{grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
@@ -466,10 +518,85 @@ function trackCheckoutClick() {
       </h1>
       <p class="lead">A live 2-hour beginner class on Google Meet. Claim <b>15,000+ free Flow credits</b> and <b>1.5 years of Gemini Pro</b> free.</p>
 
-      <div class="w-a lt" data-audio-src="/assets/audio/yt_tm4.mp3">
-        <span class="av av-g num" aria-hidden="true">73<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
-        <div class="meta"><p class="who">Hear Attendee #73<small>Voice note &middot; <a href="#voices">6 more</a></small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:26</span></div></div>
-        <button class="pb" type="button" aria-label="Play voice note from attendee #73"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+      <div class="w-hv" id="heroVoices" role="region" aria-roledescription="carousel" aria-label="Voice notes from attendees">
+        <div class="hv-top">
+          <span class="hv-live">Hear real attendees</span>
+          <span class="hv-n" aria-live="polite"><b>1</b>/14</span>
+          <button class="hv-next" type="button" aria-label="Next voice note"><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+        <div class="hv-track">
+        <div class="w-a lt hv-card is-on" data-audio-src="/assets/audio/yt_student_4.mp3" role="group" aria-roledescription="slide" aria-label="1 of 14">
+          <span class="av av-g num" aria-hidden="true">73<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #73<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:23</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #73"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/yt_student_6.mp3" role="group" aria-roledescription="slide" aria-label="2 of 14" inert aria-hidden="true">
+          <span class="av av-b" aria-hidden="true">S<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Shemna<small>Attendee <b>#462</b></small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">1:00</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from Shemna"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/yt_student_5.mp3" role="group" aria-roledescription="slide" aria-label="3 of 14" inert aria-hidden="true">
+          <span class="av av-b num" aria-hidden="true">521<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #521<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:20</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #521"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/yt_tm4.mp3" role="group" aria-roledescription="slide" aria-label="4 of 14" inert aria-hidden="true">
+          <span class="av av-l num" aria-hidden="true">538<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #538<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:26</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #538"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/anas.mp3" role="group" aria-roledescription="slide" aria-label="5 of 14" inert aria-hidden="true">
+          <span class="av av-b" aria-hidden="true">A<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Anas<small>Attendee <b>#347</b></small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:28</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from Anas"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/tm1.mp3" role="group" aria-roledescription="slide" aria-label="6 of 14" inert aria-hidden="true">
+          <span class="av av-l num" aria-hidden="true">389<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #389<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:27</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #389"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/tm2.mp3" role="group" aria-roledescription="slide" aria-label="7 of 14" inert aria-hidden="true">
+          <span class="av av-w num" aria-hidden="true">416<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #416<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:19</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #416"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/tm5.mp3" role="group" aria-roledescription="slide" aria-label="8 of 14" inert aria-hidden="true">
+          <span class="av av-g num" aria-hidden="true">493<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #493<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:16</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #493"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/tm6.mp3" role="group" aria-roledescription="slide" aria-label="9 of 14" inert aria-hidden="true">
+          <span class="av av-b num" aria-hidden="true">509<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #509<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:43</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #509"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/tm7.mp3" role="group" aria-roledescription="slide" aria-label="10 of 14" inert aria-hidden="true">
+          <span class="av av-l num" aria-hidden="true">318<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #318<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:17</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #318"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/tm8.mp3" role="group" aria-roledescription="slide" aria-label="11 of 14" inert aria-hidden="true">
+          <span class="av av-w num" aria-hidden="true">356<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #356<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:28</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #356"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/tm9.mp3" role="group" aria-roledescription="slide" aria-label="12 of 14" inert aria-hidden="true">
+          <span class="av av-g num" aria-hidden="true">431<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #431<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:28</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #431"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/tm10.mp3" role="group" aria-roledescription="slide" aria-label="13 of 14" inert aria-hidden="true">
+          <span class="av av-b num" aria-hidden="true">477<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #477<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:11</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #477"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        <div class="w-a lt hv-card" data-audio-src="/assets/audio/tm11.mp3" role="group" aria-roledescription="slide" aria-label="14 of 14" inert aria-hidden="true">
+          <span class="av av-l num" aria-hidden="true">544<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+          <div class="meta"><p class="who">Attendee #544<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:15</span></div></div>
+          <button class="pb" type="button" aria-label="Play voice note from attendee #544"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+        </div>
+        </div>
+        <div class="hv-bar" aria-hidden="true"><i></i></div>
       </div>
     </div>
 
@@ -581,7 +708,7 @@ function trackCheckoutClick() {
   <div class="wrap">
     <span class="tag">The workflow</span>
     <h2 class="w-h2">Everything taught is <span class="key">practical.</span></h2>
-    <p class="lead">Master the complete workflow on 1 Nov, from your first idea to a clean final video.</p>
+    <p class="lead">Master the complete workflow on 1 Nov, from your first idea to a clean final video, then edit it with Claude.</p>
     <div class="w-steps">
       <article class="ws ws-1">
         <div class="art" aria-hidden="true">
@@ -610,6 +737,16 @@ function trackCheckoutClick() {
         <span class="n">3</span>
         <h3>Watermark-free export</h3>
         <p>Export your final video cleanly in full resolution, completely free of any watermarks.</p>
+      </article>
+      <article class="ws ws-4">
+        <div class="art" aria-hidden="true">
+          <div class="cl-q">Cut the pauses, add captions</div>
+          <div class="cl-a"><span class="cl-dot"></span>Editing your video&hellip; <b>Done &check;</b></div>
+          <span class="chip">Works on Claude free plan</span>
+        </div>
+        <span class="n">4</span>
+        <h3>Edit videos with Claude</h3>
+        <p>We show you, live, how to create and edit videos inside Claude using our own Raise AI editing skill, even on Claude's free plan.</p>
       </article>
     </div>
   </div>
@@ -695,21 +832,11 @@ function trackCheckoutClick() {
     <span class="tag">Real proof</span>
     <h2 class="w-h2">Hear it from <span class="key">recent attendees.</span></h2>
     <p class="lead">Voice notes from our attendees. Tap play.</p>
-    <div class="w-aud">
-      <div class="w-a" data-audio-src="/assets/audio/yt_jasim_1.mp3">
-        <span class="av av-l" aria-hidden="true">J<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
-        <div class="meta"><p class="who">Jasim Thangal<small>Attendee <b>#312</b> &middot; Video Editor</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:43</span></div></div>
-        <button class="pb" type="button" aria-label="Play voice note from Jasim Thangal"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
-      </div>
-      <div class="w-a" data-audio-src="/assets/audio/yt_tm4.mp3">
+    <div class="w-aud" id="voiceList">
+      <div class="w-a" data-audio-src="/assets/audio/yt_student_6.mp3">
         <span class="av av-b" aria-hidden="true">S<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
-        <div class="meta"><p class="who">Shemna<small>Attendee <b>#462</b></small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:26</span></div></div>
+        <div class="meta"><p class="who">Shemna<small>Attendee <b>#462</b></small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">1:00</span></div></div>
         <button class="pb" type="button" aria-label="Play voice note from Shemna"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
-      </div>
-      <div class="w-a" data-audio-src="/assets/audio/yt_jasim_2.mp3">
-        <span class="av av-w" aria-hidden="true">J<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
-        <div class="meta"><p class="who">Jasim<small>Attendee <b>#315</b> &middot; Second review</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:18</span></div></div>
-        <button class="pb" type="button" aria-label="Play voice note from Jasim"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
       </div>
       <div class="w-a" data-audio-src="/assets/audio/yt_student_4.mp3">
         <span class="av av-g num" aria-hidden="true">73<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
@@ -721,10 +848,60 @@ function trackCheckoutClick() {
         <div class="meta"><p class="who">Attendee #521<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:20</span></div></div>
         <button class="pb" type="button" aria-label="Play voice note from attendee #521"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
       </div>
-      <div class="w-a" data-audio-src="/assets/audio/yt_student_6.mp3">
+      <div class="w-a w-x" data-audio-src="/assets/audio/yt_tm4.mp3">
         <span class="av av-l num" aria-hidden="true">538<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
-        <div class="meta"><p class="who">Attendee #538<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">1:00</span></div></div>
+        <div class="meta"><p class="who">Attendee #538<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:26</span></div></div>
         <button class="pb" type="button" aria-label="Play voice note from attendee #538"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+      </div>
+      <div class="w-a w-x" data-audio-src="/assets/audio/anas.mp3">
+        <span class="av av-b" aria-hidden="true">A<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+        <div class="meta"><p class="who">Anas<small>Attendee <b>#347</b></small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:28</span></div></div>
+        <button class="pb" type="button" aria-label="Play voice note from Anas"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+      </div>
+      <div class="w-a w-x" data-audio-src="/assets/audio/tm1.mp3">
+        <span class="av av-l num" aria-hidden="true">389<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+        <div class="meta"><p class="who">Attendee #389<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:27</span></div></div>
+        <button class="pb" type="button" aria-label="Play voice note from attendee #389"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+      </div>
+      <div class="w-a w-x" data-audio-src="/assets/audio/tm2.mp3">
+        <span class="av av-w num" aria-hidden="true">416<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+        <div class="meta"><p class="who">Attendee #416<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:19</span></div></div>
+        <button class="pb" type="button" aria-label="Play voice note from attendee #416"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+      </div>
+      <div class="w-a w-x" data-audio-src="/assets/audio/tm5.mp3">
+        <span class="av av-g num" aria-hidden="true">493<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+        <div class="meta"><p class="who">Attendee #493<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:16</span></div></div>
+        <button class="pb" type="button" aria-label="Play voice note from attendee #493"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+      </div>
+      <div class="w-a w-x" data-audio-src="/assets/audio/tm6.mp3">
+        <span class="av av-b num" aria-hidden="true">509<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+        <div class="meta"><p class="who">Attendee #509<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:43</span></div></div>
+        <button class="pb" type="button" aria-label="Play voice note from attendee #509"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+      </div>
+      <div class="w-a w-x" data-audio-src="/assets/audio/tm7.mp3">
+        <span class="av av-l num" aria-hidden="true">318<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+        <div class="meta"><p class="who">Attendee #318<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:17</span></div></div>
+        <button class="pb" type="button" aria-label="Play voice note from attendee #318"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+      </div>
+      <div class="w-a w-x" data-audio-src="/assets/audio/tm8.mp3">
+        <span class="av av-w num" aria-hidden="true">356<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+        <div class="meta"><p class="who">Attendee #356<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:28</span></div></div>
+        <button class="pb" type="button" aria-label="Play voice note from attendee #356"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+      </div>
+      <div class="w-a w-x" data-audio-src="/assets/audio/tm9.mp3">
+        <span class="av av-g num" aria-hidden="true">431<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+        <div class="meta"><p class="who">Attendee #431<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:28</span></div></div>
+        <button class="pb" type="button" aria-label="Play voice note from attendee #431"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+      </div>
+      <div class="w-a w-x" data-audio-src="/assets/audio/tm10.mp3">
+        <span class="av av-b num" aria-hidden="true">477<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+        <div class="meta"><p class="who">Attendee #477<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:11</span></div></div>
+        <button class="pb" type="button" aria-label="Play voice note from attendee #477"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
+      </div>
+      <div class="w-a w-x" data-audio-src="/assets/audio/tm11.mp3">
+        <span class="av av-l num" aria-hidden="true">544<i><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></i></span>
+        <div class="meta"><p class="who">Attendee #544<small>Voice note</small></p><div class="rail"><div class="fill"></div></div><div class="tm"><span class="cur">0:00</span><span class="dur">0:15</span></div></div>
+        <button class="pb" type="button" aria-label="Play voice note from attendee #544"><svg class="iy" viewBox="0 0 12 14"><path d="M1 0l11 7-11 7z" fill="#000"/></svg><svg class="ip" viewBox="0 0 12 14"><path d="M1 0h3.5v14H1zM7.5 0H11v14H7.5z" fill="#000"/></svg></button>
       </div>
       <a class="w-a go js-cta" href="/webinar/payment/">
         <span class="gn">500+</span>
@@ -732,6 +909,7 @@ function trackCheckoutClick() {
         <span class="gl">Take your seat <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
     </div>
+    <button class="w-more" id="voiceMore" type="button" aria-controls="voiceList" aria-expanded="false"><span>Show all 14 voice notes</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
   </div>
 </section>
 
@@ -752,6 +930,10 @@ function trackCheckoutClick() {
       <details>
         <summary>I have zero video editing experience. Can I join?</summary>
         <p>Yes. This masterclass is made for complete beginners. If you can type simple prompts and click buttons, you can generate pro AI videos.</p>
+      </details>
+      <details>
+        <summary>Do I need a paid Claude plan for the video editing part?</summary>
+        <p>No. We show you live how to create and edit videos inside Claude with our own Raise AI editing skill, and it works on Claude's free plan.</p>
       </details>
       <details>
         <summary>Is the class in Malayalam or English?</summary>
@@ -1104,6 +1286,114 @@ function trackCheckoutClick() {
       });
     }
   });
+})();
+
+// Voice notes section: show 3 first, the rest behind "Show all"
+(function() {
+  var list = document.getElementById('voiceList');
+  var btn = document.getElementById('voiceMore');
+  if (!list || !btn) return;
+  var label = btn.querySelector('span');
+  btn.addEventListener('click', function() {
+    var open = !list.classList.contains('all');
+    if (!open) {
+      // stop any voice note that is about to be hidden
+      list.querySelectorAll('.w-x.on .pb').forEach(function(pb) { pb.click(); });
+    }
+    list.classList.toggle('all', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    label.textContent = open ? 'Show fewer' : 'Show all 14 voice notes';
+    if (!open) document.getElementById('voices').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+
+// Hero voice notes: auto-slide every few seconds; once someone plays one it stops sliding
+(function() {
+  var box = document.getElementById('heroVoices');
+  if (!box) return;
+  var cards = box.querySelectorAll('.hv-card');
+  var bar = box.querySelector('.hv-bar i');
+  var num = box.querySelector('.hv-n b');
+  var DUR = 4000, idx = 0, elapsed = 0, last = 0, flashT = null;
+  var played = false, hover = false, seen = true;
+
+  // Front card is-on, the next two peek out behind it (p1, p2), the rest wait hidden
+  function place() {
+    cards.forEach(function(c, i) {
+      var d = (i - idx + cards.length) % cards.length;
+      c.classList.toggle('is-on', d === 0);
+      c.classList.toggle('p1', d === 1);
+      c.classList.toggle('p2', d === 2);
+      if (d === 0) { c.removeAttribute('inert'); c.removeAttribute('aria-hidden'); }
+      else { c.setAttribute('inert', ''); c.setAttribute('aria-hidden', 'true'); }
+    });
+  }
+
+  function show(n) {
+    var prev = idx;
+    idx = (n + cards.length) % cards.length;
+    if (idx === prev) return;
+    if (cards[prev].classList.contains('on') && window.pauseVoiceNotes) window.pauseVoiceNotes();
+    var out = cards[prev];
+    out.classList.add('is-out');
+    setTimeout(function() { out.classList.remove('is-out'); }, 650);
+    place();
+    var front = cards[idx];
+    cards.forEach(function(c) { c.classList.remove('flash'); });
+    void front.offsetWidth;
+    front.classList.add('flash');
+    clearTimeout(flashT);
+    flashT = setTimeout(function() { front.classList.remove('flash'); }, 1300);
+    num.textContent = idx + 1;
+    num.classList.remove('tick');
+    void num.offsetWidth;
+    num.classList.add('tick');
+    elapsed = 0;
+    bar.style.width = '0%';
+  }
+
+  function frame(t) {
+    // Cap the step so a paused/background tab doesn't skip several notes on return
+    var dt = last ? Math.min(t - last, 100) : 0;
+    last = t;
+    if (!played && !hover && seen && !document.hidden) {
+      elapsed += dt;
+      if (elapsed >= DUR) show(idx + 1);
+      bar.style.width = (elapsed / DUR * 100) + '%';
+    }
+    if (!played) requestAnimationFrame(frame);
+  }
+
+  // Playing a note ("on" is set by the voice note player) stops the slider for good
+  var mo = new MutationObserver(function() {
+    if (played || !box.querySelector('.hv-card.on')) return;
+    played = true;
+    box.classList.add('played');
+  });
+  cards.forEach(function(c) { mo.observe(c, { attributes: true, attributeFilter: ['class'] }); });
+
+  box.querySelector('.hv-next').addEventListener('click', function() { show(idx + 1); });
+
+  // Swipe left / right on phones
+  var x0 = null;
+  box.addEventListener('touchstart', function(e) { x0 = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener('touchend', function(e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    x0 = null;
+    if (Math.abs(dx) > 40) show(idx + (dx < 0 ? 1 : -1));
+  });
+
+  box.addEventListener('mouseenter', function() { hover = true; });
+  box.addEventListener('mouseleave', function() { hover = false; });
+  box.addEventListener('focusin', function() { hover = true; });
+  box.addEventListener('focusout', function() { hover = false; });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(es) { seen = es[0].isIntersecting; }).observe(box);
+  }
+
+  place();
+  requestAnimationFrame(frame);
 })();
 </script>
 

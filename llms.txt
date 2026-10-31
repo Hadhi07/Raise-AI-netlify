@@ -9,6 +9,7 @@ Raise AI is an AI upskilling company in Kerala, India. We teach working professi
 - Student Results: Watch AI commercial ads, product videos, and UGC reels made by students without a camera, studio, or shoot. URL: https://raiseai.in/results/
 - Students: Meet the people who finished a Raise AI course, what they do, and what they said after learning AI for their own work. URL: https://raiseai.in/students/
 - Reviews: Real voice-note reviews from people who joined the live AI webinar. URL: https://raiseai.in/reviews/
+- Testimonials: Voice notes from webinar attendees and AI ads made by course students. URL: https://raiseai.in/testimonials/
 - Blog: Simple, practical guides on AI video, AI tools, and using AI at work. URL: https://raiseai.in/blog/
 - Guide: How to make an AI video ad for free (step by step) using ChatGPT, Google Flow, Luma Dream Machine, ElevenLabs, and CapCut. URL: https://raiseai.in/blog/how-to-make-an-ai-video-ad-for-free/
 - Blog RSS feed: https://raiseai.in/blog/rss.xml
