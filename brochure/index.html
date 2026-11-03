@@ -1,13 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18499038791"></script>
+<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PNBGWV3L"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-18499038791');
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -42,7 +41,7 @@ fbq('track', 'PageView');
     })(window, document, "clarity", "script", "y7w4qe8w9w");
 </script>
 <style>
-/* Layout: mobile-first stacked bands (blue hero → white results → black schedule → white/blue modules → black promise → grey plans → white join); one CTA zone at the end. */
+/* Layout: mobile-first stacked bands (blue hero → white results → black testimonials → black schedule → white/blue modules → black promise → grey plans → white join); one CTA zone at the end. */
 :root{
   --blue:#1554FF; --blue-hi:#08B8F5; --blue-lo:#1237D6;
   --lime:#D1FE17; --black:#000000; --char:#17191C; --char2:#2A2D33;
@@ -134,6 +133,41 @@ a{color:inherit}
 .lb iframe{width:100%;height:100%;border:0}
 .lb .x{position:absolute;top:14px;right:14px;width:48px;height:48px;border-radius:50%;border:0;background:#fff;color:#000;font:700 24px/1 var(--display);cursor:pointer}
 .vid figcaption{font-size:13px;color:var(--ink-muted);padding:0 4px}
+
+/* TESTIMONIALS (Black theme auto-sliding carousel) */
+.testi-band{background:var(--black);color:var(--white);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);padding-block:72px}
+.testi-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.testi-head .head-text{display:flex;flex-direction:column;gap:10px;max-width:680px}
+.testi-nav{display:flex;gap:10px;align-items:center}
+.testi-btn{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.05);color:var(--white);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:all 200ms ease;-webkit-user-select:none;user-select:none}
+.testi-btn:hover{background:var(--lime);color:var(--black);border-color:var(--lime);transform:scale(1.06)}
+.testi-btn:active{transform:scale(0.95)}
+.testi-vids{margin-top:28px;scroll-padding-inline-start:max(20px,calc((100% - 1100px)/2 + 20px))}
+.testi-vids .track{padding-inline:max(20px,calc((100% - 1100px)/2 + 20px));gap:18px}
+.testi-vids .track > *{scroll-snap-align:start}
+.card-t{width:260px;flex-shrink:0;background:#111317;border:1px solid rgba(255,255,255,0.08);border-radius:24px;padding:12px;display:flex;flex-direction:column;gap:12px;cursor:pointer;outline:none;text-align:left;transition:transform 280ms cubic-bezier(.2,.8,.4,1),border-color 280ms ease,box-shadow 280ms ease;box-shadow:0 12px 30px rgba(0,0,0,0.5)}
+.card-t:hover{transform:translateY(-5px);border-color:rgba(209,254,23,0.45);box-shadow:0 18px 40px rgba(0,0,0,0.7),0 0 24px rgba(209,254,23,0.12)}
+.card-t:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.card-t .frame{aspect-ratio:9/16;width:100%;border-radius:18px;background:var(--char);position:relative;overflow:hidden;display:block}
+.card-t .frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 350ms ease}
+.card-t:hover .frame img{transform:scale(1.04)}
+.card-t .play-pill{position:absolute;left:10px;bottom:10px;display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,0.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:5px 12px 5px 5px;border-radius:999px;border:1px solid rgba(255,255,255,0.18);color:var(--white);font-size:12px;font-weight:700;letter-spacing:.02em;transition:all 220ms ease;box-shadow:0 4px 12px rgba(0,0,0,0.5)}
+.card-t .play-pill .ic{width:26px;height:26px;border-radius:50%;background:var(--lime);color:#000;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 220ms ease}
+.card-t .play-pill .ic svg{width:10px;height:12px;margin-left:2px}
+.card-t:hover .play-pill{background:var(--lime);color:#000;border-color:var(--lime);box-shadow:0 6px 18px rgba(209,254,23,0.4)}
+.card-t:hover .play-pill .ic{background:#000;color:var(--lime)}
+.card-t .meta{display:flex;flex-direction:column;gap:6px;padding:2px 4px 4px}
+.card-t .who-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.card-t .name{font-family:var(--display);font-size:16px;font-weight:700;color:var(--white);margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-t .stars{color:var(--lime);font-size:12px;letter-spacing:1.5px;line-height:1}
+.card-t .role{font-size:12px;font-weight:600;color:var(--lime);text-transform:uppercase;letter-spacing:.05em;margin:0}
+.card-t .quote{font-size:13px;line-height:1.45;color:var(--on-dark);margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:480px){
+  .card-t{width:240px;padding:10px;border-radius:20px;gap:10px}
+  .testi-vids .track{gap:14px}
+  .testi-band{padding-block:52px}
+  .testi-btn{width:40px;height:40px}
+}
 
 /* SCHEDULE */
 .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;font-weight:600;color:var(--on-dark)}
@@ -279,7 +313,31 @@ a{color:inherit}
   </div>
 </section>
 
-<!-- 3. SCHEDULE -->
+<!-- 3. TESTIMONIALS -->
+<section class="band dark testi-band" aria-labelledby="testi-h">
+  <div class="wrap">
+    <div class="testi-head">
+      <div class="head-text">
+        <p class="label">Student Reviews</p>
+        <h2 class="h2" id="testi-h">Real stories. <span class="g-volt">Real growth.</span></h2>
+        <p class="lead">Watch video reviews from creators, editors, and designers who went through the 14-day masterclass. Tap any video to hear their experience.</p>
+      </div>
+      <div class="testi-nav" aria-label="Testimonial controls">
+        <button type="button" class="testi-btn" id="testiPrev" aria-label="Previous testimonial">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="testi-btn" id="testiNext" aria-label="Next testimonial">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="viewport testi-vids" aria-label="Student video testimonials">
+    <div class="track" id="testiTrack"></div>
+  </div>
+</section>
+
+<!-- 4. SCHEDULE -->
 <section class="band dark" aria-labelledby="sch-h">
   <div class="wrap narrow">
     <p class="label">What is this</p>
@@ -296,7 +354,7 @@ a{color:inherit}
   </div>
 </section>
 
-<!-- 4. MODULES -->
+<!-- 5. MODULES -->
 <section class="band modules" aria-labelledby="mod-h">
   <div class="wrap">
     <p class="label">What you will learn</p>
@@ -310,7 +368,7 @@ a{color:inherit}
   </div>
 </section>
 
-<!-- 5. GUARANTEE -->
+<!-- 6. GUARANTEE -->
 <section class="band" aria-labelledby="g-h">
   <div class="wrap">
     <div class="promise">
@@ -323,7 +381,7 @@ a{color:inherit}
   </div>
 </section>
 
-<!-- 6. PLANS -->
+<!-- 7. PLANS -->
 <section class="band plans" aria-labelledby="p-h">
   <div class="wrap">
     <p class="label">Plans · prices include GST</p>
@@ -332,7 +390,7 @@ a{color:inherit}
   </div>
 </section>
 
-<!-- 7. JOIN -->
+<!-- 8. JOIN -->
 <section class="band" aria-labelledby="j-h">
   <div class="wrap">
     <div class="seats"><i></i>Only 25 seats left · starts 1 November</div>
@@ -409,6 +467,16 @@ a{color:inherit}
     {yt:'l48YJvzv4jA', poster:'/assets/images/results/Creating_sunscreen_product_comme_202609020459_jpg.webp?v=3', caption:'Sunscreen product commercial'},
     {yt:'ry0RzLb1o-I', poster:'/assets/images/results/Video_Project_2_1_jpg.webp?v=3', caption:'AI video project'}
   ];
+
+  /* Student video testimonials (YouTube Shorts & reviews) */
+  var TESTIMONIALS = [
+    {yt:'PFOYCrzywOY', poster:'/assets/images/testimonials/testi_amjath.webp', name:'Amjath', role:'Designer', quote:'Direct feedback and clear workflows in every live session. Learned to build professional AI video ads.'},
+    {yt:'P7yugr-0sFo', poster:'/assets/images/testimonials/testi_shafeeq.webp', name:'Shafeeq', role:'Interior Designer · Batch 2', quote:'Turned 3D concepts into client-ready commercial video reels. The workflow is fast and practical.'},
+    {yt:'jFarZV47tvk', poster:'/assets/images/testimonials/testi_niyas.webp', name:'Niyas', role:'Content Creator', quote:'No studio or expensive camera needed. The AI workflow saves me 15 hours on every video campaign.'},
+    {yt:'hDX7q4EjwTI', poster:'/assets/images/testimonials/testi_jasim.webp', name:'Jasim Thangal', role:'Video Editor · Batch 1', quote:'Character consistency and AI visuals changed how I edit and pitch to premium brand clients.'},
+    {yt:'6p881lTFoHc', poster:'/assets/images/testimonials/testi_hafeef.webp', name:'Hafeef', role:'Content Creator', quote:'My creation speed tripled in the first two weeks. Learned to make full AI commercials from scratch.'},
+    {yt:'AY8XtX5Ds1g', poster:'/assets/images/testimonials/testi_ajmal.webp', name:'Ajmal Sunoon', role:'Content Creator · Batch 2', quote:'We produce commercial AI reels in-house now. Reach and client interest grew right away.'}
+  ];
   var MODULES = [
     {t:'Precision Editing', p:['Trigger AI changes at precise seconds','Swap materials in existing footage','Clean watermarks and glitches'], s:'A client video with its hero asset swapped.', yt:'s-s2sYs8GnY', poster:'/assets/images/brochure/module-1.webp'},
     {t:'Creative Strategy and Scripting', p:['Custom GPTs for scripts','Hook, Meat and CTA structure','Templates from viral videos'], s:'Your own script GPT and three reel scripts.', img:'/assets/images/brochure/module-2-ad-director.webp', alt:'Raise AI Ad Director, our custom GPT for ad scripts and prompts'},
@@ -458,11 +526,48 @@ a{color:inherit}
   var lb=document.getElementById('vidLb'), lbBox=lb.querySelector('.box');
   function openVid(id){
     lbBox.innerHTML='<iframe src="https://www.youtube.com/embed/'+encodeURIComponent(id)+'?autoplay=1&playsinline=1&rel=0" title="Student video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
-    lb.hidden=false; vt.paused=true; document.body.style.overflow='hidden';
+    lb.hidden=false;
+    if(vt) vt.paused=true;
+    if(tt) tt.paused=true;
+    if(ht) ht.paused=true;
+    document.body.style.overflow='hidden';
   }
-  function closeVid(){ lb.hidden=true; lbBox.innerHTML=''; vt.paused=false; document.body.style.overflow=''; }
+  function closeVid(){
+    lb.hidden=true;
+    lbBox.innerHTML='';
+    if(vt) vt.paused=false;
+    if(tt) tt.paused=false;
+    if(ht) ht.paused=false;
+    document.body.style.overflow='';
+  }
   vt.addEventListener('click',function(e){var f=e.target.closest('[data-yt]'); if(f) openVid(f.getAttribute('data-yt'));});
   vt.addEventListener('keydown',function(e){var f=e.target.closest('[data-yt]'); if(f&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openVid(f.getAttribute('data-yt'));}});
+
+  // Testimonials track
+  var tt=document.getElementById('testiTrack');
+  if(tt){
+    tt.innerHTML=TESTIMONIALS.map(function(t){
+      return '<article class="card-t" role="button" tabindex="0" data-yt="'+esc(t.yt)+'" aria-label="Watch video review by '+esc(t.name)+'">' +
+        '<div class="frame">' +
+          '<img src="'+esc(t.poster)+'" alt="'+esc(t.name)+' video review" width="260" height="462" loading="lazy" decoding="async">' +
+          '<span class="play-pill"><span class="ic"><svg viewBox="0 0 12 14" aria-hidden="true"><path d="M0 0l12 7-12 7z" fill="currentColor"/></svg></span><span>Watch review</span></span>' +
+        '</div>' +
+        '<div class="meta">' +
+          '<div class="who-row">' +
+            '<h3 class="name">'+esc(t.name)+'</h3>' +
+            '<span class="stars" aria-label="5 stars">★★★★★</span>' +
+          '</div>' +
+          '<p class="role">'+esc(t.role)+'</p>' +
+          '<p class="quote">“'+esc(t.quote)+'”</p>' +
+        '</div>' +
+      '</article>';
+    }).join('');
+    tt.addEventListener('click',function(e){var f=e.target.closest('[data-yt]'); if(f) openVid(f.getAttribute('data-yt'));});
+    tt.addEventListener('keydown',function(e){var f=e.target.closest('[data-yt]'); if(f&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openVid(f.getAttribute('data-yt'));}});
+    var tp=document.getElementById('testiPrev'), tn=document.getElementById('testiNext');
+    if(tp) tp.addEventListener('click',function(){ if(tt.prev) tt.prev(); });
+    if(tn) tn.addEventListener('click',function(){ if(tt.next) tt.next(); });
+  }
   var mods=document.getElementById('mods');
   mods.addEventListener('click',function(e){var f=e.target.closest('[data-yt]'); if(f) openVid(f.getAttribute('data-yt'));});
   mods.addEventListener('keydown',function(e){var f=e.target.closest('[data-yt]'); if(f&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openVid(f.getAttribute('data-yt'));}});
@@ -522,9 +627,15 @@ a{color:inherit}
     window.addEventListener('pointermove',function(e){ if(!md) return; var dx=e.clientX-md.x; if(Math.abs(dx)>5){ moved=true; vp.classList.add('drag'); } if(moved) vp.scrollLeft=md.sl-dx; });
     window.addEventListener('pointerup',function(){ if(!md) return; md=null; free(); if(vp.classList.contains('drag')){ vp.classList.remove('drag'); vp.scrollTo({left:pos(nearest()),behavior:'smooth'}); } });
     vp.addEventListener('click',function(e){ if(moved){ e.preventDefault(); e.stopPropagation(); moved=false; } },true);
+    // pause on mouse hover
+    vp.addEventListener('pointerenter',function(e){ if(e.pointerType==='mouse') track.paused=true; });
+    vp.addEventListener('pointerleave',function(e){ if(e.pointerType==='mouse'){ track.paused=false; lastTouch=Date.now(); } });
+    // external controls (prev / next)
+    track.next=function(){ settle(); lastTouch=Date.now(); vp.scrollTo({left:pos(cur+1),behavior:'smooth'}); };
+    track.prev=function(){ settle(); lastTouch=Date.now(); vp.scrollTo({left:pos(cur-1),behavior:'smooth'}); };
     // auto-slide
     setInterval(function(){
-      if(document.hidden||touching||track.paused||Date.now()-lastTouch<4500) return;
+      if(document.hidden||touching||track.paused||reduce||Date.now()-lastTouch<4500) return;
       settle(); vp.scrollTo({left:pos(cur+1),behavior:'smooth'});
     },every);
     window.addEventListener('resize',function(){ jumpTo(cur); });
@@ -533,6 +644,7 @@ a{color:inherit}
   }
   loop(ht, 3000, heroPill);
   loop(vt, 2800);
+  if(tt) loop(tt, 3200);
 
   // Copy UPI
   document.getElementById('copyBtn').addEventListener('click',function(){
