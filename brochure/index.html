@@ -1556,6 +1556,159 @@
       margin-top: 8px
     }
 
+    /* Replay Redirection Banner */
+    .replay-card {
+      background: linear-gradient(135deg, #111317 0%, #17191C 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+      padding: 24px;
+      margin-top: 10px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+    }
+
+    .replay-card::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(21, 84, 255, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .replay-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .replay-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      padding: 4px 12px 4px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .02em;
+      width: fit-content;
+    }
+
+    .replay-badge .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #FF3B30;
+      box-shadow: 0 0 10px rgba(255, 59, 48, 0.8);
+      animation: pulse-dot 1.8s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(0.85); }
+    }
+
+    .replay-main {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    @media (min-width: 720px) {
+      .replay-card {
+        padding: 28px 32px;
+      }
+      .replay-main {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+    }
+
+    .replay-text {
+      max-width: 580px;
+    }
+
+    .replay-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 19px;
+      color: var(--white);
+      margin: 0 0 6px;
+      line-height: 1.25;
+    }
+
+    .replay-desc {
+      font-size: 14px;
+      color: var(--on-dark);
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    .replay-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--lime);
+      color: #000000;
+      font-family: var(--body);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 20px 14px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+      box-shadow: 0 6px 20px rgba(209, 254, 23, 0.28);
+    }
+
+    .replay-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(209, 254, 23, 0.42);
+      background: #DCFF38;
+    }
+
+    .replay-btn:active {
+      transform: translateY(0);
+    }
+
+    .replay-btn-ic {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #000000;
+      color: var(--lime);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .replay-btn-ic svg {
+      margin-left: 1px;
+    }
+
+    .replay-btn-arr {
+      display: inline-flex;
+      align-items: center;
+      transition: transform 200ms ease;
+    }
+
+    .replay-btn:hover .replay-btn-arr {
+      transform: translateX(3px);
+    }
+
     @media (min-width:900px) {
       .band {
         padding-block: 96px
@@ -1786,6 +1939,32 @@
             <p class="muted" style="color:var(--on-dark-muted)">WhatsApp: +91 73560 03301</p>
           </div>
         </div>
+
+        <!-- Replay Redirection Box -->
+        <div class="replay-card" id="webinar-replay">
+          <div class="replay-inner">
+            <div class="replay-badge">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span>Webinar Recording</span>
+            </div>
+            <div class="replay-main">
+              <div class="replay-text">
+                <h3 class="replay-title">Looking for the webinar replay?</h3>
+                <p class="replay-desc">Watch the full 2-hour live recording of the Flow AI Masterclass, plus download the Claude Reel Editor and prompt toolkit.</p>
+              </div>
+              <a class="replay-btn" href="/replay/webinar.html">
+                <span class="replay-btn-ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <span>Watch Webinar Replay</span>
+                <span class="replay-btn-arr" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <p class="foot">Raise AI · raiseai.in · support@raiseai.in · Instagram @hadhi_creates_</p>
       </div>
     </section>
