@@ -1680,10 +1680,9 @@
         <h2 class="h2" id="mod-h">7 modules. <span class="g-blue">7 things you ship.</span></h2>
         <div class="mods" id="mods"></div>
         <div class="bonus">
-          <p class="tag">Ultimate plan bonus</p>
+          <p class="tag">Claude AI Editing Included</p>
           <h3>Claude AI editing and Higgsfield</h3>
-          <p>Do editing tasks in Claude and control its style, plus an introduction to Higgsfield and all the major AI
-            integration tools.</p>
+          <p>Claude editing basics included in Pre-Recorded, improved basics in 14-Day Live, plus advanced editing workflows, Higgsfield, and major AI integration tools in the Ultimate Course.</p>
         </div>
         <div class="bonus" style="margin-top:16px;background:linear-gradient(135deg,#0E1626,#070B14);border:1px solid rgba(8,184,245,0.35);box-shadow:0 12px 36px rgba(8,184,245,0.08)">
           <p class="tag" style="background:#08B8F5;color:#000;font-weight:800">Live &amp; Ultimate Plans Perk</p>
@@ -1727,19 +1726,19 @@
     <section class="band" aria-labelledby="j-h">
       <div class="wrap">
         <div class="seats"><i></i>Only 25 seats left · starts <span class="js-start">next Sunday</span></div>
-        <h2 class="h2" id="j-h">Lock your seat with <span class="g-blue">₹500.</span></h2>
-        <p class="lead">Pay ₹500 today to hold your seat and plan. Pay the balance within 7 days.</p>
-        <a class="btn" href="#pay">Pay ₹500 and lock my seat<span class="arr"><svg width="16" height="16"
+        <h2 class="h2" id="j-h">Lock your seat with <span class="g-blue">₹499.</span></h2>
+        <p class="lead">Pay ₹499 today to hold your seat and plan. Pay the balance within 7 days.</p>
+        <a class="btn" href="#pay">Pay ₹499 and lock my seat<span class="arr"><svg width="16" height="16"
               viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="#000" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg></span></a>
         <ol class="steps">
           <li><span class="sn">01</span>
-            <div><b>Pay ₹500 advance</b><span>Your seat and plan are locked.</span></div>
+            <div><b>Pay ₹499 advance</b><span>Your seat and plan are locked.</span></div>
           </li>
           <li><span class="sn">02</span>
-            <div><b>Pay the balance within 7 days</b><span>Recorded ₹7,949 · Live ₹15,900 · Ultimate ₹27,499</span>
+            <div><b>Pay the balance within 7 days</b><span>Recorded ₹7,950 · Live ₹15,901 · Ultimate ₹27,500</span>
             </div>
           </li>
           <li><span class="sn">03</span>
@@ -1777,7 +1776,7 @@
                 app</span></div>
             <p class="muted">After paying, send your screenshot and chosen plan on WhatsApp.</p>
             <a class="btn"
-              href="https://wa.me/917356003301?text=Hi%2C%20I%20paid%20the%20%E2%82%B9500%20advance%20for%20the%20AI%20Video%20Masterclass"
+              href="https://wa.me/917356003301?text=Hi%2C%20I%20paid%20the%20%E2%82%B9499%20advance%20for%20the%20AI%20Video%20Masterclass"
               target="_blank" rel="noopener">Send on WhatsApp<span class="arr"><svg width="16" height="16"
                   viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="#000" stroke-width="2" stroke-linecap="round"
@@ -1880,9 +1879,9 @@
     'Introduction to all the major AI integration tools'
   ];
   var TIERS = [
-    {cls:'', tag:'Self-paced', name:'Pre-Recorded Classes', price:'₹8,449', blurb:'Learn on your own time, with our prompt GPT and 14 days of WhatsApp doubt support.', access:'Lifetime recording access', doubt:'Doubt clearing on WhatsApp for 14 days', f:[1,1,1,1,0,0,1,0,0,0,0]},
-    {cls:'mid', tag:'Live + recorded', name:'14-Day Live + Recordings', price:'₹16,400', blurb:'The full course with live doubt-clearing every other day + 1st month Google Gemini Pro paid by Raise AI.', access:'Lifetime recording access', doubt:'Doubt clearing on WhatsApp and Google Meet for 14 days', f:[1,1,1,1,1,1,1,1,0,0,0]},
-    {cls:'top', tag:'Everything', name:'Ultimate Course', price:'₹27,999', blurb:'Live and recorded, 1st month Gemini Pro paid by Raise AI, plus Claude AI editing, Higgsfield & tools.', access:'Lifetime recording access', doubt:'Doubt clearing on WhatsApp and Google Meet for 30 days', f:[1,1,1,1,1,1,1,1,1,1,1]}
+    {cls:'', tag:'Self-paced', name:'Pre-Recorded Classes', price:'₹8,449', blurb:'Learn on your own time, with prompt GPT, Claude editing basics and 14 days of WhatsApp doubt support.', access:'Lifetime recording access', doubt:'Doubt clearing on WhatsApp for 14 days', claude:'Claude AI editing basics', f:[1,1,1,1,0,0,1,0,1,0,0]},
+    {cls:'mid', tag:'Live + recorded', name:'14-Day Live + Recordings', price:'₹16,400', blurb:'Full course with live doubt-clearing, 1st month Gemini Pro, plus improved Claude AI editing basics.', access:'Lifetime recording access', doubt:'Doubt clearing on WhatsApp and Google Meet for 14 days', claude:'Claude AI editing (improved basics)', f:[1,1,1,1,1,1,1,1,1,0,0]},
+    {cls:'top', tag:'Everything', name:'Ultimate Course', price:'₹27,999', blurb:'Live and recorded, 1st month Gemini Pro paid by Raise AI, plus full Claude AI editing, Higgsfield & tools.', access:'Lifetime recording access', doubt:'Doubt clearing on WhatsApp and Google Meet for 30 days', claude:'Advanced Claude AI editing & scripts', f:[1,1,1,1,1,1,1,1,1,1,1]}
   ];
   /* ================================== */
   // Hide cards whose text is still a [placeholder]; photo-only cards (no name) are fine
@@ -1989,7 +1988,7 @@
       // Plans
       document.getElementById('tiers').innerHTML = TIERS.map(function (t) {
         var top = t.cls === 'top', on = top ? '#D1FE17' : '#1554FF', off = top ? '#9AA0AA' : '#6B7079';
-        var rows = FEATS.map(function (f, k) { var y = t.f[k], txt = k === 1 ? t.access : k === 3 ? t.doubt : f; return '<li class="' + (y ? '' : 'no') + '">' + (y ? tick(on) : dash(off)) + '<span>' + esc(txt) + '</span><span class="sr" style="position:absolute;left:-9999px">' + (y ? 'Included' : 'Not included') + '</span></li>'; }).join('');
+        var rows = FEATS.map(function (f, k) { var y = t.f[k], txt = k === 1 ? t.access : k === 3 ? t.doubt : k === 8 ? (t.claude || f) : f; return '<li class="' + (y ? '' : 'no') + '">' + (y ? tick(on) : dash(off)) + '<span>' + esc(txt) + '</span><span class="sr" style="position:absolute;left:-9999px">' + (y ? 'Included' : 'Not included') + '</span></li>'; }).join('');
         return '<article class="tier ' + t.cls + '"><p class="tag">' + t.tag + '</p><h3>' + t.name + '</h3><p class="price">' + t.price + '</p><p class="blurb">' + t.blurb + '</p><ul>' + rows + '</ul><a class="btn" href="#pay">Enroll now<span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></article>';
       }).join('');
 
