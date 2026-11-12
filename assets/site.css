@@ -2382,7 +2382,7 @@ dialog#note::backdrop {
   
   /* Courses */
   .cards {
-    grid-template-columns: 1fr 1fr 1.2fr;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
     margin-top: 56px;
   }
