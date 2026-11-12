@@ -85,6 +85,279 @@ body{background:var(--soft-white);padding-bottom:0}
 .p-legal{font-size:12.5px;color:var(--ink-muted);text-align:center;margin-top:22px;line-height:1.6}
 .p-legal a{text-decoration:underline;text-underline-offset:3px}
 .p-help{display:block;text-align:center;margin-top:10px;font:600 14px/1.4 var(--body);color:var(--raise-blue)}
+
+/* Pop-up Modal (Temporary Closed) */
+.p-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 18, 24, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  overflow-y: auto;
+}
+.p-modal-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+.p-modal-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--divider);
+  border-radius: 28px;
+  padding: 34px 26px 26px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 35px 80px -25px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0,0,0,0.04);
+  text-align: center;
+  transform: translateY(18px) scale(0.96);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  margin: auto;
+}
+.p-modal-overlay.is-active .p-modal-card {
+  transform: translateY(0) scale(1);
+}
+.p-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--divider);
+  background: var(--soft-white);
+  color: var(--charcoal);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.p-modal-close:hover {
+  background: #e5e7eb;
+  transform: scale(1.06);
+}
+.p-modal-icon-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.p-modal-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #FFFBEB;
+  border: 2px solid #FDE68A;
+  color: #D97706;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 24px -6px rgba(217, 119, 6, 0.25);
+}
+.p-modal-icon svg {
+  width: 30px;
+  height: 30px;
+}
+.p-modal-pill {
+  display: inline-block;
+  font: 700 11px/1 var(--body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #B45309;
+  background: #FEF3C7;
+  border-radius: 99px;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+}
+.p-modal-title {
+  font-size: 23px;
+  line-height: 1.22;
+  color: var(--charcoal);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+}
+.p-modal-desc {
+  font: 400 14px/1.55 var(--body);
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+}
+.p-modal-notice {
+  background: var(--soft-white);
+  border: 1px solid var(--divider);
+  border-radius: 16px;
+  padding: 13px 15px;
+  text-align: left;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.p-modal-notice svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  color: var(--raise-blue);
+  margin-top: 2px;
+}
+.p-modal-notice-text b {
+  display: block;
+  font-size: 13.5px;
+  color: var(--charcoal);
+  margin-bottom: 2px;
+}
+.p-modal-notice-text span {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--ink-muted);
+  display: block;
+}
+.p-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.p-modal-actions .btn-wa,
+.p-closed-box .btn-wa {
+  background: #25D366;
+  color: #fff;
+  border-radius: 99px;
+  padding: 14px 20px;
+  font: 700 15px/1 var(--display);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 12px 28px -10px rgba(37, 211, 102, 0.65);
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+.p-modal-actions .btn-wa:hover,
+.p-closed-box .btn-wa:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+.p-modal-actions .btn-wa svg,
+.p-closed-box .btn-wa svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  flex: none;
+}
+.p-modal-actions .btn-back {
+  background: #f1f3f7;
+  color: var(--charcoal);
+  border-radius: 99px;
+  padding: 12px 18px;
+  font: 600 14px/1 var(--body);
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.18s ease;
+}
+.p-modal-actions .btn-back:hover {
+  background: #e4e7ee;
+}
+.p-modal-foot {
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+.p-modal-foot a {
+  color: var(--raise-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Page Closed Screen Card */
+.p-closed-box {
+  background: #17191C;
+  color: #fff;
+  border-radius: 26px;
+  padding: 26px 20px;
+  margin-top: 14px;
+  text-align: center;
+  box-shadow: 0 25px 60px -25px rgba(0, 0, 0, 0.45);
+}
+.p-closed-badge {
+  display: inline-block;
+  font: 700 11px/1 var(--body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #000;
+  background: var(--volt-lime);
+  border-radius: 99px;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+}
+.p-closed-box h2 {
+  font-size: 21px;
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.p-closed-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 18px;
+  max-width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-closed-reopen {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.88);
+  border-radius: 99px;
+  padding: 10px 18px;
+  font: 600 13px/1 var(--body);
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.p-closed-reopen:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+.p-closed-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 600 12px/1 var(--body);
+  background: #FEE2E2;
+  color: #B91C1C;
+  border-radius: 99px;
+  padding: 7px 12px;
+}
+.p-closed-pill::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #EF4444;
+}
+.p-sec.closed {
+  color: #B45309;
+  background: #FFFBEB;
+  border-color: #FDE68A;
+}
+.p-sec.closed svg {
+  stroke: #D97706;
+}
 </style>
 
 <!-- Meta Pixel Code -->
@@ -132,33 +405,50 @@ fbq('track', 'PageView');
       <a class="p-back" href="/webinar/" aria-label="Back to the webinar page"><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
       <a class="logo" href="/" aria-label="Raise AI home"><img src="/assets/images/logo/logo-light.webp?v=3" alt="Raise AI" width="132" height="88"></a>
     </div>
-    <span class="p-sec"><svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure checkout</span>
+    <span class="p-sec closed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Registrations paused</span>
   </div>
 </header>
 
 <main class="p-wrap">
 
-  <!-- Order summary + the only timer -->
+  <!-- Order summary + batch status -->
   <section class="p-card">
     <span class="p-kick">You're registering for</span>
     <h1>Flow Fundamentals with 100% free tools</h1>
     <ul class="p-meta">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><b>Sunday, 8 Nov</b> &middot; 9:00 - 11:00 PM IST</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><b>Upcoming Live Session</b> &middot; 9:00 - 11:00 PM IST</span></li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="3"/><path d="M16 10l5-3v10l-5-3z"/></svg>Live on Google Meet &middot; recording included</li>
     </ul>
     <div class="p-price">
-      <div><small>Flash price</small><p class="p-amt"><s>₹199</s>₹99</p></div>
-      <span class="p-timer">Reserved for <b id="urgency-timer">10:00</b></span>
+      <div><small>Admission price</small><p class="p-amt"><s>₹199</s>₹99</p></div>
+      <span class="p-closed-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Registrations Paused</span>
     </div>
   </section>
 
-  <!-- Pay -->
+  <!-- Closed State Notice on Payment Page -->
+  <section class="p-closed-box">
+    <span class="p-closed-badge">TEMPORARILY CLOSED</span>
+    <h2>Registrations for this batch are full</h2>
+    <p>Admissions have been paused to maintain interactive live workshop quality. Join our WhatsApp priority list to receive next batch dates and early-access registration.</p>
+    
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <a class="btn-wa" href="https://wa.me/917356003301?text=Hi%20Raise%20AI,%20please%20notify%20me%20when%20the%20next%20webinar%20registrations%20open" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.35C9.34 7.35 9.04 7.42 8.78 7.7C8.53 7.98 7.82 8.64 7.82 10C7.82 11.36 8.81 12.67 8.95 12.86C9.09 13.05 10.89 15.82 13.65 17.01C14.31 17.29 14.82 17.46 15.22 17.59C15.88 17.8 16.48 17.77 16.96 17.7C17.5 17.62 18.61 17.03 18.84 16.38C19.07 15.73 19.07 15.17 19 15.05C18.93 14.93 18.75 14.86 18.47 14.72C18.19 14.58 16.82 13.91 16.57 13.82C16.31 13.72 16.13 13.68 15.94 13.96C15.76 14.24 15.24 14.86 15.09 15.05C14.93 15.24 14.78 15.26 14.5 15.12C14.22 14.98 13.33 14.69 12.28 13.75C11.46 13.02 10.91 12.11 10.75 11.83C10.59 11.55 10.73 11.4 10.87 11.26C11 11.13 11.16 10.92 11.3 10.76C11.44 10.6 11.49 10.48 11.58 10.3C11.67 10.11 11.63 9.95 11.56 9.81C11.49 9.67 10.93 8.31 10.7 7.75C10.47 7.21 10.24 7.29 10.06 7.28C9.9 7.28 9.71 7.28 9.53 7.35Z"/></svg>
+        <span>Join Next Batch on WhatsApp</span>
+      </a>
+      <button type="button" class="p-closed-reopen" id="reopenModalBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <span>View Details Pop-up</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Razorpay hosted Payment Button (Temporarily disabled while batch is closed)
   <section class="p-pay">
     <div class="p-pay-hd">
       <h2><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Pay securely</h2>
       <span class="p-due">₹99</span>
     </div>
-    <!-- Razorpay hosted Payment Button (unchanged) -->
     <p class="p-tap"><span>Tap the button below to pay ₹99</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></svg></i></p>
     <div class="p-rzp">
       <form>
@@ -174,20 +464,114 @@ fbq('track', 'PageView');
       <span><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span><a href="/refund/" target="_blank" rel="noopener">Refund within 3 days</a> of payment</span></span>
     </div>
   </section>
+  -->
 
-  <!-- After payment -->
+  <!-- After payment info / waitlist steps -->
   <section class="p-card p-after">
-    <h2>After you pay</h2>
+    <h2>How to join the next batch</h2>
     <ol>
-      <li><span>Take a <b>screenshot</b> of your payment.</span></li>
-      <li><span>Send it to us on <b>WhatsApp +91 73560 03301</b>.</span></li>
-      <li><span>We confirm your seat and send the <b>Google Meet link</b>.</span></li>
+      <li><span>Message us on <b>WhatsApp +91 73560 03301</b>.</span></li>
+      <li><span>Get added to the <b>priority early-bird waitlist</b>.</span></li>
+      <li><span>We notify you <b>before public release</b> so you secure a seat.</span></li>
     </ol>
   </section>
 
-  <p class="p-legal">By completing payment, you agree to our <a href="/terms/" target="_blank" rel="noopener">Terms of Service</a> &amp; <a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
-  <a class="p-help" href="https://wa.me/917356003301" target="_blank" rel="noopener">Need help with your payment? Chat with us &rarr;</a>
+  <p class="p-legal">By registering interest, you agree to our <a href="/terms/" target="_blank" rel="noopener">Terms of Service</a> &amp; <a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+  <a class="p-help" href="https://wa.me/917356003301" target="_blank" rel="noopener">Need help or want to speak with our team? Chat with us &rarr;</a>
 </main>
+
+<!-- Temporary Closed Modal Popup -->
+<div class="p-modal-overlay" id="closedModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="p-modal-card">
+    <button type="button" class="p-modal-close" id="closeModalBtn" aria-label="Close popup">&times;</button>
+    
+    <div class="p-modal-icon-wrap">
+      <div class="p-modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+      </div>
+    </div>
+
+    <span class="p-modal-pill">ADMISSIONS PAUSED</span>
+    <h2 id="modalTitle" class="p-modal-title">Registrations Temporarily Closed</h2>
+    <p class="p-modal-desc">
+      All available seats for this webinar batch are currently full. Admissions have been paused temporarily while we prepare our next live session.
+    </p>
+
+    <div class="p-modal-notice">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <div class="p-modal-notice-text">
+        <b>Next Live Batch Announcement</b>
+        <span>Join our WhatsApp waitlist to receive the new session dates and early-bird link before public release.</span>
+      </div>
+    </div>
+
+    <div class="p-modal-actions">
+      <a class="btn-wa" href="https://wa.me/917356003301?text=Hi%20Raise%20AI,%20please%20notify%20me%20when%20the%20next%20webinar%20registrations%20open" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.35C9.34 7.35 9.04 7.42 8.78 7.7C8.53 7.98 7.82 8.64 7.82 10C7.82 11.36 8.81 12.67 8.95 12.86C9.09 13.05 10.89 15.82 13.65 17.01C14.31 17.29 14.82 17.46 15.22 17.59C15.88 17.8 16.48 17.77 16.96 17.7C17.5 17.62 18.61 17.03 18.84 16.38C19.07 15.73 19.07 15.17 19 15.05C18.93 14.93 18.75 14.86 18.47 14.72C18.19 14.58 16.82 13.91 16.57 13.82C16.31 13.72 16.13 13.68 15.94 13.96C15.76 14.24 15.24 14.86 15.09 15.05C14.93 15.24 14.78 15.26 14.5 15.12C14.22 14.98 13.33 14.69 12.28 13.75C11.46 13.02 10.91 12.11 10.75 11.83C10.59 11.55 10.73 11.4 10.87 11.26C11 11.13 11.16 10.92 11.3 10.76C11.44 10.6 11.49 10.48 11.58 10.3C11.67 10.11 11.63 9.95 11.56 9.81C11.49 9.67 10.93 8.31 10.7 7.75C10.47 7.21 10.24 7.29 10.06 7.28C9.9 7.28 9.71 7.28 9.53 7.35Z"/></svg>
+        <span>Join Next Batch on WhatsApp</span>
+      </a>
+      <a class="btn-back" href="/webinar/">Back to Webinar Overview</a>
+    </div>
+
+    <p class="p-modal-foot">
+      Need help? Reach out directly on <a href="https://wa.me/917356003301" target="_blank" rel="noopener">WhatsApp +91 73560 03301</a>
+    </p>
+  </div>
+</div>
+
+<script>
+// Temporary Closed Modal Controller
+(function() {
+  var modal = document.getElementById('closedModal');
+  var closeBtn = document.getElementById('closeModalBtn');
+  var reopenBtn = document.getElementById('reopenModalBtn');
+
+  function openModal() {
+    if (!modal) return;
+    modal.classList.add('is-active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove('is-active');
+    document.body.style.overflow = '';
+  }
+
+  // Open modal automatically on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', openModal);
+  } else {
+    openModal();
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (reopenBtn) reopenBtn.addEventListener('click', openModal);
+
+  // Close on backdrop click
+  if (modal) {
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal && modal.classList.contains('is-active')) {
+      closeModal();
+    }
+  });
+})();
+</script>
 
 <script>
 // Same 10-minute offer timer as /webinar/ (shared localStorage key)
@@ -196,6 +580,7 @@ fbq('track', 'PageView');
     try { var s = Number(localStorage.getItem(KEY)); if (s > Date.now()) end = s; } catch (e) {}
     if (!end) { end = Date.now() + TEN; try { localStorage.setItem(KEY, end); } catch (e) {} }
     var el = document.getElementById('urgency-timer');
+    if (!el) return;
     function tick() {
         var r = end - Date.now();
         if (r <= 0) { end = Date.now() + TEN; try { localStorage.setItem(KEY, end); } catch (e) {} r = TEN; }
