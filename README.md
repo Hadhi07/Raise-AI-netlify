@@ -22,5 +22,6 @@ Posts are Markdown files in `build/blog/posts/`. A zero-dependency Node script t
 - Write or edit a post: `build/blog/posts/<slug>.md`
 - Build: `npm run build:blog` (renders share covers, then all pages)
 - Validate only: `npm run check:blog`
+- The "Latest guides" cards on the homepage and About page are also written by the build, between the `BLOG:LATEST` markers
 - Topic queue: `build/blog/keywords.json`
 - Format, writing rules and the scheduled-run playbook: `build/blog/AUTOPILOT.md`
