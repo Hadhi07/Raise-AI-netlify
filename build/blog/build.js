@@ -23,7 +23,7 @@ const SRC = path.join(__dirname, 'posts');
 const PARTIALS = path.join(__dirname, 'partials');
 const OUT = path.join(ROOT, 'blog');
 const SITE = 'https://raiseai.in';
-const ASSET_V = '4'; // bump when assets/blog.css or assets/blog.js change
+const ASSET_V = '6'; // bump when assets/blog.css or assets/blog.js change
 const DEFAULT_OG = '/assets/images/results/AI_advertisement_jpg.webp';
 const CHECK_ONLY = process.argv.includes('--check');
 
@@ -79,6 +79,10 @@ const CTAS = {
     final: 'Prompts are step one. <span class="key">A real workflow is step two.</span>',
   },
 };
+
+// Proof line shown in the mid-post box on every post. Keep these numbers in sync
+// with the "Real numbers from real students" block on the homepage.
+const PROOF = '25+ course students, 500+ live webinar attendees and ₹1,00,000+ earned by students. <a href="/results/">See what they made</a>';
 
 const ARROW = '<i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>';
 
@@ -468,6 +472,7 @@ function postPage(post, posts) {
   const midbox = `<div class="midbox">
   <span class="tag tag-lime">${cta.tag}</span>
   <p>${cta.text}</p>
+  <small class="proof">${PROOF}</small>
   <a class="btn" href="${cta.href}" id="midbox-cta-btn" data-cta="${cta.event}">
     ${cta.button}
     ${ARROW}
@@ -510,7 +515,7 @@ function postPage(post, posts) {
         mainEntityOfPage: post.url,
         url: post.url,
         isPartOf: { '@id': SITE + '/blog/#blog' },
-        ...(post.sources.length ? { citation: post.sources.map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url })) } : {}),
+        ...(post.sources.length ? { citation: post.sources.map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url.startsWith('/') ? SITE + s.url : s.url })) } : {}),
       },
       {
         '@type': 'FAQPage',
@@ -564,7 +569,7 @@ ${post.toc.map((t) => `          <li><a href="#${t.id}">${esc(t.text)}</a></li>`
     ? `
       <h2 class="sub" id="sources">Sources</h2>
       <ul class="sources">
-${post.sources.map((s) => `        <li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.note ? `: <span>${inline(s.note)}</span>` : ''}</li>`).join('\n')}
+${post.sources.map((s) => `        <li><a href="${esc(s.url)}"${s.url.startsWith('/') ? '' : ' target="_blank" rel="noopener"'}>${esc(s.title)}</a>${s.note ? `: <span>${inline(s.note)}</span>` : ''}</li>`).join('\n')}
       </ul>
       <p class="checked">Facts in this guide were last checked on <time datetime="${post.updated}">${human(post.updated)}</time>. AI tools change their plans and features often, so confirm limits and prices on the official pages above.</p>
 `

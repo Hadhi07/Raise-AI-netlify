@@ -28,7 +28,7 @@
 .article h1{text-wrap:balance}
 .article .body h2{font-size:28px;scroll-margin-top:84px}
 .article .body h3{font-size:22px;scroll-margin-top:84px}
-.article .body a,.article .faq a,.article .answer a,.article .kt a{color:var(--raise-blue);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.article .body a:not(.btn),.article .faq a,.article .answer a,.article .kt a{color:var(--raise-blue);font-weight:600;text-decoration:underline;text-underline-offset:3px}
 .article .body strong{color:var(--charcoal)}
 .article .body code{font:500 0.9em/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--soft-white);border:1px solid var(--divider);border-radius:6px;padding:1px 6px}
 .article .body blockquote{border-left:4px solid var(--volt-lime);padding:4px 0 4px 18px;margin:0 0 24px;color:var(--charcoal);font-weight:600}
@@ -36,6 +36,9 @@
 .article h2.sub{font-size:28px;margin-top:48px;color:var(--charcoal);scroll-margin-top:84px}
 .article .author a{font-weight:600}
 @media (min-width:860px){.article h1{font-size:46px;line-height:1.1}}
+
+.midbox .proof{font:500 14px/1.5 var(--body);color:var(--d-ink-soft)}
+.midbox .proof a{color:var(--volt-lime);font-weight:600;text-decoration:underline;text-underline-offset:3px}
 
 /* Key takeaways */
 .kt{margin-top:20px;padding:20px 22px;border:1px solid var(--divider);border-radius:16px;background:#fff}

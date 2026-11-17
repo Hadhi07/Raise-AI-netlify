@@ -10,7 +10,6 @@ date: 2026-11-17
 keywords: ai walkthrough video from render | ai architecture walkthrough video | image to video for architects | google flow architecture video | render to video ai | ai video for real estate
 audience: Architects, interior designers, builders and 3D visualisers
 cta: aec
-featured: true
 answer: To make an AI walkthrough video from a render, upload the still image to Google Flow as the first frame, describe one slow camera move, and generate a short clip. Repeat for 4 to 6 views, then join the clips in a video editor with music. You get a 20 to 40 second cinematic film without animating anything in 3D software. It works best as a mood film for clients and social media, not as an exact fly-through.
 ---
 

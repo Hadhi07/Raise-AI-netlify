@@ -3,184 +3,454 @@
   "audience": "Working professionals in construction: architects, interior designers, civil and site engineers, builders. Many already use ChatGPT and Gemini Pro and search for ready prompts.",
   "entries": [
     {
+      "primary": "best ai course in kerala",
+      "asks": [
+        "which is the best ai course in kerala",
+        "best ai upskilling institute in kerala",
+        "ai course with real student results",
+        "is raise ai legit"
+      ],
+      "category": "raise-ai-stories",
+      "funnel": "BOFU",
+      "status": "published",
+      "slug": "raise-ai-student-results",
+      "source": "hadhi"
+    },
+    {
       "primary": "ai walkthrough video from render",
-      "asks": ["how to make a walkthrough video from a render with AI", "image to video for architects", "can google flow animate my 3d render"],
-      "category": "ai-for-architects", "funnel": "MOFU", "status": "published", "slug": "ai-walkthrough-video-from-render"
+      "asks": [
+        "how to make a walkthrough video from a render with AI",
+        "image to video for architects",
+        "can google flow animate my 3d render"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "MOFU",
+      "status": "published",
+      "slug": "ai-walkthrough-video-from-render"
     },
     {
       "primary": "chatgpt prompts for architects",
-      "asks": ["best chatgpt prompts for architects", "gemini prompts for architects", "can chatgpt design a house plan"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "published", "slug": "chatgpt-prompts-for-architects"
+      "asks": [
+        "best chatgpt prompts for architects",
+        "gemini prompts for architects",
+        "can chatgpt design a house plan"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "published",
+      "slug": "chatgpt-prompts-for-architects"
     },
     {
       "primary": "sketch to render ai",
-      "asks": ["turn my sketch into a realistic render", "floor plan to 3d render ai free", "gemini sketch to render prompt"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "published", "slug": "sketch-to-render-ai"
+      "asks": [
+        "turn my sketch into a realistic render",
+        "floor plan to 3d render ai free",
+        "gemini sketch to render prompt"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "published",
+      "slug": "sketch-to-render-ai"
     },
     {
       "primary": "gemini prompts for interior designers",
-      "asks": ["gemini prompt to redesign my room from a photo", "ai virtual staging prompt", "chatgpt prompts for interior design"],
-      "category": "ai-for-interiors", "funnel": "TOFU", "status": "published", "slug": "gemini-prompts-for-interior-designers"
+      "asks": [
+        "gemini prompt to redesign my room from a photo",
+        "ai virtual staging prompt",
+        "chatgpt prompts for interior design"
+      ],
+      "category": "ai-for-interiors",
+      "funnel": "TOFU",
+      "status": "published",
+      "slug": "gemini-prompts-for-interior-designers"
     },
     {
       "primary": "chatgpt prompts for civil engineers",
-      "asks": ["chatgpt prompt for daily site report", "can chatgpt make a boq", "ai for site engineers"],
-      "category": "ai-for-civil-engineers", "funnel": "TOFU", "status": "published", "slug": "chatgpt-prompts-for-civil-engineers"
+      "asks": [
+        "chatgpt prompt for daily site report",
+        "can chatgpt make a boq",
+        "ai for site engineers"
+      ],
+      "category": "ai-for-civil-engineers",
+      "funnel": "TOFU",
+      "status": "published",
+      "slug": "chatgpt-prompts-for-civil-engineers"
     },
     {
       "primary": "ai course for architects in kerala",
-      "asks": ["best ai course for architects in kerala", "ai course for interior designers", "where can architects learn ai in india"],
-      "category": "ai-for-architects", "funnel": "BOFU", "status": "published", "slug": "ai-course-for-architects-kerala"
+      "asks": [
+        "best ai course for architects in kerala",
+        "ai course for interior designers",
+        "where can architects learn ai in india"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "BOFU",
+      "status": "published",
+      "slug": "ai-course-for-architects-kerala"
     },
     {
       "primary": "ai video ad free",
-      "asks": ["how to make an ai video ad for free", "free ai ad maker"],
-      "category": "ai-video", "funnel": "TOFU", "status": "published", "slug": "how-to-make-an-ai-video-ad-for-free"
+      "asks": [
+        "how to make an ai video ad for free",
+        "free ai ad maker"
+      ],
+      "category": "ai-video",
+      "funnel": "TOFU",
+      "status": "published",
+      "slug": "how-to-make-an-ai-video-ad-for-free"
     },
-
     {
       "primary": "ai front elevation design",
-      "asks": ["front elevation design for my house with AI", "gemini prompt for house elevation", "chatgpt prompt for 30x40 house front elevation"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "queued", "priority": 10,
+      "asks": [
+        "front elevation design for my house with AI",
+        "gemini prompt for house elevation",
+        "chatgpt prompt for 30x40 house front elevation"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 10,
       "angle": "'Front elevation design' is one of the most common house design searches in India. Give 8 copy-paste prompts by style (contemporary, Kerala traditional, tropical modern, box type) from a plan, a sketch or a site photo, plus the keep-the-openings rule."
     },
     {
       "primary": "kerala house design ai prompts",
-      "asks": ["ai prompt for kerala style house", "nalukettu house design ai", "gemini prompt kerala traditional home exterior"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "queued", "priority": 12,
+      "asks": [
+        "ai prompt for kerala style house",
+        "nalukettu house design ai",
+        "gemini prompt kerala traditional home exterior"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 12,
       "angle": "Local advantage: prompts with real Kerala vocabulary (sloped clay tile roof, laterite, sit-out, charupadi, courtyard, monsoon light). No other AI site writes this well."
     },
     {
       "primary": "ai virtual staging free",
-      "asks": ["how to furnish an empty room photo with AI", "virtual staging with gemini", "ai staging for flat sale listing"],
-      "category": "ai-for-interiors", "funnel": "TOFU", "status": "queued", "priority": 14,
+      "asks": [
+        "how to furnish an empty room photo with AI",
+        "virtual staging with gemini",
+        "ai staging for flat sale listing"
+      ],
+      "category": "ai-for-interiors",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 14,
       "angle": "Step by step for builders and interior designers selling flats: empty room photo to staged photo, 3 styles, what to disclose to buyers."
     },
     {
       "primary": "floor plan to 3d ai",
-      "asks": ["convert 2d floor plan to 3d with ai free", "chatgpt floor plan to 3d", "can ai read my floor plan"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "queued", "priority": 16,
+      "asks": [
+        "convert 2d floor plan to 3d with ai free",
+        "chatgpt floor plan to 3d",
+        "can ai read my floor plan"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 16,
       "angle": "Dedicated deep dive (the sketch-to-render post only covers it briefly): cutaway, isometric, room-by-room interior views from a plan, and honest limits on scale."
     },
     {
       "primary": "ai real estate video",
-      "asks": ["how to make a property video with ai", "ai reel for builders and real estate", "site photo to finished building video ai"],
-      "category": "ai-video", "funnel": "MOFU", "status": "queued", "priority": 18,
+      "asks": [
+        "how to make a property video with ai",
+        "ai reel for builders and real estate",
+        "site photo to finished building video ai"
+      ],
+      "category": "ai-video",
+      "funnel": "MOFU",
+      "status": "queued",
+      "priority": 18,
       "angle": "Hadhi's core skill applied to builders: a 30-second project launch reel from renders and site photos (hook, walkthrough clips, voiceover, CTA). Link to the ad guide and the walkthrough guide."
     },
     {
       "primary": "modular kitchen design ai",
-      "asks": ["ai prompt for modular kitchen design", "redesign my kitchen photo with gemini", "l shaped kitchen design ai"],
-      "category": "ai-for-interiors", "funnel": "TOFU", "status": "queued", "priority": 20,
+      "asks": [
+        "ai prompt for modular kitchen design",
+        "redesign my kitchen photo with gemini",
+        "l shaped kitchen design ai"
+      ],
+      "category": "ai-for-interiors",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 20,
       "angle": "Kitchen-only prompts: layout types, shutters, countertop, backsplash, lighting, from a site photo or a plan. India-specific sizes and materials."
     },
     {
       "primary": "chatgpt prompts for interior designers",
-      "asks": ["chatgpt prompts for interior design business", "ai quotation for interior work", "client questionnaire interior design chatgpt"],
-      "category": "ai-for-interiors", "funnel": "TOFU", "status": "queued", "priority": 22,
+      "asks": [
+        "chatgpt prompts for interior design business",
+        "ai quotation for interior work",
+        "client questionnaire interior design chatgpt"
+      ],
+      "category": "ai-for-interiors",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 22,
       "angle": "The business side (text prompts): quotation structure, scope notes, site measurement checklist, vendor follow-ups, Instagram captions. Complements the Gemini image post."
     },
     {
       "primary": "chatgpt for boq",
-      "asks": ["how to use chatgpt for boq and estimation", "chatgpt excel boq formula", "ai quantity takeoff"],
-      "category": "ai-for-civil-engineers", "funnel": "MOFU", "status": "queued", "priority": 24,
+      "asks": [
+        "how to use chatgpt for boq and estimation",
+        "chatgpt excel boq formula",
+        "ai quantity takeoff"
+      ],
+      "category": "ai-for-civil-engineers",
+      "funnel": "MOFU",
+      "status": "queued",
+      "priority": 24,
       "angle": "Worked example with a small G+1 house: paste a BOQ table, find gaps, build Excel formulas, abstract of cost. Rates always from the user's own SOR."
     },
     {
       "primary": "gemini pro vs chatgpt plus for architects",
-      "asks": ["is gemini pro worth it for architects", "chatgpt plus or gemini pro for interior designers", "which ai subscription should an architect buy"],
-      "category": "ai-for-architects", "funnel": "MOFU", "status": "queued", "priority": 26,
+      "asks": [
+        "is gemini pro worth it for architects",
+        "chatgpt plus or gemini pro for interior designers",
+        "which ai subscription should an architect buy"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "MOFU",
+      "status": "queued",
+      "priority": 26,
       "angle": "Many readers already pay for Gemini Pro or ChatGPT. Compare by job (writing, image edits, video, file limits). Every plan fact must be checked on the official pricing pages on the day of writing."
     },
     {
       "primary": "best ai tools for architects",
-      "asks": ["best free ai tools for architects", "ai tools for interior designers in india", "which ai is best for architecture rendering"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "queued", "priority": 28,
+      "asks": [
+        "best free ai tools for architects",
+        "ai tools for interior designers in india",
+        "which ai is best for architecture rendering"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 28,
       "angle": "Short honest list grouped by job (write, render, video, present), with what each is good and bad at. No affiliate tone. Verify every tool's current plan."
     },
     {
       "primary": "site photo to finished building ai",
-      "asks": ["show the finished building on my site photo with ai", "before and after construction reel ai", "ai renovation before after prompt"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "queued", "priority": 30,
+      "asks": [
+        "show the finished building on my site photo with ai",
+        "before and after construction reel ai",
+        "ai renovation before after prompt"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 30,
       "angle": "The before/after reveal is the most shareable format for architects on Instagram. Photo of plot or old house to finished design, then a reveal clip in Flow."
     },
     {
       "primary": "ai for construction project management",
-      "asks": ["chatgpt prompts for construction project managers", "ai delay analysis construction", "ai meeting minutes site meeting"],
-      "category": "ai-for-civil-engineers", "funnel": "TOFU", "status": "queued", "priority": 32,
+      "asks": [
+        "chatgpt prompts for construction project managers",
+        "ai delay analysis construction",
+        "ai meeting minutes site meeting"
+      ],
+      "category": "ai-for-civil-engineers",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 32,
       "angle": "Schedules, look-ahead plans, delay notes, RFI logs and site meeting minutes for project managers and contractors."
     },
     {
       "primary": "whatsapp voice note to site report ai",
-      "asks": ["convert voice note to site report", "malayalam voice note to english report ai", "daily progress report format chatgpt"],
-      "category": "ai-for-civil-engineers", "funnel": "TOFU", "status": "queued", "priority": 34,
+      "asks": [
+        "convert voice note to site report",
+        "malayalam voice note to english report ai",
+        "daily progress report format chatgpt"
+      ],
+      "category": "ai-for-civil-engineers",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 34,
       "angle": "One narrow, very practical workflow: record a Malayalam voice note on site, get an English DPR and a client WhatsApp update. Include the DPR format."
     },
     {
       "primary": "false ceiling design ai",
-      "asks": ["ai prompt for false ceiling design", "gemini ceiling design from room photo", "pop ceiling design ai"],
-      "category": "ai-for-interiors", "funnel": "TOFU", "status": "queued", "priority": 36,
+      "asks": [
+        "ai prompt for false ceiling design",
+        "gemini ceiling design from room photo",
+        "pop ceiling design ai"
+      ],
+      "category": "ai-for-interiors",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 36,
       "angle": "Ceiling and lighting options on a real room photo: cove, profile lights, wooden rafters. One-change prompts."
     },
     {
       "primary": "vastu house plan chatgpt prompt",
-      "asks": ["chatgpt prompt for vastu compliant house plan", "ai vastu check for floor plan", "east facing house plan vastu ai"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "queued", "priority": 38,
+      "asks": [
+        "chatgpt prompt for vastu compliant house plan",
+        "ai vastu check for floor plan",
+        "east facing house plan vastu ai"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 38,
       "angle": "Clients ask for it, so architects search it. Treat Vastu as a client preference: prompts to list the client's Vastu wishes, check a zoning diagram against them and explain trade-offs. Make no claims that Vastu works."
     },
     {
       "primary": "sketchup to render ai",
-      "asks": ["render my sketchup model with ai free", "sketchup screenshot to photoreal render gemini", "ai alternative to vray for sketchup"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "queued", "priority": 40,
+      "asks": [
+        "render my sketchup model with ai free",
+        "sketchup screenshot to photoreal render gemini",
+        "ai alternative to vray for sketchup"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 40,
       "angle": "Model screenshot workflow in detail: export settings, material-by-surface prompt, keeping camera, night and monsoon variants."
     },
     {
       "primary": "ai landscape design from photo",
-      "asks": ["ai garden design from photo", "landscape design prompt gemini", "courtyard design ai kerala"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "queued", "priority": 42,
+      "asks": [
+        "ai garden design from photo",
+        "landscape design prompt gemini",
+        "courtyard design ai kerala"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 42,
       "angle": "Front yard, courtyard and terrace garden options on a real photo, with plants that suit a warm-humid climate (ask the reader to confirm species locally)."
     },
     {
       "primary": "ai for architecture students",
-      "asks": ["chatgpt prompts for architecture thesis", "ai for architecture portfolio", "how architecture students should use ai"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "queued", "priority": 44,
+      "asks": [
+        "chatgpt prompts for architecture thesis",
+        "ai for architecture portfolio",
+        "how architecture students should use ai"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 44,
       "angle": "Thesis topic research, case study tables, jury presentation, portfolio text. Be clear about academic honesty rules."
     },
     {
       "primary": "ai client presentation for architects",
-      "asks": ["make an architecture presentation with ai", "chatgpt prompt for design presentation", "ai pitch deck for interior designers"],
-      "category": "ai-at-work", "funnel": "MOFU", "status": "queued", "priority": 46,
+      "asks": [
+        "make an architecture presentation with ai",
+        "chatgpt prompt for design presentation",
+        "ai pitch deck for interior designers"
+      ],
+      "category": "ai-at-work",
+      "funnel": "MOFU",
+      "status": "queued",
+      "priority": 46,
       "angle": "From approved images to a client deck and a WhatsApp-ready PDF: story structure, slide text prompts, tools."
     },
     {
       "primary": "ai marketing for architects",
-      "asks": ["how architects can get clients from instagram using ai", "reel ideas for architects", "ai content ideas for interior designers"],
-      "category": "ai-video", "funnel": "MOFU", "status": "queued", "priority": 48,
+      "asks": [
+        "how architects can get clients from instagram using ai",
+        "reel ideas for architects",
+        "ai content ideas for interior designers"
+      ],
+      "category": "ai-video",
+      "funnel": "MOFU",
+      "status": "queued",
+      "priority": 48,
       "angle": "10 reel formats for a design practice (before/after, walkthrough, material story), each with a hook and an AI workflow. Use hooks that worked in the Notion Content Calendar."
     },
     {
       "primary": "ai course for interior designers",
-      "asks": ["best ai course for interior designers in kerala", "ai interior design course online india"],
-      "category": "ai-for-interiors", "funnel": "BOFU", "status": "queued", "priority": 50,
+      "asks": [
+        "best ai course for interior designers in kerala",
+        "ai interior design course online india"
+      ],
+      "category": "ai-for-interiors",
+      "funnel": "BOFU",
+      "status": "queued",
+      "priority": 50,
       "angle": "BOFU page for interior designers. Reuse the checklist approach from the architects course post. Only state facts that are on raiseai.in on the day of writing."
     },
     {
       "primary": "ai course for civil engineers",
-      "asks": ["ai course for civil engineers in kerala", "how civil engineers can learn ai"],
-      "category": "ai-for-civil-engineers", "funnel": "BOFU", "status": "queued", "priority": 52,
+      "asks": [
+        "ai course for civil engineers in kerala",
+        "how civil engineers can learn ai"
+      ],
+      "category": "ai-for-civil-engineers",
+      "funnel": "BOFU",
+      "status": "queued",
+      "priority": 52,
       "angle": "BOFU page for civil and site engineers. Same rule: facts only from raiseai.in."
     },
     {
       "primary": "ai mistakes in architectural renders",
-      "asks": ["why does ai change my building design", "how to stop ai from changing windows in render", "ai render looks fake how to fix"],
-      "category": "ai-for-architects", "funnel": "TOFU", "status": "queued", "priority": 54,
+      "asks": [
+        "why does ai change my building design",
+        "how to stop ai from changing windows in render",
+        "ai render looks fake how to fix"
+      ],
+      "category": "ai-for-architects",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 54,
       "angle": "Troubleshooting post: 10 common failures with the exact fix prompt for each. Strong for question-style queries."
     },
     {
       "primary": "ai for builders and contractors",
-      "asks": ["how builders can use ai", "chatgpt for construction business", "ai for small construction company india"],
-      "category": "ai-for-civil-engineers", "funnel": "TOFU", "status": "queued", "priority": 56,
+      "asks": [
+        "how builders can use ai",
+        "chatgpt for construction business",
+        "ai for small construction company india"
+      ],
+      "category": "ai-for-civil-engineers",
+      "funnel": "TOFU",
+      "status": "queued",
+      "priority": 56,
       "angle": "10 uses for a small contractor: quotations, customer updates, payment reminders, labour planning, marketing reels."
+    },
+    {
+      "primary": "ai course in kozhikode",
+      "asks": [
+        "best ai training institute in kozhikode",
+        "ai classes in calicut",
+        "offline ai course near ramanattukara"
+      ],
+      "category": "raise-ai-stories",
+      "funnel": "BOFU",
+      "status": "queued",
+      "priority": 2,
+      "source": "hadhi",
+      "angle": "Local search page for Kozhikode/Calicut. Lead with student results and the KINFRA office. Facts only from raiseai.in. Be clear that classes are live online on Google Meet."
+    },
+    {
+      "primary": "student story",
+      "asks": [
+        "what do ai course students actually earn",
+        "can a video editor earn with ai",
+        "ai freelancing kerala real example"
+      ],
+      "category": "raise-ai-stories",
+      "funnel": "MOFU",
+      "status": "blocked",
+      "priority": 3,
+      "source": "hadhi",
+      "angle": "One case study per student (Hafeef, Jasim Thangal, Niyas, Ajmal Sunoon, Shafeeq the interior designer...). BLOCKED until Hadhi adds a 'Student stories' page in Notion with the student's own facts (before, what they made, clients, earnings) and their consent to publish. Never invent or estimate a student's earnings."
+    },
+    {
+      "primary": "ai course for video editors in kerala",
+      "asks": [
+        "ai video editing course malayalam",
+        "how video editors can earn more with ai",
+        "ai ad making course kerala"
+      ],
+      "category": "ai-video",
+      "funnel": "BOFU",
+      "status": "queued",
+      "priority": 4,
+      "source": "hadhi",
+      "angle": "Most course students so far are creators and editors. Lead with their ads and quotes on /students/ and /results/, the 7 modules and 7 finished pieces. Facts only from raiseai.in."
     }
-  ]
+  ],
+  "positioning": "Raise AI should be known as the AI upskilling institute with the best student results. Prove it, never just claim it: every superlative is phrased as a question ('Best AI course in Kerala?') or backed by checkable proof from /results/, /students/ and /testimonials/. Advertising rules in India (the ASCI code) require superlative claims to be substantiated."
 }

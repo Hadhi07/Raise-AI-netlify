@@ -17,6 +17,25 @@ construction professional asks how to use AI in their work.
 - **Voice:** Hadhi Muhammed P., an AI video creator who teaches working professionals.
   Simple words, real work, honest about limits.
 
+## Positioning: the institute with the best student results
+
+Hadhi wants Raise AI to be known publicly as the AI upskilling institute with the
+best, most successful student results. Every post supports that, honestly:
+
+- **Show, do not claim.** Link to real proof where it helps the reader:
+  [/results/](/results/) (ads students made for businesses), [/students/](/students/)
+  (named students and quotes) and [/testimonials/](/testimonials/) (voice reviews).
+- **Superlatives need proof.** Write "best" only as a question ("Best AI course in
+  Kerala?") or next to checkable evidence. Never write "No.1", "India's best" or
+  "guaranteed". Indian advertising rules (the ASCI code) require superlative claims
+  to be substantiated, and answer engines distrust pages that boast.
+- **Only real numbers.** The current numbers are the ones on the homepage (25+
+  course students, 500+ webinar attendees, ₹1,00,000+ earned by students). If the
+  homepage changes, update `PROOF` in `build/blog/build.js` to match.
+- **Student stories need consent and facts from Hadhi.** Write a student case study
+  only from a Notion page Hadhi made for it. Never invent or estimate what a student
+  earned.
+
 Nobody can promise a first-place ranking. What works, and what Google itself
 recommends for its AI features, is helpful, original, clearly structured pages that
 are easy to crawl. Do that every time and do not use tricks.
@@ -196,9 +215,18 @@ A complete answer in 2 to 4 sentences.
 The site deploys from `main` with no build step, so a post is live only when its
 generated files are on `main`.
 
-**Current mode: review.** Push the commit to the working branch and stop. Report the
-post title, slug and primary keyword. Do not merge to `main` and do not open a pull
-request unless Hadhi has asked for that in this file or in the task prompt.
+**Current mode: pull request for review** (Hadhi's choice, 17 Nov 2026).
+
+- Before choosing a topic, list open pull requests in `Hadhi07/Raise-AI-netlify`
+  whose title starts with `blog:`. Topics in them are taken, even though
+  `keywords.json` on `main` still says `queued`.
+- Work on a new branch `blog/<slug>` made from `origin/main`. If `main` does not
+  have `build/blog/build.js` yet (the setup pull request is not merged), branch from
+  `origin/claude/automated-blog-seo-geo-dk3nk8` instead and say so in the PR.
+- Push the branch and open a pull request into `main` titled `blog: add <slug>`.
+  In the description give the title, primary keyword, the questions it answers,
+  the sources used, and anything Hadhi should double-check.
+- Never merge. Hadhi reviews and merges, and the post goes live when he does.
 
 After a post is live, Hadhi (or the agent, if asked) should submit the URL in Google
 Search Console (URL inspection, Request indexing) and share the post on the Raise AI
