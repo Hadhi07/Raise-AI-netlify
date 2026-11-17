@@ -209,6 +209,7 @@ A complete answer in 2 to 4 sentences.
 | `build/blog/partials/` | Shared head, header and footer for blog pages |
 | `assets/blog.css`, `assets/blog.js` | Blog styles and scripts. Bump `ASSET_V` in `build.js` when they change |
 | `blog/**`, `sitemap.xml`, `llms.txt` | Generated. Never edit by hand |
+| "Latest guides" section in `index.html` and `about/index.html` | Generated between the `BLOG:LATEST` markers. Shows the featured post and the newest posts |
 
 ## Publishing
 
