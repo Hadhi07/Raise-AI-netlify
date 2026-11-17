@@ -220,8 +220,9 @@ generated files are on `main`.
 - Before choosing a topic, list open pull requests in `Hadhi07/Raise-AI-netlify`
   whose title starts with `blog:`. Topics in them are taken, even though
   `keywords.json` on `main` still says `queued`.
-- Work on a new branch `blog/<slug>` made from `origin/main`. If `main` does not
-  have `build/blog/build.js` yet (the setup pull request is not merged), branch from
+- Work on the development branch the session was given (or `blog/<slug>` if none
+  was given), created fresh from `origin/main`. If `main` does not have
+  `build/blog/build.js` yet (the setup pull request is not merged), create it from
   `origin/claude/automated-blog-seo-geo-dk3nk8` instead and say so in the PR.
 - Push the branch and open a pull request into `main` titled `blog: add <slug>`.
   In the description give the title, primary keyword, the questions it answers,
