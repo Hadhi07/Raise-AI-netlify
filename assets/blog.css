@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Raise AI blog: index + post components. Loaded after site.css.
+   Built for answer engines and people: answer box, takeaways, contents,
+   copyable prompt cards, tables, sources.
+   ========================================================================== */
+
+/* ---------- Shared: logo crop (the logo file has padding; same fix as the homepage) ---------- */
+.hdr .logo,.ftr .logo{height:28px;width:111px;overflow:hidden;display:block}
+.hdr .logo img,.ftr .logo img{height:88px!important;width:auto!important;max-width:none;margin:-30px 0 0 -11px}
+.final .wrap{position:relative;z-index:1}
+
+/* ---------- Blog index ---------- */
+.feat{margin-top:28px}
+.feat .ph{aspect-ratio:1200/630;overflow:hidden;background:#000}
+.feat .ph img{width:100%;height:100%;object-fit:cover;object-position:0 50%;display:block}
+.blog-empty{margin-top:28px;padding:22px 0;border-top:1px solid var(--divider);border-bottom:1px solid var(--divider);color:var(--ink-soft);font-size:16px}
+.post .meta{font-size:14px;color:var(--ink-muted);margin-top:8px}
+@media (min-width:860px){
+  .feat{display:grid;grid-template-columns:1.1fr 1fr;align-items:stretch}
+  .feat .ph{aspect-ratio:auto;min-height:300px}
+  .feat h2{font-size:32px;line-height:1.15}
+  .feat .in{padding:40px;align-self:center}
+  .posts .post{row-gap:8px}
+}
+
+/* ---------- Post page ---------- */
+.article figure{margin:0}
+.article h1{text-wrap:balance}
+.article .body h2{font-size:28px;scroll-margin-top:84px}
+.article .body h3{font-size:22px;scroll-margin-top:84px}
+.article .body a,.article .faq a,.article .answer a,.article .kt a{color:var(--raise-blue);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.article .body strong{color:var(--charcoal)}
+.article .body code{font:500 0.9em/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--soft-white);border:1px solid var(--divider);border-radius:6px;padding:1px 6px}
+.article .body blockquote{border-left:4px solid var(--volt-lime);padding:4px 0 4px 18px;margin:0 0 24px;color:var(--charcoal);font-weight:600}
+.article .body blockquote p{margin:0}
+.article h2.sub{font-size:28px;margin-top:48px;color:var(--charcoal);scroll-margin-top:84px}
+.article .author a{font-weight:600}
+@media (min-width:860px){.article h1{font-size:46px;line-height:1.1}}
+
+/* Key takeaways */
+.kt{margin-top:20px;padding:20px 22px;border:1px solid var(--divider);border-radius:16px;background:#fff}
+.kt b{display:block;font:800 13px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--raise-blue)}
+.kt ul{margin:14px 0 0;padding-left:20px;font-size:16.5px;line-height:1.55;color:var(--ink-soft)}
+.kt li{margin-bottom:8px}
+.kt li:last-child{margin-bottom:0}
+.kt li::marker{color:var(--raise-blue)}
+
+/* Contents */
+.toc{margin-top:16px;padding:18px 22px;border-radius:16px;background:var(--soft-white)}
+.toc b{display:block;font:800 13px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted)}
+.toc ol{margin:12px 0 0;padding-left:22px;font-size:16px;line-height:1.5}
+.toc li{margin-bottom:6px}
+.toc li::marker{color:var(--ink-muted);font-weight:600}
+.toc a{color:var(--charcoal);font-weight:600;text-decoration:underline;text-decoration-color:var(--divider);text-underline-offset:4px}
+.toc a:hover{color:var(--raise-blue);text-decoration-color:currentColor}
+
+/* Prompt cards */
+.article .prompt{margin:28px 0 32px;border-radius:18px;background:#0B0C0E;color:#fff;overflow:hidden}
+.prompt figcaption{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;padding:16px 18px 14px;border-bottom:1px solid var(--d-divider)}
+.article .body .prompt h3{margin:0;font:700 17px/1.3 var(--display);letter-spacing:-.01em;color:#fff;scroll-margin-top:84px}
+.prompt .works{font:600 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:#000;background:var(--volt-lime);border-radius:99px;padding:7px 10px;white-space:nowrap}
+.prompt pre{margin:0;padding:16px 18px;max-height:420px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font:400 14.5px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--d-ink-soft)}
+.article .body .prompt code{background:none;border:0;padding:0;font:inherit;color:inherit}
+.prompt .p-actions{display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px 14px;border-top:1px solid var(--d-divider)}
+.prompt .p-actions button,.article .body .prompt .p-actions a{font:700 14px/1 var(--display);min-height:42px;padding:0 16px;border-radius:99px;display:inline-flex;align-items:center;cursor:pointer;text-decoration:none;transition:background-color .15s ease,color .15s ease}
+.prompt .p-actions button{background:var(--volt-lime);color:#000;border:1px solid var(--volt-lime)}
+.prompt .p-actions button:hover{background:#fff;border-color:#fff}
+.article .body .prompt .p-actions a{background:transparent;color:#fff;border:1px solid #3A3E45}
+.article .body .prompt .p-actions a:hover{border-color:#fff}
+.prompt .p-actions .done{background:#fff;border-color:#fff}
+
+/* Tables */
+.tbl{margin:8px 0 28px;overflow-x:auto;border:1px solid var(--divider);border-radius:14px}
+.tbl table{width:100%;min-width:520px;border-collapse:collapse;font-size:15.5px;line-height:1.45}
+.tbl th,.tbl td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--divider)}
+.tbl thead th{background:var(--soft-white);font:700 13px/1.3 var(--display);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-muted);white-space:nowrap}
+.tbl tbody th{font-weight:700;color:var(--charcoal)}
+.tbl tbody tr:last-child th,.tbl tbody tr:last-child td{border-bottom:0}
+
+/* Notes */
+.note{margin:28px 0;padding:18px 20px;border-radius:14px;background:#F2F6FF;border:1px solid #D6E2FF}
+.note b{display:block;font:800 13px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--deep-blue);margin-bottom:10px}
+.article .body .note p{font-size:16.5px;line-height:1.6;margin-bottom:10px;color:var(--ink-soft)}
+.article .body .note p:last-child,.article .body .note ul:last-child{margin-bottom:0}
+.article .body .note ul{font-size:16.5px;margin-bottom:10px}
+
+/* In-post images */
+.article .post-shot{margin:24px auto 28px;max-width:320px}
+.article .post-shot.wide{max-width:none}
+.article .post-shot img{width:100%;height:auto;display:block;border-radius:16px;background:#000}
+.article .post-shot figcaption{margin-top:10px;font-size:14px;line-height:1.5;color:var(--ink-muted);text-align:center}
+.article .cover-img img{object-position:50% 30%}
+
+/* Sources */
+.sources{margin:18px 0 0;padding-left:20px;font-size:15.5px;line-height:1.55;color:var(--ink-soft)}
+.sources li{margin-bottom:8px}
+.sources a{color:var(--raise-blue);font-weight:600;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.sources span{color:var(--ink-muted)}
+.checked{margin-top:14px;font-size:14px;line-height:1.55;color:var(--ink-muted)}
+
+@media (max-width:520px){
+  .prompt{margin-left:-6px;margin-right:-6px}
+  .prompt pre{font-size:14px;max-height:360px}
+  .prompt .p-actions button,.article .body .prompt .p-actions a{flex:1 1 auto;justify-content:center}
+}
+@media print{
+  .hdr,.bar,.final,.midbox,.p-actions,.ftr,.toc{display:none!important}
+  .prompt{background:#fff;color:#000;border:1px solid #999}
+  .prompt pre,.article .body .prompt h3{color:#000}
+}

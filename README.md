@@ -12,6 +12,15 @@ Static marketing + funnel site for raiseai.in (Raise AI).
 - `replay/` — replay pages
 - `course/` — course dashboard + day pages
 - `about/`, `results/`, `students/`, `reviews/` — company and proof pages
-- `blog/` — blog index, posts (one folder per post) and `blog/rss.xml`
+- `blog/` — blog index, posts (one folder per post) and `blog/rss.xml`. **Generated, do not edit by hand** (see Blog below)
 - `payment/`, `thankyou/`, `contact/`, `privacy/`, `terms/`, `refund/`, `delivery/` — funnel + legal pages
-- `sitemap.xml`, `robots.txt`, `llms.txt` — search and AI crawler files. Add every new public page to `sitemap.xml` and `llms.txt`; add every new post to `blog/index.html` and `blog/rss.xml`.
+- `sitemap.xml`, `robots.txt`, `llms.txt` — search and AI crawler files. Add every new public page to `sitemap.xml` and `llms.txt`. Blog entries in both files are written by the blog generator.
+
+## Blog
+Posts are Markdown files in `build/blog/posts/`. A zero-dependency Node script turns them into the pages in `blog/`, and updates `blog/index.html`, `blog/rss.xml` and the blog entries in `sitemap.xml` and `llms.txt`. The output is committed because the site has no deploy-time build.
+
+- Write or edit a post: `build/blog/posts/<slug>.md`
+- Build: `npm run build:blog` (renders share covers, then all pages)
+- Validate only: `npm run check:blog`
+- Topic queue: `build/blog/keywords.json`
+- Format, writing rules and the scheduled-run playbook: `build/blog/AUTOPILOT.md`

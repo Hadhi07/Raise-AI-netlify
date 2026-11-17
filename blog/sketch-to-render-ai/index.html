@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sketch to Render AI: Free Gemini and ChatGPT Guide | Raise AI</title>
+<meta name="description" content="How to turn a hand sketch, floor plan or SketchUp screenshot into a photoreal render with AI, using Gemini or ChatGPT. Includes 6 copy-paste prompts and fixes.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://raiseai.in/blog/sketch-to-render-ai/">
+<link rel="alternate" type="application/rss+xml" title="Raise AI Blog" href="https://raiseai.in/blog/rss.xml">
+<meta name="author" content="Hadhi Muhammed P.">
+<meta property="article:published_time" content="2026-11-17T00:00:00+05:30">
+<meta property="article:modified_time" content="2026-11-17T00:00:00+05:30">
+<meta property="article:section" content="AI for architects">
+
+<!-- Open Graph / Meta -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Raise AI">
+<meta property="og:url" content="https://raiseai.in/blog/sketch-to-render-ai/">
+<meta property="og:title" content="Sketch to render with AI: turn a sketch or floor plan into a photoreal image">
+<meta property="og:description" content="How to turn a hand sketch, floor plan or SketchUp screenshot into a photoreal render with AI, using Gemini or ChatGPT. Includes 6 copy-paste prompts and fixes.">
+<meta property="og:image" content="https://raiseai.in/blog/sketch-to-render-ai/cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sketch to render with AI: turn a sketch or floor plan into a photoreal image">
+<meta name="twitter:description" content="How to turn a hand sketch, floor plan or SketchUp screenshot into a photoreal render with AI, using Gemini or ChatGPT. Includes 6 copy-paste prompts and fixes.">
+<meta name="twitter:image" content="https://raiseai.in/blog/sketch-to-render-ai/cover.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/assets/images/logo/logo-dark.webp?v=3">
+
+<!-- Google Fonts CDN (Inter, Manrope, Unbounded) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Self-hosted Fonts & Site CSS Fallback -->
+<link rel="preload" href="/assets/fonts/manrope-800.woff2?v=3" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css?v=3">
+<link rel="stylesheet" href="/assets/site.css?v=3">
+
+<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PNBGWV3L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "y7w4qe8w9w");
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2035781653725728');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2035781653725728&ev=PageView&noscript=1"/></noscript>
+<link rel="stylesheet" href="/assets/blog.css?v=4">
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://raiseai.in/blog/sketch-to-render-ai/#article",
+      "headline": "Sketch to render with AI: turn a sketch or floor plan into a photoreal image",
+      "description": "How to turn a hand sketch, floor plan or SketchUp screenshot into a photoreal render with AI, using Gemini or ChatGPT. Includes 6 copy-paste prompts and fixes.",
+      "image": "https://raiseai.in/blog/sketch-to-render-ai/cover.jpg",
+      "datePublished": "2026-11-17T00:00:00+05:30",
+      "dateModified": "2026-11-17T00:00:00+05:30",
+      "inLanguage": "en-IN",
+      "articleSection": "AI for architects",
+      "keywords": "sketch to render ai, ai render from sketch, floor plan to 3d render ai, gemini sketch to render, chatgpt architecture render prompt, sketchup to render ai",
+      "wordCount": 1843,
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Architects, interior designers and 3D visualisers"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://raiseai.in/#hadhi",
+        "name": "Hadhi Muhammed P.",
+        "url": "https://raiseai.in/about/",
+        "jobTitle": "Founder & AI Mentor, Raise AI",
+        "image": "https://raiseai.in/assets/images/founder/hadhi-cutout.webp?v=3",
+        "sameAs": [
+          "https://www.instagram.com/hadhi_creates_",
+          "https://www.linkedin.com/in/hadhi-muhammed-p-71667b378/",
+          "https://x.com/amHadhi"
+        ]
+      },
+      "publisher": {
+        "@type": "EducationalOrganization",
+        "@id": "https://raiseai.in/#org",
+        "name": "Raise AI",
+        "url": "https://raiseai.in/",
+        "logo": "https://raiseai.in/assets/images/logo/logo-light.webp"
+      },
+      "mainEntityOfPage": "https://raiseai.in/blog/sketch-to-render-ai/",
+      "url": "https://raiseai.in/blog/sketch-to-render-ai/",
+      "isPartOf": {
+        "@id": "https://raiseai.in/blog/#blog"
+      },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "4 tips for image editing in the Gemini app",
+          "url": "https://blog.google/products-and-platforms/products/gemini/nano-banana-tips/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Image generation with Gemini",
+          "url": "https://ai.google.dev/gemini-api/docs/image-generation"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Gemini image generation overview",
+          "url": "https://gemini.google/overview/image-generation/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Uploading files to ChatGPT",
+          "url": "https://help.openai.com/en/articles/8555545-file-uploads-faq"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://raiseai.in/blog/sketch-to-render-ai/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can AI turn a sketch into a realistic render for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Gemini and ChatGPT both accept an uploaded sketch and return a photoreal image on their free plans. Free plans limit how many images and uploads you get each day, so plan your prompts before you start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which AI is best for sketch to render: Gemini or ChatGPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both work with the prompts in this guide. Gemini's image model is designed to edit an uploaded image while keeping the rest unchanged, which helps a building stay true to the sketch. Run the same sketch and prompt in both and compare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can AI convert a 2D floor plan into a 3D model?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can create a 3D-looking image of the plan, such as a cutaway view, which is useful for explaining a layout to a client. It does not create a real, measurable 3D model. For that you still need SketchUp, Revit, Blender or similar software."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will AI replace V-Ray, Lumion or Enscape?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not for final, accurate visuals. Rendering software works from your real model, so every dimension is right. AI is faster for early concepts, mood options and quick client approvals. The two work well together: AI first, rendering software for the final set."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a powerful computer for AI rendering?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The image is generated on the tool's servers, so a normal laptop or even a phone is enough. This is the main reason small studios pick it up quickly."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://raiseai.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://raiseai.in/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sketch to render with AI",
+          "item": "https://raiseai.in/blog/sketch-to-render-ai/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body id="top">
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Raise AI Homepage">
+      <img src="/assets/images/logo/logo-light.webp?v=3" alt="Raise AI" width="112" height="28" style="height:28px;width:auto">
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/#courses">Courses</a>
+      <a href="/results/">Student Results</a>
+      <a href="/students/">Students</a>
+      <a href="/reviews/">Reviews</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/about/">About</a>
+    </nav>
+    <div class="hdr-r">
+      <a class="hdr-cta" href="https://wa.me/917356003301?text=Hi%2C%20I%20have%20a%20question%20about%20Raise%20AI.">Chat with us</a>
+      <details class="menu">
+        <summary aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </summary>
+        <nav aria-label="Mobile navigation">
+          <a href="/#courses">Courses</a>
+          <a href="/results/">Student Results</a>
+          <a href="/students/">Students</a>
+          <a href="/reviews/">Reviews</a>
+          <a href="/testimonials/">Testimonials</a>
+          <a href="/blog/" aria-current="page">Blog</a>
+          <a href="/about/">About</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <article class="article">
+
+      <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">Sketch to render with AI</span></nav>
+
+      <div style="margin-top:24px"><span class="tag">AI for architects</span></div>
+
+      <h1>Sketch to render with AI: turn a sketch or floor plan into a photoreal image</h1>
+
+      <p class="by">By <a href="/about/">Hadhi Muhammed P.</a> · <time datetime="2026-11-17">17 Nov 2026</time> · 9 min read</p>
+
+      <div class="answer">
+        <b>Short answer:</b> To turn a sketch into a render with AI, upload a clean photo of the sketch to Gemini or ChatGPT and write a prompt with five parts: keep the geometry, name the materials, set the light, set the camera and describe the surroundings. Then change one thing at a time. You get a photoreal concept image in a few minutes. It is a picture, not a scaled drawing, so use it for early client approval and not for construction.
+      </div>
+
+      <div class="kt">
+        <b>Key takeaways</b>
+        <ul>
+          <li>You need only a browser: Gemini or ChatGPT, on a free plan to start.</li>
+          <li>The prompt formula is Keep + Materials + Light + Camera + Context.</li>
+          <li>Always tell the AI to keep the form, openings and proportions of your image. This one line prevents most bad results.</li>
+          <li>Change one thing per message. Asking for five changes at once makes the building drift.</li>
+          <li>AI renders are concept visuals. They are not to scale and can invent details, so label them clearly for clients.</li>
+        </ul>
+      </div>
+
+      <nav class="toc" aria-label="In this guide">
+        <b>In this guide</b>
+        <ol>
+          <li><a href="#what-do-you-need-to-turn-a-sketch-into-a-render">What do you need to turn a sketch into a render?</a></li>
+          <li><a href="#how-do-you-prepare-the-sketch">How do you prepare the sketch?</a></li>
+          <li><a href="#what-is-the-prompt-formula-for-an-ai-render">What is the prompt formula for an AI render?</a></li>
+          <li><a href="#how-do-you-turn-a-floor-plan-into-a-3d-view">How do you turn a floor plan into a 3D view?</a></li>
+          <li><a href="#how-do-you-fix-a-render-that-looks-wrong">How do you fix a render that looks wrong?</a></li>
+          <li><a href="#what-are-the-limits-of-ai-renders">What are the limits of AI renders?</a></li>
+        </ol>
+      </nav>
+
+      <div class="body">
+
+<h2 id="what-do-you-need-to-turn-a-sketch-into-a-render">What do you need to turn a sketch into a render?</h2>
+<p>Three things, and none of them is rendering software or a powerful PC:</p>
+<ol>
+  <li><strong>An input image.</strong> A hand sketch, a printed floor plan, or a screenshot of a SketchUp, Revit or Blender model.</li>
+  <li><strong>An AI chat tool that edits images.</strong> Gemini and ChatGPT both do this. Gemini's image model is nicknamed Nano Banana.</li>
+  <li><strong>A clear prompt.</strong> That is the rest of this guide.</li>
+</ol>
+<div class="tbl" role="region" aria-label="Table" tabindex="0"><table>
+<thead><tr><th scope="col">Input</th><th scope="col">Works well for</th><th scope="col">What to tell the AI</th></tr></thead>
+<tbody>
+<tr><th scope="row">Hand sketch</th><td>Early concept, elevations, perspectives</td><td>Which lines are walls, glass and roof</td></tr>
+<tr><th scope="row">Floor plan</th><td>3D cutaway views, furniture layout ideas</td><td>Room names and which way is north or the entry</td></tr>
+<tr><th scope="row">Model screenshot (clay or white)</th><td>The most accurate results</td><td>Materials for each surface</td></tr>
+<tr><th scope="row">Site photo</th><td>Showing the design on the real plot</td><td>What to keep and what to replace</td></tr>
+</tbody>
+</table></div>
+<p>A model screenshot gives the most faithful render, because the perspective and proportions are already correct. A loose sketch gives the AI more freedom, which is good for ideas and bad for accuracy.</p>
+<h2 id="how-do-you-prepare-the-sketch">How do you prepare the sketch?</h2>
+<p>The AI can only keep what it can see. Two minutes of preparation saves ten minutes of fixing.</p>
+<ul>
+  <li><strong>Shoot it flat and straight.</strong> Photograph or scan the sketch from directly above, in even light, with no shadow of your phone.</li>
+  <li><strong>Darken the lines.</strong> Go over the main outline in pen. Faint pencil gets ignored.</li>
+  <li><strong>Crop tight.</strong> Remove the desk, your hand and other drawings from the frame.</li>
+  <li><strong>Label what is unclear.</strong> Write &quot;glass&quot;, &quot;void&quot; or &quot;sloped roof&quot; in small letters where the drawing could be read two ways.</li>
+  <li><strong>For a model screenshot,</strong> switch off axes, guides and section planes, and pick the camera angle you want in the final image.</li>
+</ul>
+<h2 id="what-is-the-prompt-formula-for-an-ai-render">What is the prompt formula for an AI render?</h2>
+<p>Use five parts, in this order. Google's own guidance for its image model says the same thing in different words: be specific about the subject, the lighting and the camera, and say what must stay the same.</p>
+<div class="tbl" role="region" aria-label="Table" tabindex="0"><table>
+<thead><tr><th scope="col">Part</th><th scope="col">What it controls</th><th scope="col">Example words</th></tr></thead>
+<tbody>
+<tr><th scope="row">Keep</th><td>Stops the building from changing</td><td>&quot;Keep the exact form, openings and proportions&quot;</td></tr>
+<tr><th scope="row">Materials</th><td>What every surface is made of</td><td>&quot;Laterite walls, exposed concrete slab, teak louvres&quot;</td></tr>
+<tr><th scope="row">Light</th><td>Time of day and mood</td><td>&quot;Soft morning sun from the left, light monsoon clouds&quot;</td></tr>
+<tr><th scope="row">Camera</th><td>Viewpoint and lens</td><td>&quot;Eye-level view from the road, 24mm wide lens&quot;</td></tr>
+<tr><th scope="row">Context</th><td>What surrounds the building</td><td>&quot;Coconut palms, compound wall, wet road after rain&quot;</td></tr>
+</tbody>
+</table></div>
+<figure class="prompt" id="prompt-1-hand-sketch-to-photoreal-exterior">
+<figcaption><h3>1. Hand sketch to photoreal exterior</h3><span class="works">Works in Gemini · ChatGPT</span></figcaption>
+<pre tabindex="0"><code>Turn this hand sketch into a photorealistic architectural photograph.
+
+Keep: the exact building form, roof shape, window and door positions and proportions from the sketch. Do not add or remove floors, windows or balconies.
+Materials: [FOR EXAMPLE laterite stone walls, white plaster, exposed concrete slab edges, teak wood louvres, clay roof tiles].
+Light: [soft morning sunlight from the left, a few clouds].
+Camera: [eye-level view from the road, 24mm lens, vertical lines straight].
+Context: [tropical garden with coconut palms, stone paving, low compound wall, quiet residential street in Kerala].
+
+Style: real photograph for an architecture magazine. No people, no cars, no text.</code></pre>
+<div class="p-actions"><button type="button" data-copy>Copy prompt</button><a href="https://gemini.google.com/app" target="_blank" rel="noopener" data-copy-open>Copy + open Gemini</a><a href="https://chatgpt.com/" target="_blank" rel="noopener" data-copy-open>Copy + open ChatGPT</a></div>
+</figure>
+<figure class="prompt" id="prompt-2-clay-model-screenshot-to-render">
+<figcaption><h3>2. Clay model screenshot to render</h3><span class="works">Works in Gemini · ChatGPT</span></figcaption>
+<pre tabindex="0"><code>This is a screenshot of my 3D model in plain white. Turn it into a photorealistic render.
+
+Keep the camera angle, the geometry and every opening exactly as in the screenshot. Only add materials, light and surroundings.
+
+Materials by surface:
+- Walls: [MATERIAL AND COLOUR]
+- Roof: [MATERIAL]
+- Windows: [FRAME COLOUR, CLEAR OR TINTED GLASS]
+- Floor or paving: [MATERIAL]
+- Feature element: [FOR EXAMPLE vertical timber fins on the first floor]
+
+Light: [TIME OF DAY AND WEATHER].
+Surroundings: [LANDSCAPE, NEIGHBOURS, ROAD].
+Photographic, natural colours, no people, no text.</code></pre>
+<div class="p-actions"><button type="button" data-copy>Copy prompt</button><a href="https://gemini.google.com/app" target="_blank" rel="noopener" data-copy-open>Copy + open Gemini</a><a href="https://chatgpt.com/" target="_blank" rel="noopener" data-copy-open>Copy + open ChatGPT</a></div>
+</figure>
+<h2 id="how-do-you-turn-a-floor-plan-into-a-3d-view">How do you turn a floor plan into a 3D view?</h2>
+<p>A plan has no heights, so tell the AI what kind of 3D view you want. A cutaway view from above is the most reliable. Treat the result as a way to explain the layout to a client, not as a measured model.</p>
+<figure class="prompt" id="prompt-3-floor-plan-to-3d-cutaway-view">
+<figcaption><h3>3. Floor plan to 3D cutaway view</h3><span class="works">Works in Gemini · ChatGPT</span></figcaption>
+<pre tabindex="0"><code>This is a 2D floor plan. Create a 3D cutaway view of it, seen from above at a 45-degree angle, with the roof removed.
+
+Keep the room layout, wall positions, doors and windows exactly as drawn. Do not add or remove rooms.
+
+Rooms: [LIST THE ROOMS AS LABELLED, FOR EXAMPLE living, dining, kitchen, 3 bedrooms, 2 toilets, sit-out].
+Walls: 3 metres high, white plaster.
+Floors: [FOR EXAMPLE vitrified tile in living areas, wood-look tile in bedrooms].
+Furniture: simple modern furniture that fits each room. Keep walking space clear.
+Light: bright even daylight, soft shadows.
+
+Clean architectural model style, plain light background, no text or labels.</code></pre>
+<div class="p-actions"><button type="button" data-copy>Copy prompt</button><a href="https://gemini.google.com/app" target="_blank" rel="noopener" data-copy-open>Copy + open Gemini</a><a href="https://chatgpt.com/" target="_blank" rel="noopener" data-copy-open>Copy + open ChatGPT</a></div>
+</figure>
+<div class="midbox">
+  <span class="tag tag-lime">Architects cohort</span>
+  <p>We are building an AI course together with architects, interior designers and civil engineers. Want to be part of it?</p>
+  <a class="btn" href="/webinar/aec/" id="midbox-cta-btn" data-cta="blog_to_aec">
+    Join the architects cohort
+    <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+  </a>
+</div>
+<h2 id="how-do-you-fix-a-render-that-looks-wrong">How do you fix a render that looks wrong?</h2>
+<p>Do not start again. Reply in the same chat and change one thing. The AI remembers the image it just made, so small follow-up edits stay consistent.</p>
+<figure class="prompt" id="prompt-4-one-change-follow-up-edits">
+<figcaption><h3>4. One-change follow-up edits</h3><span class="works">Works in Gemini · ChatGPT</span></figcaption>
+<pre tabindex="0"><code>Use these one at a time, as replies to the image you just got:
+
+- Keep everything exactly the same. Only change the wall material to [MATERIAL].
+- Keep everything exactly the same. Only change the time to dusk, with warm lights on inside.
+- Keep the building exactly the same. Only replace the sky with heavy monsoon clouds and make the ground wet.
+- Keep everything exactly the same. Remove the [OBJECT] on the [LEFT / RIGHT].
+- The window on the first floor, left side, has changed. Restore it to match my original image.</code></pre>
+<div class="p-actions"><button type="button" data-copy>Copy prompt</button><a href="https://gemini.google.com/app" target="_blank" rel="noopener" data-copy-open>Copy + open Gemini</a><a href="https://chatgpt.com/" target="_blank" rel="noopener" data-copy-open>Copy + open ChatGPT</a></div>
+</figure>
+<div class="tbl" role="region" aria-label="Table" tabindex="0"><table>
+<thead><tr><th scope="col">Problem</th><th scope="col">Why it happens</th><th scope="col">Fix</th></tr></thead>
+<tbody>
+<tr><th scope="row">The building shape changed</th><td>No &quot;keep&quot; line, or too many changes at once</td><td>Add the keep line and make one change per message</td></tr>
+<tr><th scope="row">Extra windows or floors appeared</th><td>The sketch lines were unclear</td><td>Label the sketch, or say &quot;exactly 2 floors, 3 windows on the front&quot;</td></tr>
+<tr><th scope="row">Materials look plastic</th><td>Vague words like &quot;modern&quot; or &quot;nice&quot;</td><td>Name the real material and finish: &quot;rough laterite&quot;, &quot;matt white plaster&quot;</td></tr>
+<tr><th scope="row">Verticals are leaning</th><td>Wide-angle distortion</td><td>Add &quot;vertical lines straight, two-point perspective&quot;</td></tr>
+<tr><th scope="row">It looks like a painting</th><td>No photo words in the prompt</td><td>Add &quot;real photograph, natural colours, 24mm lens&quot;</td></tr>
+<tr><th scope="row">Text and signs are garbled</th><td>Image models are weak at small text</td><td>Add &quot;no text&quot; and place text later in your own software</td></tr>
+</tbody>
+</table></div>
+<figure class="prompt" id="prompt-5-same-design-three-moods">
+<figcaption><h3>5. Same design, three moods</h3><span class="works">Works in Gemini · ChatGPT</span></figcaption>
+<pre tabindex="0"><code>Using the render you just made, create 3 versions. Keep the building, camera and materials exactly the same in all three. Change only the light and weather:
+
+1. Bright morning, clear sky
+2. Golden hour, long warm shadows
+3. Dusk after rain, interior lights on, wet reflections on the paving
+
+Show them as 3 separate images.</code></pre>
+<div class="p-actions"><button type="button" data-copy>Copy prompt</button><a href="https://gemini.google.com/app" target="_blank" rel="noopener" data-copy-open>Copy + open Gemini</a><a href="https://chatgpt.com/" target="_blank" rel="noopener" data-copy-open>Copy + open ChatGPT</a></div>
+</figure>
+<figure class="prompt" id="prompt-6-place-the-design-on-the-real-site-photo">
+<figcaption><h3>6. Place the design on the real site photo</h3><span class="works">Works in Gemini · ChatGPT</span></figcaption>
+<pre tabindex="0"><code>Image 1 is a photo of the empty plot. Image 2 is my building design.
+
+Place the building from image 2 onto the plot in image 1. Keep the real road, neighbouring buildings, trees and sky from image 1. Match the sunlight direction and shadows to the site photo. Keep the building's form and materials exactly as in image 2.
+
+Photorealistic. No people, no text.</code></pre>
+<div class="p-actions"><button type="button" data-copy>Copy prompt</button><a href="https://gemini.google.com/app" target="_blank" rel="noopener" data-copy-open>Copy + open Gemini</a><a href="https://chatgpt.com/" target="_blank" rel="noopener" data-copy-open>Copy + open ChatGPT</a></div>
+</figure>
+<h2 id="what-are-the-limits-of-ai-renders">What are the limits of AI renders?</h2>
+<ul>
+  <li><strong>They are not to scale.</strong> Proportions are approximate. Never take a dimension from an AI image.</li>
+  <li><strong>They can invent things.</strong> Check every opening, level and railing against your drawing before you show a client.</li>
+  <li><strong>Fine detail and text are weak.</strong> Google notes that small text and fine details may not come out right.</li>
+  <li><strong>Images may carry an AI watermark.</strong> Read each tool's terms if you plan to use the image in paid advertising.</li>
+  <li><strong>Tell the client it is a concept.</strong> A line such as &quot;AI concept visual, not final design&quot; avoids arguments later.</li>
+</ul>
+<p>Once a still is approved, the next step is motion. See <a href="/blog/ai-walkthrough-video-from-render/">how to make an AI walkthrough video from a render</a>. For the writing side of a project, use our <a href="/blog/chatgpt-prompts-for-architects/">ChatGPT prompts for architects</a>.</p>
+
+
+      </div>
+
+      <h2 class="sub" id="faq">Questions people ask</h2>
+      <div class="faq" style="margin-top:20px">
+        <details open>
+          <summary>Can AI turn a sketch into a realistic render for free?</summary>
+          <p>Yes. Gemini and ChatGPT both accept an uploaded sketch and return a photoreal image on their free plans. Free plans limit how many images and uploads you get each day, so plan your prompts before you start.</p>
+        </details>
+        <details>
+          <summary>Which AI is best for sketch to render: Gemini or ChatGPT?</summary>
+          <p>Both work with the prompts in this guide. Gemini's image model is designed to edit an uploaded image while keeping the rest unchanged, which helps a building stay true to the sketch. Run the same sketch and prompt in both and compare.</p>
+        </details>
+        <details>
+          <summary>Can AI convert a 2D floor plan into a 3D model?</summary>
+          <p>It can create a 3D-looking image of the plan, such as a cutaway view, which is useful for explaining a layout to a client. It does not create a real, measurable 3D model. For that you still need SketchUp, Revit, Blender or similar software.</p>
+        </details>
+        <details>
+          <summary>Will AI replace V-Ray, Lumion or Enscape?</summary>
+          <p>Not for final, accurate visuals. Rendering software works from your real model, so every dimension is right. AI is faster for early concepts, mood options and quick client approvals. The two work well together: AI first, rendering software for the final set.</p>
+        </details>
+        <details>
+          <summary>Do I need a powerful computer for AI rendering?</summary>
+          <p>No. The image is generated on the tool's servers, so a normal laptop or even a phone is enough. This is the main reason small studios pick it up quickly.</p>
+        </details>
+      </div>
+
+      <h2 class="sub" id="sources">Sources</h2>
+      <ul class="sources">
+        <li><a href="https://blog.google/products-and-platforms/products/gemini/nano-banana-tips/" target="_blank" rel="noopener">4 tips for image editing in the Gemini app</a>: <span>Google's guidance on direct, one-step edits.</span></li>
+        <li><a href="https://ai.google.dev/gemini-api/docs/image-generation" target="_blank" rel="noopener">Image generation with Gemini</a>: <span>Google's developer guide, including how to edit an image while keeping the rest unchanged, and known limits.</span></li>
+        <li><a href="https://gemini.google/overview/image-generation/" target="_blank" rel="noopener">Gemini image generation overview</a>: <span>what the Gemini app's image model can do and who can use it.</span></li>
+        <li><a href="https://help.openai.com/en/articles/8555545-file-uploads-faq" target="_blank" rel="noopener">Uploading files to ChatGPT</a>: <span>upload limits on the free and paid ChatGPT plans.</span></li>
+      </ul>
+      <p class="checked">Facts in this guide were last checked on <time datetime="2026-11-17">17 Nov 2026</time>. AI tools change their plans and features often, so confirm limits and prices on the official pages above.</p>
+
+      <div class="author">
+        <img src="/assets/images/founder/hadhi-cutout-2.webp" alt="Hadhi Muhammed P., founder of Raise AI" width="64" height="64" loading="lazy" decoding="async" style="object-fit:cover;object-position:top;background:var(--soft-white)">
+        <div>
+          <b>Hadhi Muhammed P.</b>
+          <p>Founder of Raise AI in Kozhikode, Kerala. He makes AI video ads and teaches working professionals, including architects, interior designers and civil engineers, to use AI in their own job. <a href="/about/">About us</a></p>
+        </div>
+      </div>
+
+      <h2 class="sub">Read next</h2>
+      <div class="posts" style="margin-top:20px">
+        <a class="post" href="/blog/chatgpt-prompts-for-architects/">
+          <small>AI for architects</small>
+          <h3>12 ChatGPT prompts for architects (copy and paste)</h3>
+          <p>Prompts for briefs, concepts, client emails, specifications and renders. Copy, fill the brackets, paste.</p>
+        </a>
+        <a class="post" href="/blog/ai-walkthrough-video-from-render/">
+          <small>AI for architects</small>
+          <h3>How to make an AI walkthrough video from a render (Google Flow)</h3>
+          <p>Turn your approved stills into a short cinematic film for clients and Instagram, with no animation software.</p>
+        </a>
+        <a class="post" href="/blog/ai-course-for-architects-kerala/">
+          <small>AI for architects</small>
+          <h3>AI course for architects in Kerala: what to learn and how to choose</h3>
+          <p>The six AI skills that matter in a design practice, a checklist to judge any course, and how the Raise AI cohort works.</p>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec-dark final">
+  <div class="wrap">
+    <h2>Prompts are step one. <span class="key">A real workflow is step two.</span></h2>
+    <a class="btn" href="/webinar/aec/" id="final-cta-btn" data-cta="blog_to_aec_final">
+      Join the architects cohort
+      <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+    </a>
+  </div>
+  <div class="shape" aria-hidden="true"></div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Raise AI Homepage">
+      <img src="/assets/images/logo/logo-dark.webp?v=3" alt="Raise AI" width="112" height="28" loading="lazy" decoding="async" style="height:28px;width:auto">
+    </a>
+    <div class="ftr-grid">
+      <div>
+        <p style="max-width:26em">Raise AI is an AI upskilling institute in Kerala, India. We teach working professionals in every field how to use AI in their own job, through online AI courses, classes, workshops and training.</p>
+        <p style="margin-top:14px;color:var(--d-ink-muted)">KINFRA Advanced Technology Park, Ramanattukara, Kozhikode, Kerala</p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/webinar/">Live AI workshop</a></li>
+          <li><a href="/webinar/aec/">Architects &amp; Interior Designers cohort</a></li>
+          <li><a href="/#courses">AI Ad Video Production course</a></li>
+          <li><a href="/results/">Student Results</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Raise AI</h4>
+        <ul>
+          <li><a href="/about/">About us</a></li>
+          <li><a href="/students/">Students</a></li>
+          <li><a href="/reviews/">Reviews</a></li>
+          <li><a href="/testimonials/">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/917356003301?text=Hi%2C%20I%20want%20to%20connect%20with%20Raise%20AI.">WhatsApp +91 73560 03301</a></li>
+          <li><a href="mailto:support@raiseai.in">support@raiseai.in</a></li>
+          <li>Every day, 9 AM to 10 PM</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/raise_ai" target="_blank" rel="noopener">Instagram @raise_ai</a></li>
+          <li><a href="https://www.instagram.com/hadhi_creates_" target="_blank" rel="noopener">Instagram @hadhi_creates_</a></li>
+          <li><a href="https://www.youtube.com/@Raise_withAI" target="_blank" rel="noopener">YouTube @Raise_withAI</a></li>
+          <li><a href="https://www.linkedin.com/in/hadhi-muhammed-p-71667b378/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Raise AI LLP</span>
+      <a href="/terms/">Terms</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/refund/">Refund</a>
+      <a href="/delivery/">Delivery</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky mobile bar -->
+<div class="bar show" id="sticky-bar">
+  <a class="btn" href="/webinar/aec/" id="bar-cta-btn" data-cta="blog_to_aec_sticky">
+    Join the architects cohort
+    <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>
+  </a>
+  <a class="wa" href="https://wa.me/917356003301?text=Hi%2C%20I%20have%20a%20question%20about%20Raise%20AI." aria-label="Chat with us on WhatsApp" id="bar-wa-btn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 19L4 20z"/>
+    </svg>
+  </a>
+</div>
+
+<script>window.RAISE_POST = { slug: "sketch-to-render-ai", event: "blog_to_aec", pixel: "BlogToAEC" };</script>
+<script src="/assets/blog.js?v=4" defer></script>
+
+</body>
+</html>
