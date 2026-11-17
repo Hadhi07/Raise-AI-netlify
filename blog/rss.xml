@@ -4,14 +4,77 @@
     <title>Raise AI Blog</title>
     <link>https://raiseai.in/blog/</link>
     <atom:link href="https://raiseai.in/blog/rss.xml" rel="self" type="application/rss+xml"/>
-    <description>Simple, practical guides on AI video, AI tools and using AI at work, from the Raise AI team in Kerala.</description>
+    <description>Practical AI guides and copy-paste prompts for working professionals, from the Raise AI team in Kerala.</description>
     <language>en-IN</language>
-    <lastBuildDate>Tue, 13 Oct 2026 00:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0530</lastBuildDate>
+    <item>
+      <title>AI course for architects in Kerala: what to learn and how to choose</title>
+      <link>https://raiseai.in/blog/ai-course-for-architects-kerala/</link>
+      <guid isPermaLink="true">https://raiseai.in/blog/ai-course-for-architects-kerala/</guid>
+      <description>What a good AI course for architects, interior designers and civil engineers should teach, a 7-point checklist, and how the Raise AI cohort in Kerala works.</description>
+      <author>support@raiseai.in (Hadhi Muhammed P.)</author>
+      <category>AI for architects</category>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>How to make an AI walkthrough video from a render (Google Flow)</title>
+      <link>https://raiseai.in/blog/ai-walkthrough-video-from-render/</link>
+      <guid isPermaLink="true">https://raiseai.in/blog/ai-walkthrough-video-from-render/</guid>
+      <description>Turn a still 3D render into a cinematic AI walkthrough video with Google Flow. Step-by-step method, camera move prompts and editing tips for architects.</description>
+      <author>support@raiseai.in (Hadhi Muhammed P.)</author>
+      <category>AI for architects</category>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>12 ChatGPT prompts for architects (copy and paste)</title>
+      <link>https://raiseai.in/blog/chatgpt-prompts-for-architects/</link>
+      <guid isPermaLink="true">https://raiseai.in/blog/chatgpt-prompts-for-architects/</guid>
+      <description>12 copy-paste ChatGPT prompts for architects: design briefs, concept options, client emails, specifications, render prompts and rule checks. They work in Gemini too.</description>
+      <author>support@raiseai.in (Hadhi Muhammed P.)</author>
+      <category>AI for architects</category>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>10 ChatGPT prompts for civil engineers (site reports, BOQ, letters)</title>
+      <link>https://raiseai.in/blog/chatgpt-prompts-for-civil-engineers/</link>
+      <guid isPermaLink="true">https://raiseai.in/blog/chatgpt-prompts-for-civil-engineers/</guid>
+      <description>10 copy-paste ChatGPT prompts for civil engineers in India: daily site reports, BOQ checks, rate analysis, schedules, contractor letters and safety talks.</description>
+      <author>support@raiseai.in (Hadhi Muhammed P.)</author>
+      <category>AI for civil engineers</category>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>10 Gemini prompts for interior designers (room photo to design)</title>
+      <link>https://raiseai.in/blog/gemini-prompts-for-interior-designers/</link>
+      <guid isPermaLink="true">https://raiseai.in/blog/gemini-prompts-for-interior-designers/</guid>
+      <description>10 copy-paste Gemini prompts for interior designers: restyle a room photo, stage an empty flat, swap materials and build mood boards. Works in ChatGPT too.</description>
+      <author>support@raiseai.in (Hadhi Muhammed P.)</author>
+      <category>AI for interior designers</category>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Best AI course in Kerala? Judge it by student results (here are ours)</title>
+      <link>https://raiseai.in/blog/raise-ai-student-results/</link>
+      <guid isPermaLink="true">https://raiseai.in/blog/raise-ai-student-results/</guid>
+      <description>How to judge an AI course in Kerala by what students make and earn, with Raise AI's real results: named students, voice reviews and ads for real businesses.</description>
+      <author>support@raiseai.in (Hadhi Muhammed P.)</author>
+      <category>Raise AI stories</category>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Sketch to render with AI: turn a sketch or floor plan into a photoreal image</title>
+      <link>https://raiseai.in/blog/sketch-to-render-ai/</link>
+      <guid isPermaLink="true">https://raiseai.in/blog/sketch-to-render-ai/</guid>
+      <description>How to turn a hand sketch, floor plan or SketchUp screenshot into a photoreal render with AI, using Gemini or ChatGPT. Includes 6 copy-paste prompts and fixes.</description>
+      <author>support@raiseai.in (Hadhi Muhammed P.)</author>
+      <category>AI for architects</category>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0530</pubDate>
+    </item>
     <item>
       <title>How to make an AI video ad for free (step by step)</title>
       <link>https://raiseai.in/blog/how-to-make-an-ai-video-ad-for-free/</link>
       <guid isPermaLink="true">https://raiseai.in/blog/how-to-make-an-ai-video-ad-for-free/</guid>
-      <description>A step-by-step guide to making your first AI video ad using only free tools, from idea to finished video.</description>
+      <description>A step-by-step guide to making your first AI video ad using only free tools, from idea to finished video, with ChatGPT, Google Flow, ElevenLabs and CapCut.</description>
       <author>support@raiseai.in (Hadhi Muhammed P.)</author>
       <category>AI video</category>
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0530</pubDate>

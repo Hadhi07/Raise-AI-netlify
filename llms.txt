@@ -10,13 +10,24 @@ Raise AI is an AI upskilling company in Kerala, India. We teach working professi
 - Students: Meet the people who finished a Raise AI course, what they do, and what they said after learning AI for their own work. URL: https://raiseai.in/students/
 - Reviews: Real voice-note reviews from people who joined the live AI webinar. URL: https://raiseai.in/reviews/
 - Testimonials: Voice notes from webinar attendees and AI ads made by course students. URL: https://raiseai.in/testimonials/
-- Blog: Simple, practical guides on AI video, AI tools, and using AI at work. URL: https://raiseai.in/blog/
-- Guide: How to make an AI video ad for free (step by step) using ChatGPT, Google Flow, Luma Dream Machine, ElevenLabs, and CapCut. URL: https://raiseai.in/blog/how-to-make-an-ai-video-ad-for-free/
+- Blog: Practical AI guides and copy-paste ChatGPT and Gemini prompts for architects, interior designers, civil engineers and creators, from Raise AI in Kerala. URL: https://raiseai.in/blog/
 - Blog RSS feed: https://raiseai.in/blog/rss.xml
+
+## Blog posts
+
+- AI course for architects in Kerala: what to learn and how to choose: What a good AI course for architects, interior designers and civil engineers should teach, a 7-point checklist, and how the Raise AI cohort in Kerala works. URL: https://raiseai.in/blog/ai-course-for-architects-kerala/
+- How to make an AI walkthrough video from a render (Google Flow): Turn a still 3D render into a cinematic AI walkthrough video with Google Flow. Step-by-step method, camera move prompts and editing tips for architects. URL: https://raiseai.in/blog/ai-walkthrough-video-from-render/
+- 12 ChatGPT prompts for architects (copy and paste): 12 copy-paste ChatGPT prompts for architects: design briefs, concept options, client emails, specifications, render prompts and rule checks. They work in Gemini too. URL: https://raiseai.in/blog/chatgpt-prompts-for-architects/
+- 10 ChatGPT prompts for civil engineers (site reports, BOQ, letters): 10 copy-paste ChatGPT prompts for civil engineers in India: daily site reports, BOQ checks, rate analysis, schedules, contractor letters and safety talks. URL: https://raiseai.in/blog/chatgpt-prompts-for-civil-engineers/
+- 10 Gemini prompts for interior designers (room photo to design): 10 copy-paste Gemini prompts for interior designers: restyle a room photo, stage an empty flat, swap materials and build mood boards. Works in ChatGPT too. URL: https://raiseai.in/blog/gemini-prompts-for-interior-designers/
+- Best AI course in Kerala? Judge it by student results (here are ours): How to judge an AI course in Kerala by what students make and earn, with Raise AI's real results: named students, voice reviews and ads for real businesses. URL: https://raiseai.in/blog/raise-ai-student-results/
+- Sketch to render with AI: turn a sketch or floor plan into a photoreal image: How to turn a hand sketch, floor plan or SketchUp screenshot into a photoreal render with AI, using Gemini or ChatGPT. Includes 6 copy-paste prompts and fixes. URL: https://raiseai.in/blog/sketch-to-render-ai/
+- How to make an AI video ad for free (step by step): A step-by-step guide to making your first AI video ad using only free tools, from idea to finished video, with ChatGPT, Google Flow, ElevenLabs and CapCut. URL: https://raiseai.in/blog/how-to-make-an-ai-video-ad-for-free/
 
 ## Courses
 
 - Live AI workshop: Flow AI Fundamentals: A 2-hour online live class for beginners teaching how to make AI videos with free browser tools on Google Meet. URL: https://raiseai.in/webinar/
+- AI for Architects and Interior Designers cohort: A live online cohort on Google Meet for architects, interior designers and civil engineers, covering photoreal 3D renders from sketches and models, interior styling, virtual staging and client presentations. Invite only, built together with practising professionals. URL: https://raiseai.in/webinar/aec/
 - AI Ad Video Production Masterclass: A 14-day live AI bootcamp in 7 modules covering precision editing, scripting, character consistency, AI influencers, product B-roll, UGC ads, and 3D, cartoon and cinematic styles. URL: https://raiseai.in/#courses
 
 ## Founder
