@@ -108,9 +108,10 @@
       ],
       "category": "ai-for-architects",
       "funnel": "TOFU",
-      "status": "queued",
+      "status": "published",
       "priority": 10,
-      "angle": "'Front elevation design' is one of the most common house design searches in India. Give 8 copy-paste prompts by style (contemporary, Kerala traditional, tropical modern, box type) from a plan, a sketch or a site photo, plus the keep-the-openings rule."
+      "angle": "'Front elevation design' is one of the most common house design searches in India. Give 8 copy-paste prompts by style (contemporary, Kerala traditional, tropical modern, box type) from a plan, a sketch or a site photo, plus the keep-the-openings rule.",
+      "slug": "ai-front-elevation-design"
     },
     {
       "primary": "kerala house design ai prompts",
@@ -418,10 +419,12 @@
       ],
       "category": "raise-ai-stories",
       "funnel": "BOFU",
-      "status": "queued",
+      "status": "covered",
       "priority": 2,
       "source": "hadhi",
-      "angle": "Local search page for Kozhikode/Calicut. Lead with student results and the KINFRA office. Facts only from raiseai.in. Be clear that classes are live online on Google Meet."
+      "angle": "Local search page for Kozhikode/Calicut. Lead with student results and the KINFRA office. Facts only from raiseai.in. Be clear that classes are live online on Google Meet.",
+      "slug": "raise-ai-student-results",
+      "note": "Covered by the student results post, which targets \"best ai training institute in kozhikode\". Classes are online, so an \"offline Kozhikode course\" page would mislead."
     },
     {
       "primary": "student story",
@@ -447,9 +450,10 @@
       "category": "ai-video",
       "funnel": "BOFU",
       "status": "queued",
-      "priority": 4,
+      "priority": 60,
       "source": "hadhi",
-      "angle": "Most course students so far are creators and editors. Lead with their ads and quotes on /students/ and /results/, the 7 modules and 7 finished pieces. Facts only from raiseai.in."
+      "angle": "Most course students so far are creators and editors. Lead with their ads and quotes on /students/ and /results/, the 7 modules and 7 finished pieces. Facts only from raiseai.in.",
+      "note": "Parked 19 Nov 2026: outside the current construction-professional focus. Move back up if Hadhi asks."
     }
   ],
   "positioning": "Raise AI should be known as the AI upskilling institute with the best student results. Prove it, never just claim it: every superlative is phrased as a question ('Best AI course in Kerala?') or backed by checkable proof from /results/, /students/ and /testimonials/. Advertising rules in India (the ASCI code) require superlative claims to be substantiated."
