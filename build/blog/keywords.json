@@ -123,8 +123,9 @@
       "category": "ai-for-architects",
       "funnel": "TOFU",
       "status": "queued",
-      "priority": 12,
-      "angle": "Local advantage: prompts with real Kerala vocabulary (sloped clay tile roof, laterite, sit-out, charupadi, courtyard, monsoon light). No other AI site writes this well."
+      "priority": 25,
+      "angle": "Local advantage: prompts with real Kerala vocabulary (sloped clay tile roof, laterite, sit-out, charupadi, courtyard, monsoon light). No other AI site writes this well.",
+      "note": "Moved down 20 Nov 2026 to space it out from the front elevation post, which already has a Kerala prompt. Make it about the whole home (interiors, courtyard, sit-out), not only the facade."
     },
     {
       "primary": "ai virtual staging free",
@@ -135,9 +136,10 @@
       ],
       "category": "ai-for-interiors",
       "funnel": "TOFU",
-      "status": "queued",
+      "status": "published",
       "priority": 14,
-      "angle": "Step by step for builders and interior designers selling flats: empty room photo to staged photo, 3 styles, what to disclose to buyers."
+      "angle": "Step by step for builders and interior designers selling flats: empty room photo to staged photo, 3 styles, what to disclose to buyers.",
+      "slug": "ai-virtual-staging-free"
     },
     {
       "primary": "floor plan to 3d ai",
