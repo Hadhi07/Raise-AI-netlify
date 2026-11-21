@@ -6,7 +6,25 @@
     <atom:link href="https://raiseai.in/blog/rss.xml" rel="self" type="application/rss+xml"/>
     <description>Practical AI guides and copy-paste prompts for working professionals, from the Raise AI team in Kerala.</description>
     <language>en-IN</language>
-    <lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 00:00:00 +0530</lastBuildDate>
+    <item>
+      <title>Free AI virtual staging: furnish empty flat photos with Gemini or ChatGPT</title>
+      <link>https://raiseai.in/blog/ai-virtual-staging-free/</link>
+      <guid isPermaLink="true">https://raiseai.in/blog/ai-virtual-staging-free/</guid>
+      <description>Furnish photos of empty flats for free with Gemini or ChatGPT. 8 copy-paste staging prompts for builders, agents and interior designers, plus honest labelling.</description>
+      <author>support@raiseai.in (Hadhi Muhammed P.)</author>
+      <category>AI for interior designers</category>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>AI front elevation design: 8 prompts for Indian houses (Gemini and ChatGPT)</title>
+      <link>https://raiseai.in/blog/ai-front-elevation-design/</link>
+      <guid isPermaLink="true">https://raiseai.in/blog/ai-front-elevation-design/</guid>
+      <description>Design a house front elevation with AI from a site photo, floor plan or sketch. 8 copy-paste Gemini and ChatGPT prompts for box type, Kerala and tropical styles.</description>
+      <author>support@raiseai.in (Hadhi Muhammed P.)</author>
+      <category>AI for architects</category>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0530</pubDate>
+    </item>
     <item>
       <title>AI course for architects in Kerala: what to learn and how to choose</title>
       <link>https://raiseai.in/blog/ai-course-for-architects-kerala/</link>

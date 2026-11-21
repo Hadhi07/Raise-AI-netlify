@@ -108,9 +108,10 @@
       ],
       "category": "ai-for-architects",
       "funnel": "TOFU",
-      "status": "queued",
+      "status": "published",
       "priority": 10,
-      "angle": "'Front elevation design' is one of the most common house design searches in India. Give 8 copy-paste prompts by style (contemporary, Kerala traditional, tropical modern, box type) from a plan, a sketch or a site photo, plus the keep-the-openings rule."
+      "angle": "'Front elevation design' is one of the most common house design searches in India. Give 8 copy-paste prompts by style (contemporary, Kerala traditional, tropical modern, box type) from a plan, a sketch or a site photo, plus the keep-the-openings rule.",
+      "slug": "ai-front-elevation-design"
     },
     {
       "primary": "kerala house design ai prompts",
@@ -122,8 +123,9 @@
       "category": "ai-for-architects",
       "funnel": "TOFU",
       "status": "queued",
-      "priority": 12,
-      "angle": "Local advantage: prompts with real Kerala vocabulary (sloped clay tile roof, laterite, sit-out, charupadi, courtyard, monsoon light). No other AI site writes this well."
+      "priority": 25,
+      "angle": "Local advantage: prompts with real Kerala vocabulary (sloped clay tile roof, laterite, sit-out, charupadi, courtyard, monsoon light). No other AI site writes this well.",
+      "note": "Moved down 20 Nov 2026 to space it out from the front elevation post, which already has a Kerala prompt. Make it about the whole home (interiors, courtyard, sit-out), not only the facade."
     },
     {
       "primary": "ai virtual staging free",
@@ -134,9 +136,10 @@
       ],
       "category": "ai-for-interiors",
       "funnel": "TOFU",
-      "status": "queued",
+      "status": "published",
       "priority": 14,
-      "angle": "Step by step for builders and interior designers selling flats: empty room photo to staged photo, 3 styles, what to disclose to buyers."
+      "angle": "Step by step for builders and interior designers selling flats: empty room photo to staged photo, 3 styles, what to disclose to buyers.",
+      "slug": "ai-virtual-staging-free"
     },
     {
       "primary": "floor plan to 3d ai",
@@ -418,10 +421,12 @@
       ],
       "category": "raise-ai-stories",
       "funnel": "BOFU",
-      "status": "queued",
+      "status": "covered",
       "priority": 2,
       "source": "hadhi",
-      "angle": "Local search page for Kozhikode/Calicut. Lead with student results and the KINFRA office. Facts only from raiseai.in. Be clear that classes are live online on Google Meet."
+      "angle": "Local search page for Kozhikode/Calicut. Lead with student results and the KINFRA office. Facts only from raiseai.in. Be clear that classes are live online on Google Meet.",
+      "slug": "raise-ai-student-results",
+      "note": "Covered by the student results post, which targets \"best ai training institute in kozhikode\". Classes are online, so an \"offline Kozhikode course\" page would mislead."
     },
     {
       "primary": "student story",
@@ -447,9 +452,10 @@
       "category": "ai-video",
       "funnel": "BOFU",
       "status": "queued",
-      "priority": 4,
+      "priority": 60,
       "source": "hadhi",
-      "angle": "Most course students so far are creators and editors. Lead with their ads and quotes on /students/ and /results/, the 7 modules and 7 finished pieces. Facts only from raiseai.in."
+      "angle": "Most course students so far are creators and editors. Lead with their ads and quotes on /students/ and /results/, the 7 modules and 7 finished pieces. Facts only from raiseai.in.",
+      "note": "Parked 19 Nov 2026: outside the current construction-professional focus. Move back up if Hadhi asks."
     }
   ],
   "positioning": "Raise AI should be known as the AI upskilling institute with the best student results. Prove it, never just claim it: every superlative is phrased as a question ('Best AI course in Kerala?') or backed by checkable proof from /results/, /students/ and /testimonials/. Advertising rules in India (the ASCI code) require superlative claims to be substantiated."

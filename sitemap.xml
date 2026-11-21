@@ -56,9 +56,21 @@
   </url>
   <url>
     <loc>https://raiseai.in/blog/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://raiseai.in/blog/ai-virtual-staging-free/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://raiseai.in/blog/ai-front-elevation-design/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://raiseai.in/blog/ai-course-for-architects-kerala/</loc>
