@@ -23,7 +23,7 @@
   <!-- OpenGraph / Social Meta -->
   <meta property="og:type" content="video.other">
   <meta property="og:title" content="AI for Architects: From Empty Site to Finished Space | Raise AI">
-  <meta property="og:description" content="Watch the exclusive session on AI for Architects & Interior Designers. Download the course modules PDF and connect on WhatsApp.">
+  <meta property="og:description" content="Watch the exclusive session on AI for Architects & Interior Designers. Explore course modules and connect on WhatsApp.">
   <meta property="og:url" content="https://raiseai.in/architects/">
   <meta property="og:image" content="https://raiseai.in/assets/images/logo/logo-dark.webp">
 
@@ -366,21 +366,36 @@
       35%, 100% { left: 140%; }
     }
 
-    /* Module PDF Button (Blue) */
-    .btn-pdf {
+    /* Module Presentation Button (Blue) */
+    .btn-presentation {
       background: #1554FF;
       color: #ffffff;
       box-shadow: 0 10px 28px rgba(21, 84, 255, 0.35);
     }
 
-    .btn-pdf:hover {
+    .btn-presentation:hover {
       background: #0f44d4;
       box-shadow: 0 14px 34px rgba(21, 84, 255, 0.5);
     }
 
-    .btn-pdf .btn-icon {
+    .btn-presentation .btn-icon {
       background: rgba(255, 255, 255, 0.16);
       color: #ffffff;
+    }
+
+    .pdf-sub-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      font-size: 12.5px;
+      color: #cbd5e1;
+      text-decoration: underline;
+      transition: color 0.15s ease;
+    }
+
+    .pdf-sub-link:hover {
+      color: var(--lime);
     }
 
     /* Quick Security / Trust Note */
@@ -407,9 +422,75 @@
       color: var(--lime);
     }
 
+    /* Cohort Offer Box */
+    .offer-banner {
+      background: linear-gradient(135deg, rgba(209, 254, 23, 0.08) 0%, rgba(21, 84, 255, 0.08) 100%);
+      border: 1px solid rgba(209, 254, 23, 0.25);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+
+    @media (min-width: 640px) {
+      .offer-banner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .offer-pill {
+      display: inline-block;
+      background: var(--lime);
+      color: #000;
+      font-size: 10.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 4px;
+    }
+
+    .offer-title {
+      font-family: var(--font-headline);
+      font-size: 18px;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .offer-pricing {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .price-strike {
+      font-size: 15px;
+      color: #64748b;
+      text-decoration: line-through;
+      font-weight: 600;
+    }
+
+    .price-main {
+      font-family: var(--font-headline);
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--lime);
+    }
+
+    .offer-terms {
+      font-size: 11.5px;
+      color: var(--text-sub);
+    }
+
     /* Modules Section */
     .modules-section {
-      margin-top: 48px;
+      margin-top: 40px;
     }
 
     .section-header {
@@ -513,6 +594,69 @@
       font-weight: 600;
       padding: 3px 9px;
       border-radius: 999px;
+    }
+
+    /* Embedded Slides Section */
+    .deck-section {
+      margin-top: 48px;
+      background: #11141e;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 24px;
+    }
+
+    .deck-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .deck-title {
+      font-family: var(--font-headline);
+      font-size: 18px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .deck-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(21, 84, 255, 0.15);
+      border: 1px solid rgba(21, 84, 255, 0.4);
+      color: #93c5fd;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .deck-link-btn:hover {
+      background: #1554FF;
+      color: #ffffff;
+    }
+
+    .deck-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .deck-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     /* Instructor Profile Section */
@@ -626,7 +770,7 @@
       color: #04240f;
     }
 
-    .dock-btn-pdf {
+    .dock-btn-slides {
       background: #1554FF;
       color: #ffffff;
     }
@@ -677,10 +821,10 @@
       </div>
     </section>
 
-    <!-- TWO PRIMARY ACTION BUTTONS (Immediately below video) -->
+    <!-- TWO PRIMARY ACTION BUTTONS (Directly below video) -->
     <section class="action-cta-container" aria-label="Next Steps and Resources">
       <h2 class="cta-heading">Ready to Master This Workflow for Your Practice?</h2>
-      <p class="cta-subheading">Connect directly with Hadhi on WhatsApp or download the complete 5-module curriculum syllabus.</p>
+      <p class="cta-subheading">Connect directly with Hadhi on WhatsApp or view the official 5-module course presentation slides.</p>
 
       <div class="buttons-grid">
         
@@ -701,28 +845,37 @@
           </div>
         </a>
 
-        <!-- Button 2: Redirect into the Module PDF -->
-        <a href="/architects/curriculum.pdf"
+        <!-- Button 2: Redirect into the Module Presentation -->
+        <a href="https://docs.google.com/presentation/d/1He4JufpK_rP5Cqf4HVikEelQjWa9edYKFrAmXKji3Hs/edit?usp=sharing"
            target="_blank"
            rel="noopener"
-           class="btn-action btn-pdf"
-           download="Raise-AI-Architects-Curriculum.pdf"
-           onclick="if(window.gtag) gtag('event', 'download_pdf', {content_name: 'architects_curriculum_pdf'});">
+           class="btn-action btn-presentation"
+           onclick="if(window.gtag) gtag('event', 'view_slides', {content_name: 'architects_module_slides'});">
           <div class="btn-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-              <polyline points="10 9 9 9 8 9"/>
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
             </svg>
           </div>
           <div class="btn-text-group">
-            <span class="btn-main-text">View Course Modules (PDF)</span>
-            <span class="btn-sub-text">Official 5-Module Syllabus PDF &rarr;</span>
+            <span class="btn-main-text">View Course Modules (Deck)</span>
+            <span class="btn-sub-text">Open Google Presentation Slides &rarr;</span>
           </div>
         </a>
 
+      </div>
+
+      <!-- PDF Download Sub-Option -->
+      <div>
+        <a href="/architects/curriculum.pdf"
+           target="_blank"
+           rel="noopener"
+           download="Raise-AI-Architects-Course-Modules.pdf"
+           class="pdf-sub-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="12" y2="18"/><line x1="15" y1="15" x2="12" y2="18"/></svg>
+          Or download the complete 12-slide module deck as a PDF
+        </a>
       </div>
 
       <!-- Trust Badges -->
@@ -737,8 +890,24 @@
         </span>
         <span class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Architecture Co-Director Bot Included
+          100% Refund Before Class 3
         </span>
+      </div>
+    </section>
+
+    <!-- First Batch Offer Banner -->
+    <section class="offer-banner" aria-label="First Batch Special Offer">
+      <div>
+        <span class="offer-pill">First Batch · Limited Seats</span>
+        <h3 class="offer-title">Special 70% Off Cohort Invitation</h3>
+        <p class="offer-terms">Lock your seat tonight with just ₹1,000 advance. Settle the balance in 7 days. Full refund if you cancel before Class 3.</p>
+      </div>
+      <div style="text-align: right;">
+        <div class="offer-pricing">
+          <span class="price-strike">₹49,449</span>
+          <span class="price-main">₹14,449</span>
+        </div>
+        <p style="font-size: 11px; color: #94a3b8; margin-top: 2px;">Advance to lock: <strong style="color:#ffffff;">₹1,000</strong></p>
       </div>
     </section>
 
@@ -762,12 +931,12 @@
           </div>
           <h3 class="mod-h3">Plot to Dream Project</h3>
           <p class="mod-paragraph">
-            Take a photo of an empty, barren plot and show the client their fully completed home standing on the exact terrain in minutes. Keep consistent perspective, horizon lines, and real-world scale across multiple camera angles.
+            Take a photo of the empty plot and show the client their finished home standing on it in minutes. Build a stronger first impression in your initial meeting, get more clients saying yes faster, and keep the exact architectural look across every camera angle.
           </p>
           <div class="mod-chips">
             <span class="chip-item">Empty Plot Replacement</span>
-            <span class="chip-item">Consistent Architectural Angles</span>
-            <span class="chip-item">High-Conversion Client Pitches</span>
+            <span class="chip-item">Consistent Angle Perspectives</span>
+            <span class="chip-item">High-Conversion Pitch Assets</span>
           </div>
         </article>
 
@@ -782,12 +951,12 @@
           </div>
           <h3 class="mod-h3">Image to Video: Walkthroughs</h3>
           <p class="mod-paragraph">
-            Others show flat still images; you show cinematic 9:16 walkthrough video. Convert SketchUp renders, Revit models, or stills into fluid video walkthroughs in under 10 minutes—eliminating 48-hour Lumion rendering bottlenecks.
+            Others show flat still images; you show video. Help clients understand scale and space far better. Turn your own 3D render into a short, cinematic 9:16 walkthrough in under 10 minutes, eliminating 48-hour Lumion rendering bottlenecks.
           </p>
           <div class="mod-chips">
-            <span class="chip-item">10-Min Video vs 48-Hr Renders</span>
+            <span class="chip-item">10-Min Video from Renders</span>
             <span class="chip-item">Natural Sunlighting &amp; Camera Glides</span>
-            <span class="chip-item">Depth &amp; Spatial Flow</span>
+            <span class="chip-item">Fair Client Pricing Models</span>
           </div>
         </article>
 
@@ -802,12 +971,12 @@
           </div>
           <h3 class="mod-h3">Multi-Engine Mastery &amp; The Co-Director Bot</h3>
           <p class="mod-paragraph">
-            Use the right tool for every architectural condition: Google Flow for rapid concepting, Kling AI for realistic vegetation and motion physics, and Seedance for high-end luxury interiors. Master our custom Co-Director prompt bot.
+            Every model, one co-director: master Google Flow (free to start, great for snaps), Kling AI (realistic camera motion and greenery), and Seedance (top quality for luxury projects). Our custom prompt bot automatically writes the exact prompt for whichever model you use.
           </p>
           <div class="mod-chips">
             <span class="chip-item">Google Flow Workflow</span>
             <span class="chip-item">Kling Physics &amp; Foliage</span>
-            <span class="chip-item">Seedance Interior Lighting</span>
+            <span class="chip-item">Seedance Luxury Renders</span>
             <span class="chip-item">Co-Director Prompt Bot</span>
           </div>
         </article>
@@ -823,12 +992,12 @@
           </div>
           <h3 class="mod-h3">Snap &amp; Material Control</h3>
           <p class="mod-paragraph">
-            Get exact control over where changes happen: swap Italian marble, terrazzo, glass partitions, louvers, or ceiling finishes in precise areas without affecting the surrounding structure. Make revisions on live video in minutes.
+            Full control over what changes and exactly where it happens: change tiles, glass, ceilings, facades, and finishes on both images and video. Edit real site video the way you want for client presentations, marketing, and live revisions.
           </p>
           <div class="mod-chips">
             <span class="chip-item">Material &amp; Finish Swapping</span>
             <span class="chip-item">Before-and-After Video Transitions</span>
-            <span class="chip-item">Live Client Revisions</span>
+            <span class="chip-item">Real-Time Client Revisions</span>
           </div>
         </article>
 
@@ -843,15 +1012,41 @@
           </div>
           <h3 class="mod-h3">Studio Marketing &amp; House Films</h3>
           <p class="mod-paragraph">
-            Turn completed projects into assets that market your firm. Produce luxury real-estate style narrated house tours, architect-led talking-head design reels, and authority-building content that brings high-value commissions.
+            Turn completed projects into stories that market your studio. Produce talking-head design reels with your own character, narrated luxury house films (real-estate style), and studio branding campaigns that attract high-budget clients.
           </p>
           <div class="mod-chips">
             <span class="chip-item">Narrated House Films</span>
             <span class="chip-item">Talking-Head Reels with Your Persona</span>
-            <span class="chip-item">Inbound Client Generation</span>
+            <span class="chip-item">Studio Client Acquisition</span>
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <!-- Embedded Google Slides Presentation Deck -->
+    <section class="deck-section" aria-label="Interactive Presentation Slides">
+      <div class="deck-header">
+        <div>
+          <h3 class="deck-title">Interactive Course Deck &amp; Syllabus</h3>
+          <p style="font-size: 12.5px; color: #94a3b8; margin-top: 2px;">Browse through the 12 presentation slides directly below:</p>
+        </div>
+        <a href="https://docs.google.com/presentation/d/1He4JufpK_rP5Cqf4HVikEelQjWa9edYKFrAmXKji3Hs/edit?usp=sharing"
+           target="_blank"
+           rel="noopener"
+           class="deck-link-btn">
+          <span>Open Full Screen</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="deck-wrapper">
+        <iframe
+          src="https://docs.google.com/presentation/d/1He4JufpK_rP5Cqf4HVikEelQjWa9edYKFrAmXKji3Hs/embed?start=false&loop=false&delayms=3000"
+          title="Raise AI Architect Course Presentation Slides"
+          allowfullscreen="true"
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true">
+        </iframe>
       </div>
     </section>
 
@@ -878,13 +1073,12 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
       <span>WhatsApp</span>
     </a>
-    <a href="/architects/curriculum.pdf"
+    <a href="https://docs.google.com/presentation/d/1He4JufpK_rP5Cqf4HVikEelQjWa9edYKFrAmXKji3Hs/edit?usp=sharing"
        target="_blank"
        rel="noopener"
-       class="dock-btn dock-btn-pdf"
-       download="Raise-AI-Architects-Curriculum.pdf">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-      <span>Module PDF</span>
+       class="dock-btn dock-btn-slides">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <span>Module Slides</span>
     </a>
   </aside>
 
