@@ -19,6 +19,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://raiseai.in/architects/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://raiseai.in/download/</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
