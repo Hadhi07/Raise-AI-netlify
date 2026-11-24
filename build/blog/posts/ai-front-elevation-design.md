@@ -192,7 +192,7 @@ Use this as a talking point with the client, not a rule. Climate, plot, budget a
 - **Fine text and logos fail.** Add the house name later in your own software.
 - **Call it a concept.** A line such as "AI concept image, not the final elevation" avoids arguments later.
 
-For more prompts across a whole project, see our [ChatGPT prompts for architects](/blog/chatgpt-prompts-for-architects/). Architects, interior designers and civil engineers who want to build these skills with others can look at the [Raise AI cohort for architects and interior designers](/webinar/aec/).
+For more prompts across a whole project, see our [ChatGPT prompts for architects](/blog/chatgpt-prompts-for-architects/). Architects, interior designers and civil engineers who want to build these skills with others can look at the [Raise AI cohort for architects and interior designers](/architects/).
 
 :::faq
 ### Can AI design a house front elevation for free?

@@ -7,6 +7,7 @@ crumb: AI course for architects in Kerala
 slug: ai-course-for-architects-kerala
 category: ai-for-architects
 date: 2026-11-17
+updated: 2026-11-24
 keywords: ai course for architects in kerala | ai course for architects | ai course for interior designers | ai for civil engineers course | ai training for architects india | learn ai for architecture
 audience: Architects, interior designers and civil engineers in Kerala and India
 cta: aec
@@ -17,7 +18,7 @@ answer: A good AI course for architects in Kerala should teach six job skills: p
 - You do not need coding. You need six practical skills that fit a design or construction practice.
 - Judge any course on seven points: live teaching, your own projects, real output, current tools, language, recordings and support after class.
 - You can start free today with ChatGPT and Gemini and the guides on this blog.
-- Raise AI's cohort for architects, interior designers and civil engineers is live on Google Meet and is being built together with practising professionals.
+- Raise AI's 10-day cohort for architects and interior designers covers plot-to-project visuals, walkthrough videos, material control and studio marketing, with a free session to watch first.
 - AI does not replace your drawings, your engineer or your licence. It removes hours of repeat work around them.
 :::
 
@@ -80,15 +81,17 @@ Self-learning works for people who practise every week. A live course mainly buy
 
 Raise AI is an AI upskilling institute based at KINFRA Advanced Technology Park, Kozhikode, Kerala. It teaches working professionals to use AI in their own job, in live online classes.
 
-For architects, interior designers and civil engineers, Raise AI runs a co-creation cohort:
+For architects and interior designers, Raise AI runs a hands-on cohort called **AI for Architects: From Empty Site to Finished Space**. According to the [architects page](/architects/):
 
-- **Who it is for:** practising architects, interior designers and civil engineers.
-- **What it covers:** photoreal 3D renders from sketches and models, interior styling and virtual staging, client presentations and practice workflows.
-- **How it runs:** live on Google Meet, with the recording included.
-- **Language:** simple Malayalam with standard English technical terms.
-- **Stage:** the course is being built together with professionals who join as collaborators, so the content follows real firm problems. Entry is by invitation after a short WhatsApp chat.
+- **Format:** a 10-day hands-on cohort with live Q&A on alternate days.
+- **Module 1, pitching and site visualisation:** show a client their finished home standing on a photo of the empty plot, with the same look from every camera angle.
+- **Module 2, image to video:** turn your own 3D render into a short cinematic walkthrough in about 10 minutes.
+- **Module 3, multi-engine work:** Google Flow, Kling AI and Seedance, with a prompt bot that writes the prompt for each tool.
+- **Module 4, material control:** change tiles, glass, ceilings, facades and finishes on images and on real site video.
+- **Module 5, studio growth:** house films, talking-head design reels and marketing for your studio.
+- **Refund:** a full refund if you cancel before class 3.
 
-Details can change as the cohort grows, so the [cohort page](/webinar/aec/) is the place to check what is current. New to AI and want a small first step? The 2-hour [live AI workshop](/webinar/) is a beginner class on making AI video with free tools.
+The page also has a free recorded session showing the workflow, so you can watch the teaching before you decide. Seats, price and the current offer are on the [architects page](/architects/), and you can message the team on WhatsApp with questions. New to AI and want a smaller first step? The 2-hour [live AI workshop](/webinar/) is a beginner class on making AI video with free tools.
 
 ## What can AI not do for an architect?
 
@@ -101,13 +104,13 @@ A course that is honest about these limits is worth more than one that promises 
 
 :::faq
 ### Which is the best AI course for architects in Kerala?
-The best AI course for an architect is one that is live, built for design practice, and makes you produce real work on your own project. Raise AI in Kozhikode runs a live online cohort for architects, interior designers and civil engineers, taught in Malayalam with English terms. Use the 7-point checklist above to compare any option.
+The best AI course for an architect is one that is live, built for design practice, and makes you produce real work on your own project. Raise AI in Kozhikode runs a 10-day hands-on cohort for architects and interior designers, with a free recorded session you can watch first. Use the 7-point checklist above to compare any option.
 
 ### Do architects need coding to learn AI?
 No. Everything in this guide is done by typing plain instructions into tools such as ChatGPT, Gemini and Google Flow. If you can write a clear brief for a junior, you can prompt an AI.
 
 ### Is the Raise AI architects cohort online or offline?
-It is online and live on Google Meet, so you can join from anywhere in Kerala, the rest of India or the Gulf. You get the recording after each session.
+It is online, so you can join from anywhere in Kerala, the rest of India or the Gulf. The [architects page](/architects/) has a free recorded session, the five modules and the current batch details.
 
 ### How long does it take to learn AI for architecture?
 You can get useful results in the first week: a better brief, a render from a sketch, a client email. Being fast and consistent across all six skills usually takes a few weeks of practice on real projects.

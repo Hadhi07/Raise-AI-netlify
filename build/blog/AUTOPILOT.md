@@ -40,36 +40,87 @@ Nobody can promise a first-place ranking. What works, and what Google itself
 recommends for its AI features, is helpful, original, clearly structured pages that
 are easy to crawl. Do that every time and do not use tricks.
 
-## One run = one post
+## The weekly run (Hadhi's choice, 24 Nov 2026)
 
-1. **Sync.** Start from the latest `main`. Read `build/blog/keywords.json` and the
-   front matter of every file in `build/blog/posts/` so you know what exists.
-2. **Pick the topic.** Take the `queued` entry with the lowest `priority`. Entries
-   with `"source": "hadhi"` always come first. Skip an entry if an existing post
-   already answers it (then mark it `"status": "covered"` with the slug).
-3. **Research.** See "Sources" below. Collect facts with their URLs before writing.
-4. **Write** `build/blog/posts/<slug>.md` using the format below.
-5. **Build and check.**
-   ```bash
-   node build/blog/covers.js
-   node build/blog/build.js
-   ```
-   Fix every `ERROR`. Fix warnings unless there is a good reason not to.
-6. **Look at it.** Open the built page in a browser (`python3 -m http.server` at the
-   repo root, then Playwright) at 390px and 1280px wide. Check the prompts, tables
-   and links. No horizontal scroll.
-7. **Update the bank.** In `keywords.json` set the entry to `"status": "published"`
-   and add its `"slug"`. If the research showed new questions people ask, add them
-   as new `queued` entries.
-8. **Refresh one old post.** Pick the post with the oldest `updated` date. Re-check
-   its tool facts against the official pages. If something changed, fix it and set
-   `updated` to today. If nothing changed, leave the date alone.
-9. **Commit and publish.** One commit, message `blog: add <slug>` (plus
-   `, refresh <slug>` if you did one). Push to the working branch, then follow the
-   "Publishing" section.
+**One article per week, every Monday, made only from verified AI news that helps
+architects, interior designers, civil engineers and builders. It is published
+automatically: no approval needed.** The evergreen topic queue in
+`keywords.json` is paused; use it only for "Read next" links and refreshes.
 
-Never publish more than one new post per run. Quality beats volume: thin pages hurt
-the whole site.
+Do these steps in order. If any step fails, stop and report instead of publishing.
+
+### Step 1. Scan the website (audience and changes)
+1. Fetch `origin/main` and list what changed outside `blog/` since the last run:
+   `git log --oneline <last run's merge>..origin/main -- . ':!blog'` (the last run's date
+   is in `build/blog/LEARNINGS.md`).
+2. Open every new or changed public page (titles, descriptions, offers, prices, dates).
+   Ask: who is this page for, what does Raise AI sell or give away now, which page
+   should blog readers go to?
+3. Update the **Site and audience** section of `LEARNINGS.md`. If an offer changed,
+   update the CTA in `build/blog/build.js`, fix any post that now states old facts
+   (and set its `updated` date), and fix the hand-written course lines in `llms.txt`.
+   Never invent or extend an offer: copy only what the site says.
+
+### Step 2. Feedback loop (learn from the data)
+1. Run `node build/blog/feedback.js`. It checks every live post on raiseai.in, pulls
+   Clarity numbers when connected, and saves a dated snapshot in
+   `build/blog/performance/snapshots/`.
+2. Fix any live-check failure first (missing page, wrong title, missing schema).
+3. Search check: search the primary keyword of the 3 posts checked longest ago (use
+   WebSearch). Record each in `build/blog/performance/search-checks.json` as
+   `{"date","keyword","slug","found":true|false,"position":n|null,"top":["domain",...]}`.
+   Posts younger than 3 weeks are often not indexed yet: record, do not panic.
+4. Apply the decision rules below, then write 3 to 6 lines in the **Log** of
+   `LEARNINGS.md`: what the data showed and what you changed because of it.
+
+| Signal | What to do |
+| --- | --- |
+| A live page fails the check | Fix it in this run, before writing anything |
+| A post gets clearly more visits than the others (Clarity) | Choose news that fits the same audience and format; link to that post from the new one |
+| Visitors arrive from ChatGPT, Perplexity, Gemini or Copilot | Note which post; keep its structure (short answer, tables, FAQ) as the model |
+| Average scroll depth on posts is below about 40% | Put the most useful part (the prompt or the table) higher; keep the opening shorter |
+| A post older than 4 weeks is not found for its keyword | Refresh it: sharper title and short answer, add 2 FAQ questions people ask, more internal links, set `updated` |
+| A post is found but not in the top 5 | Look at what the top results answer that it does not, and add that |
+| An earlier news item has changed (price, availability, name) | Correct it in the old post and set `updated` |
+| No data yet (Clarity not connected, posts too new) | Say so in the log; rely on the editorial rules |
+
+### Step 3. Find and verify the news
+1. Candidates: the last 7 days of Hadhi's Notion **Content Calendar** (rows with Pick
+   Type "News", "Offer" or "Early"), plus a web search for AI news about images, video,
+   3D, drawings, presentations, site work and productivity in the past week.
+2. Keep only items that help the audience in their work. Skip celebrity, robotics,
+   finance, US-only or invite-only items, unless they change how this audience works.
+3. **Verification gate (all must be true for each item):**
+   - Confirmed on the company's own page (official blog, release notes, help centre).
+   - Date within the last 10 days.
+   - Who can use it (country, free or paid plan, age) is stated by the official page.
+   - Anything you could not confirm is left out, not hedged.
+4. Pick 3 to 5 items. Fewer verified items is better than more unverified ones. If
+   fewer than 2 items pass, do not publish this week: report why.
+
+### Step 4. Write the weekly article
+- Slug: `ai-news-architects-engineers-YYYY-MM-DD` (the Monday date). Category: `ai-news`.
+- Title pattern (keep it under about 100 characters): "AI news for architects: <lead item>, <second item> and more (<date>)".
+- Start with a table: News, who can use it, cost, useful for.
+- One H2 per item, written as a question: "What is <X>, and how can architects use it?"
+  Under it: what changed (facts only, from the official page), who can use it, how this
+  audience can use it at work, and one `:::prompt` card where it fits.
+- A short "What we left out this week, and why" section (unverified, not available in
+  India, not useful for this audience). This builds trust.
+- Link each item's official page in Sources. Link 2 or more older posts where they help.
+- Every rule in "Writing rules" and "What makes a post quotable" still applies.
+
+### Step 5. Build, check and publish automatically
+1. `node build/blog/covers.js` then `node build/blog/build.js`: 0 errors.
+2. Browser check at 390px and 1280px (Playwright): no horizontal scroll, prompts copy.
+3. Commit on the session's branch (restart it from `origin/main` first if the last
+   pull request was merged), push, open a pull request titled `blog: weekly news <date>`
+   with what the data showed, the items and their official sources.
+4. **Merge it yourself** (Hadhi allowed automatic publishing for verified weekly
+   posts on 24 Nov 2026). Never merge if a check failed or a fact is unverified:
+   leave the pull request open and tell Hadhi why.
+5. About 5 minutes after merging, run `node build/blog/feedback.js --no-save` and
+   confirm the new page is live. Report the result.
 
 ## Sources, in this order
 
@@ -142,7 +193,7 @@ description: 120 to 160 characters for Google and social cards
 excerpt: One line for the blog index card (optional)
 crumb: Short breadcrumb name (optional)
 slug: primary-keyword-slug
-category: ai-for-architects | ai-for-interiors | ai-for-civil-engineers | ai-video | ai-at-work | raise-ai-stories
+category: ai-news | ai-for-architects | ai-for-interiors | ai-for-civil-engineers | ai-video | ai-at-work | raise-ai-stories
 date: YYYY-MM-DD
 updated: YYYY-MM-DD (only when facts were re-checked or content changed)
 keywords: primary keyword | second keyword | third keyword
@@ -195,7 +246,7 @@ A complete answer in 2 to 4 sentences.
 ```
 
 `:::cta` places the mid-post call to action once, about one third of the way down.
-`cta: aec` (architects cohort) is for architecture, interiors and civil posts.
+`cta: aec` (free architects session on `/architects/`) is for architecture, interiors, civil and weekly news posts.
 `cta: webinar` (live workshop) is for AI video and general posts.
 
 ## Files
@@ -203,7 +254,10 @@ A complete answer in 2 to 4 sentences.
 | File | Purpose |
 | --- | --- |
 | `build/blog/posts/*.md` | The posts. The only place content is edited |
-| `build/blog/keywords.json` | Topic queue and what is published |
+| `build/blog/keywords.json` | Evergreen topic bank (paused while the weekly news mode runs) |
+| `build/blog/LEARNINGS.md` | Site and audience notes, rules learned from data, and the run log. Read it first every run |
+| `build/blog/feedback.js` | Live check of every post, Clarity numbers, dated snapshots |
+| `build/blog/performance/` | `search-checks.json` (search presence per keyword) and `snapshots/` (one file per run) |
 | `build/blog/build.js` | Generator and validator (`--check` validates only) |
 | `build/blog/covers.js` | Renders `blog/<slug>/cover.jpg` (1200x630 share image) |
 | `build/blog/partials/` | Shared head, header and footer for blog pages |
@@ -213,24 +267,11 @@ A complete answer in 2 to 4 sentences.
 
 ## Publishing
 
-The site deploys from `main` with no build step, so a post is live only when its
-generated files are on `main`.
+**Current mode: automatic weekly publishing** (Hadhi's choice, 24 Nov 2026). The weekly
+verified-news article is merged into `main` by the agent after every check passes, and
+goes live on raiseai.in a few minutes later. Anything else (refreshes of old posts
+outside the weekly run, design changes, new pages) still goes through a pull request
+for Hadhi to approve.
 
-**Current mode: pull request for review** (Hadhi's choice, 17 Nov 2026).
-
-- Before choosing a topic, list open pull requests in `Hadhi07/Raise-AI-netlify`
-  whose title starts with `blog:`. Topics in them are taken, even though
-  `keywords.json` on `main` still says `queued`.
-- Work on the development branch the session was given (or `blog/<slug>` if none
-  was given), created fresh from `origin/main`. If `main` does not have
-  `build/blog/build.js` yet (the setup pull request is not merged), create it from
-  `origin/claude/automated-blog-seo-geo-dk3nk8` instead and say so in the PR.
-- Push the branch and open a pull request into `main` titled `blog: add <slug>`.
-  In the description give the title, primary keyword, the questions it answers,
-  the sources used, and anything Hadhi should double-check.
-- Never merge. Hadhi reviews and merges, and the post goes live when he does.
-
-After a post is live, Hadhi (or the agent, if asked) should submit the URL in Google
-Search Console (URL inspection, Request indexing) and share the post on the Raise AI
-WhatsApp community, Instagram and LinkedIn. Mentions and links from real places are
-what make answer engines trust a new page.
+After a post is live, Hadhi can share it on the Raise AI WhatsApp community, Instagram
+and LinkedIn. Mentions and links from real places help answer engines trust a new page.

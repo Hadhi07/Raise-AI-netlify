@@ -197,7 +197,7 @@ Rules:
 - **Small text fails.** Keep logos and prices out of the image and add them in your own software.
 - **Free plans have daily limits.** Plan your rooms and prompts before you start.
 
-Next, turn the staged photos into a short walkthrough film for WhatsApp and Instagram with our guide on [AI walkthrough videos from a render](/blog/ai-walkthrough-video-from-render/). Selling a new house rather than a flat? Show the outside too with [AI front elevation design prompts](/blog/ai-front-elevation-design/). Builders, architects and interior designers who want to learn these skills properly can look at the [Raise AI cohort for architects and interior designers](/webinar/aec/).
+Next, turn the staged photos into a short walkthrough film for WhatsApp and Instagram with our guide on [AI walkthrough videos from a render](/blog/ai-walkthrough-video-from-render/). Selling a new house rather than a flat? Show the outside too with [AI front elevation design prompts](/blog/ai-front-elevation-design/). Builders, architects and interior designers who want to learn these skills properly can look at the [Raise AI cohort for architects and interior designers](/architects/).
 
 :::faq
 ### Is AI virtual staging really free?

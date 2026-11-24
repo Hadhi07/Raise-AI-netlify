@@ -149,7 +149,7 @@ No. You need still images. They can come from rendering software, from an AI ren
 Yes. Interior designers use it to show a room before work starts, and builders use it for project launch reels and WhatsApp marketing. The steps are the same.
 
 ### Where can I learn AI video properly?
-Raise AI in Kerala teaches AI video in live online classes, starting with a 2-hour beginner workshop on Google Flow. See the [live AI workshop](/webinar/), or the [cohort for architects and interior designers](/webinar/aec/).
+Raise AI in Kerala teaches AI video in live online classes, starting with a 2-hour beginner workshop on Google Flow. See the [live AI workshop](/webinar/), or the [cohort for architects and interior designers](/architects/).
 :::
 
 :::sources

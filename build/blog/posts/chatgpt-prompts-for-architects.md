@@ -7,6 +7,7 @@ crumb: ChatGPT prompts for architects
 slug: chatgpt-prompts-for-architects
 category: ai-for-architects
 date: 2026-11-17
+updated: 2026-11-24
 keywords: chatgpt prompts for architects | ai prompts for architects | gemini prompts for architects | chatgpt for architecture | architecture prompts
 audience: Architects and architecture students
 cta: aec
@@ -216,7 +217,7 @@ Yes. Copy them, change them and share them with your team. They work on the free
 Remove anything that identifies the client or the plot, such as names, phone numbers, addresses and survey numbers, before you paste. Check your account's data settings, and follow any confidentiality terms in your agreement with the client.
 
 ### Where can architects in Kerala learn AI properly?
-Raise AI, an AI upskilling institute in Kozhikode, Kerala, is building a live cohort for architects, interior designers and civil engineers together with practising professionals. Classes are online on Google Meet. See [AI for architects and interior designers](/webinar/aec/).
+Raise AI, an AI upskilling institute in Kozhikode, Kerala, runs a 10-day hands-on cohort for architects and interior designers: plot-to-project visuals, render-to-video walkthroughs, material control and studio marketing. There is a free recorded session to watch first on the [architects page](/architects/).
 :::
 
 :::sources
