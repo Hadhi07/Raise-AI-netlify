@@ -1,0 +1,218 @@
+{
+  "date": "2026-11-24",
+  "posts": [
+    {
+      "slug": "ai-course-for-architects-kerala",
+      "primary": "ai course for architects in kerala",
+      "date": "2026-11-17",
+      "updated": "2026-11-24",
+      "category": "ai-for-architects"
+    },
+    {
+      "slug": "ai-front-elevation-design",
+      "primary": "ai front elevation design",
+      "date": "2026-11-19",
+      "updated": "2026-11-19",
+      "category": "ai-for-architects"
+    },
+    {
+      "slug": "ai-news-architects-engineers-2026-11-24",
+      "primary": "ai news for architects",
+      "date": "2026-11-24",
+      "updated": "2026-11-24",
+      "category": "ai-news"
+    },
+    {
+      "slug": "ai-virtual-staging-free",
+      "primary": "ai virtual staging free",
+      "date": "2026-11-20",
+      "updated": "2026-11-20",
+      "category": "ai-for-interiors"
+    },
+    {
+      "slug": "ai-walkthrough-video-from-render",
+      "primary": "ai walkthrough video from render",
+      "date": "2026-11-17",
+      "updated": "2026-11-17",
+      "category": "ai-for-architects"
+    },
+    {
+      "slug": "chatgpt-prompts-for-architects",
+      "primary": "chatgpt prompts for architects",
+      "date": "2026-11-17",
+      "updated": "2026-11-24",
+      "category": "ai-for-architects"
+    },
+    {
+      "slug": "chatgpt-prompts-for-civil-engineers",
+      "primary": "chatgpt prompts for civil engineers",
+      "date": "2026-11-17",
+      "updated": "2026-11-17",
+      "category": "ai-for-civil-engineers"
+    },
+    {
+      "slug": "gemini-prompts-for-interior-designers",
+      "primary": "gemini prompts for interior designers",
+      "date": "2026-11-17",
+      "updated": "2026-11-17",
+      "category": "ai-for-interiors"
+    },
+    {
+      "slug": "how-to-make-an-ai-video-ad-for-free",
+      "primary": "ai video ad free",
+      "date": "2026-10-12",
+      "updated": "2026-11-17",
+      "category": "ai-video"
+    },
+    {
+      "slug": "raise-ai-student-results",
+      "primary": "best ai course in kerala",
+      "date": "2026-11-17",
+      "updated": "2026-11-17",
+      "category": "raise-ai-stories"
+    },
+    {
+      "slug": "sketch-to-render-ai",
+      "primary": "sketch to render ai",
+      "date": "2026-11-17",
+      "updated": "2026-11-17",
+      "category": "ai-for-architects"
+    }
+  ],
+  "live": {
+    "reachable": true,
+    "pages": [
+      {
+        "slug": "ai-course-for-architects-kerala",
+        "status": 200,
+        "ok": true,
+        "issues": []
+      },
+      {
+        "slug": "ai-front-elevation-design",
+        "status": 200,
+        "ok": true,
+        "issues": []
+      },
+      {
+        "slug": "ai-news-architects-engineers-2026-11-24",
+        "status": 200,
+        "ok": false,
+        "issues": [
+          "live H1 differs from source (not merged yet?)",
+          "BlogPosting schema missing",
+          "not in sitemap.xml",
+          "not in llms.txt"
+        ]
+      },
+      {
+        "slug": "ai-virtual-staging-free",
+        "status": 200,
+        "ok": true,
+        "issues": []
+      },
+      {
+        "slug": "ai-walkthrough-video-from-render",
+        "status": 200,
+        "ok": true,
+        "issues": []
+      },
+      {
+        "slug": "chatgpt-prompts-for-architects",
+        "status": 200,
+        "ok": true,
+        "issues": []
+      },
+      {
+        "slug": "chatgpt-prompts-for-civil-engineers",
+        "status": 200,
+        "ok": true,
+        "issues": []
+      },
+      {
+        "slug": "gemini-prompts-for-interior-designers",
+        "status": 200,
+        "ok": true,
+        "issues": []
+      },
+      {
+        "slug": "how-to-make-an-ai-video-ad-for-free",
+        "status": 200,
+        "ok": true,
+        "issues": []
+      },
+      {
+        "slug": "raise-ai-student-results",
+        "status": 200,
+        "ok": true,
+        "issues": []
+      },
+      {
+        "slug": "sketch-to-render-ai",
+        "status": 200,
+        "ok": true,
+        "issues": []
+      }
+    ]
+  },
+  "clarity": {
+    "connected": false,
+    "reason": "Request was cancelled."
+  },
+  "searchChecks": [
+    {
+      "date": "2026-11-24",
+      "keyword": "chatgpt prompts for architects",
+      "slug": "chatgpt-prompts-for-architects",
+      "found": false,
+      "position": null,
+      "top": [
+        "geeksforgeeks.org",
+        "architizer.com",
+        "dev.to",
+        "clickup.com",
+        "archgyan.com",
+        "myarchitectai.com"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "keyword": "sketch to render ai",
+      "slug": "sketch-to-render-ai",
+      "found": false,
+      "position": null,
+      "top": [
+        "creativefabrica.com",
+        "runway.com",
+        "lumalabs.ai",
+        "picsart.com",
+        "morphic.com",
+        "gendo.ai"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "keyword": "raiseai.in blog",
+      "slug": "(site)",
+      "found": false,
+      "position": null,
+      "top": [
+        "ftraiseai.onrender.com"
+      ],
+      "note": "Brand search does not return raiseai.in yet; a different 'FTRAISE AI' site ranks. Indexing, not content, is the first problem."
+    }
+  ],
+  "ages": {
+    "ai-course-for-architects-kerala": 7,
+    "ai-front-elevation-design": 5,
+    "ai-news-architects-engineers-2026-11-24": 0,
+    "ai-virtual-staging-free": 4,
+    "ai-walkthrough-video-from-render": 7,
+    "chatgpt-prompts-for-architects": 7,
+    "chatgpt-prompts-for-civil-engineers": 7,
+    "gemini-prompts-for-interior-designers": 7,
+    "how-to-make-an-ai-video-ad-for-free": 43,
+    "raise-ai-student-results": 7,
+    "sketch-to-render-ai": 7
+  }
+}

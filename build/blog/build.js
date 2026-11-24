@@ -23,7 +23,7 @@ const SRC = path.join(__dirname, 'posts');
 const PARTIALS = path.join(__dirname, 'partials');
 const OUT = path.join(ROOT, 'blog');
 const SITE = 'https://raiseai.in';
-const ASSET_V = '6'; // bump when assets/blog.css or assets/blog.js change
+const ASSET_V = '7'; // bump when assets/blog.css or assets/blog.js change
 const DEFAULT_OG = '/assets/images/results/AI_advertisement_jpg.webp';
 const CHECK_ONLY = process.argv.includes('--check');
 
@@ -49,6 +49,7 @@ const AUTHOR = {
 
 // Order here is the order of the filter pills on /blog/.
 const CATEGORIES = {
+  'ai-news': 'AI news',
   'ai-for-architects': 'AI for architects',
   'ai-for-interiors': 'AI for interior designers',
   'ai-for-civil-engineers': 'AI for civil engineers',
@@ -69,11 +70,11 @@ const CTAS = {
     final: 'Reading is step one. <span class="key">Building is step two.</span>',
   },
   aec: {
-    tag: 'Architects cohort',
-    text: 'We are building an AI course together with architects, interior designers and civil engineers. Want to be part of it?',
-    button: 'Join the architects cohort',
-    bar: 'Join the architects cohort',
-    href: '/webinar/aec/',
+    tag: 'Free session',
+    text: 'Watch the free session: how architects and interior designers turn an empty plot, a floor plan or a render into a cinematic walkthrough video.',
+    button: 'Watch the free session',
+    bar: 'Watch the free architects session',
+    href: '/architects/',
     event: 'blog_to_aec',
     pixel: 'BlogToAEC',
     final: 'Prompts are step one. <span class="key">A real workflow is step two.</span>',

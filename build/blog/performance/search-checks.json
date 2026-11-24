@@ -1,0 +1,8 @@
+{
+  "_about": "Search presence per primary keyword, recorded by the weekly run with WebSearch (a US web index, not Google itself, so treat it as a rough signal). found = raiseai.in appears in the results. top = the leading domains, i.e. who to beat.",
+  "checks": [
+    {"date": "2026-11-24", "keyword": "chatgpt prompts for architects", "slug": "chatgpt-prompts-for-architects", "found": false, "position": null, "top": ["geeksforgeeks.org", "architizer.com", "dev.to", "clickup.com", "archgyan.com", "myarchitectai.com"]},
+    {"date": "2026-11-24", "keyword": "sketch to render ai", "slug": "sketch-to-render-ai", "found": false, "position": null, "top": ["creativefabrica.com", "runway.com", "lumalabs.ai", "picsart.com", "morphic.com", "gendo.ai"]},
+    {"date": "2026-11-24", "keyword": "raiseai.in blog", "slug": "(site)", "found": false, "position": null, "top": ["ftraiseai.onrender.com"], "note": "Brand search does not return raiseai.in yet; a different 'FTRAISE AI' site ranks. Indexing, not content, is the first problem."}
+  ]
+}

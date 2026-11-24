@@ -67,7 +67,7 @@ A jewellery shop ad made by a course student. Watch it and nine others on the [S
 The students are not only video people. Batch 2 included creators, editors, a designer and an interior designer. That is the point of Raise AI: you keep your profession and add AI to it.
 
 :::figure /assets/images/results/yt_home_visual.webp | 450x800 | AI visual of a Kerala-style home, made by a Raise AI course student
-An AI visual of a home, made by a course student. The same skills now power our [cohort for architects and interior designers](/webinar/aec/).
+An AI visual of a home, made by a course student. The same skills now power our [cohort for architects and interior designers](/architects/).
 :::
 
 :::cta
@@ -122,7 +122,7 @@ It is a good fit if you are a working professional who wants to use AI in your o
 Two ways to start:
 
 - **The 2-hour live AI workshop.** A beginner class where you make your first AI video with free tools. It is the low-risk way to see how Raise AI teaches. See the [live AI workshop](/webinar/).
-- **The architects cohort.** For architects, interior designers and civil engineers. See [AI for architects and interior designers](/webinar/aec/), or read [how to choose an AI course for architects](/blog/ai-course-for-architects-kerala/).
+- **The architects cohort.** For architects, interior designers and civil engineers. See [AI for architects and interior designers](/architects/), or read [how to choose an AI course for architects](/blog/ai-course-for-architects-kerala/).
 
 To see the kind of thing you will make, start with our free guide on [how to make an AI video ad](/blog/how-to-make-an-ai-video-ad-for-free/).
 

@@ -21,6 +21,7 @@ const SRC = path.join(__dirname, 'posts');
 const OUT = path.join(ROOT, 'blog');
 
 const LABELS = {
+  'ai-news': 'AI news this week',
   'ai-for-architects': 'AI for architects',
   'ai-for-interiors': 'AI for interior designers',
   'ai-for-civil-engineers': 'AI for civil engineers',

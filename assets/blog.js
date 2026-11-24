@@ -4,9 +4,31 @@
   'use strict';
   var post = window.RAISE_POST || null;
 
-  function track(name, pixelName) {
+  // Every event goes to Clarity (custom event), Google Tag Manager (dataLayer,
+  // so GA4 can count it if it is set up in GTM) and, for key actions, the Meta Pixel.
+  function track(name, pixelName, extra) {
+    var data = { post_slug: post ? post.slug : '(index)' };
+    if (extra) for (var k in extra) data[k] = extra[k];
     try { if (window.clarity) window.clarity('event', name); } catch (e) {}
-    try { if (pixelName && window.fbq) window.fbq('trackCustom', pixelName, post ? { slug: post.slug } : {}); } catch (e) {}
+    try { (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: 'blog_' + name }, data)); } catch (e) {}
+    try { if (pixelName && window.fbq) window.fbq('trackCustom', pixelName, data); } catch (e) {}
+  }
+
+  // Tag the Clarity session with the post, so recordings and heatmaps can be
+  // filtered per article in the Clarity dashboard.
+  if (post) {
+    try { if (window.clarity) { window.clarity('set', 'post', post.slug); window.clarity('set', 'cta', post.event); } } catch (e) {}
+    // Reading depth: one event each at 50% and 90% of the article.
+    var marks = { 50: false, 90: false };
+    var article = document.querySelector('.article');
+    var onScroll = function () {
+      if (!article) return;
+      var r = article.getBoundingClientRect();
+      var seen = Math.min(100, Math.round(((window.innerHeight - r.top) / r.height) * 100));
+      [50, 90].forEach(function (m) { if (!marks[m] && seen >= m) { marks[m] = true; track('read_' + m); } });
+      if (marks[90]) window.removeEventListener('scroll', onScroll);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
   }
 
   function copyText(text) {
@@ -34,7 +56,8 @@
       btn.textContent = 'Copied';
       btn.classList.add('done');
       setTimeout(function () { btn.textContent = label; btn.classList.remove('done'); }, 1800);
-      track('prompt_copied', 'PromptCopied');
+      var h = card.querySelector('h3');
+      track('prompt_copied', 'PromptCopied', { prompt: h ? h.textContent.trim().slice(0, 80) : '' });
     }
     btn.addEventListener('click', function () {
       copyText(code.textContent).then(copied, function () { btn.textContent = 'Select and copy'; });
@@ -47,7 +70,11 @@
 
   // CTA tracking
   var mid = document.getElementById('midbox-cta-btn');
-  if (mid && post) mid.addEventListener('click', function () { track(post.event, post.pixel); });
+  if (mid && post) mid.addEventListener('click', function () { track(post.event, post.pixel, { position: 'mid' }); });
+  var fin = document.getElementById('final-cta-btn');
+  if (fin && post) fin.addEventListener('click', function () { track(post.event, post.pixel, { position: 'final' }); });
+  var bar = document.getElementById('bar-cta-btn');
+  if (bar && post) bar.addEventListener('click', function () { track(post.event, post.pixel, { position: 'sticky' }); });
 
   // Topic filter on the blog index
   var btns = document.querySelectorAll('.pills button[data-f]');
