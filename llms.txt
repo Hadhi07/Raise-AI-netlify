@@ -30,7 +30,7 @@ Raise AI is an AI upskilling company in Kerala, India. We teach working professi
 ## Courses
 
 - Live AI workshop: Flow AI Fundamentals: A 2-hour online live class for beginners teaching how to make AI videos with free browser tools on Google Meet. URL: https://raiseai.in/webinar/
-- Live AI webinar: Snap With AI for Architects: A live 90-minute webinar on Google Meet for architects, interior designers and civil engineers covering Google Flow, the Snap Method, Render-to-Real and watermark-free export with free tools (live only, no recording available). URL: https://raiseai.in/webinar/architects/
+- Live AI webinar: Snap With AI for Architects: A live 90-minute webinar on Google Meet for architects, interior designers and civil engineers covering Google Flow, the Snap Method, and watermark-free export with free tools (live only, no recording available). URL: https://raiseai.in/webinar/architects/
 - AI for Architects: From Empty Site to Finished Space: A 10-day hands-on cohort for architects and interior designers in 5 modules (plot photo to finished project visuals, render to cinematic walkthrough video, Google Flow, Kling and Seedance, material and finish control, studio marketing films), with a free recorded session. URL: https://raiseai.in/architects/
 - AI Ad Video Production Masterclass: A 14-day live AI bootcamp in 7 modules covering precision editing, scripting, character consistency, AI influencers, product B-roll, UGC ads, and 3D, cartoon and cinematic styles. URL: https://raiseai.in/#courses
 
