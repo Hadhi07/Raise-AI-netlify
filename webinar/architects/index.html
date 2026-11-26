@@ -412,6 +412,30 @@
       pointer-events: none;
     }
 
+    /* Real Results Showcase (2 vertical Snap Method videos) */
+    .w-show .frames {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 32px 0 0;
+      padding: 6px 0;
+      overflow: visible;
+    }
+
+    .w-show .frame {
+      width: 100%;
+      max-width: 280px;
+    }
+
+    @media (min-width: 640px) {
+      .w-show .frames {
+        grid-template-columns: repeat(2, 260px);
+        justify-content: start;
+        gap: 20px;
+        margin-top: 40px;
+      }
+    }
+
     /* Steps as visual cards (Snap Method in the webinar) */
     .w-steps {
       display: grid;
@@ -1555,8 +1579,34 @@
       </div>
     </section>
 
-    <!-- 2. WHAT YOU LEARN LIVE: THE SNAP METHOD -->
-    <section class="sec sec-soft">
+    <!-- 2. REAL SNAP METHOD RESULTS -->
+    <section class="sec sec-dark work w-show" id="results">
+      <div class="wrap">
+        <span class="tag">Real Snap Method results</span>
+        <h2 class="w-h2">See the Snap Method <span class="key">in action.</span></h2>
+        <p class="lead">Watch what you'll learn to build live on Friday using Google Flow and Erasio. Tap any video to play it.</p>
+        <div class="frames" id="showFrames">
+          <div class="frame" data-yt-id="S53clheypGg" role="button" tabindex="0" aria-label="Play video: Snap Method result 1">
+            <img src="https://i.ytimg.com/vi/S53clheypGg/oar2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/S53clheypGg/hqdefault.jpg';" alt="Snap Method architectural AI video result 1" width="260" height="462" loading="lazy" decoding="async">
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="#000" /></svg></span>
+          </div>
+          <div class="frame" data-yt-id="3TX92XtLIoQ" role="button" tabindex="0" aria-label="Play video: Snap Method result 2">
+            <img src="https://i.ytimg.com/vi/3TX92XtLIoQ/oar2.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/3TX92XtLIoQ/hqdefault.jpg';" alt="Snap Method architectural AI video result 2" width="260" height="462" loading="lazy" decoding="async">
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="#000" /></svg></span>
+          </div>
+        </div>
+        <div class="w-cta">
+          <a class="btn js-cta" href="/webinar/payment/">
+            <span class="js-btn-text" data-flash="Learn this for ₹99">Learn this for ₹199</span>
+            <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></i>
+          </a>
+          <span class="note">Friday, 27 Nov &middot; 9:00 - 10:30 PM IST &middot; Live only (no recording)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WHAT YOU LEARN LIVE: THE SNAP METHOD -->
+    <section class="sec">
       <div class="wrap">
         <span class="tag">What you learn on 27 Nov</span>
         <h2 class="w-h2">Live training on the <span class="key">Snap Method.</span></h2>
@@ -1921,6 +1971,47 @@
       if (!bar || !cta) return;
       if (!('IntersectionObserver' in window)) { bar.classList.add('show'); return; }
       new IntersectionObserver(function (es) { bar.classList.toggle('show', !es[0].isIntersecting); }).observe(cta);
+    })();
+
+    // Showcase: tap-to-play YouTube (iframe inserted only after tap or Enter/Space)
+    (function () {
+      var frames = document.querySelectorAll('.frame[data-yt-id]');
+      function stopAll() {
+        frames.forEach(function (f) {
+          var old = f.querySelector('iframe');
+          if (old) {
+            old.remove();
+            f.setAttribute('role', 'button');
+            f.setAttribute('tabindex', '0');
+            if (f.dataset.label) f.setAttribute('aria-label', f.dataset.label);
+          }
+        });
+      }
+      function play(frame) {
+        var ytId = frame.getAttribute('data-yt-id');
+        if (!ytId || frame.querySelector('iframe')) return;
+        stopAll();
+        var label = frame.getAttribute('aria-label') || 'Video';
+        frame.dataset.label = label;
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(ytId) + '?autoplay=1&playsinline=1&rel=0';
+        iframe.title = label.replace(/^Play video:\s*/, '');
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        frame.removeAttribute('role');
+        frame.removeAttribute('tabindex');
+        frame.removeAttribute('aria-label');
+        frame.appendChild(iframe);
+        try { iframe.focus(); } catch (e) { }
+        try { if (window.clarity) window.clarity('event', 'video_play'); } catch (e) { }
+      }
+      frames.forEach(function (frame) {
+        frame.addEventListener('click', function () { play(frame); });
+        frame.addEventListener('keydown', function (e) {
+          if (e.target !== frame) return;
+          if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); play(frame); }
+        });
+      });
     })();
   </script>
 
