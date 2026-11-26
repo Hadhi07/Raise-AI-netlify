@@ -11,7 +11,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Payment Successful | Raise AI</title>
+<noscript><meta http-equiv="refresh" content="4; url=https://wa.me/917356003301?text=Hi!%20Here%20is%20my%20payment%20screenshot%2C%20Name%2C%20Email%2C%20and%20Phone%20Number%20for%20the%20Snap%20With%20AI%20Architects%20Webinar%20(27%20Nov)."></noscript>
+<title>Payment Successful | Snap With AI Webinar | Raise AI</title>
 <link rel="icon" type="image/webp" href="/assets/images/logo/logo-dark.webp?v=3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +44,7 @@ body{background:var(--soft-white);padding-bottom:0}
 .t-send li{font:600 13px/1 var(--body);background:rgba(255,255,255,.6);border-radius:99px;padding:9px 12px}
 .t-box .btn{width:100%;justify-content:space-between;margin-top:18px;box-shadow:0 14px 30px -12px rgba(21,84,255,.8)}
 .t-box .note{font-size:13px;color:#17191C;margin-top:12px}
+.t-redir{margin-top:10px;font:600 13px/1.35 var(--body);color:#17191C;background:rgba(255,255,255,.6);border-radius:12px;padding:9px 12px}
 
 .t-when{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--divider);border-radius:20px;padding:14px 16px;margin-top:14px}
 .t-when svg{width:22px;height:22px;flex:none}
@@ -80,7 +82,7 @@ fbq('track', 'PageView');
   var key = 'purchase_tracked_' + paymentId;
   try { if (sessionStorage.getItem(key)) return; sessionStorage.setItem(key, '1'); } catch (e) {}
   fbq('track', 'Purchase', {
-    content_name: 'Flow Fundamentals with 100% free tools',
+    content_name: 'Snap With AI Webinar for Architects',
     value: 99.00,
     currency: 'INR'
   }, { eventID: paymentId });
@@ -101,7 +103,7 @@ fbq('track', 'PageView');
   <div class="t-head">
     <span class="t-ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
     <h1>Payment successful!</h1>
-    <p>You're in. <b>One last step</b> to get your Google Meet link.</p>
+    <p>You're in for the <b>Snap With AI Webinar</b>. One last step to get your Google Meet link.</p>
   </div>
 
   <section class="t-box">
@@ -110,29 +112,73 @@ fbq('track', 'PageView');
     <ul class="t-send">
       <li>Payment screenshot</li><li>Name</li><li>Email</li><li>Phone number</li>
     </ul>
-    <a class="btn" href="https://wa.me/917356003301?text=Hi!%20Here%20is%20my%20payment%20screenshot,%20Name,%20Email,%20and%20Phone%20Number%20for%20the%20Raise%20AI%20Masterclass." target="_blank" rel="noopener" data-cta="wa_thankyou">
+    <a class="btn" id="waBtn" href="https://wa.me/917356003301?text=Hi!%20Here%20is%20my%20payment%20screenshot%2C%20Name%2C%20Email%2C%20and%20Phone%20Number%20for%20the%20Snap%20With%20AI%20Architects%20Webinar%20(27%20Nov)." target="_blank" rel="noopener" data-cta="wa_thankyou">
       Send on WhatsApp
       <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 19L4 20z"/></svg></i>
     </a>
-    <p class="note">We confirm your seat and send the Google Meet link before the class.</p>
+    <p class="t-redir" id="waRedir" hidden>Redirecting to WhatsApp in <b id="waSec">4</b>s&hellip; (or tap the button above)</p>
+    <p class="note">We confirm your seat and send the Google Meet link before 9:00 PM IST.</p>
   </section>
 
   <div class="t-when">
     <svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-    <div><b>Sunday, 8 Nov &middot; 9-11 PM IST</b><span>Live on Google Meet &middot; recording included</span></div>
+    <div><b>Friday, 27 Nov 2026 &middot; 9:00&ndash;10:30 PM IST</b><span>Live on Google Meet &middot; No recording available</span></div>
   </div>
 
   <a class="t-help" href="https://wa.me/917356003301" target="_blank" rel="noopener">Questions? Chat with us on WhatsApp &rarr;<small>+91 73560 03301 &middot; every day, 9 AM to 10 PM</small></a>
 </main>
 
 <script>
-// WhatsApp "send details" click
-document.addEventListener('click', function(e) {
-    var a = e.target.closest ? e.target.closest('a[data-cta="wa_thankyou"]') : null;
-    if (!a) return;
-    try { if (window.fbq) fbq('track', 'Contact', { content_name: 'Payment details (WhatsApp)' }); } catch (err) {}
-    try { if (window.clarity) window.clarity('event', 'thankyou_whatsapp_click'); } catch (err) {}
-});
+// WhatsApp "send details" click + automatic WhatsApp redirect after payment
+(function() {
+    var btn = document.getElementById('waBtn');
+    var msg = document.getElementById('waRedir');
+    var secEl = document.getElementById('waSec');
+    var timer = null;
+    var redirectedKey = 'raise_arch_wa_redirected';
+
+    function trackWa() {
+        try { if (window.fbq) fbq('track', 'Contact', { content_name: 'Snap With AI Webinar WhatsApp Confirmation' }); } catch (err) {}
+        try { if (window.clarity) window.clarity('event', 'thankyou_whatsapp_click'); } catch (err) {}
+    }
+
+    document.addEventListener('click', function(e) {
+        var a = e.target.closest ? e.target.closest('a[data-cta="wa_thankyou"]') : null;
+        if (!a) return;
+        if (timer) { clearInterval(timer); timer = null; }
+        if (msg) msg.hidden = true;
+        trackWa();
+    });
+
+    // Redirect once to WhatsApp shortly after landing so Meta Purchase event finishes firing first
+    if (btn) {
+        var already = false;
+        try { already = !!sessionStorage.getItem(redirectedKey); } catch (e) {}
+        if (!already) {
+            var left = 4;
+            if (msg) msg.hidden = false;
+            if (secEl) secEl.textContent = left;
+            timer = setInterval(function() {
+                left -= 1;
+                if (secEl && left >= 0) secEl.textContent = left;
+                if (left <= 0) {
+                    clearInterval(timer);
+                    timer = null;
+                    if (msg) msg.textContent = 'Opening WhatsApp\u2026 (or tap the button above)';
+                    try { sessionStorage.setItem(redirectedKey, '1'); } catch (e) {}
+                    trackWa();
+                    window.location.href = btn.href;
+                }
+            }, 1000);
+        }
+    }
+    window.addEventListener('pageshow', function(e) {
+        if (e.persisted) {
+            if (timer) { clearInterval(timer); timer = null; }
+            if (msg) msg.hidden = true;
+        }
+    });
+})();
 </script>
 </body>
 </html>
