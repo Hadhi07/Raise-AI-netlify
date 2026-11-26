@@ -1,0 +1,1929 @@
+<!doctype html>
+<html lang="en-IN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snap With AI Webinar | Learn the Snap Method for Architects (Fri, 27 Nov, 9:00 - 10:30 PM) | Raise AI</title>
+  <meta name="description"
+    content="Snap With AI Webinar for architects, interior designers &amp; engineers. Learn the Snap Method using Google Flow and Erasio with zero subscriptions. Live Friday, 27 Nov 2026, 9:00 - 10:30 PM IST on Google Meet (no recording available).">
+  <link rel="canonical" href="https://raiseai.in/webinar/architects/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://raiseai.in/webinar/architects/">
+  <meta property="og:title" content="Snap With AI Webinar | Learn the Snap Method | Raise AI">
+  <meta property="og:description"
+    content="Live 90-minute upskilling session for architects, interior designers &amp; engineers on Google Meet. Friday, 27 Nov 2026, 9:00 - 10:30 PM IST. Attend with zero subscriptions. Live only (no recording).">
+  <meta property="og:image" content="https://raiseai.in/assets/images/logo/logo-dark.webp?v=3">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/webp" href="/assets/images/logo/logo-dark.webp?v=3">
+
+  <!-- Same fonts and design system as the home page & webinar SOP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Unbounded:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/manrope-800.woff2?v=3" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css?v=3">
+  <link rel="stylesheet" href="/assets/site.css?v=7">
+  <link rel="prefetch" href="/webinar/payment/">
+
+  <style>
+    /* Architects webinar landing (scoped; site.css is shared) */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Logo crop matching home & /webinar/ */
+    .hdr .logo,
+    .ftr .logo {
+      height: 28px;
+      width: 111px;
+      overflow: hidden;
+      display: block;
+    }
+
+    .hdr .logo img,
+    .ftr .logo img {
+      height: 88px !important;
+      width: auto !important;
+      max-width: none;
+      margin: -30px 0 0 -11px;
+    }
+
+    .w-h2 {
+      margin-top: 22px;
+    }
+
+    /* Urgency strip */
+    .w-top {
+      background: #000;
+      color: #fff;
+      font: 600 13px/1.3 var(--body);
+      padding: 9px var(--pad);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 4px 12px;
+      text-align: center;
+    }
+
+    .w-top .live {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--volt-lime);
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .w-top .live::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--volt-lime);
+      animation: wpulse 1.6s infinite;
+    }
+
+    .w-top .t {
+      font: 600 13px/1 var(--pill);
+      color: #FF4D5E;
+      text-shadow: 0 0 10px rgba(255, 42, 64, .9);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Info marquee strip */
+    .w-cred {
+      background: var(--volt-lime);
+      color: #000;
+      overflow: hidden;
+      padding: 9px 0;
+      font: 600 13px/1 var(--body);
+    }
+
+    .w-cred .row {
+      display: flex;
+      width: max-content;
+      animation: wcred 28s linear infinite;
+    }
+
+    .w-cred:hover .row {
+      animation-play-state: paused;
+    }
+
+    .w-cred .row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 22px;
+      white-space: nowrap;
+    }
+
+    .w-cred .row svg {
+      width: 16px;
+      height: 16px;
+      flex: none;
+    }
+
+    @keyframes wcred {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .w-cred .row {
+        animation-duration: 60s;
+      }
+    }
+
+    @keyframes wpulse {
+      50% {
+        opacity: .25;
+      }
+    }
+
+    /* Header CTA & Navbar Countdown */
+    .hdr-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hdr-timer {
+      padding: 5px 5px 5px 11px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .hdr-timer b {
+      padding: 5px 8px;
+      font-size: 12px;
+    }
+
+    /* Hero */
+    .w-hero {
+      padding: 26px 0 48px;
+      overflow: hidden;
+    }
+
+    .w-hero .wrap {
+      display: grid;
+      gap: 24px;
+    }
+
+    .w-hero h1 {
+      font-size: clamp(30px, 8vw, 40px);
+      line-height: 1.08;
+      margin-top: 16px;
+      max-width: 14em;
+    }
+
+    .w-hero .lead {
+      margin-top: 16px;
+    }
+
+    .w-hero .lead b {
+      color: var(--charcoal);
+      font-weight: 600;
+    }
+
+    /* Rotating benefit pill (site.css .swap: 6 pills, 12s loop) */
+    .w-hero h1 .swap {
+      font-size: clamp(20px, 5.4vw, 26px);
+      margin: 14px 0 4px;
+    }
+
+    .w-hero h1 .swap>span {
+      white-space: nowrap;
+    }
+
+    /* Compact hero mentor/info chips */
+    .w-host {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 10px;
+      font: 600 13.5px/1.35 var(--body);
+      color: var(--ink-soft);
+    }
+
+    .w-host span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--soft-white);
+      border: 1px solid var(--divider);
+      border-radius: 99px;
+      padding: 7px 13px;
+    }
+
+    .w-host svg {
+      width: 15px;
+      height: 15px;
+      color: var(--raise-blue);
+      flex: none;
+    }
+
+    /* Ticket card (volt lime + diagonal sheen) */
+    .w-ticket {
+      position: relative;
+      overflow: hidden;
+      background: var(--volt-lime);
+      border: 0;
+      border-radius: 28px;
+      padding: 20px;
+      color: #000;
+      box-shadow: 0 30px 70px -32px rgba(130, 170, 0, .9);
+    }
+
+    .w-ticket::after {
+      content: "";
+      position: absolute;
+      top: -10%;
+      bottom: -10%;
+      left: 0;
+      width: 55%;
+      background: linear-gradient(100deg, transparent 0%, rgba(255, 255, 255, .15) 35%, rgba(255, 255, 255, .6) 50%, rgba(255, 255, 255, .15) 65%, transparent 100%);
+      transform: translateX(-160%) skewX(-18deg);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .w-ticket::after {
+        animation: boxshine 3.6s ease-in-out 1.2s infinite;
+      }
+    }
+
+    @keyframes boxshine {
+      0% {
+        transform: translateX(-160%) skewX(-18deg);
+      }
+
+      40%,
+      100% {
+        transform: translateX(260%) skewX(-18deg);
+      }
+    }
+
+    .w-when {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: rgba(255, 255, 255, .6);
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+
+    .w-when b {
+      font: 800 17px/1.2 var(--display);
+      letter-spacing: -.01em;
+      color: #000;
+    }
+
+    .w-when span {
+      font-size: 13.5px;
+      color: #17191C;
+    }
+
+    .w-price {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 16px 2px 14px;
+    }
+
+    .w-lbl {
+      font: 600 12px/1 var(--body);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--raise-blue);
+    }
+
+    .w-amt {
+      font: 800 46px/1 var(--display);
+      letter-spacing: -.03em;
+      margin-top: 8px;
+      font-variant-numeric: tabular-nums;
+      color: #000;
+    }
+
+    .w-amt s {
+      font-size: .48em;
+      font-weight: 600;
+      color: rgba(0, 0, 0, .45);
+      margin-right: 8px;
+      text-decoration-thickness: 2px;
+    }
+
+    .w-timer {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font: 600 13px/1 var(--body);
+      background: #000;
+      color: #fff;
+      border: 1px solid rgba(255, 42, 64, .5);
+      border-radius: 99px;
+      padding: 7px 7px 7px 13px;
+      box-shadow: 0 0 18px -4px rgba(255, 42, 64, .75);
+    }
+
+    .w-timer b {
+      font: 600 13px/1 var(--pill);
+      color: #fff;
+      background: #FF2A40;
+      border-radius: 99px;
+      padding: 6px 10px;
+      font-variant-numeric: tabular-nums;
+      box-shadow: 0 0 12px rgba(255, 42, 64, .9);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .w-timer {
+        animation: redglow 1.8s ease-in-out infinite;
+      }
+    }
+
+    @keyframes redglow {
+      0%, 100% {
+        box-shadow: 0 0 14px -3px rgba(255, 42, 64, .65);
+      }
+      50% {
+        box-shadow: 0 0 24px 0 rgba(255, 42, 64, .95);
+      }
+    }
+
+    .w-ticket .btn,
+    .w-offer .btn {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .w-ticket .btn {
+      box-shadow: 0 14px 30px -12px rgba(21, 84, 255, .8);
+    }
+
+    .w-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      margin-top: 14px;
+      font-size: 13px;
+      color: #17191C;
+    }
+
+    .w-trust span {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .w-trust svg {
+      width: 15px;
+      height: 15px;
+      flex: none;
+      stroke: #000;
+    }
+
+    .w-trust a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      color: #000;
+    }
+
+    .btn.is-loading {
+      opacity: .75;
+      pointer-events: none;
+    }
+
+    /* Steps as visual cards (Snap Method in the webinar) */
+    .w-steps {
+      display: grid;
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    .ws {
+      position: relative;
+      border-radius: 26px;
+      padding: 16px 16px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      overflow: hidden;
+    }
+
+    .ws .art {
+      height: 150px;
+      border-radius: 18px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      gap: 12px;
+      padding: 16px;
+      margin-bottom: 10px;
+    }
+
+    .ws .n {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font: 600 18px/1 var(--pill);
+      z-index: 2;
+    }
+
+    .ws h3 {
+      font-size: 21px;
+      padding: 0 6px;
+    }
+
+    .ws p {
+      font-size: 15.5px;
+      padding: 0 6px;
+    }
+
+    .ws .chip {
+      font: 700 13px/1 var(--display);
+      padding: 10px 14px;
+      border-radius: 99px;
+    }
+
+    /* Card 1: Volt lime — Google Flow & Free Credits */
+    .ws-1 {
+      background: var(--volt-lime);
+      border: 0;
+      color: #000;
+    }
+
+    .ws-1 .art {
+      background: rgba(255, 255, 255, .58);
+    }
+
+    .ws-1 .n {
+      background: #000;
+      color: var(--volt-lime);
+    }
+
+    .ws-1 .pbox {
+      width: 100%;
+      max-width: 260px;
+      background: #fff;
+      border: 1px dashed rgba(0, 0, 0, .25);
+      border-radius: 12px;
+      padding: 11px 14px;
+      font: 600 13.5px/1.35 var(--body);
+      color: var(--charcoal);
+      text-align: center;
+    }
+
+    .ws-1 .pbox s {
+      text-decoration-color: #FF2A40;
+      text-decoration-thickness: 2px;
+      color: var(--ink-muted);
+      margin-right: 6px;
+    }
+
+    .ws-1 .chip {
+      background: #000;
+      color: var(--volt-lime);
+      transform: rotate(-3deg);
+    }
+
+    .ws-1 p {
+      color: #17191C;
+    }
+
+    /* Card 2: Raise blue — The Snap & Timeline Method */
+    .ws-2 {
+      background: var(--raise-blue);
+      color: #fff;
+    }
+
+    .ws-2 .art {
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .ws-2 .n {
+      background: var(--volt-lime);
+      color: #000;
+    }
+
+    .ws-2 .flow {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .ws-2 .flow span {
+      font: 700 13px/1 var(--display);
+      background: #fff;
+      color: var(--raise-blue);
+      padding: 9px 12px;
+      border-radius: 99px;
+    }
+
+    .ws-2 .flow i {
+      font-style: normal;
+      color: var(--volt-lime);
+      font-weight: 800;
+    }
+
+    .ws-2 .bar {
+      width: 100%;
+      max-width: 240px;
+      height: 8px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .2);
+      overflow: hidden;
+    }
+
+    .ws-2 .bar b {
+      display: block;
+      height: 100%;
+      width: 42%;
+      background: var(--volt-lime);
+      border-radius: 8px;
+    }
+
+    .ws-2 small {
+      font: 600 12px/1 var(--body);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #fff;
+      opacity: .9;
+    }
+
+    .ws-2 p {
+      color: rgba(255, 255, 255, .88);
+    }
+
+    /* Card 3: Crisp blueprint white — Render to Real */
+    .ws-3r {
+      background: var(--soft-white);
+      border: 1px solid var(--divider);
+      color: var(--charcoal);
+    }
+
+    .ws-3r .art {
+      background: #fff;
+      border: 1px solid var(--divider);
+      justify-items: stretch;
+      max-width: 100%;
+    }
+
+    .ws-3r .n {
+      background: var(--raise-blue);
+      color: #fff;
+    }
+
+    .ws-3r .cl-q {
+      justify-self: end;
+      max-width: 240px;
+      background: #E8EEFF;
+      color: #1237D6;
+      font: 600 13px/1.3 var(--body);
+      padding: 9px 12px;
+      border-radius: 14px 14px 4px 14px;
+    }
+
+    .ws-3r .cl-a {
+      justify-self: start;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--soft-white);
+      border: 1px solid var(--divider);
+      color: var(--charcoal);
+      font: 600 13px/1.3 var(--body);
+      padding: 9px 12px;
+      border-radius: 14px 14px 14px 4px;
+    }
+
+    .ws-3r .cl-a b {
+      color: var(--raise-blue);
+    }
+
+    .ws-3r .cl-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--raise-blue);
+      flex: none;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .ws-3r .cl-dot {
+        animation: wpulse 1.2s infinite;
+      }
+    }
+
+    .ws-3r .chip {
+      justify-self: center;
+      background: var(--volt-lime);
+      color: #000;
+      transform: rotate(2deg);
+    }
+
+    .ws-3r p {
+      color: var(--ink-soft);
+    }
+
+    /* Card 4: Black — Watermark-free clean export (Erasio) */
+    .ws-3 {
+      background: #000;
+      color: #fff;
+    }
+
+    .ws-3 .art {
+      background: #17191C;
+      gap: 12px;
+    }
+
+    .ws-3 .n {
+      background: #fff;
+      color: #000;
+    }
+
+    .ws-3 .wm-box {
+      width: 100%;
+      max-width: 240px;
+      background: #0c0d10;
+      border: 1px solid var(--d-divider);
+      border-radius: 14px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .ws-3 .wm-box s {
+      font: 700 11px/1 var(--body);
+      letter-spacing: .12em;
+      color: rgba(255, 255, 255, .75);
+      text-decoration-color: #FF2A40;
+      text-decoration-thickness: 2px;
+    }
+
+    .ws-3 .wm-box b {
+      font: 700 12px/1 var(--display);
+      color: var(--volt-lime);
+    }
+
+    .ws-3 .chip {
+      background: var(--volt-lime);
+      color: #000;
+    }
+
+    .ws-3 p {
+      color: var(--d-ink-soft);
+    }
+
+    /* Transparent Upskill + Full Course Section (dark band) */
+    .w-split {
+      display: grid;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .w-box-webinar,
+    .w-box-course {
+      border-radius: 24px;
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .w-box-webinar {
+      background: var(--volt-lime);
+      color: #000;
+    }
+
+    .w-box-course {
+      background: #17191C;
+      border: 1px solid var(--d-divider);
+      color: #fff;
+    }
+
+    .w-box-kick {
+      display: inline-block;
+      align-self: flex-start;
+      font: 700 11px/1 var(--body);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 6px 11px;
+      border-radius: 99px;
+    }
+
+    .w-box-webinar .w-box-kick {
+      background: #000;
+      color: var(--volt-lime);
+    }
+
+    .w-box-course .w-box-kick {
+      background: rgba(209, 254, 23, .14);
+      color: var(--volt-lime);
+      border: 1px solid rgba(209, 254, 23, .35);
+    }
+
+    .w-box-webinar ul,
+    .w-box-course ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 9px;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .w-box-webinar li,
+    .w-box-course li {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+    }
+
+    .w-box-webinar li svg,
+    .w-box-course li svg {
+      width: 18px;
+      height: 18px;
+      flex: none;
+      margin-top: 2px;
+    }
+
+    .w-box-course li {
+      color: var(--d-ink-soft);
+    }
+
+    .w-mods {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .w-mod {
+      background: #17191C;
+      border: 1px solid var(--d-divider);
+      border-radius: 20px;
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .w-mod-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .w-mod-num {
+      font: 600 11.5px/1 var(--pill);
+      letter-spacing: .06em;
+      color: var(--volt-lime);
+      text-transform: uppercase;
+    }
+
+    .w-mod-tag {
+      font: 600 11px/1 var(--body);
+      color: var(--d-ink-muted);
+      border: 1px solid var(--d-divider);
+      border-radius: 99px;
+      padding: 4px 9px;
+    }
+
+    .w-mod h3 {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .w-mod p {
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: var(--d-ink-soft);
+    }
+
+    .w-course-meta {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .w-course-meta span {
+      font: 600 13px/1.3 var(--body);
+      color: var(--d-ink-soft);
+      background: #17191C;
+      border: 1px solid var(--d-divider);
+      border-radius: 99px;
+      padding: 9px 14px;
+    }
+
+    .w-course-meta b {
+      color: var(--volt-lime);
+    }
+
+    .w-cta {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px 20px;
+    }
+
+    .w-cta .note {
+      font-size: 14px;
+      color: var(--d-ink-muted);
+    }
+
+    .sec-dark .w-cta .btn {
+      background: var(--volt-lime);
+      color: #000;
+      box-shadow: 0 14px 30px -14px rgba(209, 254, 23, .55);
+    }
+
+    .sec-dark .w-cta .btn:hover {
+      background: #C4F000;
+    }
+
+    .sec-dark .w-cta .btn i {
+      background: var(--raise-blue);
+    }
+
+    .sec-dark .w-cta .btn i svg {
+      stroke: #fff;
+    }
+
+    /* Value stack */
+    .w-vals {
+      display: grid;
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    .w-val {
+      background: #fff;
+      border: 1px solid var(--divider);
+      border-radius: 24px;
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .w-val .kick {
+      font: 600 12px/1 var(--body);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--raise-blue);
+    }
+
+    .w-val p {
+      font-size: 15.5px;
+      color: var(--ink-soft);
+    }
+
+    .w-val .v {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--divider);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: var(--ink-muted);
+    }
+
+    .w-val .v b {
+      font: 500 16px/1 var(--pill);
+      color: var(--charcoal);
+    }
+
+    .w-val.hl {
+      background: var(--volt-lime);
+      border-color: var(--volt-lime);
+    }
+
+    .w-val.hl .kick {
+      color: #000;
+    }
+
+    .w-val.hl p,
+    .w-val.hl .v {
+      color: #17191C;
+    }
+
+    .w-val.hl .v {
+      border-color: rgba(0, 0, 0, .14);
+    }
+
+    /* Offer box */
+    .w-offer {
+      position: relative;
+      overflow: hidden;
+      margin-top: 16px;
+      background: #000;
+      color: #fff;
+      border-radius: 28px;
+      padding: 28px 22px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .w-offer::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: var(--signature-gradient);
+      right: -170px;
+      top: -190px;
+      opacity: .85;
+      pointer-events: none;
+    }
+
+    .w-offer>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .w-offer .tot {
+      font-size: 15px;
+      color: var(--d-ink-muted);
+    }
+
+    .w-offer .tot s {
+      color: #fff;
+      font-weight: 600;
+      text-decoration-thickness: 2px;
+      margin-left: 4px;
+    }
+
+    .w-offer .w-lbl {
+      color: var(--volt-lime);
+      display: block;
+      margin-top: 14px;
+    }
+
+    .w-offer .w-amt {
+      color: #fff;
+    }
+
+    .w-offer .w-amt s {
+      color: var(--d-ink-muted);
+    }
+
+    .w-offer .w-timer {
+      background: #17191C;
+      margin-top: 14px;
+    }
+
+    .w-offer .w-trust {
+      color: var(--d-ink-muted);
+    }
+
+    .w-offer .w-trust svg {
+      stroke: var(--volt-lime);
+    }
+
+    .w-offer .w-trust a {
+      color: #fff;
+    }
+
+    /* Tool cost */
+    .w-tools-grid {
+      display: grid;
+      gap: 8px;
+    }
+
+    .w-zero {
+      display: block;
+      font: 600 clamp(96px, 30vw, 168px)/.9 var(--pill);
+      letter-spacing: -.06em;
+      margin-top: 18px;
+      background: var(--text-blue-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      width: max-content;
+      padding-right: .1em;
+    }
+
+    .w-tools {
+      list-style: none;
+      padding: 0;
+      margin-top: 28px;
+      border-top: 1px solid var(--divider);
+    }
+
+    .w-tools li {
+      display: grid;
+      grid-template-columns: 52px 1fr auto;
+      align-items: center;
+      gap: 4px 16px;
+      padding: 16px 2px;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .w-tools li .lg {
+      grid-column: 1;
+      grid-row: 1/span 2;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      transform: rotate(-4deg);
+      box-shadow: 0 10px 22px -10px rgba(21, 84, 255, .55);
+      transition: transform .2s ease;
+    }
+
+    .w-tools li:nth-child(even) .lg {
+      transform: rotate(4deg);
+    }
+
+    .w-tools li:hover .lg {
+      transform: rotate(0) scale(1.06);
+    }
+
+    .w-tools li .lg svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .w-tools li>b {
+      grid-column: 2;
+      font: 700 17px/1.3 var(--display);
+    }
+
+    .w-tools li>span:not(.lg) {
+      grid-column: 2;
+      font-size: 14.5px;
+      line-height: 1.45;
+      color: var(--ink-soft);
+    }
+
+    .w-tools li em {
+      grid-column: 3;
+      grid-row: 1/span 2;
+      align-self: center;
+      background: var(--volt-lime);
+      color: #000;
+      padding: 8px 10px;
+      border-radius: 99px;
+      font: 500 14px/1 var(--pill);
+      font-style: normal;
+    }
+
+    .lg-blue { background: var(--raise-blue); }
+    .lg-lime { background: var(--volt-lime); }
+    .lg-dark { background: #17191C; }
+    .lg-sig  { background: var(--signature-gradient); }
+
+    .w-tools li.tot {
+      margin-top: 14px;
+      border: 0;
+      border-radius: 18px;
+      background: var(--volt-lime);
+      padding: 18px 20px;
+      grid-template-columns: 1fr auto;
+    }
+
+    .w-tools li.tot>b {
+      grid-column: 1;
+      grid-row: 1;
+      font-size: 18px;
+    }
+
+    .w-tools li.tot em {
+      grid-column: 2;
+      grid-row: 1;
+      background: none;
+      padding: 0;
+      color: #000;
+      font-size: 22px;
+    }
+
+    /* FAQ & Help */
+    .faq p a {
+      color: var(--raise-blue);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .w-help {
+      margin-top: 28px;
+    }
+
+    /* Sticky mobile bar */
+    .w-barp {
+      flex: none;
+      line-height: 1.1;
+    }
+
+    .w-barp small {
+      display: block;
+      font: 600 10px/1 var(--body);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--raise-blue);
+      margin-bottom: 4px;
+    }
+
+    .w-barp b {
+      font: 800 20px/1 var(--display);
+      letter-spacing: -.02em;
+    }
+
+    .w-barp b s {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink-muted);
+      margin-right: 4px;
+    }
+
+    /* Flash toast */
+    .w-toast {
+      position: fixed;
+      top: 14px;
+      left: 50%;
+      z-index: 60;
+      width: min(92%, 420px);
+      transform: translate(-50%, -160%);
+      background: #000;
+      color: #fff;
+      border-radius: 20px;
+      padding: 14px 16px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
+      transition: transform .45s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .w-toast.show {
+      transform: translate(-50%, 0);
+    }
+
+    .w-toast .ic {
+      flex: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--volt-lime);
+      display: grid;
+      place-items: center;
+      font-size: 19px;
+    }
+
+    .w-toast p {
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .w-toast p b {
+      display: block;
+      font: 700 12px/1.2 var(--body);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--volt-lime);
+      margin-bottom: 3px;
+    }
+
+    .w-toast .t {
+      font: 600 13px/1 var(--pill);
+      color: #FF4D5E;
+      text-shadow: 0 0 10px rgba(255, 42, 64, .9);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Desktop breakpoints */
+    @media (min-width: 680px) {
+      .w-split {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .w-mods {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 860px) {
+      .bar {
+        display: none !important;
+      }
+
+      .w-hero {
+        padding: 72px 0 96px;
+      }
+
+      .w-hero .wrap {
+        grid-template-columns: 1.12fr .88fr;
+        align-items: center;
+        gap: 56px;
+      }
+
+      .w-hero h1 {
+        font-size: 54px;
+      }
+
+      .w-hero h1 .swap {
+        font-size: 40px;
+        margin-top: 18px;
+      }
+
+      .w-ticket {
+        padding: 26px;
+      }
+
+      .w-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 56px;
+      }
+
+      .ws .art {
+        height: 170px;
+      }
+
+      .w-mods {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .w-vals {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 56px;
+      }
+
+      .w-val {
+        padding: 30px 28px;
+      }
+
+      .w-offer {
+        grid-template-columns: 1fr minmax(320px, 380px);
+        align-items: center;
+        gap: 40px;
+        padding: 44px 48px;
+        margin-top: 20px;
+      }
+
+      .w-offer::after {
+        width: 420px;
+        height: 420px;
+        right: -230px;
+        top: -260px;
+      }
+
+      .w-tools-grid {
+        grid-template-columns: .9fr 1.1fr;
+        gap: 64px;
+        align-items: start;
+      }
+
+      .w-tools {
+        margin-top: 0;
+      }
+
+      .w-cta {
+        margin-top: 36px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .w-hero {
+        padding: 18px 0 36px;
+      }
+
+      .w-hero .wrap {
+        gap: 16px;
+      }
+
+      .w-hero h1 {
+        margin-top: 12px;
+        font-size: clamp(26px, 7.2vw, 33px);
+      }
+
+      .w-hero h1 .swap {
+        margin: 10px 0 2px;
+      }
+
+      .w-hero .lead {
+        font-size: 15.5px;
+        line-height: 1.48;
+        margin-top: 12px;
+      }
+
+      .w-host {
+        margin-top: 12px;
+        gap: 6px 8px;
+        font-size: 12.5px;
+      }
+
+      .w-host span {
+        padding: 5px 10px;
+      }
+
+      .w-ticket {
+        padding: 16px;
+      }
+
+      .w-price {
+        margin: 12px 2px;
+      }
+
+      .w-amt {
+        font-size: 40px;
+      }
+
+      .w-top {
+        font-size: 12px;
+      }
+
+      .hdr-r {
+        gap: 6px;
+      }
+
+      .hdr-timer {
+        padding: 4px;
+      }
+
+      .hdr-tlbl {
+        display: none;
+      }
+
+      .hdr-cta {
+        padding: 10px 14px;
+        font-size: 13px;
+      }
+
+      .w-cta .btn {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .w-top .live::before {
+        animation: none;
+      }
+
+      .w-toast {
+        transition: none;
+      }
+    }
+  </style>
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PNBGWV3L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2035781653725728');
+    fbq('track', 'PageView');
+
+    // Track InitiateCheckout on every payment CTA click
+    function trackCheckoutClick() {
+      if (typeof fbq === 'function') {
+        fbq('track', 'InitiateCheckout', {
+          content_name: 'Snap With AI Webinar for Architects',
+          value: 99.00,
+          currency: 'INR'
+        });
+      }
+    }
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2035781653725728&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "y7w4qe8w9w");
+  </script>
+
+  <!-- Canvas Confetti for the flash-price moment -->
+  <script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Snap With AI Webinar: Learn the Snap Method for Architects & Interior Designers",
+    "description": "A live 90-minute upskilling webinar teaching the Snap Method with Google Flow and Erasio using free tools. Live session only — recording is not available.",
+    "startDate": "2026-11-27T21:00:00+05:30",
+    "endDate": "2026-11-27T22:30:00+05:30",
+    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": { "@type": "VirtualLocation", "url": "https://raiseai.in/webinar/architects/" },
+    "image": "https://raiseai.in/assets/images/logo/logo-dark.webp?v=3",
+    "organizer": { "@type": "Organization", "name": "Raise AI", "url": "https://raiseai.in/" },
+    "offers": { "@type": "Offer", "url": "https://raiseai.in/webinar/architects/", "price": "199", "priceCurrency": "INR", "availability": "https://schema.org/InStock" }
+  }
+  </script>
+</head>
+
+<body id="top">
+
+  <!-- Urgency strip -->
+  <div class="w-top">
+    <span class="live">Snap With AI · Live</span>
+    <span>Registration closes 27 Nov, 9:00 PM IST</span>
+    <span class="js-flash" hidden>&middot; ₹99 offer ends in <span class="t js-timer">05:00</span></span>
+  </div>
+
+  <header class="hdr">
+    <div class="wrap">
+      <a class="logo" href="/" aria-label="Raise AI home">
+        <img src="/assets/images/logo/logo-light.webp?v=3" alt="Raise AI" width="132" height="88">
+      </a>
+      <div class="hdr-r">
+        <span class="w-timer hdr-timer js-flash" hidden><span class="hdr-tlbl">Ends in</span><b class="js-timer">05:00</b></span>
+        <a class="hdr-cta js-cta" href="/webinar/payment/"><span class="js-btn-text" data-flash="Join for ₹99">Join for
+            ₹199</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Info marquee strip -->
+  <div class="w-cred" role="note" aria-label="Live Snap Method training with zero paid subscriptions">
+    <div class="row" aria-hidden="true">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z" /><path d="M8.5 12l2.5 2.5 4.5-5" /></svg>Zero paid subscriptions required</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>Learn the Snap Method live</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 3" /></svg>Live only &middot; No recording available</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z" /><path d="M8.5 12l2.5 2.5 4.5-5" /></svg>Zero paid subscriptions required</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>Learn the Snap Method live</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 3" /></svg>Live only &middot; No recording available</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- 1. HERO: Snap Method webinar promise + ticket -->
+    <section class="w-hero">
+      <div class="wrap">
+        <div>
+          <span class="tag">Snap With AI · Architects &amp; Designers</span>
+          <h1>Learn the Snap Method for AI spaces
+            <span class="sr-only">in one snap, with no render farm, zero paid subscriptions, Lumion in minutes, clean HD export, and live hands-on demo.</span>
+            <span class="swap" aria-hidden="true">
+              <span>In one snap</span>
+              <span>No render farm</span>
+              <span>Zero subscription</span>
+              <span>Lumion in minutes</span>
+              <span>Clean HD export</span>
+              <span>Live hands-on demo</span>
+            </span>
+          </h1>
+          <p class="lead">A live 90-minute upskilling session on Google Meet. Learn the <b>Snap Method</b> in Google Flow and export cleanly with Erasio — attend without any subscription and make your own AI video.</p>
+
+          <div class="w-host">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4" /><path d="M4 20c.8-4 4-6 8-6s7.2 2 8 6" /></svg>Hosted by Hadhi Muhammed P.</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" /></svg>Gemini Pro is optional</span>
+          </div>
+        </div>
+
+        <div class="w-ticket" id="register">
+          <p class="w-when"><b>Friday, 27 Nov &middot; 9:00–10:30 PM IST</b><span>Live on Google Meet &middot; <strong>No recording available</strong></span></p>
+          <div class="w-price">
+            <div>
+              <span class="w-lbl js-price-label">Standard admission</span>
+              <p class="w-amt js-price">₹199</p>
+            </div>
+            <span class="w-timer js-flash" hidden>Ends in <b class="js-timer">05:00</b></span>
+          </div>
+          <a class="btn js-cta" href="/webinar/payment/" id="heroCta">
+            <span class="js-btn-text" data-flash="Register now for ₹99">Register for live session</span>
+            <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></i>
+          </a>
+          <p class="w-trust">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z" /><path d="M8.5 12l2.5 2.5 4.5-5" /></svg><a href="/refund/">Refund within 3 days</a></span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="#1554FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 19L4 20z" /></svg>Instant WhatsApp confirmation</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. WHAT YOU LEARN LIVE: THE SNAP METHOD -->
+    <section class="sec sec-soft">
+      <div class="wrap">
+        <span class="tag">What you learn on 27 Nov</span>
+        <h2 class="w-h2">Live training on the <span class="key">Snap Method.</span></h2>
+        <p class="lead">This ₹99 webinar gives you real standalone value: we teach you the Snap Method step by step on free tools, so you leave with your own AI video.</p>
+        <div class="w-steps">
+          <article class="ws ws-1">
+            <div class="art" aria-hidden="true">
+              <div class="pbox"><s>Night of Lumion</s> <strong>50 free Flow credits / day</strong></div>
+              <span class="chip">Omni 1.1 &middot; &le;15s clip</span>
+            </div>
+            <span class="n">1</span>
+            <h3>Google Flow &amp; free credits</h3>
+            <p>Set up Google Flow on your laptop or phone and learn how to stretch your 50 daily free credits (Omni 1.1 &amp; clip limits) without buying any subscription.</p>
+          </article>
+
+          <article class="ws ws-2">
+            <div class="art" aria-hidden="true">
+              <div class="flow"><span>Clip</span><i>&rarr;</i><span>4.2s Snap</span><i>&rarr;</i><span>New Material</span></div>
+              <div class="bar"><b></b></div>
+              <small>Exact-second timeline edit</small>
+            </div>
+            <span class="n">2</span>
+            <h3>The Snap &amp; Timeline Method</h3>
+            <p>Note the exact second of your snap and prompt the change — e.g. switching floor tiles to light grey matte stone right on the beat.</p>
+          </article>
+
+          <article class="ws ws-3r">
+            <div class="art" aria-hidden="true">
+              <div class="cl-q">Keep walls, windows &amp; roof accurate</div>
+              <div class="cl-a"><span class="cl-dot"></span>Lumion / D5 / SketchUp &rarr; <b>Realistic Video</b></div>
+              <span class="chip">3D model = source of truth</span>
+            </div>
+            <span class="n">3</span>
+            <h3>Render to Real</h3>
+            <p>Turn a screenshot or clip from your Lumion, D5, or SketchUp model into a realistic walkthrough with slow, clean camera motion.</p>
+          </article>
+
+          <article class="ws ws-3">
+            <div class="art" aria-hidden="true">
+              <div class="wm-box"><s>WATERMARK</s><b>Clean MP4 &check;</b></div>
+              <span class="chip">&darr; Erasio Clean Export</span>
+            </div>
+            <span class="n">4</span>
+            <h3>Watermark-free clean export</h3>
+            <p>A watermark costs you credibility. Use Erasio to remove watermarks, fix tracking marks, and download a clean MP4 ready for clients or reels.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FULL TRANSPARENCY: WEBINAR VS WHAT'S IN THE FULL COURSE -->
+    <section class="sec sec-dark" id="course">
+      <div class="wrap">
+        <span class="tag">Full transparency</span>
+        <h2 class="w-h2">What's in this webinar vs <span class="key">the full course.</span></h2>
+        <p class="lead">To be 100% upfront: this ₹99 webinar is an upskilling session leading into our 10-day Architects AI Course. Tonight we deliver real value by teaching the Snap Method — and here is everything covered if you later choose to join the full course.</p>
+
+        <div class="w-split">
+          <div class="w-box-webinar">
+            <span class="w-box-kick">Tonight &middot; ₹99 Webinar</span>
+            <h3>The Snap Method (Live Only)</h3>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" /></svg><span>Google Flow setup &amp; 50/day free credit strategy (Omni 1.1)</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" /></svg><span>Exact-second Snap &amp; Timeline material switching</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" /></svg><span>Render to Real from Lumion, D5, or SketchUp</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" /></svg><span>Clean watermark-free MP4 export via Erasio</span></li>
+            </ul>
+          </div>
+
+          <div class="w-box-course">
+            <span class="w-box-kick">Optional Next Step &middot; 10-Day Course</span>
+            <h3>Complete Architects AI Course</h3>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" /></svg><span>5 practical modules from empty plot pitches to studio marketing</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" /></svg><span>Multi-engine workflows (Flow, Kling &amp; Seedance) + Co-director bot</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" /></svg><span>Alternate-day 9 PM live Q&amp;A reviews &amp; 48h real assignments</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" /></svg><span>1-month Flow Pro access, lifetime recordings &amp; community</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="w-mods">
+          <article class="w-mod">
+            <div class="w-mod-top"><span class="w-mod-num">Module 01</span><span class="w-mod-tag">Full Course</span></div>
+            <h3>Pitch the Dream</h3>
+            <p>Take a photo of a client's empty plot and show their finished home standing on it in minutes, keeping one look across every angle.</p>
+          </article>
+          <article class="w-mod">
+            <div class="w-mod-top"><span class="w-mod-num">Module 02</span><span class="w-mod-tag">Full Course</span></div>
+            <h3>Pitch with Video</h3>
+            <p>Turn screenshots from your own 3D model into a realistic AI walkthrough in under 10 minutes as a fast client service.</p>
+          </article>
+          <article class="w-mod">
+            <div class="w-mod-top"><span class="w-mod-num">Module 03</span><span class="w-mod-tag">Full Course</span></div>
+            <h3>Use Any Engine</h3>
+            <p>Use Flow, Kling, and Seedance together with our Malayalam/English Co-director bot that asks what you need and writes the engine prompt.</p>
+          </article>
+          <article class="w-mod">
+            <div class="w-mod-top"><span class="w-mod-num">Module 04</span><span class="w-mod-tag">Full Course</span></div>
+            <h3>Control Every Change</h3>
+            <p>Put your own designed interior — the exact tile, glass, or ceiling you chose — into a real empty room photo or video.</p>
+          </article>
+          <article class="w-mod">
+            <div class="w-mod-top"><span class="w-mod-num">Module 05</span><span class="w-mod-tag">Full Course</span></div>
+            <h3>Market Your Studio</h3>
+            <p>Turn finished projects into Malayalam talking-head ads and real-estate style narrated house films that bring clients to you.</p>
+          </article>
+        </div>
+
+        <div class="w-course-meta">
+          <span><b>10-Day Cohort:</b> ~2h recorded classes</span>
+          <span><b>Assignments:</b> 48h real project submission</span>
+          <span><b>Live Q&amp;A:</b> Google Meet 9 PM (alternate days)</span>
+          <span><b>Course Perks:</b> Flow Pro (1 month) + Lifetime access</span>
+        </div>
+
+        <div class="w-cta">
+          <a class="btn js-cta" href="/webinar/payment/">
+            <span class="js-btn-text" data-flash="Learn the Snap Method for ₹99">Learn the Snap Method for ₹199</span>
+            <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></i>
+          </a>
+          <span class="note">Friday, 27 Nov &middot; 9:00 - 10:30 PM IST &middot; Live only (no recording)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. WHAT YOU GET -->
+    <section class="sec sec-soft" id="curriculum">
+      <div class="wrap">
+        <span class="tag">Your ₹99 webinar registration</span>
+        <h2 class="w-h2">What you get on <span class="key">Friday night.</span></h2>
+        <p class="lead">Live 90-minute training on the Snap Method and the 5-step prompt card — with zero subscriptions needed. (Live only; recording is not available.)</p>
+        <div class="w-vals">
+          <article class="w-val">
+            <span class="kick">Live 90-min session</span>
+            <h3>Snap Method live training</h3>
+            <p>Step-by-step live walkthrough of Google Flow setup, free-plan credit strategy, exact-second material switches, Render-to-Real, and Erasio export.</p>
+            <div class="v">Standard value <b>₹1,799</b></div>
+          </article>
+          <article class="w-val hl">
+            <span class="kick">No subscription needed</span>
+            <h3>Make AI videos at ₹0 tool cost</h3>
+            <p>Attend and build your own AI video without buying any paid software. Google Flow gives 50 free daily credits, and Gemini Pro is completely optional.</p>
+            <div class="v">Subscription needed <b>None (₹0)</b></div>
+          </article>
+          <article class="w-val">
+            <span class="kick">Included takeaway</span>
+            <h3>5-Step Snap Method Card</h3>
+            <p>Get the 1-card Snap Method prompt formula for site clips and Lumion, D5, or SketchUp renders. Note: live attendance only — recording is not available.</p>
+            <div class="v">Deliverable value <b>₹999</b></div>
+          </article>
+        </div>
+
+        <div class="w-offer">
+          <div>
+            <p class="tot">Total combined value <s>₹2,798</s></p>
+            <span class="w-lbl js-price-label">Standard admission</span>
+            <p class="w-amt js-price">₹199</p>
+            <span class="w-timer js-flash" hidden>Special offer ends in <b class="js-timer">05:00</b></span>
+          </div>
+          <div>
+            <a class="btn js-cta" href="/webinar/payment/">
+              <span class="js-btn-text" data-flash="Register now for ₹99">Register now for ₹199</span>
+              <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></i>
+            </a>
+            <p class="w-trust">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z" /><path d="M8.5 12l2.5 2.5 4.5-5" /></svg><a href="/refund/">Refund within 3 days of payment</a></span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 19L4 20z" /></svg>Instant WhatsApp confirmation</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TOOL COST -->
+    <section class="sec">
+      <div class="wrap w-tools-grid">
+        <div>
+          <span class="tag">Total cost of AI tools taught</span>
+          <span class="w-zero" aria-hidden="true">₹0</span>
+          <h2 class="sr-only">Total cost of AI tools taught: ₹0</h2>
+          <p class="lead">You can attend without any subscription and still make videos. No credit card needed — Gemini Pro is completely optional.</p>
+        </div>
+        <div>
+          <ul class="w-tools">
+            <li><span class="lg lg-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3" /><path d="M10 9.5v5l4.5-2.5z" fill="#D1FE17" stroke="#D1FE17" /></svg></span><b>Google Flow (Free Plan)</b><span>50 free credits every day (Omni 1.1, up to 15s clips) on laptop or phone app</span><em>₹0</em></li>
+            <li><span class="lg lg-lime" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#17191C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v6c0 4.2-3 7.5-8 8-5-.5-8-3.8-8-8V7l8-4z" /><path d="M9 12l2 2 4-4" /></svg></span><b>Erasio</b><span>Removes watermarks cleanly, fixes tracking, and downloads client-ready MP4s</span><em>₹0</em></li>
+            <li><span class="lg lg-dark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#D1FE17" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z" /><path d="M9 21V13h6v8" /></svg></span><b>Your Existing Phone or 3D Model</b><span>Use any site/room clip or a Lumion, D5, or SketchUp screenshot as source of truth</span><em>₹0</em></li>
+            <li><span class="lg lg-sig" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c.6 5.4 4.6 9.4 10 10-5.4.6-9.4 4.6-10 10-.6-5.4-4.6-9.4-10-10 5.4-.6 9.4-4.6 10-10z" /></svg></span><b>Google Gemini / ChatGPT (Free)</b><span>Free prompt helpers for material &amp; camera wording (Gemini Pro is optional)</span><em>₹0</em></li>
+            <li class="tot"><b>Total tool stack cost</b><em>₹0</em></li>
+          </ul>
+          <div style="margin-top:20px;padding:16px 20px;background:rgba(8,184,245,0.08);border:1px solid rgba(8,184,245,0.25);border-radius:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+            <span style="background:#08B8F5;color:#000;font-weight:800;font-size:12px;padding:4px 10px;border-radius:99px;text-transform:uppercase;letter-spacing:.04em">No Subscription Needed</span>
+            <p style="margin:0;font-size:14px;color:var(--ink-soft);line-height:1.5">Everything in the live webinar runs on <strong>free accounts</strong>. If you already use or want <strong>Google Gemini Pro</strong> later, it is completely optional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FAQ -->
+    <section class="sec sec-soft" id="faq">
+      <div class="wrap">
+        <span class="tag">Have questions?</span>
+        <h2 class="w-h2">Frequently asked <span class="key">questions.</span></h2>
+        <div class="faq">
+          <details open>
+            <summary>When is the Snap With AI webinar, and is a recording available?</summary>
+            <p>The session is live on <strong>Friday, 27 Nov 2026 at 9:00 PM – 10:30 PM IST</strong> on Google Meet. <strong>Recorded video is not available</strong> — please join the live session on time so you don't miss the demos and Q&amp;A.</p>
+          </details>
+          <details>
+            <summary>Why is this ₹99, and do I have to join the full course?</summary>
+            <p>We want to be completely transparent: this webinar is an upskilling introduction to our 10-day Architects AI Course, and we will share how the full course works at the end. There is zero obligation to join — you get real standalone value from learning the <strong>Snap Method</strong> live in this session.</p>
+          </details>
+          <details>
+            <summary>Do I need any paid AI subscription or Gemini Pro to attend?</summary>
+            <p>No. You can attend without any subscription and still make complete AI videos. Google Flow gives 50 free credits every day (Omni 1.1), and Erasio handles clean exports for free. <strong>Google Gemini Pro is completely optional.</strong></p>
+          </details>
+          <details>
+            <summary>Do I need a high-end PC or render farm?</summary>
+            <p>No. Everything runs in the cloud on your laptop browser or the Flow app on your phone—no overnight GPU rendering required.</p>
+          </details>
+          <details>
+            <summary>Will AI distort my design or replace my 3D model?</summary>
+            <p>No. In Render to Real, you start directly from your own <strong>Lumion, D5, or SketchUp</strong> screenshot/clip and specify what must not change (walls, windows, roof), so your 3D model stays the source of truth.</p>
+          </details>
+          <details>
+            <summary>Is the class in Malayalam or English?</summary>
+            <p>Classes are live in simple <strong>Malayalam</strong> with standard architectural and industry <strong>English</strong> technical terms, so every step is clear and practical.</p>
+          </details>
+          <details>
+            <summary>How do I receive the webinar link after paying?</summary>
+            <p>After you pay on the checkout page, send a screenshot of your payment to our WhatsApp support (<a href="https://wa.me/917356003301">+91 73560 03301</a>). We will confirm your seat and send you the Google Meet link for Friday's session.</p>
+          </details>
+        </div>
+        <a class="more w-help"
+          href="https://wa.me/917356003301?text=Hi%2C%20I%20need%20help%20registering%20for%20the%20Snap%20With%20AI%20Architects%20webinar."
+          target="_blank" rel="noopener">Need help registering? Chat with us on WhatsApp &rarr;</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="ftr">
+    <div class="wrap">
+      <a class="logo" href="/" aria-label="Raise AI home">
+        <img src="/assets/images/logo/logo-dark.webp?v=3" alt="Raise AI" width="132" height="88" loading="lazy" decoding="async">
+      </a>
+      <div class="ftr-grid">
+        <div>
+          <p style="max-width:26em">Raise AI is an AI upskilling institute in Kerala, India. We teach working professionals how to use AI in their own job.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="https://wa.me/917356003301" target="_blank" rel="noopener">WhatsApp +91 73560 03301</a></li>
+            <li><a href="mailto:support@raiseai.in">support@raiseai.in</a></li>
+            <li>Every day, 9 AM to 10 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <span>&copy; 2026 Raise AI LLP</span>
+        <a href="/terms/">Terms</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/refund/">Refund</a>
+        <a href="/delivery/">Delivery</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile bar -->
+  <div class="bar" id="mobileBar">
+    <div class="w-barp"><small class="js-price-label">Admission</small><b class="js-price">₹199</b></div>
+    <a class="btn js-cta" href="/webinar/payment/">
+      <span class="js-btn-text" data-flash="Join for ₹99">Join for ₹199</span>
+      <i><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></i>
+    </a>
+  </div>
+
+  <!-- Flash price toast (shows for 5 seconds) -->
+  <div class="w-toast" id="flashToast" role="status" aria-live="polite">
+    <span class="ic" aria-hidden="true">🎉</span>
+    <p><b>Flash discount unlocked</b>Price dropped to ₹99 for the next <span class="t js-timer">05:00</span></p>
+  </div>
+
+  <script>
+    // Pass ad parameters (utm_*, fbclid, ...) on to the payment page
+    (function () {
+      var q = window.location.search;
+      if (!q) return;
+      document.querySelectorAll('a[href="/webinar/payment/"]').forEach(function (a) { a.href = '/webinar/payment/' + q; });
+    })();
+
+    // Payment CTAs: track the click and show a loading state (stops double taps)
+    (function () {
+      function reset(a) {
+        a.classList.remove('is-loading');
+        var t = a.querySelector('.js-btn-text');
+        if (t && a.dataset.txt) t.textContent = a.dataset.txt;
+        delete a.dataset.busy;
+      }
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest ? e.target.closest('a.js-cta') : null;
+        if (!a) return;
+        if (a.dataset.busy) { e.preventDefault(); return; }
+        trackCheckoutClick();
+        try { if (window.clarity) window.clarity('event', 'architects_webinar_checkout_click'); } catch (err) { }
+        var t = a.querySelector('.js-btn-text');
+        a.dataset.busy = '1';
+        a.classList.add('is-loading');
+        if (t) { a.dataset.txt = t.textContent; t.textContent = 'Loading checkout…'; }
+        setTimeout(function () { reset(a); }, 3000);
+      });
+      window.addEventListener('pageshow', function () { document.querySelectorAll('a.js-cta').forEach(reset); });
+    })();
+
+    // Flash price: ₹199 -> ₹99 with a 5-minute countdown that restarts when it runs out
+    (function () {
+      var FIVE = 5 * 60 * 1000, KEY = 'raise_arch_offer_end_time', end;
+      var reduce = false;
+      try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { }
+      function save(v) { try { localStorage.setItem(KEY, v); } catch (e) { } }
+      try { var s = parseInt(localStorage.getItem(KEY), 10); if (s > Date.now() && s <= Date.now() + FIVE) end = s; } catch (e) { }
+      if (!end) { end = Date.now() + FIVE; save(end); }
+
+      var timers = document.querySelectorAll('.js-timer');
+      function tick() {
+        var r = end - Date.now();
+        if (r <= 0) { end = Date.now() + FIVE; save(end); r = FIVE; }
+        var sec = Math.floor(r / 1000);
+        var txt = String(Math.floor(sec / 60)).padStart(2, '0') + ':' + String(sec % 60).padStart(2, '0');
+        timers.forEach(function (el) { el.textContent = txt; });
+      }
+
+      document.querySelectorAll('.js-price').forEach(function (el) { el.innerHTML = '<s>₹199</s>₹99'; });
+      document.querySelectorAll('.js-price-label').forEach(function (el) { el.textContent = 'Flash price'; });
+      document.querySelectorAll('.js-btn-text[data-flash]').forEach(function (el) { el.textContent = el.getAttribute('data-flash'); });
+      document.querySelectorAll('.js-flash').forEach(function (el) { el.hidden = false; });
+      tick();
+      setInterval(tick, 1000);
+
+      var toast = document.getElementById('flashToast');
+      setTimeout(function () { toast.classList.add('show'); }, 400);
+      setTimeout(function () { toast.classList.remove('show'); }, 5400);
+
+      window.addEventListener('load', function () {
+        if (reduce || typeof confetti !== 'function') return;
+        var colors = ['#D1FE17', '#1554FF', '#08B8F5', '#FFFFFF'];
+        confetti({ particleCount: 140, spread: 90, startVelocity: 45, origin: { y: 0.7 }, colors: colors });
+        setTimeout(function () {
+          confetti({ particleCount: 70, angle: 60, spread: 55, origin: { x: 0, y: 0.65 }, colors: colors });
+          confetti({ particleCount: 70, angle: 120, spread: 55, origin: { x: 1, y: 0.65 }, colors: colors });
+        }, 250);
+      });
+    })();
+
+    // Sticky mobile bar: shows once the hero button scrolls away
+    (function () {
+      var bar = document.getElementById('mobileBar');
+      var cta = document.getElementById('heroCta');
+      if (!bar || !cta) return;
+      if (!('IntersectionObserver' in window)) { bar.classList.add('show'); return; }
+      new IntersectionObserver(function (es) { bar.classList.toggle('show', !es[0].isIntersecting); }).observe(cta);
+    })();
+  </script>
+
+</body>
+
+</html>
