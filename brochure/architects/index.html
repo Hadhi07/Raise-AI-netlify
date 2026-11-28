@@ -1559,18 +1559,21 @@
             </div>
 
             <div class="media-slot">
-              <div class="slot-box">
-                <img src="/assets/images/brochure-architects/m2-plan.webp" alt="2D architectural floor plan converted to 3D walkthrough" width="640" height="360" loading="lazy" decoding="async">
-                <div class="slot-foot">
-                  <span>Floor plan → Interactive 3D link</span>
-                  <span class="tbd">[NUA Residence 3D walkthrough]</span>
-                </div>
+              <div class="vframe wide" role="button" tabindex="0" data-yt="-1QdBpP5sXY" data-wide="1" aria-label="Play video: NUA Residence 3D walkthrough">
+                <img src="/assets/images/brochure-architects/m2-nua-3d.webp" alt="NUA Residence 3D architectural model walkthrough" width="640" height="360" loading="lazy" decoding="async">
+                <span class="top-tag">Module 02 · NUA Residence</span>
+                <span class="play-badge">
+                  <span class="play-ic" aria-hidden="true">
+                    <svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="currentColor" /></svg>
+                  </span>
+                  <span>Watch 3D walkthrough</span>
+                </span>
               </div>
             </div>
           </article>
 
           <!-- Module 03 -->
-          <article class="mod-card is-vert">
+          <article class="mod-card">
             <div class="mod-body">
               <p class="eyebrow">MODULE 03 · IMAGE TO VIDEO, ANY ENGINE</p>
               <h3>Others show images. <span class="kw">You show video</span>.</h3>
@@ -1595,15 +1598,15 @@
               </div>
             </div>
 
-            <div class="hero-media">
-              <div class="vframe" role="button" tabindex="0" data-yt="p5UjELUGTFU" aria-label="Play video: AI architectural home visual showcase">
-                <img src="/assets/images/results/yt_home_visual.webp" alt="AI architectural home visual walkthrough showcase" width="540" height="960" loading="lazy" decoding="async">
-                <span class="top-tag">Module 03</span>
+            <div class="media-slot">
+              <div class="vframe wide" role="button" tabindex="0" data-yt="Va1dFHlPHjg" data-wide="1" aria-label="Play video: 3D house visual transformation">
+                <img src="/assets/images/brochure-architects/m3-walkthrough.webp" alt="Modern residence 3D house visual transformation" width="1080" height="608" loading="lazy" decoding="async">
+                <span class="top-tag">Module 03 · 16:9</span>
                 <span class="play-badge">
                   <span class="play-ic" aria-hidden="true">
                     <svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="currentColor" /></svg>
                   </span>
-                  <span>Watch walkthrough</span>
+                  <span>Watch house film</span>
                 </span>
               </div>
             </div>
@@ -1668,11 +1671,16 @@
             </div>
 
             <div class="hero-media">
-              <div class="vframe" style="cursor:default">
-                <img src="/assets/images/brochure-architects/m5-shafeeq.webp" alt="Shafeeq AI talking-head architectural marketing frame" width="720" height="1280" loading="lazy" decoding="async">
+              <div class="vframe" role="button" tabindex="0" data-yt="Tpwx3koiucY" aria-label="Play video: Shafeeq AI talking-head ad">
+                <img src="/assets/images/brochure-architects/m5-shafeeq.webp" alt="Shafeeq AI talking-head architectural marketing video" width="720" height="1280" loading="lazy" decoding="async">
                 <span class="top-tag">Module 05</span>
+                <span class="play-badge">
+                  <span class="play-ic" aria-hidden="true">
+                    <svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="currentColor" /></svg>
+                  </span>
+                  <span>Watch talking-head ad</span>
+                </span>
               </div>
-              <span class="tbd">[Shafeeq talking-head video]</span>
             </div>
           </article>
         </div>
@@ -2030,8 +2038,8 @@
       var lb = document.getElementById('vidLb');
       var lbBox = lb.querySelector('.box');
 
-      function openVid(id) {
-        lbBox.className = 'box';
+      function openVid(id, isWide) {
+        lbBox.className = isWide ? 'box wide' : 'box';
         lbBox.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&playsinline=1&rel=0" title="AI Architect Course video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
         lb.hidden = false;
         document.body.style.overflow = 'hidden';
@@ -2057,7 +2065,7 @@
       document.addEventListener('click', function (e) {
         var vf = e.target.closest('[data-yt]');
         if (vf) {
-          openVid(vf.getAttribute('data-yt'));
+          openVid(vf.getAttribute('data-yt'), vf.hasAttribute('data-wide'));
           return;
         }
         var imf = e.target.closest('[data-img]');
@@ -2078,7 +2086,7 @@
         var vf = e.target.closest('[data-yt]');
         if (vf && (e.key === 'Enter' || e.key === ' ')) {
           e.preventDefault();
-          openVid(vf.getAttribute('data-yt'));
+          openVid(vf.getAttribute('data-yt'), vf.hasAttribute('data-wide'));
         }
       });
 
