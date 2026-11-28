@@ -1238,6 +1238,29 @@
       transform: translateY(-1px);
     }
 
+    .rzp-box {
+      background: var(--white);
+      border: 2px solid var(--blue);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: var(--shadow-panel);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: flex-start;
+      scroll-margin-top: 84px;
+    }
+
+    .rzp-form {
+      width: 100%;
+      max-width: 100%;
+      min-height: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
     /* FAQ Accordion */
     .faq-list {
       display: flex;
@@ -1982,18 +2005,16 @@
           </article>
         </div>
 
-        <div class="actions">
-          <a class="btn-upi" href="upi://pay?pa=hadhip6252@sbi&pn=Hadhi%20Muhammed%20P&am=1000&cu=INR&tn=AI%20Architect%20Course%20Advance">
-            Pay ₹1,000 via GPay / PhonePe / UPI
-          </a>
-          <a class="btn" href="#pay">
-            <span>Scan UPI QR below</span>
-            <span class="arr" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="#15171B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-          </a>
+        <div class="rzp-box" id="checkout">
+          <p class="eyebrow">OPTION 1 · INSTANT RAZORPAY CHECKOUT (UPI, CARDS, NETBANKING)</p>
+          <h3>Pay ₹1,000 advance online</h3>
+          <div class="rzp-form">
+            <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_U5VxDJFVQPMdaO" async> </script> </form>
+            <a class="btn-upi" href="upi://pay?pa=hadhip6252@sbi&pn=Hadhi%20Muhammed%20P&am=1000&cu=INR&tn=AI%20Architect%20Course%20Advance">
+              Pay ₹1,000 via GPay / PhonePe / UPI
+            </a>
+          </div>
+          <p class="small-note">100% secure payment processed by Razorpay. Or scan the UPI QR directly below.</p>
         </div>
 
         <div class="pay-panel" id="pay">
