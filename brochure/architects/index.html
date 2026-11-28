@@ -1087,22 +1087,23 @@
     .qr-box {
       width: 100%;
       max-width: 280px;
+      aspect-ratio: 1 / 1;
       margin: 0 auto;
-      background: var(--soft-blue);
+      background: var(--white);
       border: 2px solid var(--line);
       border-radius: 24px;
-      padding: 12px;
+      padding: 10px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
     }
 
     .qr-box img {
       width: 100%;
-      max-height: 400px;
+      height: 100%;
       object-fit: contain;
-      border-radius: 16px;
+      image-rendering: crisp-edges;
+      border-radius: 14px;
       background: var(--white);
     }
 
@@ -1908,7 +1909,7 @@
 
         <div class="pay-panel" id="pay">
           <div class="qr-box">
-            <img src="/assets/images/brochure-architects/upi-qr-razorpay.webp" alt="Razorpay UPI QR code for Raise AI" width="674" height="1644" loading="lazy" decoding="async">
+            <img src="/assets/images/brochure-architects/upi-qr-razorpay.webp?v=2" alt="Razorpay UPI QR code for Raise AI" width="436" height="436" loading="lazy" decoding="async">
           </div>
           <div class="pay-info">
             <p class="eyebrow">RAZORPAY UPI QR · SCAN WITH ANY UPI APP</p>
