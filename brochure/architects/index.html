@@ -1168,35 +1168,74 @@
       font-weight: 600;
     }
 
-    /* Instructor */
-    .inst-layout {
+    /* 10-day visual timeline */
+    .sched-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 28px;
-      align-items: center;
+      gap: 12px;
+      margin-top: 8px;
     }
 
-    @media (min-width: 860px) {
-      .inst-layout {
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 40px;
+    @media (min-width: 720px) {
+      .sched-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
       }
     }
 
-    .inst-photo {
-      background: var(--soft-blue);
-      border: 2px solid #D7E2FF;
-      border-radius: 28px;
-      overflow: hidden;
-      max-width: 340px;
-      margin: 0 auto;
-      padding: 20px 20px 0;
+    .sched-card {
+      background: var(--white);
+      border: 2px solid var(--line);
+      border-radius: 20px;
+      padding: 18px 16px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
-    .inst-photo img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+    .sched-card .days {
+      font-family: var(--font-head);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .sched-card b {
+      font-family: var(--font-head);
+      font-size: 15px;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+
+    .sched-card .rhythm {
+      font-size: 13px;
+      line-height: 1.4;
+      color: var(--body);
+      margin-top: auto;
+    }
+
+    .btn-upi {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 22px;
+      border-radius: var(--radius-pill);
+      background: var(--lime);
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      transition: transform 180ms ease, background 180ms ease;
+    }
+
+    .btn-upi:hover {
+      background: #c4f20d;
+      transform: translateY(-1px);
     }
 
     /* FAQ Accordion */
@@ -1491,7 +1530,53 @@
       </div>
     </section>
 
-    <!-- 3. WHAT YOU'LL BE ABLE TO DO (5 MODULES) -->
+    <!-- 3. RESULTS (MOVED UP FOR PROOF FIRST) -->
+    <section class="sec" aria-labelledby="res-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">RESULTS</p>
+          <h2 id="res-h">Real results from <span class="kw">one simple skill</span>.</h2>
+        </div>
+
+        <div class="results-layout">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div class="grid-3">
+              <article class="card">
+                <p class="card-kicker">01 · CLIENTS</p>
+                <h3>Won a HiLite project</h3>
+                <p>Shafeeq posted one AI talking-head video as a story. Someone at HiLite saw it, and he got a residence project.</p>
+              </article>
+              <article class="card">
+                <p class="card-kicker">02 · VISIBILITY</p>
+                <h3>200k+ views, real enquiries</h3>
+                <p>One snap reel brought architects into our inbox asking how it was done.</p>
+              </article>
+              <article class="card blue">
+                <p class="card-kicker">03 · TIME</p>
+                <h3>2 days to 10 minutes</h3>
+                <p>A 20-second video that took two days of rendering now takes under 10 minutes.</p>
+              </article>
+            </div>
+            <p class="lead" style="font-size:16px"><strong>And it cost nothing:</strong> Shafeeq's video was made on Flow at zero cost.</p>
+          </div>
+
+          <div class="hero-media">
+            <div class="vframe" role="button" tabindex="0" data-yt="P7yugr-0sFo" aria-label="Play video: Shafeeq student story">
+              <img src="/assets/images/testimonials/testi_shafeeq.webp" alt="Interior designer Shafeeq sharing his Raise AI result" width="540" height="960" loading="lazy" decoding="async">
+              <span class="top-tag">Shafeeq · Interior Designer</span>
+              <span class="play-badge">
+                <span class="play-ic" aria-hidden="true">
+                  <svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="currentColor" /></svg>
+                </span>
+                <span>Watch Shafeeq's story</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. WHAT YOU'LL BE ABLE TO DO (5 MODULES) -->
     <section class="sec" aria-labelledby="mods-h">
       <div class="wrap">
         <div class="sec-head">
@@ -1606,7 +1691,6 @@
               </ul>
               <div class="callout">
                 <strong>Your co-director, included.</strong> Describe the shot in Malayalam or English. It asks what it needs, then writes the right prompt for that engine.
-                <div style="margin-top:8px"><span class="tbd">[Co-director bot screenshot]</span></div>
               </div>
             </div>
 
@@ -1699,7 +1783,7 @@
       </div>
     </section>
 
-    <!-- 4. HOW YOU'LL LEARN -->
+    <!-- 5. HOW YOU'LL LEARN -->
     <section class="sec" aria-labelledby="learn-h">
       <div class="wrap">
         <div class="sec-head">
@@ -1728,53 +1812,36 @@
             <p>Every class and Q&amp;A recorded, to rewatch anytime.</p>
           </article>
         </div>
+
+        <div class="sched-grid" aria-label="10-day course rhythm">
+          <div class="sched-card">
+            <span class="days">Days 1–2</span>
+            <b>01 · Pitch the dream</b>
+            <p class="rhythm">Watch + build · Live Q&amp;A at 9 PM</p>
+          </div>
+          <div class="sched-card">
+            <span class="days">Days 3–4</span>
+            <b>02 · Plan to 3D</b>
+            <p class="rhythm">Watch + build · Live Q&amp;A at 9 PM</p>
+          </div>
+          <div class="sched-card">
+            <span class="days">Days 5–6</span>
+            <b>03 · Image to video</b>
+            <p class="rhythm">Watch + build · Live Q&amp;A at 9 PM</p>
+          </div>
+          <div class="sched-card">
+            <span class="days">Days 7–8</span>
+            <b>04 · Snap &amp; control</b>
+            <p class="rhythm">Watch + build · Live Q&amp;A at 9 PM</p>
+          </div>
+          <div class="sched-card">
+            <span class="days">Days 9–10</span>
+            <b>05 · Market your studio</b>
+            <p class="rhythm">Watch + build · Final review at 9 PM</p>
+          </div>
+        </div>
+
         <p class="small-note">Not clear after 10 days? We extend your support.</p>
-      </div>
-    </section>
-
-    <!-- 5. RESULTS -->
-    <section class="sec" aria-labelledby="res-h">
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="eyebrow">RESULTS</p>
-          <h2 id="res-h">Real results from <span class="kw">one simple skill</span>.</h2>
-        </div>
-
-        <div class="results-layout">
-          <div style="display:flex;flex-direction:column;gap:16px">
-            <div class="grid-3">
-              <article class="card">
-                <p class="card-kicker">01 · CLIENTS</p>
-                <h3>Won a HiLite project</h3>
-                <p>Shafeeq posted one AI talking-head video as a story. Someone at HiLite saw it, and he got a residence project.</p>
-              </article>
-              <article class="card">
-                <p class="card-kicker">02 · VISIBILITY</p>
-                <h3>200k+ views, real enquiries</h3>
-                <p>One snap reel brought architects into our inbox asking how it was done.</p>
-              </article>
-              <article class="card blue">
-                <p class="card-kicker">03 · TIME</p>
-                <h3>2 days to 10 minutes</h3>
-                <p>A 20-second video that took two days of rendering now takes under 10 minutes.</p>
-              </article>
-            </div>
-            <p class="lead" style="font-size:16px"><strong>And it cost nothing:</strong> Shafeeq's video was made on Flow at zero cost.</p>
-          </div>
-
-          <div class="hero-media">
-            <div class="vframe" role="button" tabindex="0" data-yt="P7yugr-0sFo" aria-label="Play video: Shafeeq student story">
-              <img src="/assets/images/testimonials/testi_shafeeq.webp" alt="Interior designer Shafeeq sharing his Raise AI result" width="540" height="960" loading="lazy" decoding="async">
-              <span class="top-tag">Shafeeq · Interior Designer</span>
-              <span class="play-badge">
-                <span class="play-ic" aria-hidden="true">
-                  <svg viewBox="0 0 12 14"><path d="M0 0l12 7-12 7z" fill="currentColor" /></svg>
-                </span>
-                <span>Watch Shafeeq's story</span>
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -1863,9 +1930,10 @@
           <p class="q">Don't like it? Can't keep up? Any issue at all?</p>
           <h2 id="risk-h" class="head">Full refund up to Class 2. <span class="hl">No questions asked.</span></h2>
           <p class="terms">
-            <span>Terms apply.</span>
-            <a href="/terms/">View Terms</a>
-            <span class="tbd">[link to terms]</span>
+            <span>Terms apply:</span>
+            <a href="/terms/">Terms &amp; Conditions</a>
+            <span>·</span>
+            <a href="/refund/">Refund Policy</a>
           </p>
         </div>
         <p class="lead">You decide after you've seen the classes for yourself. <strong>All the risk is on us.</strong></p>
@@ -1876,8 +1944,9 @@
     <section class="sec" id="join" aria-labelledby="join-h" style="scroll-margin-top:76px">
       <div class="wrap">
         <div class="sec-head">
-          <p class="eyebrow">HOW TO JOIN</p>
-          <h2 id="join-h">Hold your <span class="kw">seat</span></h2>
+          <p class="pill"><i></i>Only 10 founding seats · Classes start Sunday, 29 Nov 2026</p>
+          <h2 id="join-h">Hold your <span class="kw">seat</span> with ₹1,000.</h2>
+          <p class="lead">Pay ₹1,000 today to lock your founding seat. Pay the balance within 7 days.</p>
         </div>
 
         <ol class="steps">
@@ -1895,16 +1964,36 @@
           </li>
         </ol>
 
-        <div class="actions" style="align-items:center">
+        <div class="grid-3" aria-label="Why join now">
+          <article class="card blue">
+            <p class="big-num">10 days</p>
+            <h3>Built for busy schedules</h3>
+            <p>Watch the 2-hour recorded class on your time, and join 9 PM live Q&amp;A on alternate days.</p>
+          </article>
+          <article class="card">
+            <p class="big-num">₹0 risk</p>
+            <h3>Refund up to Class 2</h3>
+            <p>See the first two classes yourself. Not for you? Full refund, no questions asked.</p>
+          </article>
+          <article class="card tint">
+            <p class="big-num">₹1,950+</p>
+            <h3>Flow Pro included</h3>
+            <p>1 month of Flow Pro plus your Co-director prompt bot included with the founding batch.</p>
+          </article>
+        </div>
+
+        <div class="actions">
+          <a class="btn-upi" href="upi://pay?pa=hadhip6252@sbi&pn=Hadhi%20Muhammed%20P&am=1000&cu=INR&tn=AI%20Architect%20Course%20Advance">
+            Pay ₹1,000 via GPay / PhonePe / UPI
+          </a>
           <a class="btn" href="#pay">
-            <span>Pay ₹1,000 · Scan UPI QR</span>
+            <span>Scan UPI QR below</span>
             <span class="arr" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="#15171B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
           </a>
-          <span class="small-note">Direct checkout: <span class="tbd">[payment link]</span></span>
         </div>
 
         <div class="pay-panel" id="pay">
@@ -1913,7 +2002,7 @@
           </div>
           <div class="pay-info">
             <p class="eyebrow">RAZORPAY UPI QR · SCAN WITH ANY UPI APP</p>
-            <h3>Scan &amp; pay ₹1,000 advance</h3>
+            <h3>Scan or pay ₹1,000 advance</h3>
             <div class="upi-row">
               <code id="upiId">hadhip6252@sbi</code>
               <button class="copy-btn" id="copyBtn" type="button">Copy UPI ID</button>
@@ -1922,7 +2011,7 @@
             <div class="apps">
               <span>Google Pay</span><span>PhonePe</span><span>Paytm</span><span>CRED</span><span>WhatsApp Pay</span>
             </div>
-            <p>Paid? Send the screenshot on WhatsApp and we'll confirm your seat.</p>
+            <p>Paid? Send the screenshot on WhatsApp and we'll confirm your seat immediately.</p>
             <div class="actions">
               <a class="btn" href="https://wa.me/917356003301?text=Hi%2C%20I%20paid%20the%20%E2%82%B91%2C000%20advance%20for%20the%20AI%20Architect%20Course" target="_blank" rel="noopener">
                 <span>Send screenshot on WhatsApp</span>
@@ -1968,7 +2057,7 @@
               <span>Do I need to pay for AI tools?</span>
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
             </button>
-            <div class="faq-a" hidden>Flow Pro is included for 1 month. Many tools have free plans; we show you which paid ones are worth it. <span class="tbd">[confirm whether a Claude plan is needed for Module 2]</span></div>
+            <div class="faq-a" hidden>Flow Pro is included for 1 month. Many tools we use have free plans, and we show you which paid ones are actually worth it for your workflow.</div>
           </div>
 
           <div class="faq-item">
@@ -1992,7 +2081,7 @@
               <span>Is it in Malayalam?</span>
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
             </button>
-            <div class="faq-a" hidden><span class="tbd">[confirm: English with Malayalam explanations?]</span></div>
+            <div class="faq-a" hidden>Classes are taught in simple Malayalam with standard architectural and industry English technical terms, so every step is clear and practical.</div>
           </div>
 
           <div class="faq-item">
